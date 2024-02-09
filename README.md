@@ -2,6 +2,7 @@
 
 <h1>Steps to after Cloning</h1>
 
+
 <ul>run composer install</ul>
 <ul>run cp .env.example. .env</ul>
 <ul>run php artisan key:generate</ul>
@@ -18,3 +19,14 @@
 <ul>git checkout -name-of-branch (Para mo balhin ka sa bago nga branch nga imong g himo)</ul>
 
 <h1>G na nah</h1>
+
+<ul>composer install</ul>
+<ul>cp .env.example. .env</ul>
+<ul>php artisan key:generate</ul>
+<ul>php artisan migrate</ul>
+<ul>php artisan db:seed --class=AdminSeeder</ul>
+<ul>npm install</ul>
+<ul>npm run dev</ul>
+<ul>php artisan optimize</ul>
+<ul>php artisan serve</ul>
+
