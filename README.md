@@ -2,6 +2,7 @@
 
 <h1>Steps to after Cloning</h1>
 
+
 <ul>composer install</ul>
 <ul>cp .env.example. .env</ul>
 <ul>php artisan key:generate</ul>
@@ -11,3 +12,11 @@
 <ul>npm run dev</ul>
 <ul>php artisan optimize</ul>
 <ul>php artisan serve</ul>
+
+<h1>Make a new branch</h1>
+<ul>git branch (Para makahibaw ka unsa ka nga branch ron)</ul>
+<ul>git branch -name-of-branch- (Ilisda ag -name-of-branch- sa imong branch prefferably imong name)</ul>
+<ul>git checkout -name-of-branch (Para mo balhin ka sa bago nga branch nga imong g himo)</ul>
+
+<h1>G na nah</h1>
+
