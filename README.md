@@ -18,6 +18,6 @@
 <ul>git branch -name-of-branch- (Ilisda ag -name-of-branch- sa imong branch prefferably imong name)</ul>
 <ul>git checkout -name-of-branch (Para mo balhin ka sa bago nga branch nga imong g himo)</ul>
 
-<h1>G na nah</h1>
+<h1 align="center">G na nah</h1>
 
-
+<p align="center"><a href="https:facebook.com" target="_blank"><img src="https://www.imagenspng.com.br/wp-content/uploads/2020/10/among-us-cyan-dead-body-png-01.png" width="400"></a></p>
