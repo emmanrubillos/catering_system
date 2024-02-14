@@ -1,6 +1,6 @@
-<p align="center"><a href="https:facebook.com" target="_blank"><img src="https://i.pinimg.com/736x/22/9a/05/229a05f9751700bd4445a6f90477dc03.jpg" width="400"></a></p>
+<p align="center"><a href="https:facebook.com" target="_blank"><img src="https://ih1.redbubble.net/image.5090039015.1125/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.u9.jpg" width="400"></a></p>
 
-<h1>Steps to after Cloning</h1>
+<h1>Steps to do after Cloning</h1>
 
 
 <ul>run composer install</ul>
@@ -20,4 +20,4 @@
 
 <h1 align="center">G na nah</h1>
 
-<p align="center"><a href="https:facebook.com" target="_blank"><img src="https://www.imagenspng.com.br/wp-content/uploads/2020/10/among-us-cyan-dead-body-png-01.png" width="400"></a></p>
+<p align="center"><a href="https:facebook.com" target="_blank"><img src="https://i.imgur.com/R0fuzVA.gif" width="400"></a></p>

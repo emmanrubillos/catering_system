@@ -1,4 +1,5 @@
-@extends('layouts.master')
+@extends('admin.partials.navbar')
+@extends('admin.partials.sidebar')
 @section('content')
 <div class="container">
     <div class="page-wrapper">
@@ -11,7 +12,7 @@
                         </div>
                         <h3 class="page-title mt-3"> Good Morning </h3>
                         <ul class="breadcrumb">
-                            <li class="breadcrumb-item active">This is Home</li>
+                            <li class="breadcrumb-item active">Your are in the Dashboard</li>
                         </ul>
                     </div>
                 </div>
