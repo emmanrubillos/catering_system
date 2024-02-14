@@ -104,17 +104,9 @@
 									<p class="text-muted mb-0">Administrator</p>
 								</div>
 							</div>
-						<a class="dropdown-item" href="{{ route('profile') }}">My Profile</a> 
+						<a class="dropdown-item" href="">My Profile</a> 
 						<a class="dropdown-item" href="settings.html">Account Settings</a> 
-						<a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+						<a class="dropdown-item" href="{{route('logout')}}">Logout</a>
 					</div>
 				</li>
 			</ul>
@@ -128,6 +120,7 @@
 		@yield('menu')
         @yield('content')
 	</div>
+	
 	<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script src="{{ URL::to('assets/js/jquery-3.5.1.min.js') }}"></script>
 	<script src="{{ URL::to('assets/js/popper.min.js') }}"></script>
