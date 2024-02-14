@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Hotel Dashboard</title>
+	<title>Admin | Titan's Catering</title>
 	<link rel="shortcut icon" type="image/x-icon" href="{{ URL::to('assets/img/favicon.png') }}">
 	<link rel="stylesheet" href="{{ URL::to('assets/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ URL::to('assets/plugins/fontawesome/css/fontawesome.min.css') }}">
@@ -23,6 +23,7 @@
 </head>
 
 <body>
+
 	<div class="main-wrapper">
 		
         @yield('content')
@@ -41,6 +42,8 @@
 	<script src="{{ URL::to('assets/js/moment.min.js') }}"></script>
 	<script src="{{ URL::to('assets/plugins/morris/morris.min.js') }}"></script>
 	<script src="{{ URL::to('assets/js/chart.morris.js') }}"></script>
+
+	@yield('script')
 	
 </body>
 
