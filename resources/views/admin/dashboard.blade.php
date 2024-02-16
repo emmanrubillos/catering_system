@@ -1,7 +1,7 @@
 @extends('admin.partials.navbar')
 @extends('admin.partials.sidebar')
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="page-wrapper">
         <div class="content container-fluid">
             <div class="page-header">
