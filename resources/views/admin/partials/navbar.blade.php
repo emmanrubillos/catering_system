@@ -1,10 +1,14 @@
 <div class="header">
     <div class="header-left">
+        <a href="#" class="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </a>
         <a href="index.html" class="logo"> <img src="{{ URL::to('assets/img/hotel_logo.png') }}" width="50" height="70" alt="logo"> <span class="logoclass">HOTEL</span> </a>
         <a href="index.html" class="logo logo-small"> <img src="{{ URL::to('assets/img/hotel_logo.png') }}" alt="Logo" width="30" height="30"> </a>
     </div>
     <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
-    <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
     <ul class="nav user-menu">
         <li class="nav-item dropdown noti-dropdown">
             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <i class="fe fe-bell"></i> <span class="badge badge-pill">3</span> </a>
@@ -95,3 +99,24 @@
         </form>
     </div>
 </div>
+<div class="new-sidebar" id="new-sidebar">
+    <div class="new-sidebar-inner">
+        <ul>
+            <li><a href="#">Menu Item 1</a></li>
+            <li><a href="#">Menu Item 2</a></li>
+            <li><a href="#">Menu Item 3</a></li>
+            <!-- Add more menu items as needed -->
+        </ul>
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const newSidebar = document.getElementById('new-sidebar');
+
+    hamburgerMenu.addEventListener('click', function() {
+        newSidebar.classList.toggle('active'); // Toggle the 'active' class on the new sidebar
+    });
+});
+
+</script>
