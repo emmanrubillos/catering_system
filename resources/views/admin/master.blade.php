@@ -56,20 +56,6 @@
 		background-color: #444;
 	}
 
-	.submenu {
-		display: none;
-		list-style: none;
-		margin-left: 10px;
-	}
-
-	.submenu li a {
-		color: #fff;
-		text-decoration: none;
-	}
-
-	.submenu li a:hover {
-		background-color: #555;
-	}
 
 	/* Your existing CSS styles for the hamburger menu icon */
 	.hamburger-menu {
