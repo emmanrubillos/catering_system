@@ -16,39 +16,58 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::to('assets/css/bootstrap-datetimepicker.min.css') }}">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<style>
-	.new-sidebar {
+		.new-sidebar {
 		position: fixed;
-		top: 0;
+		top: 60px;
 		left: -200px; /* Initially hide the sidebar off-screen */
 		width: 200px;
 		height: 100%;
 		background-color: #333;
 		transition: left 0.3s ease; /* Add transition effect for smoother animation */
 	}
-	
+
 	.new-sidebar.active {
 		left: 0; /* Display the sidebar when it has the 'active' class */
 	}
-	
+
 	.new-sidebar-inner {
 		padding: 20px;
 	}
-	
+
 	.new-sidebar ul {
 		list-style: none;
 		padding: 0;
-		margin: 0;
+		margin-top: 10px;
 	}
-	
+
 	.new-sidebar ul li {
 		margin-bottom: 10px;
 	}
-	
+
 	.new-sidebar ul li a {
 		color: #fff;
 		text-decoration: none;
 	}
-	
+
+	.new-sidebar ul li a:hover {
+		background-color: #444;
+	}
+
+	.submenu {
+		display: none;
+		list-style: none;
+		margin-left: 10px;
+	}
+
+	.submenu li a {
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.submenu li a:hover {
+		background-color: #555;
+	}
+
 	/* Your existing CSS styles for the hamburger menu icon */
 	.hamburger-menu {
 		display: none; /* Hide the hamburger menu icon by default */
@@ -73,6 +92,7 @@
 			background-color: #000;
 		}
 	}
+
 	</style>
 
 	{{-- message toastr --}}
