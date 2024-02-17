@@ -16,7 +16,10 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::to('assets/css/bootstrap-datetimepicker.min.css') }}">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 	<style>
-		.new-sidebar {
+	a {
+		text-decoration: none;
+	}
+	.new-sidebar {
 		position: fixed;
 		top: 60px;
 		left: -200px; /* Initially hide the sidebar off-screen */
@@ -114,7 +117,7 @@
 	
 	
 </body>
-<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+	<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script src="{{ URL::to('assets/js/popper.min.js') }}"></script>
 	<script src="{{ URL::to('assets/js/bootstrap.min.js') }}"></script>
 	<script src="{{ URL::to('assets/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
