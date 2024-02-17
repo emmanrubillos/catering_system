@@ -15,9 +15,9 @@
                 </li>
                 <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Reservation </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="#">Customer reservation</a></li>
-                        <li><a href="#">Customer review</a></li>
-                        <li><a href="#">Customer bill</a></li>
+                        <li><a href="#">Customer Reservation</a></li>
+                        <li><a href="#">Customer Review</a></li>
+                        <li><a href="#">Customer Bill</a></li>
                     </ul>
                 </li>
                 <li class="submenu"> 
