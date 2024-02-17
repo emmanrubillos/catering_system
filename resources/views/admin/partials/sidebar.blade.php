@@ -1,7 +1,7 @@
 @extends('admin.master')
 
 <div class="sidebar" id="sidebar">
-    <div class="sidebar-inner slimscroll">
+    <div class="sidebar-inner">
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
                 <li class="active"> <a href="{{ route('admin') }}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
