@@ -8,8 +8,7 @@
 <ul>run php artisan key:generate</ul>
 <ul>run php artisan migrate</ul>
 <ul>run php artisan db:seed --class=AdminSeeder</ul>
-<ul>run npm install</ul>
-<ul>run npm run dev</ul>
+<ul>npm install && npm run dev</ul>
 <ul>run php artisan optimize</ul>
 <ul> run php artisan serve</ul>
 
