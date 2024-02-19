@@ -6,36 +6,61 @@
             <ul>
                 <!-- Nav Item - Dashboard -->
                 <li class="nav-item {{ request()->is('admin') ? 'active' : '' }}">
-                <a class="nav-link" href="/admin">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-                </li>
-                <li class="list-divider"></li>
-                <li class="submenu">
-                    <a href="#">
-                        <i class="fas fa-user"></i>
-                        <span> Users </span>
-                        <span class="menu-arrow"></span>
+                    <a class="nav-link" href="/admin">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Dashboard</span>
                     </a>
+                </li>
+
+                <li class="list-divider"></li>
+
+                <li class="submenu">
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            <span> Users </span>
+                            <span class="menu-arrow"></span>
+                        </a>
                     <ul class="submenu_class">
-                        <li><a href="{{ route('admin_user') }}" class="{{ request()->is('admin_user') ? 'active' : '' }}"> {!! request()->is('admin_user') ? '<b>Admin</b>' : 'Admin' !!} </a></li>
-                        <li><a href="{{ route('users') }}" class="{{ request()->is('users') ? 'active' : '' }}"> {!! request()->is('users') ? '<b>User</b>' : 'User' !!} </a></li>
+                        <li>
+                            <a href="{{ route('admin_user') }}" class="{{ request()->is('admin_user') ? 'active' : '' }}"> 
+                                {!! request()->is('admin_user') ? '<b>Admin</b>' : 'Admin' !!} 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('users') }}" class="{{ request()->is('users') ? 'active' : '' }}">
+                                {!! request()->is('users') ? '<b>User</b>' : 'User' !!} 
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
                 <li class="submenu">
                     <a href="#">
                         <i class="fas fa-user"></i>
-                        <span>Reservation</span>
+                        <span> Reservation </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="submenu_class">
-                        <li><a href="{{ route('menu') }}" class="{{ request()->is('menu') ? 'active' : '' }}"> {!! request()->is('menu') ? '<b>Menu</b>' : 'Menu' !!} </a></li>
-
-                        <li><a href="{{ route('customer_reservation') }}" class="{{ request()->is('customer_reservation') ? 'active' : '' }}">Customer Reservation</a></li>
-                        <li><a href="{{ route('bill') }}" class="{{ request()->is('bill') ? 'active' : '' }}">Customer Bill</a></li>
-                        <li><a href="{{ route('review') }}" class="{{ request()->is('review') ? 'active' : '' }}">Customer Review</a></li>
-
+                        <li>
+                            <a href="{{ route('buffet_order') }}" class="{{ request()->is('reservation/buffet_order') ? 'active' : '' }}">
+                                {!! request()->is('reservation/buffet_order') ? '<b>Buffet Order</b>' : 'Buffet Order' !!}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('event_details') }}" class="{{ request()->is('reservation/event_details') ? 'active' : '' }}">
+                                {!! request()->is('reservation/event_details') ? '<b>Event Details</b>' : 'Event Details' !!} 
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('bill') }}" class="{{ request()->is('reservation/bill') ? 'active' : '' }}">
+                                {!! request()->is('reservation/bill') ? '<b>Bill</b>' : 'Bill' !!}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('review') }}" class="{{ request()->is('reservation/review') ? 'active' : '' }}">
+                                {!! request()->is('reservation/review') ? '<b>Review</b>' : 'Review' !!}
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
@@ -67,3 +92,5 @@
         </div>
     </div>
 </div>
+
+

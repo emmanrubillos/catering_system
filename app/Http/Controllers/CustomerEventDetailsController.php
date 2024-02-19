@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CustomerReservationController extends Controller
+class CustomerEventDetailsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class CustomerReservationController extends Controller
      */
     public function index()
     {
-        return view ('admin.reservation.customer_reservation.index');
+        return view ('admin.reservation.event_details.index');
     }
 
     /**
