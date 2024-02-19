@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class MenuController extends Controller
+class CustomerBuffetOrderController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class MenuController extends Controller
      */
     public function index()
     {
-        return view ('admin.reservation.menu.index');
+        return view ('admin.reservation.buffet_order.index');
     }
 
     /**
