@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PackageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +29,7 @@ Route::get('/reservation/review', [App\Http\Controllers\CustomerReviewController
 Route::get('/reservation/customer_reservation', [App\Http\Controllers\CustomerReservationController::class, 'index'])->name('customer_reservation');
 Route::get('/admin_user', [App\Http\Controllers\AdminUserController::class, 'index'])->name('admin_user');
 Route::get('/users', [App\Http\Controllers\UsersController::class, 'index'])->name('users');
+
 
 Route::middleware('CheckUserRole')->group(function (){
 
