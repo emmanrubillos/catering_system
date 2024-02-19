@@ -7,7 +7,7 @@
                 <li class="active"> <a href="{{ route('admin') }}"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
                 <li class="list-divider"></li>
                 <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> User </span> <span class="menu-arrow"></span></a>
-                    <ul class="submenu_class" style="display: none;">
+                    <ul class="submenu_class">
                         <li><a href="employees.html">Admin </a></li>
                         <li><a href="employees.html">Customer </a></li>
                         <li><a href="leaves.html">Employees </a></li>
