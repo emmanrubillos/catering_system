@@ -23,6 +23,7 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->na
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->middleware('auth')->name('profile');
 Route::get('/package', [App\Http\Controllers\PackageController::class, 'index'])->name('package');
+Route::get('/packages/create', [PackageController::class, 'create'])->name('packages.create');
 
 Route::get('/reservation/buffet_order', [App\Http\Controllers\CustomerBuffetOrderController::class, 'index'])->name('buffet_order');
 Route::get('/reservation/bill', [App\Http\Controllers\CustomerBillController::class, 'index'])->name('bill');
@@ -31,6 +32,7 @@ Route::get('/reservation/event_details', [App\Http\Controllers\CustomerEventDeta
 
 Route::get('/admin_user', [App\Http\Controllers\AdminUserController::class, 'index'])->name('admin_user');
 Route::get('/users', [App\Http\Controllers\UsersController::class, 'index'])->name('users');
+
 
 
 Route::middleware('CheckUserRole')->group(function (){
