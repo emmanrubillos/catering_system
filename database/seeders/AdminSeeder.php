@@ -16,12 +16,16 @@ class AdminSeeder extends Seeder
      */
     public function run()
     {
-        $adminRole = DB::table('role')->where('name', 'admin')->first();
+        // $adminRole = DB::table('role')->where('name', 'admin')->first();
 
         DB::table('users')->insert([
-            'name' => 'adminko',
+            'first_name' => 'admin',
+            'role_id' => '1',
+            'middle_name' => 'lage',
+            'last_name' => 'ko',
+            'contact_number' => '12345',
+            'address' => 'Brgy.Eastern',
             'email' => 'Admin@example.com',
-            'role' => '1',
             'password' => Hash::make('admin123'),
 
         ]);
