@@ -20,7 +20,7 @@
                                     Users
                                 </div>
                                 <div class="col-md-6 col-12 text-right">
-                                    <a href="#" class="btn btn-success"><i class="fas fa-plus"></i> Add New User</a>
+                                    <a href="{{ route('users.create') }}" class="btn btn-success"><i class="fas fa-plus"></i> Add New User</a>
                                 </div>
                             </div>
                         </div>
@@ -38,64 +38,24 @@
                                     <th scope="col">Adress</th>
                                     <th scope="col">Role</th>
                                 </tr> 
-                                <tr>
-                                    <td>1</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i> </a>
-                                        <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i> </a>
-                                    </td>
-                                    <td>John Doe</td>
-                                    <td>John Doe</td>
-                                    <td>John Doe</td>
-                                    <td>john@example.com</td>
-                                    <td>09615164097</td>
-                                    <td>Secret</td>
-                                    <td><span class="badge bg-dark">Admin</span></td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i> </a>
-                                        <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i> </a>
-                                    </td>
-                                    <td>Jane Smith</td>
-                                    <td>John Doe</td>
-                                    <td>John Doe</td>
-                                    <td>jane@example.com</td>
-                                    <td>09615164097</td>
-                                    <td>Secret</td>
-                                    <td><span class="badge bg-secondary">Staff</span></td>
-                                </tr>
-                                <tr>
-                                    <td>3</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i> </a>
-                                        <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i> </a>
-                                    </td>
-                                    <td>Jane Smith</td>
-                                    <td>John Doe</td>
-                                    <td>John Doe</td>
-                                    <td>jane@example.com</td>
-                                    <td>09615164097</td>
-                                    <td>Secret</td>
-                                    <td><span class="badge bg-warning">Cook</span></td>
-                                </tr>
-                                <tr>
-                                    <td>4</td>
-                                    <td>
-                                        <a href="#" class="btn btn-primary"><i class="fas fa-edit"></i> </a>
-                                        <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt"></i> </a>
-                                    </td>
-                                    <td>Jane Smith</td>
-                                    <td>John Doe</td>
-                                    <td>John Doe</td>
-                                    <td>jane@example.com</td>
-                                    <td>09615164097</td>
-                                    <td>Secret</td>
-                                    <td><span class="badge bg-success">Customer</span></td>
-                                </tr>
                               </thead>
                               <tbody>
+                                @foreach($users as $user)
+                                <tr>
+                                    <td>{{ $user->id }}</td>
+                                    <td>
+                                        <!-- Actions such as edit, delete, view -->
+                                    </td>
+                                    <td>{{ $user->first_name }}</td>
+                                    <td>{{ $user->middle_name }}</td>
+                                    <td>{{ $user->last_name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->contact_number }}</td>
+                                    <td>{{ $user->address }}</td>
+                                    <td>{{ $user->role_id }}</td> <!-- Assuming you have a role attribute in your User model -->
+                                </tr>
+                                @endforeach
+
                               </tbody>
                             </table>
                         </div>
