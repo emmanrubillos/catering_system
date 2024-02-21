@@ -34,6 +34,7 @@ Route::get('/users', [App\Http\Controllers\UsersController::class, 'index'])->na
 
 Route::get('/users/create', [UsersController::class, 'create'])->name('users.create');
 Route::post('/users/create', [UsersController::class, 'store'])->name('users.store');
+
 // Route::get('/users/edit/{id}', [UsersController::class, 'edit'])->name('users.edit');
 Route::middleware('CheckUserRole')->group(function (){
 

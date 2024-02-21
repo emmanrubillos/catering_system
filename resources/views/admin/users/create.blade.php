@@ -15,7 +15,7 @@
                                         <h4><i class="fas fa-user"></i> Add New User</h4>
                                     </div>
                                     <div class="card-body">
-                                        <form action="" method="POST">
+                                        <form action="{{ route('users.store') }}" method="POST">
                                             @csrf
                                             <div class="row">
                                                 <div class="col-md-6">
@@ -32,45 +32,48 @@
                                                         <input type="text" class="form-control" id="last_name" name="last_name">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="contact">Contact</label>
-                                                        <input type="text" class="form-control" id="contact" name="contact">
+                                                        <label for="contact_number">Contact</label>
+                                                        <input type="string" class="form-control" id="contact_number" name="contact_number">
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="contact">Address</label>
-                                                        <input type="text" class="form-control" id="contact" name="address">
-                                                    </div>
+                                                        <label for="address">Address</label>
+                                                        <input type="text" class="form-control" id="address" name="address">
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="email">Email</label>
-                                                        <input type="email" class="form-control" id="email" name="email">
-                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="email">Email</label>
+                                                    <input type="email" class="form-control" id="email" name="email">
+                                                </div>
 
-                                                    
-                                                    <div class="form-group">
-                                                        <label for="temp_password">Temporary Password</label>
-                                                        <input type="password" class="form-control" id="temp_password" name="temp_password">
-                                                    </div>
+                                                
+                                                <div class="form-group">
+                                                    <label for="temp_password">Temporary Password</label>
+                                                    <input type="password" class="form-control" id="temp_password" name="temp_password">
+                                                </div>
 
-                                                    @if ($errors->any())
-                                                         <div class="alert alert-danger">
-                                                            <ul class="p-0 m-0">
-                                                                @foreach ($errors->all() as $error)
-                                                                    <li>{{ $error }}</li>
-                                                                 @endforeach
-                                                        </ul>
-                                                    </div>
-                                                    @endif
+                                                @if ($errors->any())
+                                                     <div class="alert alert-danger">
+                                                        <ul class="p-0 m-0">
+                                                            @foreach ($errors->all() as $error)
+                                                                <li>{{ $error }}</li>
+                                                             @endforeach
+                                                    </ul>
+                                                </div>
+                                                @endif
 
-                                                    <div class="form-group">
-                                                        <label for="role">Role</label>
-                                                        <select name="role" id="role" class="form-control">
-                                                            <option value="" selected disabled>Select a Role</option>
-                                                            <option value="1">Staff</option>
-                                                            <option value="2">Cook</option>
-                                                            <option value="2">Customer</option>
-                                                        </select>
-                                                    </div>
+                                                <div class="form-group">
+                                                    <label for="role_id">Role</label>
+                                                    <select name="role_id" id="role_id" class="form-control">
+                                                        <option value="" selected disabled>Select a Role</option>
+                                                        <option value="0">Admin</option>
+                                                        <option value="1">Staff</option>
+                                                        <option value="2">Cook</option>
+                                                        <option value="3">Customer</option>
+                                                    </select>
+                                                </div>
                                                 </div>
                                             </div>
                                             <div class="card-footer">
@@ -78,6 +81,15 @@
                                                 <a href="{{ back()->getTargetUrl() }}" class="btn btn-secondary btn-sm">Cancel</a>
                                             </div>
                                         </form>
+                                        @if ($errors->any())
+                                            <div class="alert alert-danger">
+                                                <ul class="p-0 m-0">
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        @endif
                                     </div>
                                 </div>
                             </div>

@@ -40,6 +40,22 @@
                                 </tr> 
                               </thead>
                               <tbody>
+                                @foreach($users as $user)
+                                <tr>
+                                    <td>{{ $user->id }}</td>
+                                    <td>
+                                        <!-- Actions such as edit, delete, view -->
+                                    </td>
+                                    <td>{{ $user->first_name }}</td>
+                                    <td>{{ $user->middle_name }}</td>
+                                    <td>{{ $user->last_name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td>{{ $user->contact_number }}</td>
+                                    <td>{{ $user->address }}</td>
+                                    <td>{{ $user->role_id }}</td> <!-- Assuming you have a role attribute in your User model -->
+                                </tr>
+                                @endforeach
+
                               </tbody>
                             </table>
                         </div>

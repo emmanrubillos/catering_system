@@ -13,7 +13,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index');
+        $users = User::all(); // Fetch all users
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -33,35 +34,37 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        // Validate the incoming request data
-        $validatedData = $request->validate([
-            'first_name' => 'required|string|max:255',
-            'middle_name' => 'nullable|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'contact' => 'nullable|string|max:255',
-            'address' => 'nullable|string|max:255',
-            'temp_password' => 'required|string|min:6', // Adjust the minimum length as needed
-            'role' => 'required|integer', // Assuming role is an integer value
-        ]);
+{
+    // Validate the incoming request data
+    $validatedData = $request->validate([
+        'role_id' => 'required|integer',
+        'email' => 'required|string|email|max:255|unique:users,email',
+        'first_name' => 'required|string|max:255',
+        'middle_name' => 'nullable|string|max:255',
+        'last_name' => 'required|string|max:255',
+        'contact_number' => 'nullable|numeric', // Changed validation rule
+        'address' => 'nullable|string|max:255',
+        'temp_password' => 'required|string|min:6',
+    ]);
 
-        // Create the user
-        $user = User::create([
-            'first_name' => $validatedData['first_name'],
-            'middle_name' => $validatedData['middle_name'],
-            'last_name' => $validatedData['last_name'],
-            'email' => $validatedData['email'],
-            'contact' => $validatedData['contact'],
-            'address' => 'nullable|string|max:255',
-            'password' => bcrypt($validatedData['temp_password']), // Hash the password
-            'role' => $validatedData['role'],
-            // Add more fields as needed
-        ]);
+    // Create the user
+    $user = User::create([
+        'role_id' => $validatedData['role_id'],
+        'email' => $validatedData['email'],
+        'first_name' => $validatedData['first_name'],
+        'middle_name' => $validatedData['middle_name'],
+        'last_name' => $validatedData['last_name'],
+        'contact_number' => $validatedData['contact_number'], // Removed unnecessary isset check
+        'address' => $validatedData['address'],
+        'password' => bcrypt($validatedData['temp_password']),
+    ]);
 
-        // Optionally, you can redirect the user to a different page after creation
-        return redirect()->route('users.index')->with('success', 'User created successfully!');
-    }
+    // Optionally, you can redirect the user to a different page after creation
+    return redirect()->route('users')->with('success', 'User created successfully!');
+
+}
+
+
     
 
     /**
