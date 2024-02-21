@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,7 +33,11 @@ Route::get('/reservation/event_details', [App\Http\Controllers\CustomerEventDeta
 Route::get('/admin_user', [App\Http\Controllers\AdminUserController::class, 'index'])->name('admin_user');
 Route::get('/users', [App\Http\Controllers\UsersController::class, 'index'])->name('users');
 
+Route::get('/users/create', [UsersController::class, 'create'])->name('users.create');
+Route::post('/users/create', [UsersController::class, 'store'])->name('users.store');
 
+
+// Route::get('/users/edit/{id}', [UsersController::class, 'edit'])->name('users.edit');
 
 Route::middleware('CheckUserRole')->group(function (){
 

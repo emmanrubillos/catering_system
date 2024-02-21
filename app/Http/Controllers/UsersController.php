@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\User;
 class UsersController extends Controller
 {
     /**
@@ -13,7 +13,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        return view('admin.users.index');
+        $users = User::all(); // Fetch all users
+        return view('admin.users.index', compact('users'));
     }
 
     /**
@@ -23,7 +24,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**
@@ -33,9 +34,38 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
-    }
+{
+    // Validate the incoming request data
+    $validatedData = $request->validate([
+        'role_id' => 'required|integer',
+        'email' => 'required|string|email|max:255|unique:users,email',
+        'first_name' => 'required|string|max:255',
+        'middle_name' => 'nullable|string|max:255',
+        'last_name' => 'required|string|max:255',
+        'contact_number' => 'nullable|numeric', // Changed validation rule
+        'address' => 'nullable|string|max:255',
+        'temp_password' => 'required|string|min:6',
+    ]);
+
+    // Create the user
+    $user = User::create([
+        'role_id' => $validatedData['role_id'],
+        'email' => $validatedData['email'],
+        'first_name' => $validatedData['first_name'],
+        'middle_name' => $validatedData['middle_name'],
+        'last_name' => $validatedData['last_name'],
+        'contact_number' => $validatedData['contact_number'], // Removed unnecessary isset check
+        'address' => $validatedData['address'],
+        'password' => bcrypt($validatedData['temp_password']),
+    ]);
+
+    // Optionally, you can redirect the user to a different page after creation
+    return redirect()->route('users')->with('success', 'User created successfully!');
+
+}
+
+
+    
 
     /**
      * Display the specified resource.
@@ -55,10 +85,14 @@ class UsersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
-    }
+{
+    // Fetch the user data based on the ID
+    // Assuming you have a User model
 
+    // Pass the user data to the view
+    return view('admin.users.edit');
+}
+    
     /**
      * Update the specified resource in storage.
      *
