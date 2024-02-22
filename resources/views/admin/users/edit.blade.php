@@ -35,22 +35,21 @@
                                                 <input type="email" class="form-control" id="email" name="email" value="{{ $user->email }}">
                                             </div>
                                             <div class="form-group">
-                                                <label for="contact">Contact</label>
-                                                <input type="text" class="form-control" id="contact" name="contact" value="{{ $user->contact }}">
+                                                <label for="contact_number">Contact</label>
+                                                <input type="text" class="form-control" id="contact_number" name="contact_number" value="{{ $user->contact_number }}">
                                             </div>
                                             <div class="form-group">
                                                 <label for="address">Address</label>
                                                 <input type="text" class="form-control" id="address" name="address" value="{{ $user->address }}">
                                             </div>
                                             <div class="form-group">
-                                                <label for="address">Role</label>
-                                                <input type="text" class="form-control" id="address" name="address" value="{{ $user->role }}">
-                                                <select name="role" id="role" class="form-control">
+                                                <label for="role_id">Role</label>
+                                                <select name="role_id" id="role_id" class="form-control">
                                                     <option value="" disabled>Select a Role</option>
-                                                    <option value="1" {{ $user->role_id === 1 ? 'selected' : '' }}>Admin</option>
-                                                    <option value="2" {{ $user->role_id === 2 ? 'selected' : '' }}>Staff</option>
-                                                    <option value="3" {{ $user->role_id === 3 ? 'selected' : '' }}>Chef</option>
-                                                    <option value="4" {{ $user->role_id === 4 ? 'selected' : '' }}>Customer</option>
+                                                    <option value="1" {{ $user->role_id == 1 ? 'selected' : '' }}>Admin</option>
+                                                    <option value="2" {{ $user->role_id == 2 ? 'selected' : '' }}>Staff</option>
+                                                    <option value="3" {{ $user->role_id == 3 ? 'selected' : '' }}>Chef</option>
+                                                    <option value="4" {{ $user->role_id == 4 ? 'selected' : '' }}>Customer</option>
                                                 </select>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Update</button>
