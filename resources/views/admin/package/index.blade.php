@@ -52,7 +52,7 @@
 
 @endsection --}}
 @extends('admin.partials.navbar')
-@extends('admin.partials.sidebar')
+@extends('admin.partials.sidebar')  
 
 @section('content')
 <div class="container-fluid">

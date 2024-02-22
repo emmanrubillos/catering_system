@@ -29,6 +29,7 @@
                               <thead>
                                 <tr>
                                     {{-- <th scope="col">#</th> --}}
+                                    <th scope="col">Action</th> <!-- Moved "Action" column to the last part -->
                                     <th scope="col">First Name</th>
                                     <th scope="col">Middle Name</th>
                                     <th scope="col">Last Name</th>
@@ -36,13 +37,24 @@
                                     <th scope="col">Contact</th>
                                     <th scope="col">Address</th>
                                     <th scope="col">Role</th>
-                                    <th scope="col">Action</th> <!-- Moved "Action" column to the last part -->
                                 </tr>
                               </thead>
                               <tbody>
                                 @foreach($users as $user)
                                 <tr>
                                     {{-- <td>{{ $user->id }}</td> --}}
+                                    <td>
+                                        {{-- <a href="{{ route('users.show', $user->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-eye"></i></a> --}}
+                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            {{-- <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button> --}}
+                                            <button  class="btn btn-sm btn-danger" onclick="confirmDeleteUser( {{$user->id}} )">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    </td>
                                     <td>{{ $user->first_name }}</td>
                                     <td>{{ $user->middle_name }}</td>
                                     <td>{{ $user->last_name }}</td>
@@ -62,18 +74,7 @@
                                             <span class="badge badge-secondary">Unknown</span>
                                         @endif
                                     </td> <!-- Assuming you have a role attribute in your User model -->
-                                    <td>
-                                        <a href="{{ route('users.edit', $user->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
-                                        <a href="{{ route('users.show', $user->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-eye"></i></a>
-                                        <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
-                                            @csrf
-                                            @method('DELETE')
-                                            {{-- <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button> --}}
-                                            <button  class="btn btn-sm btn-danger" onclick="confirmDeleteUser( {{$user->id}} )">
-                                                <i class="fas fa-trash"></i>
-                                            </button>
-                                        </form>
-                                    </td>
+                                    
                                 </tr>
                                 @endforeach
                               </tbody>
