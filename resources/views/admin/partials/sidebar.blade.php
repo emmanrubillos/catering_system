@@ -14,24 +14,11 @@
 
                 <li class="list-divider"></li>
 
-                <li class="submenu">
-                        <a href="#">
-                            <i class="fas fa-user"></i>
-                            <span> Users </span>
-                            <span class="menu-arrow"></span>
-                        </a>
-                    <ul class="submenu_class">
-                        <li>
-                            <a href="{{ route('admin_user') }}" class="{{ request()->is('admin_user') ? 'active' : '' }}"> 
-                                {!! request()->is('admin_user') ? '<b>Admin</b>' : 'Admin' !!} 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('users') }}" class="{{ request()->is('users') ? 'active' : '' }}">
-                                {!! request()->is('users') ? '<b>User</b>' : 'User' !!} 
-                            </a>
-                        </li>
-                    </ul>
+                <li class="nav-item
+                 {{ request()->is('users') ? 'active' : '' }}">
+                <a class="nav-link" href="/users">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Users</span></a>
                 </li>
 
                 <li class="submenu">
@@ -48,7 +35,7 @@
                         </li>
                         <li>
                             <a href="{{ route('event_details') }}" class="{{ request()->is('reservation/event_details') ? 'active' : '' }}">
-                                {!! request()->is('reservation/event_details') ? '<b>Event Details</b>' : 'Event Details' !!} 
+                                {!! request()->is('reservation/event_details') ? '<b>Event Details</b>' : 'Event Details' !!}
                             </a>
                         </li>
                         <li>

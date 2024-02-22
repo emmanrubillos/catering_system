@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UsersController;
+use App\Http\Controllers\PackageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,10 +30,21 @@ Route::get('/reservation/bill', [App\Http\Controllers\CustomerBillController::cl
 Route::get('/reservation/review', [App\Http\Controllers\CustomerReviewController::class, 'index'])->name('review');
 Route::get('/reservation/event_details', [App\Http\Controllers\CustomerEventDetailsController::class, 'index'])->name('event_details');
 
-Route::get('/admin_user', [App\Http\Controllers\AdminUserController::class, 'index'])->name('admin_user');
-Route::get('/users', [App\Http\Controllers\UsersController::class, 'index'])->name('users');
+
+
+Route::resource('users', 'UsersController');
+Route::resource('users', \App\Http\Controllers\UsersController::class);
+
+
+Route::resource('packages', 'PackageController');
+Route::resource('packages', \App\Http\Controllers\PackageController::class);
 
 
 Route::middleware('CheckUserRole')->group(function (){
+
+
+
+
+
 
 });
