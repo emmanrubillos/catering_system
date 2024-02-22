@@ -15,6 +15,7 @@ class UsersController extends Controller
     {
         $users = User::all(); // Fetch all users
         return view('admin.users.index', compact('users'));
+        
     }
 
     /**
