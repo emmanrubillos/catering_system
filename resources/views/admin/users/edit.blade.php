@@ -15,7 +15,7 @@
                                         <h4>Edit User</h4>
                                     </div>
                                     <div class="card-body">
-                                        <form action="" method="POST">
+                                        <form action="{{ route('users.update', $user->id) }}" method="POST">
                                             @csrf
                                             @method('PUT')
                                             <div class="form-group">
@@ -47,12 +47,14 @@
                                                 <input type="text" class="form-control" id="address" name="address" value="{{ $user->role }}">
                                                 <select name="role" id="role" class="form-control">
                                                     <option value="" disabled>Select a Role</option>
-                                                    <option value="1" {{ $user->role_id === 1 ? 'selected' : '' }}>Staff</option>
-                                                    <option value="2" {{ $user->role_id === 2 ? 'selected' : '' }}>Cook</option>
-                                                    <option value="3" {{ $user->role_id === 3 ? 'selected' : '' }}>Customer</option>
+                                                    <option value="1" {{ $user->role_id === 1 ? 'selected' : '' }}>Admin</option>
+                                                    <option value="2" {{ $user->role_id === 2 ? 'selected' : '' }}>Staff</option>
+                                                    <option value="3" {{ $user->role_id === 3 ? 'selected' : '' }}>Chef</option>
+                                                    <option value="4" {{ $user->role_id === 4 ? 'selected' : '' }}>Customer</option>
                                                 </select>
                                             </div>
                                             <button type="submit" class="btn btn-primary">Update</button>
+                                            <a href="{{ route('users.index') }}" class="btn btn-secondary">Cancel</a>
                                         </form>
                                     </div>
                                 </div>
