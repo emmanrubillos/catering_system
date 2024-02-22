@@ -35,7 +35,7 @@
                         </li>
                         <li>
                             <a href="{{ route('event_details') }}" class="{{ request()->is('reservation/event_details') ? 'active' : '' }}">
-                                {!! request()->is('reservation/event_details') ? '<b>Event Details</b>' : 'Event Details' !!} 
+                                {!! request()->is('reservation/event_details') ? '<b>Event Details</b>' : 'Event Details' !!}
                             </a>
                         </li>
                         <li>
