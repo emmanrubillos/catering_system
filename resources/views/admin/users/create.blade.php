@@ -48,7 +48,7 @@
                                                     <input type="email" class="form-control" id="email" name="email">
                                                 </div>
 
-                                                
+
                                                 <div class="form-group">
                                                     <label for="temp_password">Temporary Password</label>
                                                     <input type="password" class="form-control" id="temp_password" name="temp_password">
@@ -68,10 +68,10 @@
                                                     <label for="role_id">Role</label>
                                                     <select name="role_id" id="role_id" class="form-control">
                                                         <option value="" selected disabled>Select a Role</option>
-                                                        <option value="0">Admin</option>
-                                                        <option value="1">Staff</option>
-                                                        <option value="2">Cook</option>
-                                                        <option value="3">Customer</option>
+                                                        <option value="1">Admin</option>
+                                                        <option value="2">Staff</option>
+                                                        <option value="3">Chef</option>
+                                                        <option value="4">Customer</option>
                                                     </select>
                                                 </div>
                                                 </div>
