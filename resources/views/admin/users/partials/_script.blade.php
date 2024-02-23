@@ -7,13 +7,13 @@
                 confirmButton: 'btn btn-danger',
                 cancelButton: 'btn btn-secondary'
             },
-            buttonsStyling: false
+            
         })
 
         swalWithBootstrapButtons.fire({
             title: 'Are you sure you want to delete this?',
             text: "You won't be able to revert this!",
-            imageUrl: "{{ asset("assets/image/trash-icon.png") }}",
+            imageUrl: "{{ asset("assets/img/trash-icon.png") }}",
             imageHeight: 200,
             showCancelButton: true,
             confirmButtonText: 'Yes, delete it!',
@@ -31,19 +31,18 @@
                     success: function(response) {
                         Swal.fire({
                             title: 'Deleted!',
-                            text: "Families has been deleted.",
+                            text: "Users has been deleted.",
                             icon: 'success',
                             showCancelButton: false,
                             confirmButtonColor: '#3085d6',
                             cancelButtonColor: '#d33',
                             confirmButtonText: 'Okay'
-                            }).then((result) => {
+                        }).then((result) => {
                             if (result.isConfirmed) {
-                                // $('#familiesTable').DataTable().ajax.reload();
-                                window.location.reload();
+                                $('#users-table').DataTable().ajax.reload();
+                                location.reload(); // This line refreshes the page
                             }
                         })
-
                     },
                     error: function(error) {
                         // Handle error response
@@ -53,8 +52,8 @@
             } else {
                 result.dismiss == Swal.DismissReason.cancel;
                 swalWithBootstrapButtons.fire(
-                    'Oops...',
-                    'Something went wrong!',
+                    'Cancelled',
+                    'Your imaginary file is safe :)',
                     'error'
                 );
             }
