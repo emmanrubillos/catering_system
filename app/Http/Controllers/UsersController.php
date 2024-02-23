@@ -128,9 +128,16 @@ class UsersController extends Controller
         $user = User::findOrFail($id);
 
         // Delete the user
-        $user->delete($id);
+        $deleteUser = $user->delete();
 
-        // Redirect back with a success message
-        return redirect()->route('users.index')->with('success', 'User deleted successfully!');
+        // Check if the deletion was successful
+        if($deleteUser){
+        // If successful, return a JSON response with success message
+        return response()->json(['message' => 'User deleted successfully']);
+        } else {
+        // If deletion failed, return a JSON response with error message
+        return response()->json(['error' => 'Deletion failed!']);
     }
+}
+
 }
