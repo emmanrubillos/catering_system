@@ -1,0 +1,73 @@
+@import url('https://fonts.cdnfonts.com/css/hello-christmas-2');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
+
+a{
+    font-family: "Montserrat", sans-serif;
+}
+
+
+
+.wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 234px;
+}
+
+.wave .shape-fill {
+    fill: #181D50;
+}
+
+/** For tablet devices **/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .wave svg {
+        width: calc(255% + 1.3px);
+        height: 262px;
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .wave svg {
+        width: calc(300% + 1.3px);
+        height: 250px;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Apply animation to sidebar */
+.slide-in {
+    animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Apply animation to sidebar */
+.slide-out {
+    animation: slideOut 0.3s ease forwards;
+}
+
