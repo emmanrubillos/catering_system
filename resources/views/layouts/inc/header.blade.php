@@ -15,6 +15,7 @@
             </button>
             {{-- logo --}}
             <a href="{{ url('/home') }}" class="logo-md-sm w-32">
+
                 <img class="logo-lg w-auto h-auto sm-mobile:w" src="{{ asset('assets/img/logo.png') }}" alt="titans-catering-logo">
             </a>
         </div>

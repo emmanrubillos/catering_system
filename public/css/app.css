@@ -499,7 +499,6 @@ video {
 }
 
 @media (min-width: 380px) {
-
   .container {
     max-width: 380px;
   }
@@ -968,7 +967,7 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
-}
+ }
 
 @media (min-width: 980px) {
 
@@ -988,9 +987,38 @@ video {
     display: none;
   }
 
+  .tablet\:w-1\/2 {
+    width: 50%;
+  }
+
+  .tablet\:gap-default {
+    gap: 50px;
+  }
+
+  .tablet\:gap-8 {
+    gap: 2rem;
+  }
+
+  .tablet\:gap-6 {
+    gap: 1.5rem;
+  }
+
+  .tablet\:gap-sm {
+    gap: 20px;
+  }
+
   .tablet\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+  }
+
+  .tablet\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .tablet\:text-lg {
+    font-size: 20px;
   }
 
   .tablet\:text-sm {
@@ -1014,6 +1042,7 @@ video {
   .desktop\:basis-1\/4 {
     flex-basis: 25%;
   }
+
 }
 
 
