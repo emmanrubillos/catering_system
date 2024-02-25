@@ -21,6 +21,8 @@ module.exports = {
       'light': '#FFF7E9',
       'dark': '#181D50',
       'primary': '#FF731D',
+      'default-blue': '#1746A2',
+      'light-blue': '#5F9DF7',
     },
     extend: {
       spacing: {
@@ -36,6 +38,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      height: {
+        '128': '32rem',
+      },
       gap: {
         'default': '50px',
         'sm': '20px',
@@ -43,11 +48,13 @@ module.exports = {
         'lg': '40px',
       },
       fontSize: {
+        xsm: '11px',
         sm: '13px',
         base: '15px',
         md: '18',
         lg: '20px',
         xl: '24px',
+        xxl: '30px',
       },
     },
   },
