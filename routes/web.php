@@ -1,12 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
-use App\Http\Controllers\UsersController;
-use App\Http\Controllers\PackageController;
-
->>>>>>> 7a8d1d76f77e8d3d96bd2e9badb07889ca1c6874
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -48,8 +42,6 @@ Route::get('/services', [App\Http\Controllers\Customer\ServicesController::class
 Route::get('/packages', [App\Http\Controllers\Customer\PackagesController::class, 'index'])->name('packages');
 Route::get('/menu', [App\Http\Controllers\Customer\MenuController::class, 'index'])->name('menu');
 Route::get('/contact_us', [App\Http\Controllers\Customer\ContactController::class, 'index'])->name('contact_us');
-
-
 
 
 });
