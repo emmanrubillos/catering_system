@@ -1,12 +1,25 @@
 @import url('https://fonts.cdnfonts.com/css/hello-christmas-2');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap')
 
-a{
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 860bdbcd3aa94e659bed4edadb38155e0d2628d6
+=======
+
+>>>>>>> e52c72dc86f34502c2d93805e998c3ff724f5424
+body {
     font-family: "Montserrat", sans-serif;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 
-
+=======
+>>>>>>> 860bdbcd3aa94e659bed4edadb38155e0d2628d6
+=======
+>>>>>>> e52c72dc86f34502c2d93805e998c3ff724f5424
 .wave {
     position: absolute;
     top: 0;

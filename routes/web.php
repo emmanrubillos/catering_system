@@ -3,11 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PackageController;
-use App\Http\Controllers\Customer\AboutController;
-use App\Http\Controllers\Customer\ServicesController;
-use App\Http\Controllers\Customer\PackagesController;
-use App\Http\Controllers\Customer\MenuController;
-use App\Http\Controllers\Customer\ContactController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,11 +33,8 @@ Route::get('/reservation/event_details', [App\Http\Controllers\CustomerEventDeta
 
 
 
-Route::resource('users', 'UsersController');
 Route::resource('users', \App\Http\Controllers\UsersController::class);
 
-
-Route::resource('packages', 'PackageController');
 Route::resource('packages', \App\Http\Controllers\PackageController::class);
 
 
