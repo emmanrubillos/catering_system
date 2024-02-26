@@ -55,7 +55,7 @@
                 </ul>
             </div>
         </div>
-        <div class="column-two basis-1/3 flex justify-between">
+        <div class="column-two basis-1/3 flex justify-between">     
             {{-- C-two-Column-one --}}
             <div>
                 <h5 class="font-bold uppercase text-lg">
@@ -237,6 +237,8 @@
 
         </div>
     </div>
+    <hr class="text-light ml-10 mr-80 mt-1 mb-3">
+    <div class="flex justify-between ml-10 mr-80 text-sm">
 
     <hr class="text-light mx-10 mr-80 mt-1 mb-3">
     <div class="flex justify-between mx-10 mr-80 text-sm">

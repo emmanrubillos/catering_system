@@ -562,11 +562,6 @@ video {
   margin: 0px;
 }
 
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -614,6 +609,10 @@ video {
 
 .ml-3 {
   margin-left: 0.75rem;
+}
+
+.mr-80 {
+  margin-right: 20rem;
 }
 
 .ms-auto {
@@ -1024,10 +1023,6 @@ video {
 }
 
 @media (min-width: 1366px) {
-
-  .laptop\:basis-1\/4 {
-    flex-basis: 25%;
-  }
 
   .laptop\:text-base {
     font-size: 15px;
