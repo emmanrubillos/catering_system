@@ -599,6 +599,10 @@ video {
   margin-inline-end: auto;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -633,6 +637,14 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
+}
+
+.mr-14 {
+  margin-right: 3.5rem;
+}
+
+.mr-80 {
+  margin-right: 20rem;
 }
 
 .block {
@@ -825,6 +837,10 @@ video {
   padding-top: 2rem;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-right {
   text-align: right;
 }
@@ -1000,19 +1016,8 @@ video {
 
 @media (min-width: 1366px) {
 
-  .laptop\:basis-1\/4 {
-    flex-basis: 25%;
-  }
-
   .laptop\:text-base {
     font-size: 15px;
-  }
-}
-
-@media (min-width: 1920px) {
-
-  .desktop\:basis-1\/4 {
-    flex-basis: 25%;
   }
 }
 

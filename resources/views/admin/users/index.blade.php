@@ -44,7 +44,8 @@
                                 @foreach($users as $user)
                                 <tr>
                                     <td>
-                                        <a href="{{ route('users.edit', ['user' => $user->id]) }}" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editUserModal"><i class="fas fa-edit"></i></a>
+                                        <a href="{{ route('users.edit', ['user' => $user->id]) }}" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editUserModal{{ $user->id }}"><i class="fas fa-edit"></i></a>
+
                                         <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
                                             @csrf
                                             @method('DELETE')
@@ -73,6 +74,7 @@
                                         @endif
                                     </td>
                                 </tr>
+                                @include('admin.users.partials._edit_user_modal', ['user' => $user])
                                 @endforeach
                             </tbody>
                         </table>
@@ -89,5 +91,5 @@
 
 @include('admin.users.partials._script')
 @include('admin.users.partials._add_user_modal')
-@include('admin.users.partials._edit_user_modal')
+
 @endsection 
