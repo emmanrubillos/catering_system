@@ -499,6 +499,7 @@ video {
 }
 
 @media (min-width: 380px) {
+
   .container {
     max-width: 380px;
   }
@@ -561,11 +562,6 @@ video {
   margin: 0px;
 }
 
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -598,19 +594,20 @@ video {
   margin-inline-end: auto;
 }
 
-<<<<<<< HEAD
 .ml-10 {
   margin-left: 2.5rem;
 }
 
-=======
->>>>>>> e52c72dc86f34502c2d93805e998c3ff724f5424
 .ml-2 {
   margin-left: 0.5rem;
 }
 
 .ml-3 {
   margin-left: 0.75rem;
+}
+
+.mr-80 {
+  margin-right: 20rem;
 }
 
 .ms-auto {
@@ -639,14 +636,6 @@ video {
 
 .mt-5 {
   margin-top: 1.25rem;
-}
-
-.mr-14 {
-  margin-right: 3.5rem;
-}
-
-.mr-80 {
-  margin-right: 20rem;
 }
 
 .block {
@@ -839,13 +828,10 @@ video {
   padding-top: 2rem;
 }
 
-<<<<<<< HEAD
 .text-center {
   text-align: center;
 }
 
-=======
->>>>>>> e52c72dc86f34502c2d93805e998c3ff724f5424
 .text-right {
   text-align: right;
 }
@@ -989,7 +975,7 @@ video {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
- }
+}
 
 @media (min-width: 980px) {
 
@@ -1009,43 +995,11 @@ video {
     display: none;
   }
 
-  .tablet\:w-1\/2 {
-    width: 50%;
-  }
-
-  .tablet\:gap-default {
-    gap: 50px;
-  }
-
-  .tablet\:gap-8 {
-    gap: 2rem;
-  }
-
-  .tablet\:gap-6 {
-    gap: 1.5rem;
-  }
-
-  .tablet\:gap-sm {
-    gap: 20px;
-  }
-
   .tablet\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
-<<<<<<< HEAD
-=======
-  .tablet\:px-10 {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-  .tablet\:text-lg {
-    font-size: 20px;
-  }
-
->>>>>>> e52c72dc86f34502c2d93805e998c3ff724f5424
   .tablet\:text-sm {
     font-size: 13px;
   }
@@ -1053,24 +1007,9 @@ video {
 
 @media (min-width: 1366px) {
 
-  .laptop\:basis-1\/4 {
-    flex-basis: 25%;
-  }
-
   .laptop\:text-base {
     font-size: 15px;
   }
 }
 
-<<<<<<< HEAD
-=======
-@media (min-width: 1920px) {
-
-  .desktop\:basis-1\/4 {
-    flex-basis: 25%;
-  }
-
-}
-
->>>>>>> e52c72dc86f34502c2d93805e998c3ff724f5424
 
