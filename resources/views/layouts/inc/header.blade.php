@@ -59,11 +59,11 @@
             <hr class="text-light mx-3">
             <div class="flex flex-col items-start justify-start w-full">
                 <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Home</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">About Us</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Services</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Package</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Menu</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Contact Us</a>
+                <a href="{{ route('about_us') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">About Us</a>
+                <a href="{{ route('services') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Services</a>
+                <a href="{{ route('packages') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Package</a>
+                <a href="{{ route('menu') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Menu</a>
+                <a href="{{ route('contact_us') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Contact Us</a>
             </div>
         </aside>
 
@@ -77,11 +77,11 @@
 
             <div class="nav-links mt-0 tablet:mt-8 hidden tablet:flex flex-wrap gap-default">
                 <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Home</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">About Us</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Services</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Package</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Menu</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Contact Us</a>
+                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">About Us</a>
+                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Services</a>
+                <a href="{{ route('packages') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Package</a>
+                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Menu</a>
+                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Contact Us</a>
             </div>
             @if (Route::has('login'))
                 <div class="nav-btn gap-sm px-8 mt-4 hidden tablet:flex">

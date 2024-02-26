@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PackageController;
+use App\Http\Controllers\Customer\AboutController;
+use App\Http\Controllers\Customer\ServicesController;
+use App\Http\Controllers\Customer\PackagesController;
+use App\Http\Controllers\Customer\MenuController;
+use App\Http\Controllers\Customer\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,7 +47,11 @@ Route::resource('packages', \App\Http\Controllers\PackageController::class);
 
 Route::middleware('CheckUserRole')->group(function (){
 
-
+Route::get('/about_us', [App\Http\Controllers\Customer\AboutController::class, 'index'])->name('about_us');
+Route::get('/services', [App\Http\Controllers\Customer\ServicesController::class, 'index'])->name('services');
+Route::get('/packages', [App\Http\Controllers\Customer\PackagesController::class, 'index'])->name('packages');
+Route::get('/menu', [App\Http\Controllers\Customer\MenuController::class, 'index'])->name('menu');
+Route::get('/contact_us', [App\Http\Controllers\Customer\ContactController::class, 'index'])->name('contact_us');
 
 
 
