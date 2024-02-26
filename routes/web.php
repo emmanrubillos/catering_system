@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsersController;
-use App\Http\Controllers\PackageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,11 +30,8 @@ Route::get('/reservation/event_details', [App\Http\Controllers\CustomerEventDeta
 
 
 
-Route::resource('users', 'UsersController');
 Route::resource('users', \App\Http\Controllers\UsersController::class);
 
-
-Route::resource('packages', 'PackageController');
 Route::resource('packages', \App\Http\Controllers\PackageController::class);
 
 

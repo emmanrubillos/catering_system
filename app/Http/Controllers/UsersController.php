@@ -83,7 +83,7 @@ class UsersController extends Controller
         // Fetch the user data based on the ID
         $user = User::findOrFail($id);
         // Pass the user data to the view
-        return view('admin.users.edit', compact('user'));
+        return view('admin.users.partials._edit_user_modal', compact('user'));
     }
 
     /**
@@ -126,19 +126,19 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        // Find the user by ID
-        $user = User::findOrFail($id);
+       // Find the user by ID
+    $user = User::findOrFail($id);
 
-        // Delete the user
-        $deleteUser = $user->delete();
+    // Delete the user
+    $deleteUser = $user->delete();
 
-        // Check if the deletion was successful
-        if($deleteUser){
-        // If successful, return a JSON response with success message
-        return response()->json(['message' => 'User deleted successfully']);
-        } else {
-        // If deletion failed, return a JSON response with error message
-        return response()->json(['error' => 'Deletion failed!']);
+    // Check if the deletion was successful
+    if ($deleteUser) {
+        // If successful, redirect back to the index page with a success message
+        return redirect()->route('users.index')->with('success', 'User deleted successfully');
+    } else {
+        // If deletion failed, redirect back to the index page with an error message
+        return redirect()->route('users.index')->with('error', 'Deletion failed');
     }
 }
 
