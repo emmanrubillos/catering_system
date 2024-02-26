@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UsersController;
-use App\Http\Controllers\PackageController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -45,8 +42,6 @@ Route::get('/services', [App\Http\Controllers\Customer\ServicesController::class
 Route::get('/packages', [App\Http\Controllers\Customer\PackagesController::class, 'index'])->name('packages');
 Route::get('/menu', [App\Http\Controllers\Customer\MenuController::class, 'index'])->name('menu');
 Route::get('/contact_us', [App\Http\Controllers\Customer\ContactController::class, 'index'])->name('contact_us');
-
-
 
 
 });
