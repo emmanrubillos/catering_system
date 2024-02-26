@@ -95,6 +95,9 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        $the_id = $id;
+        dd($the_id);
         // Validate the request data
         $validatedData = $request->validate([
             'first_name' => 'required|string|max:255',
@@ -109,7 +112,6 @@ class UsersController extends Controller
         // Find the user by ID and update its details
         $user = User::findOrFail($id);
         $user->update($validatedData);
-
         // Redirect back to the index page with the updated user data and a success message
         return redirect()->route('users.index')->with('success', 'User updated successfully!');
     }
