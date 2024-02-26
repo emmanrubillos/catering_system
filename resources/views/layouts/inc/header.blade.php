@@ -20,9 +20,13 @@
             {{-- logo --}}
             <a href="{{ url('/home') }}" class="logo-md-sm w-32">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> 860bdbcd3aa94e659bed4edadb38155e0d2628d6
+=======
+
+>>>>>>> e52c72dc86f34502c2d93805e998c3ff724f5424
                 <img class="logo-lg w-auto h-auto sm-mobile:w" src="{{ asset('assets/img/logo.png') }}" alt="titans-catering-logo">
             </a>
         </div>
