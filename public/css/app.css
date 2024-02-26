@@ -1016,6 +1016,10 @@ video {
 
 @media (min-width: 1366px) {
 
+  .laptop\:basis-1\/4 {
+    flex-basis: 25%;
+  }
+
   .laptop\:text-base {
     font-size: 15px;
   }

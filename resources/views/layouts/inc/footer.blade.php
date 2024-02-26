@@ -54,7 +54,11 @@
                 </ul>
             </div>
         </div>
+<<<<<<< HEAD
         <div class="column-two basis-1/3 flex justify-between">
+=======
+        <div class="column-two basis-1/3 laptop:basis-1/4 flex justify-between">
+>>>>>>> 860bdbcd3aa94e659bed4edadb38155e0d2628d6
             {{-- C-two-Column-one --}}
             <div>
                 <h5 class="font-bold uppercase text-lg">
@@ -236,8 +240,13 @@
 
         </div>
     </div>
+<<<<<<< HEAD
     <hr class="text-light ml-10 mr-80 mt-1 mb-3">
     <div class="flex justify-between ml-10 mr-80 text-sm">
+=======
+    <hr class="text-light mx-10 mt-1 mb-3">
+    <div class="flex justify-between mx-10 text-sm">
+>>>>>>> 860bdbcd3aa94e659bed4edadb38155e0d2628d6
         <p>MLG CL's Capstone Project Catering System Web-Based.</p>
         <p>Copyright © 2024. All Right Reserved.</p>
     </div>
