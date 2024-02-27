@@ -14,11 +14,13 @@
 
 <body>
 
-	<div class="main-wrapper">
+	<div class="main-wrapper overflow-x-hidden">
 		
 		@include('layouts.inc.header')
 		
         	@yield('content')
+
+			
 
 		@include('layouts.inc.footer')
 

@@ -39,6 +39,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       height: {
+        '115': '28rem',
         '128': '32rem',
       },
       gap: {
