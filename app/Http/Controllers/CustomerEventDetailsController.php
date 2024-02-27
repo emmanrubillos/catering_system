@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CustomerEventDetail;
 
 class CustomerEventDetailsController extends Controller
 {
@@ -13,7 +14,8 @@ class CustomerEventDetailsController extends Controller
      */
     public function index()
     {
-        return view ('admin.reservation.event_details.index');
+        $event_details = CustomerEventDetail::all(); // Assuming EventDetail is your model name
+        return view('admin.reservation.event_details.index', compact('event_details'));
     }
 
     /**
@@ -32,9 +34,10 @@ class CustomerEventDetailsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+        public function store(Request $request)
     {
         //
+
     }
 
     /**
@@ -45,7 +48,7 @@ class CustomerEventDetailsController extends Controller
      */
     public function show($id)
     {
-        //
+       //
     }
 
     /**
@@ -56,7 +59,7 @@ class CustomerEventDetailsController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Logic to edit a specific event will be added here
     }
 
     /**
@@ -68,7 +71,7 @@ class CustomerEventDetailsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Logic to update a specific event will be added here
     }
 
     /**
@@ -79,6 +82,6 @@ class CustomerEventDetailsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Logic to delete a specific event will be added here
     }
 }

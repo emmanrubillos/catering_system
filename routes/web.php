@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PackageController;
+use App\Http\Controllers\CustomerEventDetailsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,19 +25,16 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->na
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->middleware('auth')->name('profile');
 Route::get('/package', [App\Http\Controllers\PackageController::class, 'index'])->name('package');
-
+ Route::get('/reservation/review', [App\Http\Controllers\CustomerReviewController::class, 'index'])->name('review');
+Route::get('/reservation/event_details', [CustomerEventDetailsController::class, 'index'])->name('event_details');
+Route::get('/reservation/event_details/create', [CustomerEventDetailsController::class, 'create'])->name('event_details.create');
 Route::get('/reservation/buffet_order', [App\Http\Controllers\CustomerBuffetOrderController::class, 'index'])->name('buffet_order');
 Route::get('/reservation/bill', [App\Http\Controllers\CustomerBillController::class, 'index'])->name('bill');
-Route::get('/reservation/review', [App\Http\Controllers\CustomerReviewController::class, 'index'])->name('review');
-Route::get('/reservation/event_details', [App\Http\Controllers\CustomerEventDetailsController::class, 'index'])->name('event_details');
 
 
 
-Route::resource('users', 'UsersController');
+
 Route::resource('users', \App\Http\Controllers\UsersController::class);
-
-
-Route::resource('packages', 'PackageController');
 Route::resource('packages', \App\Http\Controllers\PackageController::class);
 
 

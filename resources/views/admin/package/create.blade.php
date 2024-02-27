@@ -25,15 +25,27 @@
                         </div>
                         <div class="form-group">
                             <label for="type">Type</label>
-                            <input type="text" class="form-control" id="type" name="type">
+                            <select class="form-control" id="type" name="type">
+                                <option value="" selected disabled>Select a Type</option>
+                                <option value="PackageA">Package A</option>
+                                <option value="PackageB">Package B</option>
+                                <option value="PackageC">Package C</option>
+                                <!-- Add more options as needed -->
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                            <textarea class="form-control tinymce-editor" id="description" name="description" rows="3"></textarea>
+
                         </div>
                         <div class="form-group">
                             <label for="price">Price</label>
-                            <input type="number" class="form-control" id="price" name="price">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">₱</span>
+                                </div>
+                                <input type="number" class="form-control" id="price" name="price">
+                            </div>
                         </div>
                         <button type="submit" class="btn btn-success">Save</button>
                         <a href="{{ route('packages.index') }}" class="btn btn-secondary">Cancel</a>
@@ -43,4 +55,14 @@
         </div>
     </div>
 </div>
+
+ <script>
+    tinymce.init({
+        selector: 'textarea.tinymce-editor', // Target specifically the textarea with the class "tinymce-editor"
+        plugins: 'autoresize',
+        toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
+        // Add more configuration options as needed
+    });
+</script> --}}
+
 @endsection
