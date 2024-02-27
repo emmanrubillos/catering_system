@@ -1,9 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\CustomerEventDetailsController;
+=======
+>>>>>>> e48d05639c73d05266635701b65081c7176b5c09
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -33,16 +36,23 @@ Route::get('/reservation/bill', [App\Http\Controllers\CustomerBillController::cl
 
 
 
+<<<<<<< HEAD
 
 Route::resource('users', \App\Http\Controllers\UsersController::class);
+=======
+Route::resource('users', \App\Http\Controllers\UsersController::class);
+
+>>>>>>> e48d05639c73d05266635701b65081c7176b5c09
 Route::resource('packages', \App\Http\Controllers\PackageController::class);
 
 
 Route::middleware('CheckUserRole')->group(function (){
 
-
-
-
+Route::get('/about_us', [App\Http\Controllers\Customer\AboutController::class, 'index'])->name('about_us');
+Route::get('/services', [App\Http\Controllers\Customer\ServicesController::class, 'index'])->name('services');
+Route::get('/packages', [App\Http\Controllers\Customer\PackagesController::class, 'index'])->name('packages');
+Route::get('/menu', [App\Http\Controllers\Customer\MenuController::class, 'index'])->name('menu');
+Route::get('/contact_us', [App\Http\Controllers\Customer\ContactController::class, 'index'])->name('contact_us');
 
 
 });

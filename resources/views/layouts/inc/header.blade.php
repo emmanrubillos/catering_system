@@ -1,11 +1,11 @@
-<header>
+<header class="bg-light">
     <div class="wave">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
         </svg>
     </div>
     <nav>
-        {{--! Sidebar for Tablet to Mobile --}}
+        {{--! Menu for Tablet to Mobile --}}
         <div class="flex items-start tablet:hidden justify-center relative">
             {{-- Hamburger Menu --}}
             <button id="menu-toggle" class="hamburger absolute left-0 py-2 px-5 transition ease-in-out delay-100 hover:scale-110">
@@ -15,7 +15,6 @@
             </button>
             {{-- logo --}}
             <a href="{{ url('/home') }}" class="logo-md-sm w-32">
-
                 <img class="logo-lg w-auto h-auto sm-mobile:w" src="{{ asset('assets/img/logo.png') }}" alt="titans-catering-logo">
             </a>
         </div>
@@ -60,11 +59,11 @@
             <hr class="text-light mx-3">
             <div class="flex flex-col items-start justify-start w-full">
                 <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Home</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">About Us</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Services</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Package</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Menu</a>
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Contact Us</a>
+                <a href="{{ route('about_us') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">About Us</a>
+                <a href="{{ route('services') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Services</a>
+                <a href="{{ route('packages') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Package</a>
+                <a href="{{ route('menu') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Menu</a>
+                <a href="{{ route('contact_us') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Contact Us</a>
             </div>
         </aside>
 
@@ -78,11 +77,11 @@
 
             <div class="nav-links mt-0 tablet:mt-8 hidden tablet:flex flex-wrap gap-default">
                 <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Home</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">About Us</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Services</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Package</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Menu</a>
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Contact Us</a>
+                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">About Us</a>
+                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Services</a>
+                <a href="{{ route('packages') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Package</a>
+                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Menu</a>
+                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Contact Us</a>
             </div>
             @if (Route::has('login'))
                 <div class="nav-btn gap-sm px-8 mt-4 hidden tablet:flex">
