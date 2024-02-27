@@ -5,7 +5,7 @@
         </svg>
     </div>
     <nav>
-        {{--! Sidebar for Tablet to Mobile --}}
+        {{--! Menu for Tablet to Mobile --}}
         <div class="flex items-start tablet:hidden justify-center relative">
             {{-- Hamburger Menu --}}
             <button id="menu-toggle" class="hamburger absolute left-0 py-2 px-5 transition ease-in-out delay-100 hover:scale-110">
