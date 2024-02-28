@@ -50,6 +50,7 @@ class PackageController extends Controller
 
         // Redirect back to the index page with a success message
         return redirect()->route('package.index')->with('success', 'Package created successfully!');
+
     }
     public function show($id)
     {
@@ -65,6 +66,7 @@ class PackageController extends Controller
     {
         $package = Package::findOrFail($id);
         return view('admin.package.partial.edit_package_modal', compact('package'));
+
     }
 
     /**

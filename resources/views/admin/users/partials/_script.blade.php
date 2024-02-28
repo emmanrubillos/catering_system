@@ -1,4 +1,9 @@
 <script>
+    $(document).ready(function() {
+        $('#users-table').DataTable();
+    });
+</script>
+<script>
     function confirmDeleteUser(id){
         event.preventDefault();
         let userId = id;
@@ -37,12 +42,10 @@
                             confirmButtonColor: '#3085d6',
                             cancelButtonColor: '#d33',
                             confirmButtonText: 'Okay'
-                        }).then((result) => {
-                            if (result.isConfirmed) {
-                                $('#users-table').DataTable().ajax.reload();
-                                location.reload(); // This line refreshes the page
-                            }
-                        })
+                        }).then(() => {
+                            // Reload the page immediately after clicking "Okay"
+                            location.reload();
+                        });
                     },
                     error: function(error) {
                         // Handle error response
