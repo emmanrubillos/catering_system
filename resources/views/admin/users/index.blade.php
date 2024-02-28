@@ -1,6 +1,5 @@
-@extends('admin.partials.navbar')
 @extends('admin.partials.sidebar')
-
+@extends('admin.partials.navbar')
 @section('content')
 <div class="container-fluid">
     <div class="page-wrapper">
@@ -84,11 +83,10 @@
     </div>
 </div>
 
-<script>
-      let table = new DataTable('#users-table');
-</script>
 
-@include('admin.users.partials._script')
+
+
+
 @include('admin.users.partials._add_user_modal')
-
+@include('admin.users.partials._script')
 @endsection 
