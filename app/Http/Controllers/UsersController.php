@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\User;
 
 class UsersController extends Controller
 {
@@ -17,6 +18,9 @@ class UsersController extends Controller
         $users = User::all(); // Fetch all users
         return view('admin.users.index', compact('users'));
         
+        $users = User::all(); // Fetch all users
+        return view('admin.users.index', compact('users'));
+        
     }
 
     /**
@@ -26,6 +30,7 @@ class UsersController extends Controller
      */
     public function create()
     {
+        return view('admin.users.create');
         return view('admin.users.create');
     }
 
@@ -95,6 +100,26 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
+        // Validate the request data
+        $validatedData = $request->validate([
+            'first_name' => 'required|string|max:255',
+            'middle_name' => 'nullable|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users,email,'.$id,
+            'contact_number' => 'nullable|string|max:255',
+            'address' => 'nullable|string|max:255',
+            'role_id' => 'required|integer',
+        ]);
+
+        // Find the user by ID and update its details
+        $user = User::findOrFail($id);
+        $user->update($validatedData);
+
+        // Redirect back to the index page with the updated user data and a success message
+        return redirect()->route('users.index')->with('success', 'User updated successfully!');
+    }
+
+
         // Validate the request data
         $validatedData = $request->validate([
             'first_name' => 'required|string|max:255',

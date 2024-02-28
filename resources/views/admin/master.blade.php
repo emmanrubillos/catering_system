@@ -35,13 +35,16 @@
 		transition: left 0.3s ease; /* Add transition effect for smoother animation */
 	}
 
+
 	.new-sidebar.active {
 		left: 0; /* Display the sidebar when it has the 'active' class */
 	}
 
+
 	.new-sidebar-inner {
 		padding: 20px;
 	}
+
 
 	.new-sidebar ul {
 		list-style: none;
@@ -49,14 +52,17 @@
 		margin: 0;
 	}
 
+
 	.new-sidebar ul li {
 		margin-bottom: 10px;
 	}
+
 
 	.new-sidebar ul li a {
 		color: #fff;
 		text-decoration: none;
 	}
+
 
 	/* Your existing CSS styles for the hamburger menu icon */
 	.hamburger-menu {
@@ -87,11 +93,13 @@
 	<script src="{{ URL::to('assets/js/toastr_jquery.min.js') }}"></script>
 	<script src="{{ URL::to('assets/js/toastr.min.js') }}"></script>
 
+
 </head>
 
 <body>
 
 	<div class="main-wrapper">
+
 
         @yield('content')
 
@@ -119,3 +127,4 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> --}}
     {{-- TinyMCE Script --}}
 </html>
+
