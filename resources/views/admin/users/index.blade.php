@@ -1,5 +1,6 @@
-@extends('admin.partials.sidebar')
 @extends('admin.partials.navbar')
+@extends('admin.partials.sidebar')
+
 @section('content')
 <div class="container-fluid">
     <div class="page-wrapper">
@@ -36,7 +37,6 @@
                                     <th scope="col">Email</th>
                                     <th scope="col">Contact</th>
                                     <th scope="col">Address</th>
-                                    <th scope="col">Address</th>
                                     <th scope="col">Role</th>
                                 </tr>
                             </thead>
@@ -45,6 +45,7 @@
                                 <tr>
                                     <td>
                                         <a href="{{ route('users.edit', ['user' => $user->id]) }}" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editUserModal{{ $user->id }}"><i class="fas fa-edit"></i></a>
+
                                         <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
                                             @csrf
                                             @method('DELETE')
@@ -84,10 +85,11 @@
     </div>
 </div>
 
+    <script>
+         let table = new DataTable('#users-table');
+    </script>
 
-
-
-
-@include('admin.users.partials._add_user_modal')
 @include('admin.users.partials._script')
+@include('admin.users.partials._add_user_modal')
+
 @endsection 
