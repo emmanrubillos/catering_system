@@ -58,7 +58,7 @@
             </div>
             <hr class="text-light mx-3">
             <div class="flex flex-col items-start justify-start w-full">
-                <a href="{{ route('home') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Home</a>
+                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Home</a>
                 <a href="{{ route('about_us') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">About Us</a>
                 <a href="{{ route('services') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Services</a>
                 <a href="{{ route('packages') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Package</a>
@@ -76,7 +76,7 @@
             </a>
 
             <div class="nav-links mt-0 tablet:mt-8 hidden tablet:flex flex-wrap gap-default">
-                <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Home</a>
+                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Home</a>
                 <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">About Us</a>
                 <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Services</a>
                 <a href="{{ route('packages') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Package</a>
