@@ -17,6 +17,7 @@ class UsersController extends Controller
         $users = User::all(); // Fetch all users
         return view('admin.users.index', compact('users'));
         
+        
     }
 
     /**
@@ -106,16 +107,13 @@ class UsersController extends Controller
             'role_id' => 'required|integer',
         ]);
 
-        // Find the user by ID and update its details
-        $user = User::findOrFail($id);
-        $user->update($validatedData);
+            // Find the user by ID and update its details
+            $user = User::findOrFail($id);
+            $user->update($validatedData);
 
-        // Redirect back to the index page with the updated user data and a success message
-        return redirect()->route('users.index')->with('success', 'User updated successfully!');
-    }
-
-
-
+            // Redirect back to the index page with the updated user data and a success message
+            return redirect()->route('users.index')->with('success', 'User updated successfully!');
+        }
     /**
      * Remove the specified resource from storage.
      *
@@ -131,13 +129,7 @@ class UsersController extends Controller
     $deleteUser = $user->delete();
 
     // Check if the deletion was successful
-    if ($deleteUser) {
-        // If successful, redirect back to the index page with a success message
-        return redirect()->route('users.index')->with('success', 'User deleted successfully');
-    } else {
-        // If deletion failed, redirect back to the index page with an error message
-        return redirect()->route('users.index')->with('error', 'Deletion failed');
-    }
+    return response()->json(['message' => 'User deleted successfully'], 200);
 }
 
 }
