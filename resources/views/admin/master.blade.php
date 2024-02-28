@@ -18,8 +18,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ URL::to('assets/css/bootstrap-datetimepicker.min.css') }}">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
-     {{-- TinyMCE --}}
-    <script src="https://cdn.tiny.cloud/1/aktu4cosyi162kexmhu2iy189dddff1gb22vte8vlumlctdi/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+   {{-- TinyMCE --}}
+   <script src="https://cdn.tiny.cloud/1/f91h8ob9cbvkiqq7t8c04i5g7mpzus8bufl7tdxkfq8cydqj/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -98,21 +98,9 @@
 
         @yield('content')
 
-        <script src="https://cdn.tiny.cloud/1/aktu4cosyi162kexmhu2iy189dddff1gb22vte8vlumlctdi/tinymce/6/tinymce.min.js"
-        referrerpolicy="origin"></script>
-    <script>
-        tinymce.init({
-            selector: 'textarea.tinymce-editor', // Target specifically the textarea with the class "tinymce-editor"
-            plugins: 'autoresize',
-            toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code',
-            // Add more configuration options as needed
-        });
-    </script>
-
 	</div>
 
-
-
+{{-- TinyMCE Script --}}
 
 </body>
 	<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
@@ -130,4 +118,5 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 	{{-- <script src="{{ URL::to('assets/js/jquery-3.5.1.min.js') }}"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> --}}
+    {{-- TinyMCE Script --}}
 </html>

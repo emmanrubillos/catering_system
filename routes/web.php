@@ -1,12 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
+
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\CustomerEventDetailsController;
-=======
->>>>>>> e48d05639c73d05266635701b65081c7176b5c09
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +26,7 @@ Auth::routes();
 Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->middleware('auth')->name('profile');
-Route::get('/package', [App\Http\Controllers\PackageController::class, 'index'])->name('package');
+// Route::get('/package', [App\Http\Controllers\PackageController::class, 'index'])->name('package');
  Route::get('/reservation/review', [App\Http\Controllers\CustomerReviewController::class, 'index'])->name('review');
 Route::get('/reservation/event_details', [CustomerEventDetailsController::class, 'index'])->name('event_details');
 Route::get('/reservation/event_details/create', [CustomerEventDetailsController::class, 'create'])->name('event_details.create');
@@ -36,14 +35,10 @@ Route::get('/reservation/bill', [App\Http\Controllers\CustomerBillController::cl
 
 
 
-<<<<<<< HEAD
+
 
 Route::resource('users', \App\Http\Controllers\UsersController::class);
-=======
-Route::resource('users', \App\Http\Controllers\UsersController::class);
-
->>>>>>> e48d05639c73d05266635701b65081c7176b5c09
-Route::resource('packages', \App\Http\Controllers\PackageController::class);
+Route::resource('package', \App\Http\Controllers\PackageController::class);
 
 
 Route::middleware('CheckUserRole')->group(function (){

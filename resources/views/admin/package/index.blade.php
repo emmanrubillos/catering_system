@@ -1,4 +1,3 @@
-User
 @extends('admin.partials.navbar')
 @extends('admin.partials.sidebar')
 
@@ -12,8 +11,9 @@ User
                         <div class="row justify-content-center">
                         </div>
                     </div>
+                </div>
             </div>
-            <div class="card ">
+            <div class="card">
                 <div class="card-header">
                     <div class="row">
                         <div class="col-md-6 col-12">
@@ -21,7 +21,9 @@ User
                             Packages
                         </div>
                         <div class="col-md-6 col-12 text-right">
-                            <a href="{{ route('packages.create') }}" class="btn btn-success"><i class="fas fa-plus"></i> Add New Package</a>
+                            <button class="btn btn-success" data-toggle="modal" data-target="#addPackageModal">
+                                <i class="fas fa-plus"></i> Add New Package
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -30,12 +32,11 @@ User
                         <caption>Packages Table</caption>
                         <thead>
                             <tr>
-                                {{-- <th scope="col">#</th> --}}
                                 <th scope="col">Name</th>
                                 <th scope="col">Type</th>
                                 <th scope="col">Description</th>
                                 <th scope="col">Price</th>
-                                <th scope="col">Actions</th> <!-- Added Actions column -->
+                                <th scope="col">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,15 +48,18 @@ User
                                 <td>{{ $package->description }}</td>
                                 <td>{{ $package->price }}</td>
                                 <td>
-                                    <a href="{{ route('packages.edit', $package->id) }}" class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></a>
+                                    <a href="#" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editPackageModal{{ $package->id }}"><i class="fas fa-edit"></i></a>
+
+
                                     {{-- <a href="{{ route('packages.show', $package->id) }}" class="btn btn-warning btn-sm"><i class="fas fa-eye"></i></a> --}}
-                                    <form action="{{ route('packages.destroy', $package->id) }}" method="POST" style="display: inline;">
+                                    <form action="{{ route('package.destroy', $package->id) }}" method="POST" style="display: inline;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
                                     </form>
                                 </td>
                             </tr>
+                            @include('admin.package.partial.edit_package_modal', ['package' => $package])
                             @endforeach
                         </tbody>
                     </table>
@@ -68,4 +72,6 @@ User
 <script>
     let table = new DataTable('#packages-table');
 </script>
+
+@include('admin.package.partial.add_package_modal')
 @endsection
