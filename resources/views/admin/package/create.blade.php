@@ -8,25 +8,15 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-12 mt-5">
-                        <div class="row justify-content-center">
-                        </div>
-                        <h3 class="page-title mt-3">Create Package</h3>
-                        <ul class="breadcrumb">
-                            <li class="breadcrumb-item active">Your are in the Package</li>
-                        </ul>
+                        <h3 class="page-title mt-3">Add New Package</h3>
                     </div>
                 </div>
             </div>
             <div class="card">
-                <div class="card-header">
-                    <div class="row">
-                        <div class="col-md-6 col-12">
-                            <i class="fas fa-solid fa-users"></i>
-                            Create New Package
-                        </div>
-                    </div>
+                <div class="card-header bg-primary text-white">
+                    <h4><i class="fas fa-user"></i> Add New Package</h4>
                 </div>
-                <div class="card-body p-1">
+                <div class="card-body">
                     <form action="{{ route('packages.store') }}" method="POST">
                         @csrf
                         <div class="form-group">
@@ -42,14 +32,11 @@
                             <textarea class="form-control" id="description" name="description" rows="3"></textarea>
                         </div>
                         <div class="form-group">
-                            <label for="number">Number</label>
-                            <input type="number" class="form-control" id="number" name="number">
-                        </div>
-                        <div class="form-group">
                             <label for="price">Price</label>
                             <input type="number" class="form-control" id="price" name="price">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-success">Save</button>
+                        <a href="{{ route('packages.index') }}" class="btn btn-secondary">Cancel</a>
                     </form>
                 </div>
             </div>
@@ -57,3 +44,4 @@
     </div>
 </div>
 @endsection
+

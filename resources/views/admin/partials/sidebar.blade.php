@@ -35,7 +35,7 @@
                         </li>
                         <li>
                             <a href="{{ route('event_details') }}" class="{{ request()->is('reservation/event_details') ? 'active' : '' }}">
-                                {!! request()->is('reservation/event_details') ? '<b>Event Details</b>' : 'Event Details' !!} 
+                                {!! request()->is('reservation/event_details') ? '<b>Event Details</b>' : 'Event Details' !!}
                             </a>
                         </li>
                         <li>
@@ -52,16 +52,29 @@
                 </li>
 
                 </li>
-                <li class="submenu">
-                    <a href="#"><i class="fas fa-user"></i> <span> Menu </span></a>
                 </li>
-                <li class="submenu">
-                    <a href="#"><i class="fas fa-user"></i> <span> Venue </span></a>
+                <li class="nav-item
+                {{ request()->is('menu') ? 'active' : '' }}">
+                <a class="nav-link" href="/menu">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Menu</span></a>
                 </li>
-                <li class="submenu">
-                    <a href="#"><i class="fas fa-user"></i> <span> Themes </span></a>
+
+                <li class="nav-item
+                {{ request()->is('venue') ? 'active' : '' }}">
+                <a class="nav-link" href="/venue">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Venue</span></a>
                 </li>
+
                 <!-- Nav Item - Package -->
+                <li class="nav-item
+                {{ request()->is('themes') ? 'active' : '' }}">
+                <a class="nav-link" href="/themes">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Themes</span></a>
+                </li>
+
                 <li class="nav-item
                 {{ request()->is('package') ? 'active' : '' }}">
                 <a class="nav-link" href="/package">
@@ -70,14 +83,14 @@
                 </li>
 
 
-
-
-                <li class="submenu">
-                    <a href="#"><i class="fas fa-user"></i> <span> Blog </span></a>
+                <li class="nav-item
+                {{ request()->is('blog') ? 'active' : '' }}">
+                <a class="nav-link" href="/blog">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Blog</span></a>
                 </li>
+
             </ul>
         </div>
     </div>
 </div>
-
-
