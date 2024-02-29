@@ -1,19 +1,20 @@
-@extends('layouts.master')
+@extends('layouts.app')
+
 @section('content')
 <div class="container">
-    <div class="page-wrapper">
-        <div class="content container-fluid">
-            <div class="page-header">
-                <div class="row">
-                    <div class="col-sm-12 mt-5">
-                        <div class="row justify-content-center">
-                            
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
                         </div>
-                        <h3 class="page-title mt-3"> Good Morning </h3>
-                        <ul class="breadcrumb">
-                            <li class="breadcrumb-item active">This is Home</li>
-                        </ul>
-                    </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
                 </div>
             </div>
         </div>

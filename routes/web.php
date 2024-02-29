@@ -39,3 +39,7 @@ Route::post('/users/create', [UsersController::class, 'store'])->name('users.sto
 Route::middleware('CheckUserRole')->group(function (){
 
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
