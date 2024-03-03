@@ -1,0 +1,12 @@
+.home {
+  background-image: url('/assets/img/background-images/home-bg-with-trp.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
