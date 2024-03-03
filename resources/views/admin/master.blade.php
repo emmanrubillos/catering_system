@@ -5,8 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 	<title>Admin | Titan's Catering</title>
-
-
+	<link href="https://cdn.datatables.net/v/dt/dt-2.0.1/datatables.min.css" rel="stylesheet">
 	<link rel="shortcut icon" type="image/x-icon" href="{{ URL::to('assets/img/favicon.png') }}">
 	<link rel="stylesheet" href="{{ URL::to('assets/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ URL::to('assets/plugins/fontawesome/css/fontawesome.min.css') }}">
@@ -17,12 +16,12 @@
 	<link rel="stylesheet" href="{{ URL::to('assets/css/style.css') }}"> </head>
 	<link rel="stylesheet" type="text/css" href="{{ URL::to('assets/css/bootstrap-datetimepicker.min.css') }}">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<link rel="stylesheet" href="{{ URL::to('assets/css/toastr.min.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	
     <style>
+		
 	a {
 		text-decoration: none;
 	}
@@ -36,13 +35,16 @@
 		transition: left 0.3s ease; /* Add transition effect for smoother animation */
 	}
 
+
 	.new-sidebar.active {
 		left: 0; /* Display the sidebar when it has the 'active' class */
 	}
 
+
 	.new-sidebar-inner {
 		padding: 20px;
 	}
+
 
 	.new-sidebar ul {
 		list-style: none;
@@ -50,14 +52,17 @@
 		margin: 0;
 	}
 
+
 	.new-sidebar ul li {
 		margin-bottom: 10px;
 	}
+
 
 	.new-sidebar ul li a {
 		color: #fff;
 		text-decoration: none;
 	}
+
 
 	/* Your existing CSS styles for the hamburger menu icon */
 	.hamburger-menu {
@@ -84,9 +89,10 @@
 	</style>
 
 	{{-- message toastr --}}
-	<link rel="stylesheet" href="{{ URL::to('assets/css/toastr.min.css') }}">
+	
 	<script src="{{ URL::to('assets/js/toastr_jquery.min.js') }}"></script>
 	<script src="{{ URL::to('assets/js/toastr.min.js') }}"></script>
+
 
 </head>
 
@@ -94,14 +100,16 @@
 
 	<div class="main-wrapper">
 
+
         @yield('content')
 
 	</div>
 
-
-
+{{-- TinyMCE Script --}}
 
 </body>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="https://cdn.datatables.net/v/dt/dt-2.0.1/datatables.min.js"></script>
 	<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script src="{{ URL::to('assets/js/popper.min.js') }}"></script>
 	<script src="{{ URL::to('assets/js/bootstrap.min.js') }}"></script>
@@ -115,6 +123,8 @@
 	<script src="{{ URL::to('assets/js/chart.morris.js') }}"></script>
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-	{{-- <script src="{{ URL::to('assets/js/jquery-3.5.1.min.js') }}"></script> --}}
-    {{-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> --}}
+	{{-- <script src="{{ URL::to('assets/js/jquery-3.5.1.min.js') }}"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> --}}
+    {{-- TinyMCE Script --}}
 </html>
+

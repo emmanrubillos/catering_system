@@ -49,7 +49,8 @@ class PackageController extends Controller
         Package::create($validatedData);
 
         // Redirect back to the index page with a success message
-        return redirect()->route('packages.index')->with('success', 'Package created successfully!');
+        return redirect()->route('package.index')->with('success', 'Package created successfully!');
+
     }
     public function show($id)
     {
@@ -64,7 +65,8 @@ class PackageController extends Controller
     public function edit($id)
     {
         $package = Package::findOrFail($id);
-        return view('admin.package.edit', compact('package'));
+        return view('admin.package.partial.edit_package_modal', compact('package'));
+
     }
 
     /**
@@ -89,7 +91,7 @@ class PackageController extends Controller
         $package->update($validatedData);
 
         // Redirect back to the index page with a success message
-        return redirect()->route('packages.index')->with('success', 'Package updated successfully!');
+        return redirect()->route('package.index')->with('success', 'Package updated successfully!');
     }
 
     /**
@@ -105,6 +107,6 @@ class PackageController extends Controller
         $package->delete();
 
         // Redirect back to the index page with a success message
-        return redirect()->route('packages.index')->with('success', 'Package deleted successfully!');
+        return redirect()->route('package.index')->with('success', 'Package deleted successfully!');
     }
 }
