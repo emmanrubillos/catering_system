@@ -42,7 +42,7 @@ class PackageController extends Controller
             'name' => 'required|string|max:255',
             'type' => 'required|string|max:255',
             'description' => 'required|string',
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|regex:/^\d+(\.\d{1,2})?$/',
         ]);
 
         // Create the new package
@@ -83,7 +83,7 @@ class PackageController extends Controller
             'name' => 'required|string|max:255',
             'type' => 'required|string|max:255',
             'description' => 'required|string',
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|regex:/^\d+(\.\d{1,2})?$/',
         ]);
 
         // Find the package by ID and update its details

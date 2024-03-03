@@ -46,7 +46,7 @@
                                 <td>{{ $package->name }}</td>
                                 <td>{{ $package->type }}</td> <!-- Display type as plain text -->
                                 <td>{{ $package->description }}</td>
-                                <td>{{ $package->price }}</td>
+                                <td>{{ '₱' . number_format($package->price, 2) }}</td>
                                 <td>
                                     <a href="#" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editPackageModal{{ $package->id }}"><i class="fas fa-edit"></i></a>
 
@@ -69,9 +69,13 @@
     </div>
 </div>
 
+
 <script>
-    let table = new DataTable('#packages-table');
+    $(document).ready(function() {
+        $('#packages-table').DataTable();
+    });
 </script>
+
 
 @include('admin.package.partial.add_package_modal')
 @endsection

@@ -19,9 +19,8 @@
                         <label for="type">Type</label>
                         <select class="form-control" id="type" name="type">
                             <option value="" selected disabled>Select a Type</option>
-                            <option value="PackageA">Package A</option>
-                            <option value="PackageB">Package B</option>
-                            <option value="PackageC">Package C</option>
+                            <option value="PackageA">Pax</option>
+                            <option value="PackageB">Package</option>
                             <!-- Add more options as needed -->
                         </select>
                     </div>
