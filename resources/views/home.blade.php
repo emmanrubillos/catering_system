@@ -1,7 +1,7 @@
-@extends('layouts.app')
-
+@extends('layouts.master')
 @section('content')
   <section class="w-full h-160">
+
     {{--? Home Top Container  --}}
     <div class="home h-full">
         <div class="relative text-center top-40">
@@ -32,7 +32,6 @@
             </a>
           </div>
         </div>
-
 
         <img class="absolute bottom-0 z-0"
         src="{{ URL::to('assets/img/wave-home.svg') }}" alt="wave-home-bottom">
@@ -675,4 +674,3 @@
 
 @include('layouts.pages_._home.scripts.tab-menu-script')
 @endsection
-

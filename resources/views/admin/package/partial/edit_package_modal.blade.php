@@ -19,9 +19,8 @@
                     <div class="form-group">
                         <label for="type">Type</label>
                         <select class="form-control" id="type" name="type">
-                            <option value="PackageA" @if($package->type == 'PackageA') selected @endif>Package A</option>
-                            <option value="PackageB" @if($package->type == 'PackageB') selected @endif>Package B</option>
-                            <option value="PackageC" @if($package->type == 'PackageC') selected @endif>Package C</option>
+                            <option value="Pax" @if($package->type == 'Pax') selected @endif>Pax</option>
+                            <option value="Package" @if($package->type == 'Package') selected @endif>Package</option>
                             <!-- Add more options as needed -->
                         </select>
                     </div>
@@ -45,3 +44,4 @@
         </div>
     </div>
 </div>
+

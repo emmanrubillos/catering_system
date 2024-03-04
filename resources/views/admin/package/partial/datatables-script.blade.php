@@ -1,6 +1,4 @@
-{{-- <script>
-    let table = new DataTable('#packages-table');
-</script> --}}
+
 <script>
     $(document).ready( function () {
         $('#packages-table').DataTable({
