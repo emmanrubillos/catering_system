@@ -85,10 +85,6 @@
     </div>
 </div>
 
-    <script>
-         let table = new DataTable('#users-table');
-    </script>
-
 @include('admin.users.partials._script')
 @include('admin.users.partials._add_user_modal')
 
