@@ -18,9 +18,12 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      'white': '#ffffff',
       'light': '#FFF7E9',
+      'light-mild': '#FAF2E4',
       'dark': '#181D50',
       'primary': '#FF731D',
+      'primary-dark': '#ED6B1B',
       'default-blue': '#1746A2',
       'light-blue': '#5F9DF7',
     },
@@ -35,12 +38,10 @@ module.exports = {
         '2xl': '1rem',
         '3xl': '1.5rem',
       },
-      fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-      },
       height: {
         '115': '28rem',
         '128': '32rem',
+        '160': '60rem',
       },
       gap: {
         'default': '50px',
@@ -52,7 +53,7 @@ module.exports = {
         xsm: '11px',
         sm: '13px',
         base: '15px',
-        md: '18',
+        md: '18px',
         lg: '20px',
         xl: '24px',
         xxl: '30px',

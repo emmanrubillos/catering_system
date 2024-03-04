@@ -28,7 +28,7 @@
                     </div>
                 </div>
                 <div class="card-body p-1">
-                    <table class="table table-sm table-hover mb-0" id="packages-table">
+                    <table class="table table-sm table-hover mb-0"  id="packages-table">
                         <caption>Packages Table</caption>
                         <thead>
                             <tr>
