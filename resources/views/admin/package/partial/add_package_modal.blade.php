@@ -1,4 +1,4 @@
-<!-- Modal -->
+<!-- Add Package Modal -->
 <div class="modal fade" id="addPackageModal" tabindex="-1" role="dialog" aria-labelledby="addPackageModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('package.store') }}" method="POST">
+                <form id="addPackageForm" action="{{ route('package.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -27,7 +27,6 @@
                     <div class="form-group">
                         <label for="description">Description</label>
                         <textarea class="form-control tinymce-editor" id="description" name="description" rows="3"></textarea>
-
                     </div>
                     <div class="form-group">
                         <label for="price">Price</label>
@@ -47,13 +46,64 @@
 </div>
 
 <script>
-    tinymce.init({
-        selector: 'textarea.tinymce-editor',
-        plugins: 'autoresize',
-        toolbar: 'undo redo | formatselect | bold italic underline | alignleft aligncenter alignright | bullist numlist outdent indent',
-        autoresize_bottom_margin: 16,
-        min_height: 150,
-        menubar: false
+    $(document).ready(function() {
+        // Add event listener for form submission
+        $("#addPackageForm").submit(function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Submit the form via AJAX
+            $.ajax({
+                url: $(this).attr('action'),
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function(response) {
+                    // Show success message with SweetAlert
+                    Swal.fire({
+                        title: 'Success!',
+                        text: "Package has been added successfully.",
+                        icon: 'success'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Reload the page after the SweetAlert is closed
+                            location.reload();
+                        }
+                    });
+                },
+                error: function(error) {
+                    // Show error message with SweetAlert
+                    Swal.fire({
+                        title: 'Error!',
+                        text: "Failed to add the package.",
+                        icon: 'error'
+                    });
+                }
+            });
+        });
+
+        // Add event listener for cancel button
+        $(".btn-secondary").click(function() {
+            // Show confirmation SweetAlert
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "Any entered data will be lost.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, cancel',
+                cancelButtonText: 'No, keep adding',
+                allowOutsideClick: false // Prevents closing the modal when clicking outside
+            }).then((result) => {
+                // If user confirms cancel, navigate to another page or perform another action
+                if (result.isConfirmed) {
+                    // For example, redirect to the index page
+                    window.location.href = "{{ route('package.index') }}";
+                }
+            });
+
+            return false; // Prevent default action of the cancel button
+        });
     });
 </script>
+
 

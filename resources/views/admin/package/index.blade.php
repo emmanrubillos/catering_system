@@ -48,8 +48,8 @@
                                 <td>{{ $package->description }}</td>
                                 <td>{{ '₱' . number_format($package->price, 2) }}</td>
                                 <td>
-                                    <a href="#" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editPackageModal{{ $package->id }}"><i class="fas fa-edit"></i></a>
-
+                                    <a href="{{ route('package.edit', ['package' => $package->id]) }}" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editPackageModal{{ $package->id }}"><i class="fas fa-edit"></i></a>
+                                    {{-- <a href="{{ route('packages.edit', ['package' => $user->id]) }}" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#editUserModal{{ $package->id }}"><i class="fas fa-edit"></i></a> --}}
                                     <form action="{{ route('package.destroy', $package->id) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
@@ -69,14 +69,11 @@
     </div>
 </div>
 
-
 <script>
     $(document).ready(function() {
         $('#packages-table').DataTable();
     });
 </script>
-
-
 
 @include('admin.package.partial.script')
 @include('admin.package.partial.add_package_modal')
