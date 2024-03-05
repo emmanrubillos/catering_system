@@ -14,14 +14,14 @@
               Vegetable Dish
             </h1>
             <p class="text-sm text-dark">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Optio provident doloremque incidunt aspernatur at error 
-              praesentium similique, adipisci sunt veritatis deserunt 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Optio provident doloremque incidunt aspernatur at error
+              praesentium similique, adipisci sunt veritatis deserunt
             </p>
           </div>
         </div>
-        
-        
+
+
       </div>
 
       <div class="Right-container flex-grow w-80">
@@ -36,9 +36,9 @@
               Vegetable Dish
             </h1>
             <p class="text-sm text-dark">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Optio provident doloremque incidunt aspernatur at error 
-              praesentium similique, adipisci sunt veritatis deserunt 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Optio provident doloremque incidunt aspernatur at error
+              praesentium similique, adipisci sunt veritatis deserunt
             </p>
           </div>
         </div>
