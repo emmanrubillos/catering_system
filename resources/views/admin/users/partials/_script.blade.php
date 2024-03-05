@@ -1,9 +1,12 @@
-{{-- Sweet alert for the Delete User Button --}}
 <script>
     $(document).ready(function() {
         $('#users-table').DataTable();
     });
 </script>
+{{-- Sweet alert for the Edit User Button --}}
+
+
+{{-- Sweet alert for the Delete User Button --}}
 <script>
     function confirmDeleteUser(id){
         event.preventDefault();
@@ -78,11 +81,12 @@
             var middleName = document.getElementById('middle_name').value;
             var email = document.getElementById('email').value;
             var tempPassword = document.getElementById('temp_password').value;
-            var ContactNumber = document.getElementById('contact_number').value;
+            var contactNumber = document.getElementById('contact_number').value;
             var address = document.getElementById('address').value;
+            var roleId = document.getElementById('role_id').value;
 
             // Check if any of the required fields are empty
-            if (!firstName || !lastName || !email || !tempPassword || !middleName || !ContactNumber || !address) {
+            if (!firstName.trim() || !lastName.trim() || !email.trim() || !tempPassword.trim() || !middleName.trim() || !contactNumber.trim() || !address.trim() || roleId === "") {
                 // If any required field is empty, show an error message and return
                 Swal.fire({
                     icon: 'error',
@@ -107,7 +111,7 @@
         });
     });
 </script>
-{{-- <script>
+<script>
     function updateUser(id){
         event.preventDefault();
         let userId = id;
@@ -171,4 +175,4 @@
             }
         });
     }
-</script> --}}
+</script>
