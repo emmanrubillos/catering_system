@@ -10,7 +10,7 @@
             </div>
             <div class="modal-body">
                 <!-- Form for editing user -->
-                <form id="editUserForm" action="{{ route('users.update', $user->id) }}" method="POST" id="user-update-form">
+                <form id="editUserForm{{ $user->id }}" action="{{ route('users.update', $user->id) }}" method="POST" id="user-update-form" onclick="confirmEditUser({{ $user->id }})">
                     @csrf
                     @method('PUT')  
                     <div class="row">

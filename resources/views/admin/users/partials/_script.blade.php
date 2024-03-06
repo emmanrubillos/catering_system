@@ -1,9 +1,82 @@
-{{-- Sweet alert for the Delete User Button --}}
 <script>
     $(document).ready(function() {
         $('#users-table').DataTable();
     });
 </script>
+{{-- Sweet alert for the Edit User Button --}}
+<script>
+    $(document).ready(function() {
+        // Add event listener for form submission
+        $(document).on("submit", "#editUserForm{{ $user->id }}", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Submit the form via AJAX
+            $.ajax({
+                url: $(this).attr('action'),
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function(response) {
+                    // Show success message with SweetAlert
+                    Swal.fire({
+                        title: 'Success!',
+                        text: "Package has been updated successfully.",
+                        icon: 'success'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Reload the page after the SweetAlert is closed
+                            location.reload();
+                        }
+                    });
+                },
+                error: function(error) {
+                    // Show error message with SweetAlert
+                    Swal.fire({
+                        title: 'Error!',
+                        text: "Failed to update the package.",
+                        icon: 'error'
+                    });
+                }
+            });
+        });
+
+        // Add event listener for cancel button
+        $(document).on("click", "#cancelEdit", function() {
+            // Show confirmation SweetAlert
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "Your changes will not be saved.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, cancel',
+                cancelButtonText: 'No, keep editing'
+            }).then((result) => {
+                // If user confirms cancel, close the modal
+                if (result.isConfirmed) {
+                    $('#editUserForm{{ $user->id }}').modal('hide');
+                } else {
+                    // If user cancels the action, show a message
+                    Swal.fire({
+                        title: 'Cancelled',
+                        text: 'The package update has been cancelled.',
+                        icon: 'info',
+                        showCancelButton: false,
+                        confirmButtonColor: '#3085d6',
+                        confirmButtonText: 'Okay'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Redirect to the index page
+                            window.location.href = "{{ route('package.index') }}";
+                        }
+                    });
+                }
+            });
+        });
+    });
+</script>
+
+{{-- Sweet alert for the Delete User Button --}}
 <script>
     function confirmDeleteUser(id){
         event.preventDefault();
@@ -78,11 +151,12 @@
             var middleName = document.getElementById('middle_name').value;
             var email = document.getElementById('email').value;
             var tempPassword = document.getElementById('temp_password').value;
-            var ContactNumber = document.getElementById('contact_number').value;
+            var contactNumber = document.getElementById('contact_number').value;
             var address = document.getElementById('address').value;
+            var roleId = document.getElementById('role_id').value;
 
             // Check if any of the required fields are empty
-            if (!firstName || !lastName || !email || !tempPassword || !middleName || !ContactNumber || !address) {
+            if (!firstName.trim() || !lastName.trim() || !email.trim() || !tempPassword.trim() || !middleName.trim() || !contactNumber.trim() || !address.trim() || roleId === "") {
                 // If any required field is empty, show an error message and return
                 Swal.fire({
                     icon: 'error',
@@ -107,7 +181,7 @@
         });
     });
 </script>
-{{-- <script>
+<script>
     function updateUser(id){
         event.preventDefault();
         let userId = id;
@@ -171,4 +245,4 @@
             }
         });
     }
-</script> --}}
+</script>
