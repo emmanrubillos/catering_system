@@ -7,16 +7,32 @@
         ring-2 ring-primary ring-opacity-5">
           <div id="img-food" class="img">
             <img class="w-[230px] h-[120px] rounded-xl shadow-lg"
-            src="{{ URL::to('assets/img/Menu/chicken/_buffalo.png') }}" alt="chicken-food-1">
+            src="{{ URL::to('assets/img/Menu/noodles/_bam.png') }}" alt="chicken-food-1">
           </div>
           <div class="flex flex-col py-3">
             <h1 class="uppercase font-bold text-md text-dark">
-              Noodle Dish
+              Special Bam-I
             </h1>
             <p class="text-sm text-dark">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Optio provident doloremque incidunt aspernatur at error 
-              praesentium similique, adipisci sunt veritatis deserunt 
+                Savor the fusion delight of Special Bam-I - a medley of bihon and canton noodles
+                with assorted veggies and savory meats for a flavorful dish.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-5 p-2 rounded-lg my-5 bg-white shadow-lg
+        ring-2 ring-primary ring-opacity-5">
+          <div id="img-food" class="img">
+            <img class="w-[230px] h-[120px] rounded-xl shadow-lg"
+            src="{{ URL::to('assets/img/Menu/noodles/_bihon.png') }}" alt="chicken-food-1">
+          </div>
+          <div class="flex flex-col py-3">
+            <h1 class="uppercase font-bold text-md text-dark">
+               Bihon
+            </h1>
+            <p class="text-sm text-dark">
+                Enjoy the simplicity of Bihon - tender rice noodles stir-fried with
+                 vegetables and meat, seasoned to perfection for a delicious meal.
             </p>
           </div>
         </div>
@@ -28,20 +44,19 @@
         ring-2 ring-primary ring-opacity-5">
           <div id="img-food" class="img">
             <img class="w-[230px] h-[120px] rounded-xl shadow-lg"
-            src="{{ URL::to('assets/img/Menu/chicken/_buffalo.png') }}" alt="chicken-food-1">
+            src="{{ URL::to('assets/img/Menu/noodles/_sotanghon.png') }}" alt="chicken-food-1">
           </div>
           <div class="flex flex-col py-3">
             <h1 class="uppercase font-bold text-md text-dark">
-              Noodle Dish
+               Sotanghon
             </h1>
             <p class="text-sm text-dark">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Optio provident doloremque incidunt aspernatur at error 
-              praesentium similique, adipisci sunt veritatis deserunt 
+                Savor the delicate flavors of Sotanghon - thin glass noodles cooked
+                 with vegetables and meat, creating a light and satisfying dish.
             </p>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
