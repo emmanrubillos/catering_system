@@ -954,6 +954,10 @@ video {
   height: 100vh;
 }
 
+.h-\[60rem\] {
+  height: 60rem;
+}
+
 .min-h-\[800px\] {
   min-height: 800px;
 }

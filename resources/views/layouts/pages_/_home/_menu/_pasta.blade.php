@@ -7,16 +7,15 @@
         ring-2 ring-primary ring-opacity-5">
           <div id="img-food" class="img">
             <img class="w-[230px] h-[120px] rounded-xl shadow-lg"
-            src="{{ URL::to('assets/img/Menu/chicken/_buffalo.png') }}" alt="chicken-food-1">
+            src="{{ URL::to('assets/img/Menu/pasta/_carbonara.png') }}" alt="chicken-food-1">
           </div>
           <div class="flex flex-col py-3">
             <h1 class="uppercase font-bold text-md text-dark">
-              Pasta Dish
+              Carbonara
             </h1>
             <p class="text-sm text-dark">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Optio provident doloremque incidunt aspernatur at error 
-              praesentium similique, adipisci sunt veritatis deserunt 
+                Savor the creamy goodness of Carbonara - al dente pasta in a rich
+                sauce with eggs, cheese, pancetta, and black pepper, for a comforting meal.
             </p>
           </div>
         </div>
@@ -28,16 +27,15 @@
         ring-2 ring-primary ring-opacity-5">
           <div id="img-food" class="img">
             <img class="w-[230px] h-[120px] rounded-xl shadow-lg"
-            src="{{ URL::to('assets/img/Menu/chicken/_buffalo.png') }}" alt="chicken-food-1">
+            src="{{ URL::to('assets/img/Menu/pasta/_spag.png') }}" alt="chicken-food-1">
           </div>
           <div class="flex flex-col py-3">
             <h1 class="uppercase font-bold text-md text-dark">
-              Pasta Dish
+                Sphagetti
             </h1>
             <p class="text-sm text-dark">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Optio provident doloremque incidunt aspernatur at error 
-              praesentium similique, adipisci sunt veritatis deserunt 
+                Savor the classic taste of Spaghetti - al dente pasta tossed in a rich tomato
+                 sauce, topped with savory meatballs and grated cheese for a comforting meal.
             </p>
           </div>
         </div>

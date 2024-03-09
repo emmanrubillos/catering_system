@@ -9,7 +9,7 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('users.store') }}" method="POST">
+                <form action="{{ route('users.store') }}" method="POST" id="create-user-form">
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
@@ -27,7 +27,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="contact_number">Contact</label>
-                                <input type="string" class="form-control" id="contact_number" name="contact_number">
+                                <input type="string" class="form-control" id="contact_number" name="contact_number" maxlength="11">
                             </div>
                             <div class="form-group">
                                 <label for="address">Address</label>
@@ -57,10 +57,11 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="submit" class="btn btn-primary" id="save-user-btn">Save</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
