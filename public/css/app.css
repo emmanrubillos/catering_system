@@ -958,6 +958,18 @@ video {
   height: 60rem;
 }
 
+.h-\[400rem\] {
+  height: 400rem;
+}
+
+.h-\[450rem\] {
+  height: 450rem;
+}
+
+.h-\[420rem\] {
+  height: 420rem;
+}
+
 .min-h-\[800px\] {
   min-height: 800px;
 }
@@ -1570,6 +1582,10 @@ video {
 
 .text-xxl {
   font-size: 30px;
+}
+
+.text-\[100px\] {
+  font-size: 100px;
 }
 
 .font-bold {

@@ -28,7 +28,7 @@
 
 	@include('layouts.inc.header')
 	
-	<main class="wrapper h-[500rem] overflow-x-hidden">
+	<main class="wrapper h-[420rem] overflow-x-hidden">
 		
 		
         	@yield('content')

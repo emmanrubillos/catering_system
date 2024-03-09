@@ -979,15 +979,26 @@
 
         </div>
       </div>
+
+      @include('layouts.pages_._home._package-modal._basic')
+      @include('layouts.pages_._home._package-modal._standard')
+      @include('layouts.pages_._home._package-modal._premium')
+
     </div>
 
-    @include('layouts.pages_._home._package-modal._basic')
-    @include('layouts.pages_._home._package-modal._standard')
-    @include('layouts.pages_._home._package-modal._premium')
+    <div>
+      <h1 class="text-center font-uppercase font-bold text-[100px]">
+        THIS IS BY PAX PACKAGE
+      </h1>
+    </div>
+
+   
 
 
   </section>
 
 @include('layouts.pages_._home.scripts.tab-menu-script')
 @include('layouts.pages_._home.scripts.read-more-package-script')
+
+
 @endsection
