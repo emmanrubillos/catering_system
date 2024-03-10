@@ -51,3 +51,7 @@ Route::get('/contact_us', [App\Http\Controllers\Customer\ContactController::clas
 
 
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -63,7 +63,7 @@ class UsersController extends Controller
         ]);
 
         // Optionally, you can redirect the user to a different page after creation
-        return redirect()->route('users.index')->with('success', 'User created successfully!');
+        return redirect()->route('users.index')->with(  'success', 'User created successfully!');
 
     }
 
@@ -102,7 +102,7 @@ class UsersController extends Controller
             'middle_name' => 'nullable|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,'.$id,
-            'contact_number' => 'nullable|string|max:255',
+            'contact_number' => 'nullable|string|min:11',
             'address' => 'nullable|string|max:255',
             'role_id' => 'required|integer',
         ]);

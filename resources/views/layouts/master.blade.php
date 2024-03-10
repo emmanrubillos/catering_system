@@ -16,6 +16,11 @@
 	<link href="{{ asset('css/header.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/home.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
+	
+
+	<link href="https://fonts.cdnfonts.com/css/hello-christmas" rel="stylesheet">
+                
 
 </head>
 
@@ -23,7 +28,7 @@
 
 	@include('layouts.inc.header')
 	
-	<main class="wrapper h-[500rem] overflow-x-hidden">
+	<main class="wrapper h-[420rem] overflow-x-hidden">
 		
 		
         	@yield('content')

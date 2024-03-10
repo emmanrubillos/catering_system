@@ -10,7 +10,7 @@
             </div>
             <div class="modal-body">
                 <!-- Form for editing user -->
-                <form id="editUserForm" action="{{ route('users.update', $user->id) }}" method="POST">
+                <form id="editUserForm{{ $user->id }}" action="{{ route('users.update', $user->id) }}" method="POST" id="user-update-form" onclick="confirmEditUser({{ $user->id }})">
                     @csrf
                     @method('PUT')  
                     <div class="row">
@@ -35,7 +35,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="contact_number">Contact</label>
-                                <input type="text" class="form-control" id="contact_number" name="contact_number" value="{{ $user->contact_number }}">
+                                <input type="text" class="form-control" id="contact_number" name="contact_number"  value="{{ $user->contact_number }}" maxlength="11">
                             </div>
                             <div class="form-group">
                                 <label for="address">Address</label>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Update</button>
+                        <button type="submit" class="btn btn-primary" id="update-submit">Update</button>
                     </div>
                 </form>
             </div>

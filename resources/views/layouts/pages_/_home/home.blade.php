@@ -8,7 +8,7 @@
           <h3 class="-top-3 inset-0 absolute font-semibold text-xxl text-light">
             WELCOME TO
           </h3>
-          <h1 class=" inset-0 absolute font-['Hello_Christmas'] text-[120px] text-dark">
+          <h1 class=" inset-0 absolute cusive-font text-[120px] text-dark">
             Titan's Catering
           </h1>
           <h2 class="inset-0 top-[125px] absolute text-[30px] uppercase font-bold text-dark">
@@ -50,7 +50,7 @@
 
           <div class="details-about-us basis-3/5 px-8">
 
-            <h1 class="mt-3 mb-3 font-['Hello_Christmas'] text-dark text text-[40px]">
+            <h1 class="mt-3 mb-3 cusive-font text-dark text text-[40px]">
               Abous Us
             </h1>
 
@@ -166,7 +166,7 @@
       <div class="flex flex-row justify-between">
         {{--? Top-left Services --}}
         <div class="flex flex-col basis-2/4">
-          <h2 class="font-['Hello_Christmas'] text-[38px] text-dark">
+          <h2 class="cusive-font text-[38px] text-dark">
             Our Services
           </h2>
           <h1 class="font-bold text-primary leading-10 text-[40px]">
@@ -291,7 +291,7 @@
            style="background-image: url('assets/img/background-images/home-menu-bg.png')">
         
         <div class="text-center flex flex-col py-5 mx-52">
-            <h1 class="font-['Hello_Christmas'] text-[38px] text-dark">
+            <h1 class="cusive-font text-[38px] text-dark">
               Our Menu
             </h1>
             <h2 class="font-bold my-4 text-primary leading-10 text-[40px]">
@@ -389,7 +389,7 @@
     <div class="relative -top-72 mt-10">
       
       <div class="text-center flex flex-col py-5 mx-52">
-        <h1 class="font-['Hello_Christmas'] text-[38px] text-dark">
+        <h1 class="cusive-font text-[38px] text-dark">
           Our Work
         </h1>
         <h2 class="font-bold my-4 text-primary leading-10 text-[40px]">
@@ -484,10 +484,10 @@
     </div>
 
     {{--? Our Wedding Packages Container  --}}
-    <div class="relative -top-72 mt-10 bg-light h-[60rem] shadow-xl">
+    <div class="relative -top-72 mt-10 bg-light h-[80rem] shadow-xl">
       
       <div class="text-center flex flex-col py-5 mx-52">
-        <h1 class="font-['Hello_Christmas'] text-[38px] text-dark">
+        <h1 class="cusive-font text-[38px] text-dark">
           Our Wedding Packages
         </h1>
         <h2 class="font-bold my-4 text-primary leading-10 text-[40px]">
@@ -503,7 +503,7 @@
       </div>
 
       <div class="flex flex-row mx-20 mt-8 gap-5">
-        <div class="Package-Details flex flex-col basis-1/4 bg-white px-5 py-3 shadow-xl rounded-xl">
+        <div class="Package-Details flex flex-col h-[35rem] basis-1/4 bg-white px-5 py-3 shadow-xl rounded-xl ">
           <h1 class="font-bold text-dark text-xxl">
             Package Details
           </h1>
@@ -653,24 +653,352 @@
         </div>
 
         <div class="flex flex-col basis-3/4 gap-5">
-          <div class="basis-1/3 bg-primary bg-opacity-30 shadow-lg rounded-lg">
+          {{--? Basic Package Summary --}}
+          <div class="basis-1/3 bg-primary bg-opacity-10 shadow-lg rounded-lg rounded-br-none">
+            <div class="flex flex-row p-5">
+
+              <div class="basis-1/4 mr-5 flex flex-col">
+                <img class="bg-primary p-2 rounded-xl shadow-xl"
+                src="{{ URL::to('assets/img/package/basic-150px.png') }}" alt="basic-package-img">
+                <p class="text-xsm text-dark mt-2 text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
+                  dolore unde consequuntur autem quidem est consequatur?
+                </p>
+              </div>
+
+              <div class="basis-3/3 mr-3">
+                <h6 class="text-dark font-bold text-base uppercase">
+                  Entourage Count
+                  <lord-icon
+                      src="https://cdn.lordicon.com/jnzhohhs.json"
+                      trigger="hover"
+                      colors="primary:#181d50"
+                      style="width:15px;height:15px">
+                  </lord-icon>
+                </h6>
+                <ul class="list-disc list-inside text-dark font-semibold text-sm"> 
+                  <li>Bride</li>
+                  <li>Groom</li>
+                  <li>Maid of Honor</li>
+                  <li>Best Man</li>
+                  <li class="w-[215px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                    3 Bridesmaids and Groomsmen</li>
+                  <li class="w-[125px] items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                    3 Flower Girls</li>
+                  <li>3 Bearer</li>
+                  <li>2 Mother & Father</li>
+                  <li>Principal Sponsors</li>
+
+                  
+                </ul>
+              </div>
+
+              <div class="basis-3/3 mr-3">
+
+                <h6 class="text-dark font-bold text-[12px] uppercase">
+                  Photographic & Videographic
+                  <lord-icon
+                      src="https://cdn.lordicon.com/jnzhohhs.json"
+                      trigger="hover"
+                      colors="primary:#181d50"
+                      style="width:15px;height:15px">
+                  </lord-icon>
+                </h6>
+                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
+                  <li class="w-[190px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                      Prenup Photo (2-3 Sets)</li>
+                  <li>Photo & View Coverage</li>
+                  <li>Wedding Day Photo <br>
+                    <span class="text-xsm">(Preparation Reception & Unlimited Shots)</span>
+                  </li>
+                  <li>Photo Highlights <br>
+                    <span class="text-xsm">(will be uploaded to Facebook)</span>
+                  </li>
+                  <li class="w-[190px] my-1 items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                    16GB Flash Drive Storage</li>
+                </ul>
+              </div>
+
+
+              <div class="basis-1/16">
+                <h6 class="text-dark font-bold text-base uppercase">
+                  Foods
+                  <lord-icon
+                      src="https://cdn.lordicon.com/jnzhohhs.json"
+                      trigger="hover"
+                      colors="primary:#181d50"
+                      style="width:15px;height:15px">
+                  </lord-icon>
+                </h6>
+                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
+                  
+                  <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                    3 Main Dish</li>
+                  <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                    1 Side Dish</li>
+                  
+                    <ul class="list-disc list-inside">
+                      <span class="font-bold">One Round:</span>
+                      <li>Soft Drink</li>
+                      <li>Dessert</li>
+                      <li>Rice</li>
+                    </ul>
+                  </ul>
+                  <button class="bg-dark py-2 px-5 w-[150px] text-light font-bold rounded-tl-[50px] rounded-tr-[50px]
+                  transition ease-in-out hover:bg-primary relative -bottom-[2.9rem] -right-7 show-b-modal">
+                    Read More
+                  </button>
+              </div>
+
+            </div>
 
           </div>
 
-          <div class="basis-1/3 bg-primary bg-opacity-60 shadow-lg rounded-lg">
+          {{--? Standard Package Summary --}}
+          <div class="basis-3/3 bg-primary bg-opacity-30 shadow-lg rounded-lg rounded-br-none">
+            <div class="flex flex-row p-5">
 
+              <div class="basis-1/4 mr-5 flex flex-col">
+                <img class="bg-primary rounded-xl shadow-xl p-2"
+                src="{{ URL::to('assets/img/package/standard-200px.png') }}" alt="basic-package-img">
+                <p class="text-xsm text-dark mt-2 text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
+                  dolore unde consequuntur autem quidem est consequatur?
+                </p>
+              </div>
+
+              <div class="basis-3/3 mr-3">
+                <h6 class="text-dark font-bold text-base uppercase">
+                  Entourage Count
+                  <lord-icon
+                      src="https://cdn.lordicon.com/jnzhohhs.json"
+                      trigger="hover"
+                      colors="primary:#181d50"
+                      style="width:15px;height:15px">
+                  </lord-icon>
+                </h6>
+                <ul class="list-disc list-inside text-dark font-semibold text-sm"> 
+                  <li>Bride</li>
+                  <li>Groom</li>
+                  <li>Maid of Honor</li>
+                  <li>Best Man</li>
+                  <li class="w-[215px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                    5 Bridesmaids and Groomsmen</li>
+                  <li class="w-[125px] items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                    6 Flower Girls</li>
+                  <li>3 Bearer</li>
+                  <li>2 Mother & Father</li>
+                  <li>Principal Sponsors</li>
+
+                  
+                </ul>
+              </div>
+
+              <div class="basis-3/3 mr-3">
+
+                <h6 class="text-dark font-bold text-[12px] uppercase">
+                  Photographic & Videographic
+                  <lord-icon
+                      src="https://cdn.lordicon.com/jnzhohhs.json"
+                      trigger="hover"
+                      colors="primary:#181d50"
+                      style="width:15px;height:15px">
+                  </lord-icon>
+                </h6>
+                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
+                  <li class="w-[230px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                      Prenup Photo (3-6 Sets) w/Stylist</li>
+                  <li>Photo & View Coverage</li>
+                  <li>Wedding Day Photo <br>
+                    <span class="text-xsm">(Preparation Reception & Unlimited Shots)</span>
+                  </li>
+                  <li>Photo Highlights <br>
+                    <span class="text-xsm">(will be uploaded to Facebook)</span>
+                  </li>
+                  <li class="w-[190px] my-1 items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                    32GB Flash Drive Storage</li>
+                  <li class="w-[160px] my-1 items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                    SDE (Same Day Edit)</li>
+                  <li class="w-[230px] my-1 items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                    Printed Copies 100pcs <span class="text-[10px]">(their Choice)</span></li>
+                </ul>
+              </div>
+
+
+              <div class="basis-1/16">
+                <h6 class="text-dark font-bold text-base uppercase">
+                  Foods
+                  <lord-icon
+                      src="https://cdn.lordicon.com/jnzhohhs.json"
+                      trigger="hover"
+                      colors="primary:#181d50"
+                      style="width:15px;height:15px">
+                  </lord-icon>
+                </h6>
+                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
+                  
+                  <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                    4 Main Dish</li>
+                  <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                    1 Side Dish</li>
+                  
+                    <ul class="list-disc list-inside">
+                      <span class="font-bold">One Round:</span>
+                      <li>Soft Drink</li>
+                      <li>Dessert</li>
+                      <li>Rice</li>
+                    </ul>
+                  </ul>
+                  <button class="bg-dark py-2 px-5 w-[150px] text-light font-bold rounded-tl-[50px] rounded-tr-[50px]
+                  transition ease-in-out hover:bg-primary relative -bottom-[3.8rem] -right-6 show-s-modal">
+                    Read More
+                  </button>
+              </div>
+            </div>
           </div>
 
-          <div class="basis-1/3 bg-primary bg-opacity-90 shadow-lg rounded-lg">
+          {{--? Premium Package Summary --}}
+          <div class="basis-3/3 bg-primary bg-opacity-90 shadow-lg rounded-lg">
+            <div class="flex flex-row p-5">
 
+              <div class="basis-1/4 mr-5 flex flex-col">
+                <img class=""
+                src="{{ URL::to('assets/img/package/premium-250px.png') }}" alt="basic-package-img">
+                <p class="text-xsm text-light  mt-3 text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
+                  dolore unde consequuntur autem quidem est consequatur?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
+                  dolore unde consequuntur autem quidem est consequatur?
+                  Lorem ipsum dolor sit amet consectetur.
+                </p>
+              </div>
+
+              <div class="basis-3/3 mr-3">
+                <h6 class="text-dark  font-bold text-base uppercase">
+                  Entourage Count
+                  <lord-icon
+                      src="https://cdn.lordicon.com/jnzhohhs.json"
+                      trigger="hover"
+                      colors="primary:#181d50"
+                      style="width:15px;height:15px">
+                  </lord-icon>
+                </h6>
+                <ul class="list-disc list-inside text-light  font-semibold text-sm"> 
+                  <li>Bride</li>
+                  <li>Groom</li>
+                  <li>Maid of Honor</li>
+                  <li>Best Man</li>
+                  <li class="w-[215px] items-center rounded-md mb-1 bg-light px-2 py-1 text-xs font-bold text-dark ">
+                    7 Bridesmaids and Groomsmen</li>
+                  <li class="w-[125px] items-center rounded-md bg-light px-2 py-1 text-xs font-bold text-dark ">
+                    8 Flower Girls</li>
+                  <li>3 Bearer</li>
+                  <li>2 Mother & Father</li>
+                  <li>Principal Sponsors</li>
+
+                  
+                </ul>
+              </div>
+
+              <div class="basis-3/3 mr-3">
+
+                <h6 class="text-dark  font-bold text-[12px] uppercase">
+                  Photographic & Videographic
+                  <lord-icon
+                      src="https://cdn.lordicon.com/jnzhohhs.json"
+                      trigger="hover"
+                      colors="primary:#181d50"
+                      style="width:15px;height:15px">
+                  </lord-icon>
+                </h6>
+                <ul class="mt-1 list-disc list-inside text-light  font-semibold text-sm"> 
+                  <li class="w-[230px] items-center rounded-md mb-1 bg-light px-2 py-1 text-xs font-bold text-dark ">
+                      Prenup Photo (6-8 Sets) w/Stylist</li>
+                  <li>Photo & View Coverage</li>
+                  <li>Wedding Day Photo <br>
+                    <span class="text-xsm">(Preparation Reception & Unlimited Shots)</span>
+                  </li>
+                  <li>Photo Highlights <br>
+                    <span class="text-xsm">(will be uploaded to Facebook)</span>
+                  </li>
+                  <li class="w-[190px] my-1 items-center rounded-md bg-light px-2 py-1 text-[12px] font-bold text-dark ">
+                    64GB Flash Drive Storage</li>
+                  <li class="w-[160px] my-1 items-center rounded-md bg-light px-2 py-1 text-[12px] font-bold text-dark ">
+                    SDE (Same Day Edit)</li>
+                  <li class="w-[230px] my-1 items-center rounded-md bg-light px-2 py-1 text-[12px] font-bold text-dark">
+                    Printed Copies 180pcs <span class="text-[10px]">(their Choice)</span></li>
+                  <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark">
+                    with 1 Photo Album</li>
+                  <li class="w-[200px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark">
+                    with 1 Photo Frame for Couple</li>
+                  <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark">
+                    with 1 Guest Book</li>
+                  <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark">
+                    PhotoBooth</li>   
+                </ul>
+              </div>
+
+
+              <div class="basis-1/16">
+                <h6 class="text-dark  font-bold text-base uppercase">
+                  Foods
+                  <lord-icon
+                      src="https://cdn.lordicon.com/jnzhohhs.json"
+                      trigger="hover"
+                      colors="primary:#181d50"
+                      style="width:15px;height:15px">
+                  </lord-icon>
+                </h6>
+                <ul class="mt-1 list-disc list-inside text-light  font-semibold text-sm"> 
+                  
+                  <li class="w-[105px] items-center rounded-md  bg-light px-2 py-1 text-xs font-bold text-dark ">
+                    5 Main Dish</li>
+                  <li class="w-[105px] items-center rounded-md my-1 bg-light px-2 py-1 text-xs font-bold text-dark ">
+                    1 Side Dish</li>
+                  <li class="w-[120px] items-center rounded-md bg-light px-2 py-1 text-xs font-bold text-dark ">
+                    1 Lechon <span class="text-[10px]">(30kls)</span></li>
+                    <ul class="list-disc list-inside">
+                      <span class="font-bold text-dark">One Round:</span>
+                      <li>Soft Drink</li>
+                      <li>Dessert</li>
+                      <li>Rice</li>
+                    </ul>
+                  </ul>
+                  <button class="bg-dark py-2 px-5 w-[150px] text-light  font-bold rounded-tl-[50px] rounded-tr-[50px]
+                  transition ease-in-out hover:bg-light hover:text-dark relative -bottom-[9.4rem] -right-6 show-p-modal">
+                    Read More
+                  </button>
+              </div>
+
+            </div>
           </div>
 
         </div>
       </div>
+
+      @include('layouts.pages_._home._package-modal._basic')
+      @include('layouts.pages_._home._package-modal._standard')
+      @include('layouts.pages_._home._package-modal._premium')
+
     </div>
+
+    <div>
+      <h1 class="text-center font-uppercase font-bold text-[100px]">
+        THIS IS BY PAX PACKAGE
+      </h1>
+    </div>
+
+   
 
 
   </section>
 
 @include('layouts.pages_._home.scripts.tab-menu-script')
+@include('layouts.pages_._home.scripts.read-more-package-script')
+
+
 @endsection
