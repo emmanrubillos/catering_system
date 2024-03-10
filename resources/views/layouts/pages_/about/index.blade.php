@@ -6,7 +6,8 @@
 
     {{--? Home Top Container  --}}
     <div class="home h-full relative">
-        <div class="relative absolute top-0 right-0">
+        <div class="relative absolute top-0 right-0
+        ">
             {{--? About Top --}}
             <div class="flex flex-row bg-light w-3/5 mx-auto rounded-3xl shadow-xl">
     
