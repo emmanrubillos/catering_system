@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Reservation;
 
 class Entourages extends Model
 {
@@ -15,4 +16,8 @@ class Entourages extends Model
         'description',
         'max_person',
     ];
+    public function Reservation()
+    {
+        return $this->belongsTo('reservation_id');
+    }
 }

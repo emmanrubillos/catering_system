@@ -15,7 +15,7 @@ class CreateReservationsTable extends Migration
     {
         Schema::create('reservations', function (Blueprint $table) {
             $table->id();
-            $table->integer('package_id');
+            $table->foreignId('service_id')->contrained('services');
             $table->string('event_name');
             $table->string('email_address');
             $table->string('transaction_number');
