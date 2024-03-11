@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReservationInclusionsTable extends Migration
+class CreateServicesInclusion extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateReservationInclusionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('reservation_inclusions', function (Blueprint $table) {
+        Schema::create('services_inclusion', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('reservation_id')->contrained('reservations');
+            $table->foreignId('service_id')->contrained('services');
+            $table->foreignId('classification_id')->contrained('classifications');
             $table->foreignId('inclusion_id')->contrained('inclusions');
+            $table->integer('total_number');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateReservationInclusionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservation_inclusions');
+        Schema::dropIfExists('services_inclusion');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Service;
 
 class Reservation extends Model
 {
@@ -11,7 +12,7 @@ class Reservation extends Model
 
     protected $fillable = [
         'name',
-        'package_id',
+        'service_id',
         'event_name',
         'email_address',
         'transaction_number',
@@ -23,4 +24,8 @@ class Reservation extends Model
         'service_date',
         'status',
     ];
+    public function Service()
+    {
+       return $this->belongsTo('service_id');
+    }
 }
