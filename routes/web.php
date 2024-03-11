@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\PackageController;
-use App\Http\Controllers\CustomerEventDetailsController;
+use App\Http\Controllers\Admin\CustomerReservation\CustomerEventDetailsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,31 +23,34 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->middleware('auth')->name('profile');
+Route::get('/admin', [App\Http\Controllers\Admin\UserController\AdminController::class, 'index'])->name('admin');
+
+Route::get('/profile', [App\Http\Controllers\Pages\HomeController::class, 'profile'])->middleware('auth')->name('profile');
 // Route::get('/package', [App\Http\Controllers\PackageController::class, 'index'])->name('package');
- Route::get('/reservation/review', [App\Http\Controllers\CustomerReviewController::class, 'index'])->name('review');
+Route::get('/reservation/review', [App\Http\Controllers\Admin\CustomerReservation\CustomerReviewController::class, 'index'])->name('review');
 Route::get('/reservation/event_details', [CustomerEventDetailsController::class, 'index'])->name('event_details');
 Route::get('/reservation/event_details/create', [CustomerEventDetailsController::class, 'create'])->name('event_details.create');
-Route::get('/reservation/buffet_order', [App\Http\Controllers\CustomerBuffetOrderController::class, 'index'])->name('buffet_order');
-Route::get('/reservation/bill', [App\Http\Controllers\CustomerBillController::class, 'index'])->name('bill');
+Route::get('/reservation/buffet_order', [App\Http\Controllers\Admin\CustomerReservation\CustomerBuffetOrderController::class, 'index'])->name('buffet_order');
+Route::get('/reservation/bill', [App\Http\Controllers\Admin\CustomerReservation\CustomerBillController::class, 'index'])->name('bill');
 
 
+Route::get('/service', [App\Http\Controllers\Admin\Services\ServiceController::class, 'index'])->name('service');
+Route::get('/service/package_details', [App\Http\Controllers\Admin\Services\ServicePackageController::class, 'index'])->name('package_details');
+Route::get('/service/pax_details', [App\Http\Controllers\Admin\Services\ServicePaxController::class, 'index'])->name('pax_details');
 
 
-
-Route::resource('users', \App\Http\Controllers\UsersController::class);
+Route::resource('users', \App\Http\Controllers\Admin\UserController\UsersController::class);
 Route::resource('package', \App\Http\Controllers\PackageController::class);
 
 
 Route::middleware('CheckUserRole')->group(function (){
 
-Route::get('/about_us', [App\Http\Controllers\Customer\AboutController::class, 'index'])->name('about_us');
-Route::get('/services', [App\Http\Controllers\Customer\ServicesController::class, 'index'])->name('services');
-Route::get('/packages', [App\Http\Controllers\Customer\PackagesController::class, 'index'])->name('packages');
-Route::get('/menu', [App\Http\Controllers\Customer\MenuController::class, 'index'])->name('menu');
-Route::get('/contact_us', [App\Http\Controllers\Customer\ContactController::class, 'index'])->name('contact_us');
+Route::get('/home', [App\Http\Controllers\Pages\HomeController::class, 'index'])->name('home');
+Route::get('/about_us', [App\Http\Controllers\Pages\AboutController::class, 'index'])->name('about_us');
+Route::get('/services', [App\Http\Controllers\Pages\ServicesController::class, 'index'])->name('services');
+Route::get('/packages', [App\Http\Controllers\Pages\PackagesController::class, 'index'])->name('packages');
+Route::get('/menu', [App\Http\Controllers\Pages\MenuController::class, 'index'])->name('menu');
+Route::get('/contact_us', [App\Http\Controllers\Pages\ContactController::class, 'index'])->name('contact_us');
 
 
 });

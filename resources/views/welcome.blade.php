@@ -8,17 +8,19 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link href="{{ asset('css/header.css') }}" rel="stylesheet">
         <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+
+        <link href="https://fonts.cdnfonts.com/css/hello-christmas" rel="stylesheet">
+                
 
     </head>
     <body class="antialiased">
-        <div class="main-wrapper">
-		
-            @include('layouts.inc.header')
+        
             
-                @yield('content')
-    
-            @include('layouts.inc.footer')
-    
-        </div>
+            
+        @include('layouts.pages_._home.home')
+
+
+
     </body>
 </html>

@@ -14,11 +14,11 @@
 
                 <li class="list-divider"></li>
 
-                <li class="nav-item
-                 {{ request()->is('users') ? 'active' : '' }}">
-                <a class="nav-link" href="/users">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Users</span></a>
+                <li class="nav-item {{ request()->is('users') ? 'active' : '' }}">
+                    <a class="nav-link" href="/users">
+                        <i class="fas fa-fw fa-user"></i>
+                        <span>Users</span>
+                    </a>
                 </li>
 
                 <li class="submenu">
@@ -51,45 +51,59 @@
                     </ul>
                 </li>
 
-                </li>
-                </li>
-                <li class="nav-item
-                {{ request()->is('menu') ? 'active' : '' }}">
-                <a class="nav-link" href="/menu">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Menu</span></a>
+                <li class="nav-item {{ request()->is('menu') ? 'active' : '' }}">
+                    <a class="nav-link" href="/menu">
+                        <i class="fas fa-fw fa-user"></i>
+                        <span>Menu</span>
+                    </a>
                 </li>
 
-                <li class="nav-item
-                {{ request()->is('venue') ? 'active' : '' }}">
-                <a class="nav-link" href="/venue">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Venue</span></a>
+                <li class="nav-item {{ request()->is('venue') ? 'active' : '' }}">
+                    <a class="nav-link" href="/venue">
+                        <i class="fas fa-fw fa-user"></i>
+                        <span>Venue</span>
+                    </a>
                 </li>
 
                 <!-- Nav Item - Package -->
-                <li class="nav-item
-                {{ request()->is('themes') ? 'active' : '' }}">
-                <a class="nav-link" href="/themes">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Themes</span></a>
+                <li class="nav-item {{ request()->is('themes') ? 'active' : '' }}">
+                    <a class="nav-link" href="/themes">
+                        <i class="fas fa-fw fa-user"></i>
+                        <span>Themes</span>
+                    </a>
                 </li>
 
-                <li class="nav-item
-                {{ request()->is('package') ? 'active' : '' }}">
-                <a class="nav-link" href="/package">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Package</span></a>
+                <li class="nav-item {{ request()->is('package') ? 'active' : '' }}">
+                    <a class="nav-link" href="/package">
+                        <i class="fas fa-fw fa-user"></i>
+                        <span>Package</span>
+                    </a>
                 </li>
 
-
-                <li class="nav-item
-                {{ request()->is('blog') ? 'active' : '' }}">
-                <a class="nav-link" href="/blog">
-                    <i class="fas fa-fw fa-user"></i>
-                    <span>Blog</span></a>
+                <li class="submenu">
+                    <a href="#">
+                        <i class="fas fa-user"></i>
+                        <span> Services </span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="submenu_class">
+                        <li>
+                            <a href="{{ route('service') }}" class="{{ request()->is('service') ? 'active' : '' }}">
+                                {!! request()->is('service') ? '<b>Services</b>' : 'Services' !!}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('package_details') }}" class="{{ request()->is('service/package_details') ? 'active' : '' }}">
+                                {!! request()->is('service/package_details') ? '<b>Package Detials</b>' : 'Package Detials' !!}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('pax_details') }}" class="{{ request()->is('service/pax_details') ? 'active' : '' }}">
+                                {!! request()->is('service/pax_details') ? '<b>Pax Details</b>' : 'Pax Details' !!}
+                            </a>
+                        </li>
+                    </ul>
                 </li>
-
             </ul>
         </div>
     </div>

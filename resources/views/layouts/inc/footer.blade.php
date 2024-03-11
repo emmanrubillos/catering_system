@@ -1,12 +1,11 @@
 {{--! footer --}}
-<footer class="bg-dark w-full h-[50rem] tablet:h-96 laptop:h-115 text-light overflow-hidden">
-    {{--! toogle-up-button --}}
-    <a href="" class="hidden">
-        <img class="tablet:w-32 tablet:h-32 w-[6.5rem] h-[6.5rem] fixed top-[10rem] 
-        right-20 transition ease-in-out delay-150 -translate-y-1 hover:scale-110"
-        src="{{ asset('assets/img/up-toggle.png') }}" alt="toggle-up">
-    </a>
-    
+<footer class=" bg-dark w-full h-[50rem] tablet:h-96 laptop:h-115 text-light overflow-hidden relative z-0">
+        {{--! toogle-up-button --}}
+        <a href="" class="hidden">
+            <img class="tablet:w-32 tablet:h-32 w-[6.5rem] h-[6.5rem] absolute -top-20 z-10
+            right-20 transition ease-in-out delay-150 -translate-y-1 hover:scale-110"
+            src="{{ asset('assets/img/up-toggle.png') }}" alt="toggle-up">
+        </a>
     <div class="relative">
 
         <div class="mx-auto px-10 pt-8 flex sm-mobile:flex-col tablet:flex-row justify-between">
@@ -196,10 +195,10 @@
                             </a>
                         </li>
                     </ul>
-                    <h5 class="font-bold uppercase text-md laptop:text-lg mt-5">
+                    <h5 class="font-bold uppercase text-md laptop:text-lg mt-5 relative">
                         Social Media
                     </h5>
-                    <div class="flex mt-2">
+                    <div class="flex mt-2 z-10">
                         <a href="" class="">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="sm-mobile:w-[25px] tablet:w-[40px] laptop:w-[50px]"
                                 viewBox="0,0,256,256" class="transition ease-in-out delay-100 hover:scale-125">
@@ -215,7 +214,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="" class="mx-3 laptop:mx-5">
+                        <a href="" class="mx-3 laptop:mx-5 z-10">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="sm-mobile:w-[25px] tablet:w-[40px] laptop:w-[50px]"
                                 viewBox="0,0,256,256" class="transition ease-in-out delay-100 hover:scale-125">
                                     <g fill="#ff731d" fill-rule="nonzero" stroke="none" stroke-width="1"
@@ -230,9 +229,9 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="" class="">
+                        <a href="" class=" z-10">
                             <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="sm-mobile:w-[25px] tablet:w-[40px] laptop:w-[50px]"
-                                viewBox="0,0,256,256" class="transition ease-in-out delay-100 hover:scale-125">
+                                viewBox="0,0,256,256" class="transition ease-in-out delay-100 hover:scale-125 z-10">
                                     <g fill="#ff731d" fill-rule="nonzero" stroke="none" stroke-width="1"
                                         stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10"
                                         stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none"
@@ -265,10 +264,11 @@
         </div>
 
         {{--! Column Shapes (Blobs) --}}
-        <img class="absolute hidden tablet:block -bottom-72 right-5 rotate-90"
+        <img class="absolute hidden tablet:block -bottom-72 right-5 rotate-90 z-0"
             src="{{ asset('assets/img/blob-foot-1.svg') }}" alt="blob-1">
 
-        <img class="absolute hidden tablet:block w-[650px] h-[850px] laptop:w-[750px] laptop:h-[900px] -bottom-[70%] -right-72 laptop:-bottom-2/4 laptop:-right-80 rotate-45" 
+        <img class="absolute hidden z-0 tablet:block w-[650px] h-[850px] laptop:w-[750px] laptop:h-[900px] -bottom-[70%] -right-72 laptop:-bottom-2/4 laptop:-right-80 rotate-45" 
         src="{{ asset('assets/img/blob-foot-2.svg') }}" alt="blob-2">
     </div>
 </footer>
+

@@ -42,7 +42,7 @@ class PackageController extends Controller
             'name' => 'required|string|max:255',
             'type' => 'required|string|max:255',
             'description' => 'required|string',
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|regex:/^\d+(\.\d{1,2})?$/',
         ]);
 
         // Create the new package
@@ -83,7 +83,7 @@ class PackageController extends Controller
             'name' => 'required|string|max:255',
             'type' => 'required|string|max:255',
             'description' => 'required|string',
-            'price' => 'required|numeric',
+            'price' => 'required|numeric|regex:/^\d+(\.\d{1,2})?$/',
         ]);
 
         // Find the package by ID and update its details
@@ -91,7 +91,12 @@ class PackageController extends Controller
         $package->update($validatedData);
 
         // Redirect back to the index page with a success message
-        return redirect()->route('package.index')->with('success', 'Package updated successfully!');
+        // return redirect()->route('package.index')->with('success', 'Package updated successfully!');
+        if ($request->ajax()) {
+            return response()->json(['message' => 'Package updated successfully'], 200);
+        } else {
+            return redirect()->route('package.index')->with('success', 'Package updated successfully!');
+        }
     }
 
     /**
@@ -107,6 +112,7 @@ class PackageController extends Controller
         $package->delete();
 
         // Redirect back to the index page with a success message
-        return redirect()->route('package.index')->with('success', 'Package deleted successfully!');
+        // return redirect()->route('package.index')->with('success', 'Package deleted successfully!');
+        return response()->json(['message' => 'Package deleted successfully'], 200);
     }
 }

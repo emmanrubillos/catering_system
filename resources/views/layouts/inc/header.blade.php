@@ -1,4 +1,4 @@
-<header class="bg-light">
+<header class="">
     <div class="wave">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
@@ -20,7 +20,7 @@
         </div>
 
         {{-- Sidebar Menu --}}
-        <aside id="sidebar" class="bg-dark hidden tablet:hidden flex-col items-start justify-start 
+        <aside id="sidebar" class="bg-dark hidden tablet:hidden flex-col items-start justify-start
             fixed inset-y-0 left-0 w-64 shadow-md overflow-y-auto transition-all duration-300 delay-130">
             @if (Route::has('login'))
                 <div class="flex justify-between items-center w-full p-4">
@@ -58,7 +58,7 @@
             </div>
             <hr class="text-light mx-3">
             <div class="flex flex-col items-start justify-start w-full">
-                <a href="#" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Home</a>
+                <a href="{{ route('home') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Home</a>
                 <a href="{{ route('about_us') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">About Us</a>
                 <a href="{{ route('services') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Services</a>
                 <a href="{{ route('packages') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Package</a>
@@ -76,7 +76,7 @@
             </a>
 
             <div class="nav-links mt-0 tablet:mt-8 hidden tablet:flex flex-wrap gap-default">
-                <a href="#" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Home</a>
+                <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Home</a>
                 <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">About Us</a>
                 <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Services</a>
                 <a href="{{ route('packages') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Package</a>
