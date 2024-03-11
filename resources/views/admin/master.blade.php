@@ -20,8 +20,13 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	
+	<link rel="stylesheet" href="https://cdn.datatables.net/2.0.2/css/dataTables.bootstrap5.css">
+	
+	<link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+
+
+
     <style>
-		
 	a {
 		text-decoration: none;
 	}
@@ -86,6 +91,8 @@
 			font-size: 40px;
 		}
 	}
+
+	
 	</style>
 
 	{{-- message toastr --}}
@@ -109,7 +116,7 @@
 
 </body>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-	<script src="https://cdn.datatables.net/v/dt/dt-2.0.1/datatables.min.js"></script>
+	{{-- <script src="https://cdn.datatables.net/v/dt/dt-2.0.1/datatables.min.js"></script> --}}
 	<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script src="{{ URL::to('assets/js/popper.min.js') }}"></script>
 	<script src="{{ URL::to('assets/js/bootstrap.min.js') }}"></script>

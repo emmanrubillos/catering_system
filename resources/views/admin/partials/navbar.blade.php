@@ -3,7 +3,7 @@
         <a href="#" class="hamburger-menu">
             <div class="fe fe-text-align-left"></div>
         </a>
-        <a href="index.html" class="logo"> <img src="{{ URL::to('assets/img/hotel_logo.png') }}" width="50" height="70" alt="logo"> <span class="logoclass">ADMIN PANEL</span> </a>
+        <a href="index.html" class="logo"> <img src="{{ URL::to('assets/img/hotel_logo.png') }}" width="50" height="70" alt="logo"> <span class="logoclass fs-5">ADMIN PANEL</span> </a>
         <a href="index.html" class="logo logo-small"> <img src="{{ URL::to('assets/img/hotel_logo.png') }}" alt="Logo" width="30" height="30"> </a>
     </div>
     <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
