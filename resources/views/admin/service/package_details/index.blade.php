@@ -19,7 +19,7 @@
                                 <thead class="border border-0">
                                     <tr>
                                         <th style="width:16%">Name</th>
-                                        <th style="width:18%">Entourage</th>
+                                        <th style="width:18%">Type</th>
                                         <th style="width:17%">Food & Catering</th>
                                         <th style="width:16%;">Decoration</th>
                                         <th style="width:25%;">Others</th>
@@ -27,7 +27,7 @@
                                 </thead>
                                 <tbody class="border border-0">
                                     <tr>
-                                        <td>Sample Package</td>
+                                        <td class="fw-bold">Sample Package</td>
                                         <td>
                                             <div class="d-flex flex-column gap-1">
                                                 <div class="d-flex flex-row justify-content-between">
@@ -201,7 +201,7 @@
                                 </tbody>
                             </table>
                         </div>
-                      </div>
+                    </div>
                     
 
                 </div>
@@ -210,17 +210,6 @@
     </div>
 </div>
 
-<style>
-    /* Custom CSS to remove borders */
-    #example.dataTable tbody tr {
-        border-bottom: none;
-    }
-
-    #example.dataTable th,
-    #example.dataTable td {
-        border: none;
-    }
-</style>
 
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
