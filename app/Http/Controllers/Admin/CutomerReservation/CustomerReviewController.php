@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\CustomerReservation;
+
+use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-class AdminUserController extends Controller
+class CustomerReviewController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +15,8 @@ class AdminUserController extends Controller
      */
     public function index()
     {
-        return view('admin.admin_user.index');
+        return view ('admin.reservation.review.index');
+
     }
 
     /**
