@@ -1,0 +1,13 @@
+.about {
+    background-image: url('/assets/img/background-images/about-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+  
+  section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
