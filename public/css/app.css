@@ -688,6 +688,7 @@ video {
   margin-right: 2.5rem;
 }
 
+
 .mx-16 {
   margin-left: 4rem;
   margin-right: 4rem;
@@ -752,6 +753,7 @@ video {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
 }
+
 
 .my-8 {
   margin-top: 2rem;
@@ -1097,6 +1099,7 @@ video {
 .w-full {
   width: 100%;
 }
+
 
 .flex-grow {
   flex-grow: 1;
@@ -1654,7 +1657,7 @@ video {
 
 .text-white {
   --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+
 }
 
 .underline {
@@ -1768,6 +1771,10 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.visited\:text-primary:visited {
+  color: rgb(255 115 29 );
+}
+
 .hover\:scale-110:hover {
   --tw-scale-x: 1.1;
   --tw-scale-y: 1.1;
@@ -1810,6 +1817,11 @@ video {
 }
 
 .hover\:text-primary:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 115 29 / var(--tw-text-opacity));
+}
+
+.focus\:text-primary:focus {
   --tw-text-opacity: 1;
   color: rgb(255 115 29 / var(--tw-text-opacity));
 }
