@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\Services;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CustomerBillController extends Controller
+class ServicePaxController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class CustomerBillController extends Controller
      */
     public function index()
     {
-        return view ('admin.reservation.bill.index');
+        return view('admin.service.pax_details.index');
     }
 
     /**

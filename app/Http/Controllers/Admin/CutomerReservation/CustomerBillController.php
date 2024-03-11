@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin\CustomerReservation;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class CustomerBuffetOrderController extends Controller
+class CustomerBillController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class CustomerBuffetOrderController extends Controller
      */
     public function index()
     {
-        return view ('admin.reservation.buffet_order.index');
+        return view ('admin.reservation.bill.index');
     }
 
     /**
