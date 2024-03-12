@@ -7,7 +7,8 @@
 	
 	<title>Titan's Catering</title>
 	
-
+	{{--? fontAwesome --}}
+	<script src="https://kit.fontawesome.com/ee3372abc2.js" crossorigin="anonymous"></script>
 
 	{{--? tailwill CSS --}}
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -15,14 +16,9 @@
 	{{--? Core CSS --}}
 	<link href="{{ asset('css/header.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/footer.css') }}" rel="stylesheet">
-	<link href="{{ asset('css/home.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/about.css') }}" rel="stylesheet">
 	
-
-	<link href="https://fonts.cdnfonts.com/css/hello-christmas" rel="stylesheet">
-                
-
 </head>
 
 <body>
