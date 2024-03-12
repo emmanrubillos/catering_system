@@ -1,15 +1,23 @@
-
-@import url('https://fonts.cdnfonts.com/css/hello-christmas');
-        
+       
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: Hello-Christmas;
+  src: url('/fonts/hello_christmas_6/Hello-Christmas.otf');
+}
+
+.cusive-font {
+  font-family: Hello-Christmas;
+}
+
+.base-font {
+  font-family: "Montserrat", sans-serif;
+}
 
 body {
   font-family: "Montserrat", sans-serif;
 }
 
-.cusive-font {
-  font-family: "Hello Christmas", sans-serif;
-}
 
 /* Ensure the wrapper fills the entire viewport */
 html, body {
@@ -27,4 +35,29 @@ html, body {
 /* Ensure the main content area expands to fill the remaining space */
 main {
   flex: 1;
+}
+
+.home {
+  background-image: url('/assets/img/background-images/home-bg-with-trp.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.login {
+  background-image: url('/assets/img/background-images/login-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-img {
+  background-image: url('/assets/img/background-images/right-login-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

@@ -27,6 +27,7 @@ module.exports = {
       'primary-dark': '#ED6B1B',
       'default-blue': '#1746A2',
       'light-blue': '#5F9DF7',
+      'red': '#EE4B2B',
     },
     extend: {
       spacing: {
