@@ -8,7 +8,7 @@
           <h3 class="-top-3 inset-0 absolute font-semibold text-xxl text-light">
             WELCOME TO
           </h3>
-          <h1 class=" inset-0 absolute cusive-font text-[120px] text-dark">
+          <h1 class=" inset-0 absolute cursive-font text-[120px] text-dark">
             Titan's Catering
           </h1>
           <h2 class="inset-0 top-[125px] absolute text-[30px] uppercase font-bold text-dark">
@@ -50,7 +50,7 @@
 
           <div class="details-about-us basis-3/5 px-8">
 
-            <h1 class="mt-3 mb-3 cusive-font text-dark text text-[40px]">
+            <h1 class="mt-3 mb-3 cursive-font text-dark text text-[40px]">
               Abous Us
             </h1>
 
@@ -166,7 +166,7 @@
       <div class="flex flex-row justify-between">
         {{--? Top-left Services --}}
         <div class="flex flex-col basis-2/4">
-          <h2 class="cusive-font text-[38px] text-dark">
+          <h2 class="cursive-font text-[38px] text-dark">
             Our Services
           </h2>
           <h1 class="font-bold text-primary leading-10 text-[40px]">
@@ -291,7 +291,7 @@
            style="background-image: url('assets/img/background-images/home-menu-bg.png')">
         
         <div class="text-center flex flex-col py-5 mx-52">
-            <h1 class="cusive-font text-[38px] text-dark">
+            <h1 class="cursive-font text-[38px] text-dark">
               Our Menu
             </h1>
             <h2 class="font-bold my-4 text-primary leading-10 text-[40px]">
@@ -389,7 +389,7 @@
     <div class="relative -top-72 mt-10">
       
       <div class="text-center flex flex-col py-5 mx-52">
-        <h1 class="cusive-font text-[38px] text-dark">
+        <h1 class="cursive-font text-[38px] text-dark">
           Our Work
         </h1>
         <h2 class="font-bold my-4 text-primary leading-10 text-[40px]">
@@ -487,7 +487,7 @@
     <div class="relative -top-72 mt-10 bg-light h-[80rem] shadow-xl">
       
       <div class="text-center flex flex-col py-5 mx-52">
-        <h1 class="cusive-font text-[38px] text-dark">
+        <h1 class="cursive-font text-[38px] text-dark">
           Our Wedding Packages
         </h1>
         <h2 class="font-bold my-4 text-primary leading-10 text-[40px]">

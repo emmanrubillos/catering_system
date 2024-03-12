@@ -14,7 +14,7 @@
                                 <h3 class="mt-2 ml-2 text-dark fw-bold">Services</h3>
                             </div>
                             <div class="mt-2">
-                                <button class="btn btn-success btn-sm">
+                                <button class="btn btn-success" data-toggle="modal" data-target="#addServiceModal">
                                     <i class="fas fa-plus mr-1"></i>
                                     Add Service
                                 </button>
@@ -79,6 +79,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
 {{-- <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script> --}}
+
+@include('admin.service.partials._add_service_modal')
 
 <script>
     new DataTable('#example');

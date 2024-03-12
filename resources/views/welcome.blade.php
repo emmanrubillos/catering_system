@@ -10,7 +10,7 @@
         <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 
-        <link href="https://fonts.cdnfonts.com/css/hello-christmas" rel="stylesheet">
+        <link href="https://fonts.cdnfonts.com/css/hello-christmas-2" rel="stylesheet">
                 
 
     </head>

@@ -790,12 +790,20 @@ video {
   margin-left: 2.5rem;
 }
 
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
 
 .ml-32 {
   margin-left: 8rem;
+}
+
+.ml-auto {
+  margin-left: auto;
 }
 
 .mr-1 {
@@ -816,6 +824,10 @@ video {
 
 .mr-5 {
   margin-right: 1.25rem;
+}
+
+.mr-auto {
+  margin-right: auto;
 }
 
 .ms-auto {
@@ -860,10 +872,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
 }
 
 .block {
@@ -1218,6 +1226,10 @@ video {
   justify-content: space-evenly;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-3 {
   gap: 0.75rem;
 }
@@ -1238,20 +1250,8 @@ video {
   gap: 20px;
 }
 
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-x-auto {
-  overflow-x: auto;
 }
 
 .overflow-y-auto {
@@ -1260,6 +1260,10 @@ video {
 
 .overflow-x-hidden {
   overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
 }
 
 .text-wrap {
@@ -1504,6 +1508,10 @@ video {
 
 .align-baseline {
   vertical-align: baseline;
+}
+
+.font-\[\'Hello_Christmas\'\] {
+  font-family: 'Hello Christmas';
 }
 
 .text-3xl {
