@@ -36,7 +36,9 @@
                                     <th scope="col">Last Name</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Contact</th>
-                                    <th scope="col">Address</th>
+                                    <th scope="col">Street</th>
+                                    <th scope="col">Barangay</th>
+                                    <th scope="col">City</th>
                                     <th scope="col">Role</th>
                                 </tr>
                             </thead>
@@ -59,7 +61,9 @@
                                     <td>{{ $user->last_name }}</td>
                                     <td>{{ $user->email }}</td>
                                     <td>{{ $user->contact_number }}</td>
-                                    <td>{{ $user->address }}</td>
+                                    <td>{{ $user->street }}</td>
+                                    <td>{{ $user->barangay }}</td>
+                                    <td>{{ $user->city }}</td>
                                     <td>
                                         @if ($user->role_id == 1)
                                         <span class="badge badge-primary">Admin</span>

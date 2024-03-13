@@ -82,14 +82,14 @@
 
                 <li class="submenu">
                     <a href="#">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-handshake"></i>
                         <span> Services </span>
                         <span class="menu-arrow"></span>
                     </a>
                     <ul class="submenu_class">
                         <li>
-                            <a href="{{ route('service') }}" class="{{ request()->is('service') ? 'active' : '' }}">
-                                {!! request()->is('service') ? '<b>Services</b>' : 'Services' !!}
+                            <a href="{{ route('service.index') }}" class="{{ request()->is('service') ? 'active' : '' }}">
+                                {!! request()->is('service') ? '<b>Service</b>' : 'Service' !!}
                             </a>
                         </li>
                         <li>

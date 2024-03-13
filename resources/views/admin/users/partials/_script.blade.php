@@ -152,11 +152,13 @@
             var email = document.getElementById('email').value;
             var tempPassword = document.getElementById('temp_password').value;
             var contactNumber = document.getElementById('contact_number').value;
-            var address = document.getElementById('address').value;
+            var street = document.getElementById('street').value;
+            var barangay = document.getElementById('barangay').value;
+            var city = document.getElementById('city').value;
             var roleId = document.getElementById('role_id').value;
 
             // Check if any of the required fields are empty
-            if (!firstName.trim() || !lastName.trim() || !email.trim() || !tempPassword.trim() || !middleName.trim() || !contactNumber.trim() || !address.trim() || roleId === "") {
+            if (!firstName.trim() || !lastName.trim() || !email.trim() || !tempPassword.trim() || !middleName.trim() || !contactNumber.trim() || !street.trim() || !barangay.trim() || !city.trim() ||  roleId === "") {
                 // If any required field is empty, show an error message and return
                 Swal.fire({
                     icon: 'error',
@@ -181,6 +183,7 @@
         });
     });
 </script>
+{{-- Sweet Alert for updating User --}}
 <script>
     function updateUser(id){
         event.preventDefault();

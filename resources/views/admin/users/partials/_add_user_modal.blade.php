@@ -30,8 +30,16 @@
                                 <input type="string" class="form-control" id="contact_number" name="contact_number" maxlength="11">
                             </div>
                             <div class="form-group">
-                                <label for="address">Address</label>
-                                <input type="text" class="form-control" id="address" name="address">
+                                <label for="street">Street</label>
+                                <input type="text" class="form-control" id="street" name="street">
+                            </div>
+                            <div class="form-group">
+                                <label for="barangay">Barangay</label>
+                                <input type="text" class="form-control" id="barangay" name="barangay">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">city</label>
+                                <input type="text" class="form-control" id="city" name="city">
                             </div>
                         </div>
                         <div class="col-md-6">
