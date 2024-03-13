@@ -55,9 +55,19 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .right-img {
   background-image: url('/assets/img/background-images/right-login-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.register {
+  background-image: url('/assets/img/background-images/register-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.left-img {
+  background-image: url('/assets/img/background-images/left-register-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
