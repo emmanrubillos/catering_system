@@ -24,7 +24,9 @@ class AdminSeeder extends Seeder
             'middle_name' => 'lage',
             'last_name' => 'ko',
             'contact_number' => '12345',
-            'address' => 'Brgy.Eastern',
+            'street' => 'SanAntonio',
+            'barangay' => 'Eastern',
+            'city' => 'Hilongos',
             'email' => 'Admin@example.com',
             'password' => Hash::make('admin123'),
 

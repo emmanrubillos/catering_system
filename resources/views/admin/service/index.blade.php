@@ -14,15 +14,14 @@
                                 <h3 class="mt-2 ml-2 text-dark fw-bold">Services</h3>
                             </div>
                             <div class="mt-2">
-                                <button class="btn btn-success btn-sm">
-                                    <i class="fas fa-plus mr-1"></i>
-                                    Add Service
+                                <button class="btn btn-success" data-toggle="modal" data-target="#addServiceModal">
+                                    <i class="fas fa-plus"></i> Add Services
                                 </button>
                             </div>
                         </div>
 
                         <div class="table-responsive">
-                            <table id="example" class="table table-striped" style="width:100%">
+                            <table id="service-table" class="table table-striped" style="width:100%">
                                 <thead class="border border-0">
                                     <tr>
                                         <th style="width:16%">Name</th>
@@ -32,39 +31,26 @@
                                         <th style="width:6%;">Action</th>
                                     </tr>
                                 </thead>
-                                <tbody class="border border-0">
+                                <tbody>
+                                    @foreach($services as $service)
                                     <tr>
-                                        <td class="fw-bold">Sample Package</td>
+                                        <td>{{ $service->name }}</td>
+                                        <td>{{ $service->type }}</td>
+                                        <td>{{ $service->price }}</td>
+                                        <td>{{ $service->description }}</td>
                                         <td>
-                                            <span class="badge-info badge text-bg-primary text-wrap fs-6">
-                                                Package
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <span class="badge-success badge text-bg-primary text-wrap fs-6">
-                                                ₱ 250,000.00
-                                            </span>
-                                        </td>
-                                        <td>
-                                            <p style="font-size: 12px" class="text-justify">
-                                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quia exercitationem 
-                                                dignissimos harum commodi ea reiciendis deserunt......
-                                            </p>
-                                            <button class="btn-secondary btn-sm badge text-bg-primary text-wrap">
-                                                Read more
-                                            </button>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex flex-row gap-1">
-                                                <button class="btn btn-primary btn-sm edit-user-btn">
-                                                    <i class="fas fa-edit"></i>
-                                                </button>
-                                                <button class="btn btn-sm btn-danger">
+                                            <a href="#" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#"><i class="fas fa-edit"></i></a>
+    
+                                            <form action="#" method="POST" class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-sm btn-danger" onclick="#">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
-                                            </div>
+                                            </form>
                                         </td>
                                     </tr>
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -83,4 +69,7 @@
 <script>
     new DataTable('#example');
 </script>
+
+@include('admin.service.partials._script')
+@include('admin.service.partials._add_service_modal')
 @endsection
