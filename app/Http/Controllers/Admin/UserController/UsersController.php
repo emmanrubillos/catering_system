@@ -47,7 +47,9 @@ class UsersController extends Controller
             'middle_name' => 'nullable|string|max:255',
             'last_name' => 'required|string|max:255',
             'contact_number' => 'nullable|numeric', // Changed validation rule
-            'address' => 'nullable|string|max:255',
+            'street' => 'nullable|string|max:255',
+            'barangay' => 'nullable|string|max:255',
+            'city' => 'nullable|string|max:255',
             'temp_password' => 'required|string|min:6',
         ]);
 
@@ -59,7 +61,9 @@ class UsersController extends Controller
             'middle_name' => $validatedData['middle_name'],
             'last_name' => $validatedData['last_name'],
             'contact_number' => $validatedData['contact_number'], // Removed unnecessary isset check
-            'address' => $validatedData['address'],
+            'street' => $validatedData['street'],
+            'barangay' => $validatedData['barangay'],
+            'city' => $validatedData['city'],
             'password' => bcrypt($validatedData['temp_password']),
         ]);
 
@@ -104,7 +108,9 @@ class UsersController extends Controller
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users,email,'.$id,
             'contact_number' => 'nullable|string|min:11',
-            'address' => 'nullable|string|max:255',
+            'street' => 'nullable|string|max:255',
+            'barangay' => 'nullable|string|max:255',
+            'city' => 'nullable|string|max:255',
             'role_id' => 'required|integer',
         ]);
 

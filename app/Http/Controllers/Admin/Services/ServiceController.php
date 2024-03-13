@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Services;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Service;
 
 class ServiceController extends Controller
 {
@@ -14,7 +15,8 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        return view('admin.service.index');
+        $services =Service::all();
+        return view('admin.service.index', compact('services'));
     }
 
     /**
@@ -35,7 +37,21 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:50',
+            'type' => 'required|string|max:50',
+            'price' => 'required|string|max:50',
+            'description' => 'required|string|max:255',
+        ]);
+
+        $service =Service::create([
+            'name' => $validatedData['name'],
+            'type' => $validatedData['type'],
+            'price' => $validatedData['price'],
+            'description' => $validatedData['description'],
+        ]);
+        return redirect()->route('service.index')->with(  'success', 'Service created successfully!');
+
     }
 
     /**

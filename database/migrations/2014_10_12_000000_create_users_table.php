@@ -22,7 +22,9 @@ class CreateUsersTable extends Migration
             $table->string('middle_name');
             $table->string('last_name');
             $table->string('contact_number');
-            $table->string('address');
+            $table->string('street');
+            $table->string('barangay');
+            $table->string('city');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
