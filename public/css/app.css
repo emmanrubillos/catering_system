@@ -1094,6 +1094,10 @@ video {
   width: 25px;
 }
 
+.w-\[26px\] {
+  width: 26px;
+}
+
 .w-\[280px\] {
   width: 280px;
 }
@@ -1132,14 +1136,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[23px\] {
-  width: 23px;
-}
-
-.w-\[26px\] {
-  width: 26px;
 }
 
 .flex-grow {
@@ -1284,10 +1280,6 @@ video {
 
 .gap-sm {
   gap: 20px;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .overflow-hidden {
@@ -1517,6 +1509,11 @@ video {
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .px-8 {
@@ -1886,6 +1883,11 @@ video {
   background-color: rgb(24 29 80 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-darker:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(25 34 128 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-light:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(255 247 233 / var(--tw-bg-opacity));
@@ -1899,11 +1901,6 @@ video {
 .hover\:bg-primary-dark:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(237 107 27 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-darker:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(25 34 128 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-opacity-40:hover {

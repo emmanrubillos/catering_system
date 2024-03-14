@@ -95,10 +95,10 @@
                                 <input id="contact_number" type="tel" placeholder="Contact number" class="w-[250px] my-2 form-control text-xsm p-3 py-3 border-none rounded-md shadow-md
                                 @error('contact_number') is-invalid @enderror" name="contact_number" value="{{ old('contact_number') }}" required autocomplete="contact_number" autofocus>
 
-                                <div class="ml-10">
+                                <div class="">
                                     @error('contact_number')
                                         <span class="invalid-feedback" role="alert">
-                                            <strong class="text-[9px] text-center rounded-md text-light bg-red px-11 py-1 m-0">
+                                            <strong class="text-[9px] text-center rounded-md text-light bg-red px-6 py-1 m-0">
                                                 {{ $message }}
                                             </strong>
                                         </span>
@@ -119,8 +119,8 @@
                                     </h3>
                                 </div>
 
-                                <input id="address" type="address" placeholder="Street" class="w-[250px] mt-2 form-control text-xsm p-3 py-3 border-none rounded-md shadow-md
-                                @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>    
+                                <input id="street" type="street" placeholder="Street" class="w-[250px] mt-2 form-control text-xsm p-3 py-3 border-none rounded-md shadow-md
+                                @error('street') is-invalid @enderror" name="street" value="{{ old('street') }}" required autocomplete="street" autofocus>    
 
                                 <div class="ml-10">
                                     @error('address')
@@ -132,8 +132,8 @@
                                     @enderror
                                 </div>
 
-                                {{-- <input id="address" type="address" placeholder="Barangay" class="w-[250px] my-2 form-control text-xsm p-3 py-3 border-none rounded-md shadow-md
-                                @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
+                                <input id="barangay" type="barangay" placeholder="Barangay" class="w-[250px] my-2 form-control text-xsm p-3 py-3 border-none rounded-md shadow-md
+                                @error('barangay') is-invalid @enderror" name="barangay" value="{{ old('barangay') }}" required autocomplete="barangay" autofocus>
 
                                 <div class="ml-10">
                                     @error('address')
@@ -145,8 +145,8 @@
                                     @enderror
                                 </div>
 
-                                <input id="address" type="address" placeholder="City/Municipal" class="w-[250px] form-control text-xsm p-3 py-3 border-none rounded-md shadow-md
-                                @error('address') is-invalid @enderror" name="address" value="{{ old('address') }}" required autocomplete="address" autofocus>
+                                <input id="city" type="city" placeholder="City/Municipal" class="w-[250px] form-control text-xsm p-3 py-3 border-none rounded-md shadow-md
+                                @error('city') is-invalid @enderror" name="city" value="{{ old('city') }}" required autocomplete="city" autofocus>
                                 
                                 <div class="ml-10">
                                     @error('address')
@@ -156,7 +156,7 @@
                                             </strong>
                                         </span>
                                     @enderror
-                                </div> --}}
+                                </div>
 
                             </div>
                        </div>

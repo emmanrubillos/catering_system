@@ -68,11 +68,11 @@
                                         @if ($user->role_id == 1)
                                         <span class="badge badge-primary">Admin</span>
                                         @elseif ($user->role_id == 2)
-                                            <span class="badge badge-success">Staff</span>
+                                            <span class="badge badge-success">Customer</span>
                                         @elseif ($user->role_id == 3)
                                             <span class="badge badge-warning">Chef</span>
                                         @elseif($user->role_id == 4)
-                                            <span class="badge badge-info">Customer</span>
+                                            <span class="badge badge-info">Staff</span>
                                         @else
                                             <span class="badge badge-secondary">Unknown</span>
                                         @endif

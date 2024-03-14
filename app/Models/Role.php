@@ -11,7 +11,15 @@ class Role extends Model
 
     protected $fillable = [
 
-        'name',
+        'first_name',
+        'middle_name',
+        'last_name',
+        'contact_number',
+        'street',
+        'barangay',
+        'city',
+        'email',
+        'password',
     ];
 
 }
