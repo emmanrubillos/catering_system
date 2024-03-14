@@ -9,7 +9,7 @@
 
                     <div class="card col-sm-12 mt-5">
                         <div class="card-header breadcrumb-item active d-flex ">
-                            <img width="46" height="46" src="https://img.icons8.com/pulsar-line/96/take-away-food.png" 
+                            <img width="46" height="46" src="https://img.icons8.com/pulsar-line/96/take-away-food.png"
                             alt="take-away-food"/>
                             <h3 class="mt-2 ml-2 text-dark fw-bold">Package Detials</h3>
                         </div>
@@ -40,10 +40,10 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="d-flex flex-row justify-content-between">
                                                     <div>
                                                         <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
@@ -54,10 +54,10 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="d-flex flex-row justify-content-between">
                                                     <div>
                                                         <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
@@ -68,7 +68,7 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -85,10 +85,10 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="d-flex flex-row justify-content-between">
                                                     <div>
                                                         <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
@@ -99,10 +99,10 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="d-flex flex-row justify-content-between">
                                                     <div>
                                                         <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
@@ -113,7 +113,7 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -130,10 +130,10 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="d-flex flex-row justify-content-between">
                                                     <div>
                                                         <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
@@ -144,7 +144,7 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -161,10 +161,10 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
-        
+
                                                 <div class="d-flex flex-row justify-content-between">
                                                     <div>
                                                         <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
@@ -175,7 +175,7 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
 
@@ -189,20 +189,20 @@
                                                         <button class="btn btn-success btn-sm edit-user-btn">
                                                             <i class="fas fa-edit"></i>
                                                         </button>
-                                                        
+
                                                     </div>
                                                 </div>
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        
+
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    
+
 
                 </div>
             </div>
