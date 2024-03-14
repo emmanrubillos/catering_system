@@ -18,7 +18,10 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss("resources/css/app.css", "public/css", [
         require("tailwindcss"),
     ])
-    
+    // Copy Flowbite CSS and JavaScript files
+    .copy('node_modules/flowbite/dist/flowbite.min.css', 'public/css')
+    .copy('node_modules/flowbite/dist/flowbite.min.js', 'public/js')
+    // Vue Loader Configuration
     .webpackConfig({
         module: {
             rules: [

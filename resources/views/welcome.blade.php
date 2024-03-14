@@ -21,7 +21,10 @@
             
         @include('layouts.pages_._home.home')
 
-
+        <script src="{{ mix('js/app.js') }}"></script>
+        <!-- Include Flowbite JS -->
+        <script src="{{ asset('js/flowbite.min.js') }}"></script>
 
     </body>
+
 </html>
