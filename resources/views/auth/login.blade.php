@@ -17,7 +17,7 @@
                                 <path fill="#ff731d" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
                             </svg>
                             <div class="flex flex-col">
-                                <input id="email" type="email" placeholder="enter your email" class="w-[300px] form-control text-xsm p-3 py-3 border-none rounded-md
+                                <input id="email" type="email" placeholder="Enter your email" class="w-[300px] form-control text-xsm p-3 py-3 border-none rounded-md shadow-md
                                 @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                             </div>
                         </div>
@@ -40,11 +40,11 @@
                             </svg>
                             <div class="flex flex-col">
                                 <div>
-                                    <input id="password" type="password" placeholder="enter your password" class="w-[250px] form-control text-xsm px-3 py-3 border-lg rounded-l-md
+                                    <input id="password" type="password" placeholder="Enter your password" class="w-[250px] form-control text-xsm px-3 py-3 border-lg rounded-l-md shadow-md
                                     @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                 </div>
                             </div>
-                            <div class="flex flex-row bg-primary w-[50px] rounded-r-md">
+                            <div class="flex flex-row bg-primary w-[50px] rounded-r-md shadow-md">
                                 {{-- Show Password --}}
                                 <button type="button" class="focus:outline-none" id="ShowPassword">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="w-[22px] ml-3">
@@ -101,7 +101,7 @@
                         </button>
                         <span class="font-semibold mt-1 text-xsm text-center text-dark">
                             Don't have an account?
-                            <a href="" class="text-primary hover:text-dark">
+                            <a href="{{ route('register') }}" class="text-primary hover:text-dark">
                                 Signup Now
                             </a>
                         </span>
