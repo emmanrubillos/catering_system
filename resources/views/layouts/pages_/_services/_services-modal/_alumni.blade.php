@@ -1,43 +1,96 @@
 <div id="modal-alumni-info" class="hidden">
     <div class="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-dark bg-opacity-50 z-40">
-        <div class="bg-light rounded shadow-lg w-[70rem]">
-            {{-- Modal Header --}}
-            <div class="border-b px-4 py-2 flex justify-between">
-                <h1 class="uppercase font-bold text-dark text-xl"></h1>
-                <lord-icon
-                    src="https://cdn.lordicon.com/zxvuvcnc.json"
-                    trigger="hover"
-                    state="hover-cross-2"
-                    colors="primary:#FF731D"
-                    style="width:40px;height:40px"
-                    class="alumni-modal-exit">
-                </lord-icon>
-            </div>
-            {{-- Modal Body  --}}
-            <div class="px-10 py-3 flex">
-                <div class=" px-1 py-3 flex justify-between">
-                    <img class="bg-primary p-1 rounded-xl shadow-xl mt-2 w-full h-auto "
-                         src="{{ URL::to('assets/img/services/_alumni.png') }}"
-                         alt="Alumni Reunions Event" style="width: 2005px; height: auto;">
+        <div class="bg-light shadow-lg w-[70rem] h-[25rem]">
+            {{-- Modal Body --}}
+            <div class="flex flex-row gap-3">
+                <div class="bg-light h-[25rem] w-2/4 ">
+
+                    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                        <!-- Carousel wrapper -->
+                        <div class="relative h-[25rem] overflow-hidden md:h-96">
+                            <!-- Item 1 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="{{ asset('assets/img/services/Alumni/Alumni_01.png') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="{{ asset('assets/img/services/Alumni/Alumni_02.png') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="{{ asset('assets/img/services/Alumni/Alumni_03.png') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="{{ asset('assets/img/services/Alumni/Alumni_04.png') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                                <img src="{{ asset('assets/img/services/Alumni/Alumni_05.png') }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                            </div>
+                        </div>
+                        <!-- Slider indicators -->
+                        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+                        </div>
+                        <!-- Slider controls -->
+                        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
+                    </div>
+
                 </div>
-                <div class="w-1/2 px-5">
-                    <h1 class="uppercase font-bold text-center text-dark text-xl ">Alumni Reunions Event</h1>
-                    <br>
-                    <p class="text-base text-dark">
-                    🎓 Reconnect and Celebrate: Let Us Craft Your Perfect Alumni Reunion! 🎉🎓 Step into
-                    a world where every detail is meticulously organized, and every moment is filled with
-                    nostalgia and joy. Elevate your special gathering with the expert coordination and
-                    seamless service of our dedicated team. From the initial planning to the final
-                    farewell, we're committed to bringing your alumni memories to life and curating
-                    a celebration that reflects the bond of your shared experiences. Indulge in our
-                    delightful offerings, customized to evoke fond memories and leave your fellow
-                    alumni captivated. With careful attention to detail and a dedication to excellence,
-                    we'll ensure that your reunion is a cherished event. Book now to embark on
-                    the journey of planning the alumni reunion of your dreams, where every moment is
-                    cherished, and memories are rekindled to last a lifetime. 🎓🎁
-                    </p>
-                    <div class="text-right mt-4 mb-4">
-                        <a href="#" class="bg-dark py-4 px-5 w-[150px] text-white font-bold rounded-lg transition ease-in-out hover:bg-primary relative -bottom-[3.7rem] -right-7 show-alumni-modal ">Go to Package</a>
+                <div class="bg-cover h-[25rem] w-2/4 ">
+                    <div class="flex justify-between px-3 py-2">
+                        <h1 class="before:border-primary before:border-l-4 before:mr-3 text-primary display-font text-[60px]">
+                            Alumni
+                        </h1>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/zxvuvcnc.json"
+                            trigger="hover"
+                            state="hover-cross-2"
+                            colors="primary:#FF731D"
+                            style="width:40px;height:40px"
+                            class="alumni-modal-exit">
+                        </lord-icon>
+                    </div>
+
+                    <div class="px-3 py-2">
+                        <span class=" font-bold text-light bg-dark px-5 py-2 text-base rounded-r-xl">
+                            Reconnect and Celebrate:
+                        </span>
+                    </div>
+
+                    <div class="pl-3 pr-7 py-2">
+                        <p class="text-sm text-justify font-semibold text-dark indent-10">
+                            Step into a world where every detail is meticulously organized, and every moment
+                            is filled with nostalgia and joy. Elevate your special gathering with the expert
+                            coordination and seamless service of our dedicated team. From the initial planning
+                            to the final farewell, we're committed to bringing your alumni memories to life and
+                            curating a celebration that reflects the bond of your shared experiences. Indulge in
+                            our delightful offerings, customized to evoke fond memories and leave your fellow
+                            alumni captivated. With careful attention to detail and a dedication to excellence,
+                            we'll ensure that your reunion is a cherished event. Book now to embark on
+                            the journey of planning the alumni reunion of your dreams, where every moment is
+                            cherished, and memories are rekindled to last a lifetime.
+                        </p>
                     </div>
                 </div>
             </div>
