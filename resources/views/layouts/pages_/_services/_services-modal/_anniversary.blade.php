@@ -24,17 +24,14 @@
                     <h1 class="uppercase font-bold text-center text-dark text-xl ">Anniversary Event</h1>
                     <br>
                     <p class="text-base text-dark">
-                        💖 Make Your Anniversary Unforgettable: Let Us Craft Your Perfect Celebration! 💍🎉
-                         Step into a world where every detail is tailored to perfection, and every moment
-                         is brimming with love and joy. Elevate your special day with the exquisite expertise
-                          and impeccable service of our dedicated team. From the initial concept to the last
-                          dance, we're committed to bringing your vision to life and curating a celebration
-                          that reflects the depth of your bond. Indulge in our delectable offerings, customized
-                           to tantalize your senses and leave your guests enchanted. With meticulous planning
-                            and a commitment to excellence, we'll ensure that your anniversary soirée is a
-                             cherished milestone. Book now to embark on the journey of planning the
-                             anniversary celebration of your dreams, where every moment is cherished, and
-                            memories are woven together to last a lifetime. 💖🎁
+                        Let Us Craft Your Perfect Celebration!
+                        Step into a world where every detail is tailored to perfection, and every moment is
+                        brimming with love and joy. Elevate your special day with the exquisite expertise and 
+                        impeccable service of our dedicated team. From the initial concept to the last dance, 
+                        we're committed to bringing your vision to life and curating a celebration that reflects 
+                        the depth of your bond. Indulge in our delectable offerings, customized to tantalize your 
+                        senses and leave your guests enchanted. With meticulous planning and a commitment to 
+                        excellence, we'll ensure that your anniversary soirée is a cherished milestone.
                     </p>
                     <div class="text-right mt-4 mb-4">
                         <a href="#" class="bg-dark py-4 px-5 w-[150px] text-white font-bold rounded-lg transition ease-in-out

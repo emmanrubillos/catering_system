@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "datatables.net-dt": "^2.0.2",
+        "flowbite": "^2.3.0",
         "sweetalert2": "^11.10.5"
     }
 }

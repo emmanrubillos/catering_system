@@ -4,3 +4,29 @@
 body {
   font-family: "Montserrat", sans-serif;
 }
+.icon
+{
+    width: 30px;
+}
+
+.iconmodal
+{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.card-body.p-1 {
+    overflow-x: scroll;
+    max-width: 100%;
+}
+
+.username
+{
+    width: 250px;
+    white-space: nowrap;
+}
+
+.btn {
+    min-width: 100px;
+    margin-bottom: 3px;/* Adjust the width as needed */
+}

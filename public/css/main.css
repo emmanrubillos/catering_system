@@ -1,9 +1,19 @@
        
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/coral-colour');
 
 @font-face {
   font-family: Hello-Christmas;
   src: url('/fonts/hello_christmas_6/Hello-Christmas.otf');
+}
+
+@font-face {
+  font-family: Intro;
+  src: url('/fonts/Intro-font/Intro.otf');
+}
+
+.display-font {
+  font-family: Intro;
 }
 
 .cusive-font {
