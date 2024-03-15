@@ -12,7 +12,7 @@
             var price = document.getElementById('price').value;
 
             // Check if any of the required fields are empty
-            if (!firstName.trim() || !lastName.trim() || !email.trim() || !tempPassword.trim() || !middleName.trim() || !contactNumber.trim() || !address.trim() || roleId === "") {
+            if (!name.trim() || type === "" || !description.trim() || !price.trim() ) {
                 // If any required field is empty, show an error message and return
                 Swal.fire({
                     icon: 'error',
@@ -36,4 +36,65 @@
             });
         });
     });
+</script>
+{{-- Delete Service SweetAlert --}}
+<script>
+    function confirmDeleteService(id){
+        event.preventDefault();
+        let serviceId = id;
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+                confirmButton: 'btn btn-danger',
+                cancelButton: 'btn btn-secondary'
+            },
+            
+        })
+
+        swalWithBootstrapButtons.fire({
+            title: 'Are you sure you want to delete this?',
+            text: "You won't be able to revert this!",
+            imageUrl: "{{ asset("assets/img/trash-icon.png") }}",
+            imageHeight: 200,
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'Cancel',
+            reverseButtons: false
+        }).then((result)=>{
+            if(result.isConfirmed){
+                $.ajax({
+                    url: `/service/${serviceId}`,
+                    type: 'DELETE',
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                        'Content-Type': 'application/json'
+                    },
+                    success: function(response) {
+                        Swal.fire({
+                            title: 'Deleted!',
+                            text: "Services has been deleted.",
+                            icon: 'success',
+                            showCancelButton: false,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Okay'
+                        }).then(() => {
+                            // Reload the page immediately after clicking "Okay"
+                            location.reload();
+                        });
+                    },
+                    error: function(error) {
+                        // Handle error response
+                        console.error('DELETE request failed:', error);
+                    }
+                });
+            } else {
+                result.dismiss == Swal.DismissReason.cancel;
+                swalWithBootstrapButtons.fire(
+                    'Cancelled',
+                    'Your imaginary file is safe :)',
+                    'error'
+                );
+            }
+        })
+    }
 </script>
