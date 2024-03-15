@@ -26,7 +26,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.service.create');
     }
 
     /**
@@ -42,13 +42,15 @@ class ServiceController extends Controller
             'type' => 'required|string|max:50',
             'price' => 'required|string|max:50',
             'description' => 'required|string|max:255',
+            'number_of_person' => 'required|string|max:255',
         ]);
-
+            // dd($validatedData);
         $service =Service::create([
             'name' => $validatedData['name'],
             'type' => $validatedData['type'],
             'price' => $validatedData['price'],
             'description' => $validatedData['description'],
+            'number_of_person' => $validatedData['number_of_person'],
         ]);
         return redirect()->route('service.index')->with(  'success', 'Service created successfully!');
 
@@ -62,7 +64,8 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        //
+        $service = Service::findOrFail($id);
+        return view('admin.service.show', compact('service'));
     }
 
     /**
@@ -96,6 +99,10 @@ class ServiceController extends Controller
      */
     public function destroy($id)
     {
-        //
+    $service = Service::findOrFail($id);
+
+    $deleteService = $service->delete();
+
+    return response()->json(['message' => 'Service deleted successfully'], 200);
     }
 }

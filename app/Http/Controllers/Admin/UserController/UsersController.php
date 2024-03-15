@@ -52,7 +52,6 @@ class UsersController extends Controller
             'city' => 'nullable|string|max:255',
             'temp_password' => 'required|string|min:6',
         ]);
-
         // Create the user
         $user = User::create([
             'role_id' => $validatedData['role_id'],
@@ -66,6 +65,7 @@ class UsersController extends Controller
             'city' => $validatedData['city'],
             'password' => bcrypt($validatedData['temp_password']),
         ]);
+        // dd($user);
 
         // Optionally, you can redirect the user to a different page after creation
         return redirect()->route('users.index')->with(  'success', 'User created successfully!');
@@ -137,6 +137,6 @@ class UsersController extends Controller
 
     // Check if the deletion was successful
     return response()->json(['message' => 'User deleted successfully'], 200);
-}
+    }
 
 }

@@ -1,8 +1,3 @@
-<script>
-    $(document).ready(function() {
-        $('#users-table').DataTable();
-    });
-</script>
 {{-- Sweet alert for the Edit User Button --}}
 <script>
     $(document).ready(function() {
