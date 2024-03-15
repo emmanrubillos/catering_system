@@ -110,10 +110,12 @@
     const exitAlumModal = document.querySelector('.alumni-modal-exit');
 
     // Alumni Modal Trigger
-    showAlumniModal.addEventListener('click', function () {
+    showAlumniModal.addEventListener('click', function (event) {
+        event.preventDefault();
         alumniModal.classList.remove('hidden');
     });
-    exitAlumModal.addEventListener('click', function() {
+    exitAlumModal.addEventListener('click', function(event) {
+        event.preventDefault();
         alumniModal.classList.add('hidden');
     });
 
@@ -124,10 +126,12 @@
     const exitBurialModal = document.querySelector('.burial-modal-exit');
 
     // Burial Modal Trigger
-    showBurialModal.addEventListener('click', function () {
+    showBurialModal.addEventListener('click', function(event)  {
+        event.preventDefault();
         burialModal.classList.remove('hidden');
     });
-    exitBurialModal.addEventListener('click', function() {
+    exitBurialModal.addEventListener('click', function(event)  {
+        event.preventDefault();
         burialModal.classList.add('hidden');
     });
 
@@ -137,10 +141,12 @@
     const exitSeminarModal = document.querySelector('.seminar-modal-exit');
 
     // Seminar  Modal Trigger
-    showSeminarModal.addEventListener('click', function () {
+    showSeminarModal.addEventListener('click', function(event){
+        event.preventDefault();
         seminarModal.classList.remove('hidden');
     });
-    exitSeminarModal.addEventListener('click', function() {
+    exitSeminarModal.addEventListener('click', function(event) {
+        event.preventDefault();
         seminarModal.classList.add('hidden');
     });
 
