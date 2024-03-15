@@ -4,7 +4,7 @@
             {{-- Modal Body --}}
             <div class="flex flex-row gap-3">
                 <div class="bg-light h-[25rem] w-2/4 ">
-                   
+
                     <div id="default-carousel" class="relative w-full" data-carousel="slide">
                         <!-- Carousel wrapper -->
                         <div class="relative h-[25rem] overflow-hidden md:h-96">
@@ -88,7 +88,7 @@
                             your unique love story. Indulge in our exquisite cuisine, customized to tantalize your
                             taste buds and leave your guests enchanted. With seamless execution and unwavering attention
                             to detail, we'll ensure that your wedding day is nothing short of magical.
-                            Book now to begin the journey ofplanning the wedding of your dreams, where every moment 
+                            Book now to begin the journey ofplanning the wedding of your dreams, where every moment
                             is cherished and memories are made to last a lifetime.
                         </p>
                     </div>
