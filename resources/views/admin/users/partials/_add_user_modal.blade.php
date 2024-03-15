@@ -38,7 +38,7 @@
                                 <input type="text" class="form-control" id="barangay" name="barangay">
                             </div>
                             <div class="form-group">
-                                <label for="city">city</label>
+                                <label for="city">City</label>
                                 <input type="text" class="form-control" id="city" name="city">
                             </div>
                         </div>

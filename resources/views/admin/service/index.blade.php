@@ -28,6 +28,7 @@
                                         <th style="width:10%">Type</th>
                                         <th style="width:10%;">Price</th>
                                         <th style="width:22%">Description</th>
+                                        <th style="width:20%;">Number of Person</th>
                                         <th style="width:6%;">Action</th>
                                     </tr>
                                 </thead>
@@ -38,13 +39,14 @@
                                         <td>{{ $service->type }}</td>
                                         <td>{{ $service->price }}</td>
                                         <td>{{ $service->description }}</td>
+                                        <td>{{ $service->number_of_person }}</td>
                                         <td>
                                             <a href="#" class="btn btn-primary btn-sm edit-user-btn" data-toggle="modal" data-target="#"><i class="fas fa-edit"></i></a>
     
-                                            <form action="#" method="POST" class="d-inline">
+                                            <form action="{{ route('service.destroy', $service->id) }}" method="POST" class="d-inline">
                                                 @csrf
                                                 @method('DELETE')
-                                                <button class="btn btn-sm btn-danger" onclick="#">
+                                                <button class="btn btn-sm btn-danger" onclick="confirmDeleteService({{ $service->id }})">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
                                             </form>
@@ -67,7 +69,7 @@
 {{-- <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script> --}}
 
 <script>
-    new DataTable('#example');
+    new DataTable('#service-table');
 </script>
 
 @include('admin.service.partials._script')

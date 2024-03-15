@@ -38,8 +38,16 @@
                                 <input type="text" class="form-control" id="contact_number" name="contact_number"  value="{{ $user->contact_number }}" maxlength="11">
                             </div>
                             <div class="form-group">
-                                <label for="address">Address</label>
-                                <input type="text" class="form-control" id="address" name="address" value="{{ $user->address }}">
+                                <label for="street">Street</label>
+                                <input type="text" class="form-control" id="street" name="street" value="{{ $user->street }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="barangay">Barangay</label>
+                                <input type="text" class="form-control" id="barangay" name="barangay" value="{{ $user->barangay }}">
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" class="form-control" id="city" name="city" value="{{ $user->city }}">
                             </div>
                             <div class="form-group">
                                 <label for="role_id">Role</label>

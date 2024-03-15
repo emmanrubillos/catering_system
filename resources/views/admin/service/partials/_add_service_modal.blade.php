@@ -22,9 +22,13 @@
                                 <label for="type">Type</label>
                                 <select name="type" id="type" class="form-control">
                                     <option value="" selected disabled>Select a Type</option>
-                                    <option value="1">Package</option>
-                                    <option value="2">Pax</option>
+                                    <option value="Package">Package</option>
+                                    <option value="Pax">Pax</option>
                                 </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="number_of_person">Number of Person</label>
+                                <input type="text" class="form-control" id="number_of_person" name="number_of_person">
                             </div>
                         </div>
                         <div class="col-md-6">
