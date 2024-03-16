@@ -375,7 +375,6 @@
 
                     <div class="bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative ml-10 mr-auto">
                         <h1 class="text-center text-primary uppercase font-bold text-xl">
-                            Anniversary
                         </h1>
                         <p class="text-base text-center">
                             Toast to another year of love and laughter with a caterer who understands
