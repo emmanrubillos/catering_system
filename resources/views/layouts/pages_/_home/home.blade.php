@@ -1,6 +1,7 @@
-@extends('layouts.master')
+@extends('layouts.inc.header')
+
 @section('content')
-  <section class="w-full h-160">
+  <div class="section w-full h-160">
     
     {{--? Home Top Container  --}}
     <div class="home h-full">
@@ -484,7 +485,7 @@
     </div>
 
     {{--? Our Wedding Packages Container  --}}
-    <div class="relative -top-72 mt-10 bg-light h-[80rem] shadow-xl">
+    <div class="relative -top-72 mt-10 bg-light h-[85rem] shadow-xl">
       
       <div class="text-center flex flex-col py-5 mx-52">
         <h1 class="cusive-font text-[38px] text-dark">
@@ -504,17 +505,17 @@
 
       <div class="flex flex-row mx-20 mt-8 gap-5">
         <div class="Package-Details flex flex-col h-[35rem] basis-1/4 bg-white px-5 py-3 shadow-xl rounded-xl ">
-          <h1 class="font-bold text-dark text-xxl">
+          <h1 class="font-bold text-dark text-xl">
             Package Details
           </h1>
-          <p class="text-dark text-sm text-justify">
+          <p class="text-dark text-xsm text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. 
             Omnis quis dolores vero reprehenderit quae culpa. 
           </p>
 
           <hr class="text-dark my-2">
 
-          <ul class="font-bold">
+          <ul class="font-bold text-base">
 
             <li class="flex flex-row mb-3">
               <script src="https://cdn.lordicon.com/lordicon.js"></script>
@@ -682,7 +683,7 @@
                   <li>Groom</li>
                   <li>Maid of Honor</li>
                   <li>Best Man</li>
-                  <li class="w-[215px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[215px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xsm font-bold text-light">
                     3 Bridesmaids and Groomsmen</li>
                   <li class="w-[125px] items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
                     3 Flower Girls</li>
@@ -696,7 +697,7 @@
 
               <div class="basis-3/3 mr-3">
 
-                <h6 class="text-dark font-bold text-[12px] uppercase">
+                <h6 class="text-dark font-bold text-[11px] uppercase">
                   Photographic & Videographic
                   <lord-icon
                       src="https://cdn.lordicon.com/jnzhohhs.json"
@@ -710,7 +711,7 @@
                       Prenup Photo (2-3 Sets)</li>
                   <li>Photo & View Coverage</li>
                   <li>Wedding Day Photo <br>
-                    <span class="text-xsm">(Preparation Reception & Unlimited Shots)</span>
+                    <span class="text-[10px]">(Preparation Reception & Unlimited Shots)</span>
                   </li>
                   <li>Photo Highlights <br>
                     <span class="text-xsm">(will be uploaded to Facebook)</span>
@@ -733,9 +734,9 @@
                 </h6>
                 <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
                   
-                  <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xsm font-bold text-light">
                     3 Main Dish</li>
-                  <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xsm font-bold text-light">
                     1 Side Dish</li>
                   
                     <ul class="list-disc list-inside">
@@ -745,8 +746,8 @@
                       <li>Rice</li>
                     </ul>
                   </ul>
-                  <button class="bg-dark py-2 px-5 w-[150px] text-light font-bold rounded-tl-[50px] rounded-tr-[50px]
-                  transition ease-in-out hover:bg-primary relative -bottom-[2.9rem] -right-7 show-b-modal">
+                  <button class="bg-dark py-2 px-5 w-[150px] text-light font-bold mt-10 shadow-lg
+                  transition ease-in-out hover:bg-primary show-b-modal">
                     Read More
                   </button>
               </div>
@@ -784,7 +785,7 @@
                   <li>Groom</li>
                   <li>Maid of Honor</li>
                   <li>Best Man</li>
-                  <li class="w-[215px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[215px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xsm font-bold text-light">
                     5 Bridesmaids and Groomsmen</li>
                   <li class="w-[125px] items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
                     6 Flower Girls</li>
@@ -798,7 +799,7 @@
 
               <div class="basis-3/3 mr-3">
 
-                <h6 class="text-dark font-bold text-[12px] uppercase">
+                <h6 class="text-dark font-bold text-[11px] uppercase">
                   Photographic & Videographic
                   <lord-icon
                       src="https://cdn.lordicon.com/jnzhohhs.json"
@@ -808,20 +809,20 @@
                   </lord-icon>
                 </h6>
                 <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
-                  <li class="w-[230px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[230px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xsm font-bold text-light">
                       Prenup Photo (3-6 Sets) w/Stylist</li>
                   <li>Photo & View Coverage</li>
                   <li>Wedding Day Photo <br>
-                    <span class="text-xsm">(Preparation Reception & Unlimited Shots)</span>
+                    <span class="text-[10px]">(Preparation Reception & Unlimited Shots)</span>
                   </li>
                   <li>Photo Highlights <br>
                     <span class="text-xsm">(will be uploaded to Facebook)</span>
                   </li>
-                  <li class="w-[190px] my-1 items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[190px] my-1 items-center rounded-md bg-primary px-2 py-1 text-xsm font-bold text-light">
                     32GB Flash Drive Storage</li>
-                  <li class="w-[160px] my-1 items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[160px] my-1 items-center rounded-md bg-primary px-2 py-1 text-xsm font-bold text-light">
                     SDE (Same Day Edit)</li>
-                  <li class="w-[230px] my-1 items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[230px] my-1 items-center rounded-md bg-primary px-2 py-1 text-[10.5px] font-bold text-light">
                     Printed Copies 100pcs <span class="text-[10px]">(their Choice)</span></li>
                 </ul>
               </div>
@@ -839,9 +840,9 @@
                 </h6>
                 <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
                   
-                  <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xsm font-bold text-light">
                     4 Main Dish</li>
-                  <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xsm font-bold text-light">
                     1 Side Dish</li>
                   
                     <ul class="list-disc list-inside">
@@ -851,8 +852,8 @@
                       <li>Rice</li>
                     </ul>
                   </ul>
-                  <button class="bg-dark py-2 px-5 w-[150px] text-light font-bold rounded-tl-[50px] rounded-tr-[50px]
-                  transition ease-in-out hover:bg-primary relative -bottom-[3.8rem] -right-6 show-s-modal">
+                  <button class="bg-dark py-2 px-5 w-[150px] text-light font-bold mt-10 shadow-lg
+                  transition ease-in-out hover:bg-primary show-s-modal">
                     Read More
                   </button>
               </div>
@@ -892,7 +893,7 @@
                   <li>Groom</li>
                   <li>Maid of Honor</li>
                   <li>Best Man</li>
-                  <li class="w-[215px] items-center rounded-md mb-1 bg-light px-2 py-1 text-xs font-bold text-dark ">
+                  <li class="w-[215px] items-center rounded-md mb-1 bg-light px-2 py-1 text-xsm font-bold text-dark ">
                     7 Bridesmaids and Groomsmen</li>
                   <li class="w-[125px] items-center rounded-md bg-light px-2 py-1 text-xs font-bold text-dark ">
                     8 Flower Girls</li>
@@ -906,7 +907,7 @@
 
               <div class="basis-3/3 mr-3">
 
-                <h6 class="text-dark  font-bold text-[12px] uppercase">
+                <h6 class="text-dark  font-bold text-[11px] uppercase">
                   Photographic & Videographic
                   <lord-icon
                       src="https://cdn.lordicon.com/jnzhohhs.json"
@@ -915,29 +916,29 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="mt-1 list-disc list-inside text-light  font-semibold text-sm"> 
-                  <li class="w-[230px] items-center rounded-md mb-1 bg-light px-2 py-1 text-xs font-bold text-dark ">
+                <ul class="mt-1 list-disc list-inside text-light font-semibold text-sm"> 
+                  <li class="w-[230px] items-center rounded-md mb-1 bg-light px-2 py-1 text-xsm font-bold text-dark ">
                       Prenup Photo (6-8 Sets) w/Stylist</li>
                   <li>Photo & View Coverage</li>
                   <li>Wedding Day Photo <br>
-                    <span class="text-xsm">(Preparation Reception & Unlimited Shots)</span>
+                    <span class="text-[10px]">(Preparation Reception & Unlimited Shots)</span>
                   </li>
                   <li>Photo Highlights <br>
                     <span class="text-xsm">(will be uploaded to Facebook)</span>
                   </li>
-                  <li class="w-[190px] my-1 items-center rounded-md bg-light px-2 py-1 text-[12px] font-bold text-dark ">
+                  <li class="w-[190px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark ">
                     64GB Flash Drive Storage</li>
-                  <li class="w-[160px] my-1 items-center rounded-md bg-light px-2 py-1 text-[12px] font-bold text-dark ">
+                  <li class="w-[160px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark ">
                     SDE (Same Day Edit)</li>
-                  <li class="w-[230px] my-1 items-center rounded-md bg-light px-2 py-1 text-[12px] font-bold text-dark">
+                  <li class="w-[230px] my-1 items-center rounded-md bg-light px-2 py-1 text-[10.5px] font-bold text-dark">
                     Printed Copies 180pcs <span class="text-[10px]">(their Choice)</span></li>
-                  <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark">
+                  <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-[10.5px] font-bold text-dark">
                     with 1 Photo Album</li>
-                  <li class="w-[200px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark">
+                  <li class="w-[200px] my-1 items-center rounded-md bg-light px-2 py-1 text-[10.5px] font-bold text-dark">
                     with 1 Photo Frame for Couple</li>
-                  <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark">
+                  <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-[10.5px] font-bold text-dark">
                     with 1 Guest Book</li>
-                  <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark">
+                  <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-[10.5px] font-bold text-dark">
                     PhotoBooth</li>   
                 </ul>
               </div>
@@ -955,11 +956,11 @@
                 </h6>
                 <ul class="mt-1 list-disc list-inside text-light  font-semibold text-sm"> 
                   
-                  <li class="w-[105px] items-center rounded-md  bg-light px-2 py-1 text-xs font-bold text-dark ">
+                  <li class="w-[105px] items-center rounded-md  bg-light px-2 py-1 text-xsm font-bold text-dark ">
                     5 Main Dish</li>
-                  <li class="w-[105px] items-center rounded-md my-1 bg-light px-2 py-1 text-xs font-bold text-dark ">
+                  <li class="w-[105px] items-center rounded-md my-1 bg-light px-2 py-1 text-xsm font-bold text-dark ">
                     1 Side Dish</li>
-                  <li class="w-[120px] items-center rounded-md bg-light px-2 py-1 text-xs font-bold text-dark ">
+                  <li class="w-[120px] items-center rounded-md bg-light px-2 py-1 text-xsm font-bold text-dark ">
                     1 Lechon <span class="text-[10px]">(30kls)</span></li>
                     <ul class="list-disc list-inside">
                       <span class="font-bold text-dark">One Round:</span>
@@ -968,8 +969,8 @@
                       <li>Rice</li>
                     </ul>
                   </ul>
-                  <button class="bg-dark py-2 px-5 w-[150px] text-light  font-bold rounded-tl-[50px] rounded-tr-[50px]
-                  transition ease-in-out hover:bg-light hover:text-dark relative -bottom-[9.4rem] -right-6 show-p-modal">
+                  <button class="bg-dark py-2 px-5 w-[150px] text-light font-bold mt-[7.5rem] shadow-lg
+                  transition ease-in-out hover:bg-light hover:text-dark show-p-modal">
                     Read More
                   </button>
               </div>
@@ -986,7 +987,7 @@
 
     </div>
 
-    <div>
+    <div class="h-[30rem]">
       <h1 class="text-center font-uppercase font-bold text-[100px]">
         THIS IS BY PAX PACKAGE
       </h1>
@@ -994,11 +995,11 @@
 
    
 
-
-  </section>
+    @include('layouts.inc.footer')
+  </div>
 
 @include('layouts.pages_._home.scripts.tab-menu-script')
 @include('layouts.pages_._home.scripts.read-more-package-script')
 
-
 @endsection
+

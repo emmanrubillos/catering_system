@@ -99,6 +99,5 @@
 
 @include('admin.users.partials._script')
 @include('admin.users.partials._add_user_modal')
-
 @endsection
 

@@ -21,24 +21,15 @@
 	
 </head>
 
-<body>
-
-	@include('layouts.inc.header')
-	
-	<main class="wrapper h-[420rem] overflow-x-hidden">
-		
-		
-        	@yield('content')
+<body class="flex flex-col w-full h-screen">
 
 
-	</main>
-	
-	@include('layouts.inc.footer')
-	
-	<script src="{{ mix('js/app.js') }}"></script>
-    <!-- Include Flowbite JS -->
-    <script src="{{ asset('js/flowbite.min.js') }}"></script>
+	@yield('content')
+
+
 	
 </body>
-
+	<script src="{{ mix('js/app.js') }}"></script>
+	<!-- Include Flowbite JS -->
+	<script src="{{ asset('js/flowbite.min.js') }}"></script>
 </html>
