@@ -840,9 +840,9 @@
                 </h6>
                 <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
                   
-                  <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xsm font-bold text-light">
                     4 Main Dish</li>
-                  <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xs font-bold text-light">
+                  <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xsm font-bold text-light">
                     1 Side Dish</li>
                   
                     <ul class="list-disc list-inside">
