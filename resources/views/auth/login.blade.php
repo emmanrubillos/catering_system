@@ -40,7 +40,7 @@
                             </svg>
                             <div class="flex flex-col">
                                 <div>
-                                    <input id="password" type="password" placeholder="Enter your password" class="w-[250px] form-control text-xsm px-3 py-3 border-lg rounded-l-md shadow-md
+                                    <input id="password" type="password" placeholder="Enter your password" class="w-[250px] form-control text-xsm px-3 py-3 rounded-l-md shadow-md
                                     @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                                 </div>
                             </div>
@@ -75,7 +75,7 @@
                     
                     <div class="flex flex-row justify-between">
                         <div class="form-check flex flex-row">
-                            <div class="mt-1 mr-1">
+                            <div class="mr-1">
                                 <input class="form-check-input text-xsm" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                             </div>
                             <div class="mt-[0.5px]">

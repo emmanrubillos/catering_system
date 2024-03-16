@@ -15,10 +15,9 @@
                 
 
     </head>
-    <body class="antialiased">
+    <body class="flex flex-col">
         
-            
-            
+           
         @include('layouts.pages_._home.home')
 
         <script src="{{ mix('js/app.js') }}"></script>

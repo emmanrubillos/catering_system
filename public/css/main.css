@@ -53,7 +53,7 @@ main {
   background-size: cover;
 }
 
-section {
+.section {
   position: absolute;
   top: 0;
   left: 0;
