@@ -81,3 +81,15 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.contact-bg {
+  background-image: url('/assets/img/background-images/contact-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-bg {
+  background-image: url('/assets/img/background-images/menu-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
