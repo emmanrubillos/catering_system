@@ -60,5 +60,6 @@ Route::get('/services', [App\Http\Controllers\Pages\ServicesController::class, '
 Route::get('/menu', [App\Http\Controllers\Pages\MenuController::class, 'index'])->name('menu');
 Route::get('/contact_us', [App\Http\Controllers\Pages\ContactController::class, 'index'])->name('contact_us');
 
+Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'index'])->name('profile');
 
 });
