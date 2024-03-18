@@ -77,7 +77,7 @@
             </a>
 
             <div class="nav-links mt-0 tablet:mt-8 hidden tablet:flex flex-wrap gap-default">
-                <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Home</a>
+                <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">Home</a>
                 <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">About Us</a>
                 <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Services</a>
                 <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Menu</a>
