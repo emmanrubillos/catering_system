@@ -1,14 +1,13 @@
 
-
 {{--! footer --}}
 <footer class="relative z-0">
-    <div class=" bg-dark w-full h-[51rem] tablet:h-96 laptop:h-115 text-light overflow-hidden ">
-        {{--! toogle-up-button --}}
-        <a href="" class="">
-            <img class="tablet:w-32 tablet:h-32 w-[6.5rem] h-[6.5rem] absolute -top-20 z-50  
-            right-20 transition ease-in-out delay-150 -translate-y-1 hover:scale-110"
-            src="{{ asset('assets/img/up-toggle.png') }}" alt="toggle-up">
-        </a>
+        <div class=" bg-dark w-full h-[51rem] tablet:h-96 laptop:h-115 text-light overflow-hidden ">
+            {{--! toogle-up-button --}}
+            <a href="#" id="scroll-to-top" class="">
+                <img class="tablet:w-32 tablet:h-32 w-[6.5rem] h-[6.5rem] absolute -top-20 z-50
+                right-20 transition ease-in-out delay-150 -translate-y-1 hover:scale-110"
+                src="{{ asset('assets/img/up-toggle.png') }}" alt="toggle-up">
+            </a>
         <div class="relative">
 
             <div class="mx-auto px-10 pt-8 flex sm-mobile:flex-col tablet:flex-row justify-between">
@@ -60,7 +59,7 @@
                                         <lord-icon src="https://cdn.lordicon.com/srsgifqc.json" trigger="hover"
                                             colors="primary:#FF731D" style="width:30px;height:30px">
                                         </lord-icon>
-                                        <span class="sm-mobile:text-lg tablet:text-[10px] laptop:text-sm font-semibold sm-mobile:mx-1 
+                                        <span class="sm-mobile:text-lg tablet:text-[10px] laptop:text-sm font-semibold sm-mobile:mx-1
                                         tablet:mx-1 tablet:mt-2 laptop:mx-2 laptop:mt-1 hover:text-primary">
                                             0907-753-0219
                                         </span>
@@ -72,7 +71,7 @@
                 </div>
                 <hr class="tablet:hidden mt-5 mb-3">
                 {{--! Column Two --}}
-                <div class="column-two basis-2/5 laptop:basis-1/3 flex justify-evenly tablet:justify-between">     
+                <div class="column-two basis-2/5 laptop:basis-1/3 flex justify-evenly tablet:justify-between">
                     {{-- C-two-Column-one --}}
                     <div>
                         <h5 class="font-bold uppercase text-md laptop:text-lg">
@@ -256,11 +255,11 @@
                     {{--? Leave it Empty --}}
                 </div>
             </div>
-            
-            {{--! Bottom Detials --}}
+
+            {{--! Bottom Details --}}
             <hr class="sm-mobile:mx-10 mt-5 mb-1.5
             text-light tablet:ml-10 tablet:mr-80 tablet:mt-1 tablet:mb-2">
-            <div class="text-center flex flex-col tablet:flex-row tablet:justify-between tablet:ml-10 
+            <div class="text-center flex flex-col tablet:flex-row tablet:justify-between tablet:ml-10
             tablet:mr-80 text-[8.5px] tablet:text-[9px] laptop:text-xsm">
                 <p>MLG CL's Capstone Project Catering System Web-Based.</p>
                 <p>Copyright © 2024. All Right Reserved.</p>
@@ -270,10 +269,47 @@
             <img class="absolute hidden tablet:block -bottom-72 right-5 rotate-90 z-0"
                 src="{{ asset('assets/img/blob-foot-1.svg') }}" alt="blob-1">
 
-            <img class="absolute hidden z-0 tablet:block w-[650px] h-[850px] laptop:w-[750px] laptop:h-[900px] -bottom-[70%] -right-72 laptop:-bottom-2/4 laptop:-right-80 rotate-45" 
+            <img class="absolute hidden z-0 tablet:block w-[650px] h-[850px] laptop:w-[750px] laptop:h-[900px] -bottom-[70%] -right-72 laptop:-bottom-2/4 laptop:-right-80 rotate-45"
             src="{{ asset('assets/img/blob-foot-2.svg') }}" alt="blob-2">
         </div>
     </div>
-        
+
 </footer>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var scrollToTopButton = document.getElementById("scroll-to-top");
+
+        scrollToTopButton.addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            var duration = 2000; // Duration of the scroll animation in milliseconds (adjust as needed)
+            var start = window.pageYOffset;
+            var end = 0; // Scroll to the top of the page
+            var startTime = null;
+
+            function scroll(currentTime) {
+                if (startTime === null) {
+                    startTime = currentTime;
+                }
+                var timeElapsed = currentTime - startTime;
+                var scrollPosition = easeInOutQuad(timeElapsed, start, end - start, duration);
+                window.scrollTo(0, scrollPosition);
+                if (timeElapsed < duration) {
+                    requestAnimationFrame(scroll);
+                }
+            }
+
+            requestAnimationFrame(scroll);
+        });
+    });
+
+    // Custom easing function for slow scroll
+    function easeInOutQuad(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+</script>
+
 

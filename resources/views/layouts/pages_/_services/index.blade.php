@@ -121,7 +121,6 @@
 
                     <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
                         <h1 class="text-center text-primary uppercase font-bold text-xl">
-                            Anniversary
                         </h1>
                         <h2 class="font-semibold text-dark">
                             Your Perfect Celebration Awaits:
