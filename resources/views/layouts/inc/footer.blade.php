@@ -1,11 +1,11 @@
 
 
 {{--! footer --}}
-<footer>
-    <div class=" bg-dark w-full h-[51rem] tablet:h-96 laptop:h-115 text-light overflow-hidden relative z-0">
+<footer class="relative z-0">
+    <div class=" bg-dark w-full h-[51rem] tablet:h-96 laptop:h-115 text-light overflow-hidden ">
         {{--! toogle-up-button --}}
-        <a href="" class="hidden">
-            <img class="tablet:w-32 tablet:h-32 w-[6.5rem] h-[6.5rem] absolute -top-20 z-10
+        <a href="" class="">
+            <img class="tablet:w-32 tablet:h-32 w-[6.5rem] h-[6.5rem] absolute -top-20 z-50  
             right-20 transition ease-in-out delay-150 -translate-y-1 hover:scale-110"
             src="{{ asset('assets/img/up-toggle.png') }}" alt="toggle-up">
         </a>

@@ -6,7 +6,7 @@ use App\Http\Controllers\Admin\UserController\UsersController;
 use App\Http\Controllers\PackageController;
 use App\Http\Controllers\Admin\CustomerReservation\CustomerEventDetailsController;
 use App\Http\Controllers\Admin\Services\ServiceController;
-
+use App\Http\Controllers\Customer\MakeReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +45,10 @@ Route::get('/service/pax_details', [App\Http\Controllers\Admin\Services\ServiceP
 Route::resource('users', \App\Http\Controllers\Admin\UserController\UsersController::class);
 Route::resource('package', \App\Http\Controllers\PackageController::class);
 Route::resource('service', \App\Http\Controllers\Admin\Services\ServiceController::class);
+
+
+//! Make a Reservation
+Route::get('/customer/make_reservation', [MakeReservationController::class, 'index'])->name('customer.make_reservation');
 
 
 Route::middleware('CheckUserRole')->group(function (){

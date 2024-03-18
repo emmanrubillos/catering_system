@@ -19,7 +19,7 @@
             </div>
         </div>
 
-        <div class="flex flex-col my-14 h-[80rem] mx-14">
+        <div class="flex flex-col my-14 h-[90rem] mx-14">
             <div class="flex flex-row gap-10 h-[44rem]">
                 <div class="flex flex-col bg-light basis-2/4 rounded-lg shadow-lg">
                     <div class="my-14 mx-10">
@@ -222,8 +222,9 @@
                 </div>
             </div>
 
-            <div>
-
+            <div class="mt-10 self-center border-[5px] rounded border-primary shadow-xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.9740754588386!2d124.72542520000003!3d10.429803100000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33077194abad0a75%3A0xc2341f5d56e75cd0!2sTitan&#39;s%20catering%20%26%20services!5e0!3m2!1sen!2sus!4v1710676324669!5m2!1sen!2sus"
+                width="1000" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 
