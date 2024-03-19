@@ -74,7 +74,7 @@
 
                     <div class="px-3 py-2">
                         <span class=" font-bold text-light bg-dark px-5 py-2 text-base rounded-r-xl">
-                            Say "I Do" to Unforgettable Moments:
+                            Craft Your Perfect Wedding:
                         </span>
                     </div>
 
