@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="section w-full h-160 z-0">
-    
+
     {{--? Home Top Container  --}}
     <div class="home h-full">
         <div class="relative text-center top-40">
@@ -19,16 +19,16 @@
             We Provide Exceptional Catering Services for your Dream Event.
           </h3>
           <p class="inset-0 top-[300px] absolute font-semibold leading-6 text-md text-dark mx-56">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, delectus rem. 
-            Iure consectetur nam laborum delectus, perferendis reprehenderit omnis ea nobis. 
-            Sequi error dolor doloribus ut sit placeat nemo quia! Lorem ipsum dolor sit amet 
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore, delectus rem.
+            Iure consectetur nam laborum delectus, perferendis reprehenderit omnis ea nobis.
+            Sequi error dolor doloribus ut sit placeat nemo quia! Lorem ipsum dolor sit amet
             consectetur, adipisicing elit. Dolore, delectus rem. Iure consectetur nam laborum
-            electus, perferendis reprehenderit omnis ea nobis. Sequi error dolor doloribus ut 
+            electus, perferendis reprehenderit omnis ea nobis. Sequi error dolor doloribus ut
             sit placeat nemo quia!
           </p>
           <div class="top-[425px] inset-0 absolute z-10">
             <a href="{{ route('customer.make_reservation') }}">
-                <button class="uppercase bg-primary text-light font-bold rounded-lg px-4 tablet:px-10 py-4 text-md 
+                <button class="uppercase bg-primary text-light font-bold rounded-lg px-4 tablet:px-10 py-4 text-md
                     tablet:text-sm laptop:text-base transition delay-100 ease-in-out hover:scale-110">
                     Make A Reservation
                 </button>
@@ -36,7 +36,7 @@
           </div>
         </div>
 
-        <img class="absolute bottom-0 z-0" 
+        <img class="absolute bottom-0 z-0"
         src="{{ URL::to('assets/img/wave-home.svg') }}" alt="wave-home-bottom">
 
     </div>
@@ -45,7 +45,7 @@
     <div class="relative -top-56">
         {{--? About Top --}}
         <div class="flex flex-row bg-light w-3/5 mx-auto rounded-3xl shadow-xl">
-          
+
           <div class="image-of-Catereer bg-cover basis-2/5 ltr">
             <img class="rounded-s-3xl ring-1 ring-dark/5"
             src="{{ URL::to('assets/img/background-images/home-about-bg.png') }}" alt="catereer-img">
@@ -62,9 +62,9 @@
             </h2>
 
             <p class="text-justify text-dark leading-5 text-[15px] font-bold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-              dolore unde consequuntur autem quidem est consequatur? Enim 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+              dolore unde consequuntur autem quidem est consequatur? Enim
               praesentium minus voluptas doloribus, reprehenderit provident!
             </p>
 
@@ -127,13 +127,13 @@
             Premium Catering Services <br> For Your Taste Only
           </h1>
           <p class="mt-5 mb-8 text-justify text-dark text-base">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-            dolore unde consequuntur autem quidem est consequatur? Enim 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+            dolore unde consequuntur autem quidem est consequatur? Enim
             praesentium minus voluptas doloribus, reprehenderit provident!
           </p>
           <a href="">
-            <button class="bg-dark font-bold uppercase text-light py-2.5 px-11 shadow-xl 
+            <button class="bg-dark font-bold uppercase text-light py-2.5 px-11 shadow-xl
             transition ease-in-out hover:scale-110 hover:bg-primary">
               About Us
             </button>
@@ -146,11 +146,11 @@
             7 Years Experiences
           </h1>
           <p class="text-center text-dark text-sm">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-            dolore unde consequuntur autem quidem est consequatur? Enim 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+            dolore unde consequuntur autem quidem est consequatur? Enim
             praesentium minus voluptas doloribus, reprehenderit provident!
-            dolore unde consequuntur autem quidem est consequatur? Enim 
+            dolore unde consequuntur autem quidem est consequatur? Enim
             praesentium minus voluptas doloribus, reprehenderit provident!
           </p>
           <a href="" class="text-center absolute inset-x-0 -bottom-5">
@@ -176,13 +176,13 @@
             Premium Catering Services <br> For Your Taste Only
           </h1>
         </div>
-        
+
         {{--? Top-right Services --}}
         <div class="flex flex-col basis-2/4">
           <p class="text-md leading-6 text-justify text-dark font-semibold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-            dolore unde consequuntur autem quidem est consequatur? Enim 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+            dolore unde consequuntur autem quidem est consequatur? Enim
             praesentium minus voluptas doloribus, reprehenderit provident!
           </p>
           <a href="" class="mt-3">
@@ -193,106 +193,159 @@
           </a>
         </div>
       </div>
-      
-      {{--? Middle Services --}}
+
+      <div class="mx-12">
+      {{--? Top Services Type --}}
       <div class="flex flex-row w-full justify-between my-20">
 
-        <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative">
-          <h1 class="text-center text-primary uppercase font-bold text-xl">
-            Wedding
-          </h1>
-          <p class="text-base text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-            dolore unde consequuntur autem quidem est consequatur? 
-          </p>
-          <a href="" class="text-center absolute inset-x-0 -bottom-5">
-            <button class="bg-dark text-light uppercase font-semibold px-10 py-2 rounded-full
-            transition ease-in-out hover:scale-110">
-              Readmore
-            </button>
-          </a>
+        <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+            <h1 class="text-center text-primary uppercase font-bold text-xl">
+                Wedding
+            </h1>
+            <h2 class="font-semibold text-center text-dark">
+                Craft Your Perfect Wedding:
+            </h2>
+            <p class="text-sm text-center text-dark overflow-hidden ">
+                Let Us Cater Your Dream Wedding! Step into a
+                world where every detail is meticulously crafted to perfection, and every moment is infused
+                with romance and joy. Elevate your special day with the culinary mastery and impeccable
+                service of our experienced team. From the first consultation to the final bite of cake,
+                we'll work tirelessly to bring your vision to life and create a celebration that reflects
+                your unique love story. Indulge in our exquisite cuisine, customized to tantalize your
+                taste buds and leave your guests enchanted. With seamless execution and unwavering attention
+                to detail, we'll ensure that your wedding day is nothing short of magical.
+                Book now to begin the journey ofplanning the wedding of your dreams, where every moment
+                is cherished and memories are made to last a lifetime.
+            </p>
+            <a href="" class="text-center absolute inset-x-0 -bottom-5">
+                <button class="bg-dark text-light uppercase font-semibold px-10 py-2 rounded-full
+                transition ease-in-out hover:scale-110 show-wedding-modal">
+                Read more
+                </button>
+            </a>
         </div>
 
-        <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative mx-10">
-          <h1 class="text-center text-primary uppercase font-bold text-xl">
-            Birthday
-          </h1>
-          <p class="text-base text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-            dolore unde consequuntur autem quidem est consequatur? 
-          </p>
-          <a href="" class="text-center absolute inset-x-0 -bottom-5">
-            <button class="bg-dark text-light uppercase font-semibold px-10 py-2 rounded-full
-            transition ease-in-out hover:scale-110">
-              Readmore
-            </button>
-          </a>
+        <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative mx-10 h-[180px]">
+            <h1 class="text-center text-primary uppercase font-bold text-xl">
+                Birthday
+            </h1>
+            <h2 class="font-semibold text-center  text-dark">
+                Make Your Birthday Unforgettable:
+            </h2>
+            <p class="text-sm text-center text-dark overflow-hidden">
+                Let Us Craft Your Perfect Celebration!
+                Step into a world where every detail is tailored to perfection, and every
+                moment is brimming with joy and excitement. Elevate your special day with
+                the culinary expertise and flawless service of our dedicated team. From
+                the initial brainstorming session to the last slice of cake, we're committed
+                to bringing your vision to life and curating a celebration that mirrors
+                your unique personality. Delight in our decadent treats, customized to
+                delight your taste buds and leave your guests mesmerized. With meticulous
+                planning and a passion for excellence, we'll ensure that your birthday
+                bash is an experience to remember. Book now to embark on the
+                journey of planning the birthday celebration of your dreams, where
+                every moment is cherished, and memories are created to last a lifetime.
+            </p>
+            <a href="" class="text-center absolute inset-x-0 -bottom-5">
+                <button class="bg-dark text-light uppercase font-semibold px-10 py-2 rounded-full
+                transition ease-in-out hover:scale-110 show-birthday-modal">
+                Read more
+                </button>
+            </a>
         </div>
 
-        <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative">
-          <h1 class="text-center text-primary uppercase font-bold text-xl">
+        <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+        <h1 class="text-center text-primary uppercase font-bold text-xl">
             Christening
-          </h1>
-          <p class="text-base text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-            dolore unde consequuntur autem quidem est consequatur? 
-          </p>
-          <a href="" class="text-center absolute inset-x-0 -bottom-5">
+        </h1>
+        <h2 class="font-semibold text-center text-dark">
+            Embrace Unforgettable Moments:
+        </h2>
+        <p class="text-sm text-center text-dark overflow-hidden">
+            Let Us Craft Your Perfect Christening Celebration!
+            Step into a world where every detail is meticulously tailored, and every moment is
+            filled with love and joy. Elevate your special day with the heartfelt expertise and
+            seamless service of our dedicated team. From the initial planning to the final blessing,
+            we're committed to bringing your vision to life and curating a celebration that reflects
+            the sanctity of this cherished occasion. Delight in our divine offerings, customized
+            to enchant your senses and leave your guests touched by the spirit of the day.
+            With unwavering dedication and a commitment to perfection, we'll ensure that
+            your christening event is a treasured memory for all. Book now to
+            embark on the journey of planning the christening celebration of your dreams,
+            where every moment is blessed, and memories are crafted to last a lifetime.
+        </p>
+        <a href="" class="text-center absolute inset-x-0 -bottom-5">
             <button class="bg-dark text-light uppercase font-semibold px-10 py-2 rounded-full
-            transition ease-in-out hover:scale-110">
-              Readmore
+            transition ease-in-out hover:scale-110 show-christening-modal">
+            Read more
             </button>
-          </a>
+        </a>
         </div>
-        
-      </div>
 
-      {{--? Bottom Services --}}
-      <div class="flex flex-row justify-between">
-        <div class="bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative ml-32 mr-10">
+    </div>
+    </div>
+
+     {{--? Bottom Services --}}
+     <div class="flex flex-row  pt-3 px-4">
+        <div class="bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative ml-32 mr-10 h-full">
           <h1 class="text-center text-primary uppercase font-bold text-xl">
             Anniversary
           </h1>
-          <p class="text-base text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-            dolore unde consequuntur autem quidem est consequatur? 
-          </p>
+          <h2 class="font-semibold text-center text-dark">
+            Your Perfect Celebration Awaits:
+        </h2>
+        <p class="text-sm text-center text-dark overflow-hidden ">
+            Step into a world where every detail is tailored to perfection, and every moment is
+            brimming with love and joy. Elevate your special day with the exquisite expertise and
+            impeccable service of our dedicated team. From the initial concept to the last dance,
+            we're committed to bringing your vision to life and curating a celebration that reflects
+            the depth of your bond. Indulge in our delectable offerings, customized to tantalize your
+            senses and leave your guests enchanted. With meticulous planning and a commitment to
+            excellence, we'll ensure that your anniversary soirée is a cherished milestone.
+        </p>
           <a href="" class="text-center absolute inset-x-0 -bottom-5">
-            <button class="bg-dark text-light uppercase font-semibold px-10 py-2 rounded-full 
-            transition ease-in-out hover:scale-110">
+            <button class="bg-dark text-light uppercase font-semibold px-10 py-2 rounded-full
+            transition ease-in-out hover:scale-110 show-anniversary-modal">
               Readmore
             </button>
           </a>
         </div>
-        
-        <div class="bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative ml-10 mr-32">
+
+        <div class="bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative ml-32 mr-10 h-full">
           <h1 class="text-center text-primary uppercase font-bold text-xl">
             Feast
           </h1>
-          <p class="text-base text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-            dolore unde consequuntur autem quidem est consequatur? 
-          </p>
+          <h2 class="font-semibold text-center text-dark">
+            Let's Celebrate the Patron Fiesta:
+        </h2>
+        <p class="text-sm text-center text-dark overflow-hidden">
+            Step into a vibrant world where every detail radiates with color, and every moment
+            bursts with joy! Let us whisk you away on a journey filled with laughter, music, and
+            the spirit of celebration. Elevate your special day with the passionate expertise
+            and seamless service of our dedicated team. From the initial planning to the final
+            Olé!, we're committed to bringing your Fiesta vision to life and curating a celebration
+            that ignites your senses and leaves your guests enchanted. Delight in our festive
+            offerings, customized to captivate your heart and transport you to a realm of pure
+            fiesta bliss.With unwavering dedication and a commitment to perfection,
+            we'll ensure that your Fiesta event is a cherished memory for all.
+
+        </p>
           <a href="" class="text-center absolute inset-x-0 -bottom-5">
-            <button class="bg-dark text-light uppercase font-semibold px-10 py-2 rounded-full 
-            transition ease-in-out hover:scale-110">
+            <button class="bg-dark text-light uppercase font-semibold px-10 py-2 rounded-full
+            transition ease-in-out hover:scale-110 show-feast-modal">
               Readmore
             </button>
           </a>
         </div>
+
       </div>
     </div>
 
     {{--? Our Menu Container  --}}
     <div class="relative -top-28">
-      <div class="bg-cover rounded-b-full h-[500px]" 
+      <div class="bg-cover rounded-b-full h-[500px]"
            style="background-image: url('assets/img/background-images/home-menu-bg.png')">
-        
+
         <div class="text-center flex flex-col py-5 mx-52">
             <h1 class="cusive-font text-[38px] text-dark">
               Our Menu
@@ -301,12 +354,12 @@
               Check Out Our Menu
             </h2>
             <p class="text-md text-dark leading-5 text-center font-semibold">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-              dolore unde consequuntur autem quidem est consequatur? Enim 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+              dolore unde consequuntur autem quidem est consequatur? Enim
               praesentium minus voluptas doloribus, reprehenderit provident!
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Omnis quis dolores vero reprehenderit quae culpa.Lorem ipsum dolor sit 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Omnis quis dolores vero reprehenderit quae culpa.Lorem ipsum dolor sit
               amet consectetur adipisicing elit. Omnis quis dolores vero reprehenderit quae culpa.
             </p>
           </div>
@@ -319,7 +372,7 @@
               <div class="tab-section bg-light rounded-lg p-5 shadow-xl w-[1200px] min-h-[800px]">
                   {{--? Table Header --}}
                   <div class="flex flex-wrap gap-3">
-                      <button id="main-dish-tab" class="uppercase text-md p-4 rounded-lg text-dark font-bold flex-grow w-80 
+                      <button id="main-dish-tab" class="uppercase text-md p-4 rounded-lg text-dark font-bold flex-grow w-80
                       transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5" data-tab-target="#md-menu">
                           Main Dish
                       </button>
@@ -332,23 +385,23 @@
                   {{--? Table Class Data MD --}}
                   <div id="md-menu" class="tab-class-menu">
                       <div id="md-class" class="flex flex-wrap gap-3 mt-3">
-                          <button id="chicken-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40 
-                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5" 
+                          <button id="chicken-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40
+                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5"
                           data-tab-target="#chicken-menu">
                               Chicken
                           </button>
-                          <button id="beef-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40 
-                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5" 
+                          <button id="beef-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40
+                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5"
                           data-tab-target="#beef-menu">
                               Beef
                           </button>
-                          <button id="pork-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40 
-                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5" 
+                          <button id="pork-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40
+                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5"
                           data-tab-target="#pork-menu">
                               Pork
                           </button>
-                          <button id="fish-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40 
-                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5" 
+                          <button id="fish-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40
+                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5"
                           data-tab-target="#fish-menu">
                               Fish
                           </button>
@@ -358,18 +411,18 @@
                   {{--? Table Class Data AD --}}
                   <div id="ad-menu" class="tab-class-menu hidden">
                       <div id="ad-class" class="flex flex-wrap gap-3 mt-3">
-                          <button id="vegetable-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40 
-                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5" 
+                          <button id="vegetable-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40
+                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5"
                           data-tab-target="#vegetable-menu">
                               Vegetable
                           </button>
-                          <button id="pasta-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40 
-                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5" 
+                          <button id="pasta-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40
+                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5"
                           data-tab-target="#pasta-menu">
                               Pasta
                           </button>
-                          <button id="noodle-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40 
-                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5" 
+                          <button id="noodle-btn" class="uppercase text-base p-2 rounded-lg text-dark font-bold flex-grow w-40
+                          transition ease-in-out hover:bg-primary hover:bg-opacity-40 ring-2 ring-primary ring-opacity-5"
                           data-tab-target="#noodle-menu">
                               Noodle
                           </button>
@@ -384,13 +437,13 @@
                   @include('layouts.pages_._home._menu._pasta')
                   @include('layouts.pages_._home._menu._noodle')
 
-                  
+
               </div>
             </div>
 
     {{--? Our Work Container --}}
     <div class="relative -top-72 mt-10">
-      
+
       <div class="text-center flex flex-col py-5 mx-52">
         <h1 class="cusive-font text-[38px] text-dark">
           Our Work
@@ -399,9 +452,9 @@
           Our Working Process
         </h2>
         <p class="text-md text-dark leading-5 text-center font-semibold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-          dolore unde consequuntur autem quidem est consequatur? Enim 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+          dolore unde consequuntur autem quidem est consequatur? Enim
           praesentium minus voluptas doloribus, reprehenderit provident!
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
@@ -426,9 +479,9 @@
                   Make An Appointment
                 </h3>
                 <p class="text-sm text-dark">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-                  dolore unde consequuntur autem quidem est consequatur? 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+                  dolore unde consequuntur autem quidem est consequatur?
                 </p>
               </div>
           </div>
@@ -450,9 +503,9 @@
                     Pay Your Catering
                   </h3>
                   <p class="text-sm text-dark">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-                    dolore unde consequuntur autem quidem est consequatur? 
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+                    dolore unde consequuntur autem quidem est consequatur?
                   </p>
                 </div>
             </div>
@@ -474,21 +527,21 @@
                   Enjoy Your Food
                 </h3>
                 <p class="text-sm text-dark">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-                  dolore unde consequuntur autem quidem est consequatur? 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+                  dolore unde consequuntur autem quidem est consequatur?
                 </p>
               </div>
           </div>
         </div>
-        
+
       </div>
 
     </div>
 
     {{--? Our Wedding Packages Container  --}}
     <div class="relative -top-72 mt-10 bg-light h-[85rem] shadow-xl">
-      
+
       <div class="text-center flex flex-col py-5 mx-52">
         <h1 class="cusive-font text-[38px] text-dark">
           Our Wedding Packages
@@ -497,9 +550,9 @@
           Choose your Wedding Package
         </h2>
         <p class="text-base text-dark leading-5 text-center font-semibold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
-          dolore unde consequuntur autem quidem est consequatur? Enim 
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Omnis quis dolores vero reprehenderit quae culpa. Pariatur
+          dolore unde consequuntur autem quidem est consequatur? Enim
           praesentium minus voluptas doloribus, reprehenderit provident!
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </p>
@@ -511,8 +564,8 @@
             Package Details
           </h1>
           <p class="text-dark text-xsm text-justify">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Omnis quis dolores vero reprehenderit quae culpa. 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Omnis quis dolores vero reprehenderit quae culpa.
           </p>
 
           <hr class="text-dark my-2">
@@ -566,7 +619,7 @@
               <span class="ml-3 mr-1 text-dark text-semibold">Entourage Attires</span>
 
             </li>
-            
+
             <li class="flex flex-row mb-3">
               <script src="https://cdn.lordicon.com/lordicon.js"></script>
               <lord-icon
@@ -664,8 +717,8 @@
                 <img class="bg-primary p-2 rounded-xl shadow-xl"
                 src="{{ URL::to('assets/img/package/basic-150px.png') }}" alt="basic-package-img">
                 <p class="text-xsm text-dark mt-2 text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur
                   dolore unde consequuntur autem quidem est consequatur?
                 </p>
               </div>
@@ -680,7 +733,7 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="list-disc list-inside text-dark font-semibold text-sm"> 
+                <ul class="list-disc list-inside text-dark font-semibold text-sm">
                   <li>Bride</li>
                   <li>Groom</li>
                   <li>Maid of Honor</li>
@@ -693,7 +746,7 @@
                   <li>2 Mother & Father</li>
                   <li>Principal Sponsors</li>
 
-                  
+
                 </ul>
               </div>
 
@@ -708,7 +761,7 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
+                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm">
                   <li class="w-[190px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xs font-bold text-light">
                       Prenup Photo (2-3 Sets)</li>
                   <li>Photo & View Coverage</li>
@@ -734,13 +787,13 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
-                  
+                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm">
+
                   <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xsm font-bold text-light">
                     3 Main Dish</li>
                   <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xsm font-bold text-light">
                     1 Side Dish</li>
-                  
+
                     <ul class="list-disc list-inside">
                       <span class="font-bold">One Round:</span>
                       <li>Soft Drink</li>
@@ -766,8 +819,8 @@
                 <img class="bg-primary rounded-xl shadow-xl p-2"
                 src="{{ URL::to('assets/img/package/standard-200px.png') }}" alt="basic-package-img">
                 <p class="text-xsm text-dark mt-2 text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur
                   dolore unde consequuntur autem quidem est consequatur?
                 </p>
               </div>
@@ -782,7 +835,7 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="list-disc list-inside text-dark font-semibold text-sm"> 
+                <ul class="list-disc list-inside text-dark font-semibold text-sm">
                   <li>Bride</li>
                   <li>Groom</li>
                   <li>Maid of Honor</li>
@@ -795,7 +848,7 @@
                   <li>2 Mother & Father</li>
                   <li>Principal Sponsors</li>
 
-                  
+
                 </ul>
               </div>
 
@@ -810,7 +863,7 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
+                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm">
                   <li class="w-[230px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xsm font-bold text-light">
                       Prenup Photo (3-6 Sets) w/Stylist</li>
                   <li>Photo & View Coverage</li>
@@ -840,13 +893,13 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm"> 
-                  
+                <ul class="mt-1 list-disc list-inside text-dark font-semibold text-sm">
+
                   <li class="w-[105px] items-center rounded-md mb-1 bg-primary px-2 py-1 text-xsm font-bold text-light">
                     4 Main Dish</li>
                   <li class="w-[105px] items-center rounded-md bg-primary px-2 py-1 text-xsm font-bold text-light">
                     1 Side Dish</li>
-                  
+
                     <ul class="list-disc list-inside">
                       <span class="font-bold">One Round:</span>
                       <li>Soft Drink</li>
@@ -870,11 +923,11 @@
                 <img class=""
                 src="{{ URL::to('assets/img/package/premium-250px.png') }}" alt="basic-package-img">
                 <p class="text-xsm text-light  mt-3 text-justify">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur
                   dolore unde consequuntur autem quidem est consequatur?
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur 
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Omnis quis dolores vero reprehenderit quae culpa. Pariatur
                   dolore unde consequuntur autem quidem est consequatur?
                   Lorem ipsum dolor sit amet consectetur.
                 </p>
@@ -890,7 +943,7 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="list-disc list-inside text-light  font-semibold text-sm"> 
+                <ul class="list-disc list-inside text-light  font-semibold text-sm">
                   <li>Bride</li>
                   <li>Groom</li>
                   <li>Maid of Honor</li>
@@ -903,7 +956,7 @@
                   <li>2 Mother & Father</li>
                   <li>Principal Sponsors</li>
 
-                  
+
                 </ul>
               </div>
 
@@ -918,7 +971,7 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="mt-1 list-disc list-inside text-light font-semibold text-sm"> 
+                <ul class="mt-1 list-disc list-inside text-light font-semibold text-sm">
                   <li class="w-[230px] items-center rounded-md mb-1 bg-light px-2 py-1 text-xsm font-bold text-dark ">
                       Prenup Photo (6-8 Sets) w/Stylist</li>
                   <li>Photo & View Coverage</li>
@@ -941,7 +994,7 @@
                   <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-[10.5px] font-bold text-dark">
                     with 1 Guest Book</li>
                   <li class="w-[140px] my-1 items-center rounded-md bg-light px-2 py-1 text-[10.5px] font-bold text-dark">
-                    PhotoBooth</li>   
+                    PhotoBooth</li>
                 </ul>
               </div>
 
@@ -956,8 +1009,8 @@
                       style="width:15px;height:15px">
                   </lord-icon>
                 </h6>
-                <ul class="mt-1 list-disc list-inside text-light  font-semibold text-sm"> 
-                  
+                <ul class="mt-1 list-disc list-inside text-light  font-semibold text-sm">
+
                   <li class="w-[105px] items-center rounded-md  bg-light px-2 py-1 text-xsm font-bold text-dark ">
                     5 Main Dish</li>
                   <li class="w-[105px] items-center rounded-md my-1 bg-light px-2 py-1 text-xsm font-bold text-dark ">
@@ -1002,7 +1055,7 @@
                 <div class="my-14 mx-10">
                     <form action="" class="flex flex-col">
                         @csrf
-                        
+
                         <div class="flex flec-row mb-3">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-[25px] mr-3">
                                 <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -1012,16 +1065,16 @@
                                 Your Full Name
                             </h3>
                         </div>
-  
+
                         <input id="first_name" type="first_name" placeholder="First name" class="w-full form-control text-dark text-base px-5 py-5 border-none rounded-md shadow-md
                         ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
                         @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name">
-                    
-                        
+
+
                         <input id="last_name" type="last_name" placeholder="Last name" class="w-full form-control mt-3 text-dark text-base px-5 py-5 border-none rounded-md shadow-md
                         ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
                         @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name">
-                        
+
                         <div class="flex flec-row my-3">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[25px] mr-3">
                                 <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
@@ -1031,21 +1084,21 @@
                                 Your E-Message
                             </h3>
                         </div>
-  
+
                         <input id="email" type="email" placeholder="Email address" class="w-full form-control text-dark text-base px-5 py-5 border-none rounded-md shadow-md
                         ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
                         @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
-  
+
                         <input id="subject" type="subject" placeholder="Subject" class="w-full form-control my-3 text-dark text-base px-5 py-5 border-none rounded-md shadow-md
                         ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
                         @error('subject') is-invalid @enderror" name="subject" value="{{ old('subject') }}" required autocomplete="subject">
-  
+
                         <div class="col-span-full">
                             <label for="about" class="block text-base font-semibold leading-6 text-primary">Message:</label>
                             <textarea id="message" name="message" placeholder="Right your Concern ..." rows="3" class="block w-full rounded-md border-0 p-5
                             shadow-md ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"></textarea>
                         </div>
-  
+
                         <button id="submit-button" type="submit" class="mx-20 text-light mt-5 font-bold uppercase text-sm py-3 px-8 bg-primary
                             transition ease-in-out hover:bg-primary-dark shadow-lg">
                             {{ __('Submit') }}
@@ -1053,7 +1106,7 @@
                     </form>
                 </div>
             </div>
-  
+
             <div class="flex flex-col basis-2/4">
                 <h3 class="cusive-font text-dark drop-shadow-lg text-[40px]">
                     Contact Us
@@ -1066,7 +1119,7 @@
                     christening, birthday, anniversary, or any special event. Let us create unforgettable moments
                     with delicious flavors and flawless service, leaving a lasting impression on you and your guests.
                 </p>
-  
+
                 <div class="flex flex-row mt-8 gap-7">
                     <div class="flex flex-col">
                         <div class="flex flex-row gap-5">
@@ -1086,7 +1139,7 @@
                                 </span>
                             </div>
                         </div>
-  
+
                         <div class="flex flex-row gap-5 my-5">
                             <div class="bg-light py-3 px-4 shadow-lg rounded">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
@@ -1103,7 +1156,7 @@
                                 </span>
                             </div>
                         </div>
-  
+
                         <div class="flex flex-row gap-5">
                             <div class="bg-light py-3 px-4 shadow-lg rounded">
                                 <script src="https://cdn.lordicon.com/lordicon.js"></script>
@@ -1121,7 +1174,7 @@
                             </div>
                         </div>
                     </div>
-  
+
                     <div class="flex flex-col">
                         <h1 class="uppercase text-xxl text-dark mb-3 font-bold">
                             Social Media
@@ -1143,12 +1196,12 @@
                                         </g>
                                     </svg>
                                 </a>
-  
+
                                 <h2 class="font-bold text-primary text-lg self-center before:border-primary before:border-l-4 before:mr-3  ">
                                     Facebook.com
                                 </h2>
                             </div>
-  
+
                             <div class="flex flex-row gap-3">
                                 <a href="" class="my-5">
                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="sm-mobile:w-[25px] tablet:w-[40px] laptop:w-[50px]"
@@ -1165,12 +1218,12 @@
                                         </g>
                                     </svg>
                                 </a>
-  
+
                                 <h2 class="font-bold text-primary text-lg self-center before:border-primary before:border-l-4 before:mr-3  ">
                                     Instagram.com
                                 </h2>
                             </div>
-  
+
                             <div class="flex flex-row gap-3">
                                 <a href="" class="">
                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="sm-mobile:w-[25px] tablet:w-[40px] laptop:w-[50px]"
@@ -1187,18 +1240,18 @@
                                         </g>
                                     </svg>
                                 </a>
-  
+
                                 <h2 class="font-bold text-primary text-lg self-center before:border-primary before:border-l-4 before:mr-3  ">
                                     Twitter.com
                                 </h2>
                             </div>
-  
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-  
+
         <div class="mt-10 self-center border-[5px] rounded border-primary shadow-xl">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.9740754588386!2d124.72542520000003!3d10.429803100000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33077194abad0a75%3A0xc2341f5d56e75cd0!2sTitan&#39;s%20catering%20%26%20services!5e0!3m2!1sen!2sus!4v1710676324669!5m2!1sen!2sus"
             width="1000" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -1213,6 +1266,18 @@
 
 @include('layouts.pages_._home.scripts.tab-menu-script')
 @include('layouts.pages_._home.scripts.read-more-package-script')
+
+
+@include('layouts.pages_._services._services-modal._wedding')
+@include('layouts.pages_._services._services-modal._birthday')
+@include('layouts.pages_._services._services-modal._christening')
+@include('layouts.pages_._services._services-modal._anniversary')
+@include('layouts.pages_._services._services-modal._feast')
+@include('layouts.pages_._services._services-modal._conference')
+@include('layouts.pages_._services._services-modal._alumni')
+@include('layouts.pages_._services._services-modal._burial')
+@include('layouts.pages_._services._services-modal._seminar')
+@include('layouts.pages_._services.scripts.read-more-services-script')
 
 @endsection
 
