@@ -15,7 +15,7 @@
                 
 
     </head>
-    <body class="flex flex-col">
+    <body class="flex flex-col overflow-x-hidden">
         
            
         @include('layouts.pages_._home.home')
