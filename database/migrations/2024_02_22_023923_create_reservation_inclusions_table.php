@@ -15,7 +15,7 @@ class CreateReservationInclusionsTable extends Migration
     {
         Schema::create('reservation_inclusions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('reservation_id')->contrained('reservations');
+            $table->foreignId('reservation_id')->constrained('reservations');
             $table->foreignId('inclusion_id')->contrained('inclusions');
             $table->timestamps();
         });

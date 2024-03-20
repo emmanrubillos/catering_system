@@ -96,7 +96,12 @@
     </div>
 </div>
 
-
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+<script>
+    new DataTable('#users-table');
+</script>
 @include('admin.users.partials._script')
 @include('admin.users.partials._add_user_modal')
 @endsection

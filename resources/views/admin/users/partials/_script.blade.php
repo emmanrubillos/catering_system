@@ -14,7 +14,7 @@
                     // Show success message with SweetAlert
                     Swal.fire({
                         title: 'Success!',
-                        text: "Package has been updated successfully.",
+                        text: "User has been updated successfully.",
                         icon: 'success'
                     }).then((result) => {
                         if (result.isConfirmed) {
@@ -132,7 +132,7 @@
         })
     }
 </script>
-{{-- Sweet alert for the Add New User Button --}}
+{{-- Sweet alert for validation of the Add New User Button --}}
 <script>
     // Wait for the DOM to fully load
     document.addEventListener('DOMContentLoaded', function() {
