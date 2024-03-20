@@ -32,11 +32,16 @@
         document.getElementById("chicken-btn").classList.add(activeClassBg);
         document.getElementById("chicken-btn").classList.add(activeClassCt);
 
+        document.getElementById("chicken-pandan").classList.remove("hidden");
+        document.getElementById("cp-btn").classList.add(activeClassCt);
+        document.getElementById("cp-btn").classList.add(activeClassBg);
 
         // Add event listeners to header tabs
         document.getElementById("main-dish-tab").addEventListener("click", function() {
             document.getElementById("chicken-btn").classList.add(activeClassBg);
             document.getElementById("chicken-btn").classList.add(activeClassCt);
+            document.getElementById("cp-btn").classList.add(activeClassBg);
+            document.getElementById("cp-btn").classList.add(activeClassCt);
             showMainDishMenu();
         });
 
@@ -50,6 +55,10 @@
         document.getElementById("chicken-btn").addEventListener("click", function(){
             document.getElementById("main-dish-tab").classList.add(activeClassBg);
             document.getElementById("main-dish-tab").classList.add(activeClassCt);
+            document.getElementById("cp-btn").classList.add(activeClassBg);
+            document.getElementById("cp-btn").classList.add(activeClassCt);
+            document.getElementById("bc-btn").classList.add('bg-white');
+            document.getElementById("cp-btn").classList.remove('bg-white');
             showChickenMenu();
         });
         document.getElementById("beef-btn").addEventListener("click", function(){
@@ -85,8 +94,42 @@
             showNoodleMenu();
         });
 
+        document.getElementById("cp-btn").addEventListener("click", function(){
+            document.getElementById("main-dish-tab").classList.add(activeClassBg);
+            document.getElementById("main-dish-tab").classList.add(activeClassCt);
+            document.getElementById("chicken-btn").classList.add(activeClassBg);
+            document.getElementById("chicken-btn").classList.add(activeClassCt);
+            document.getElementById("cp-btn").classList.add(activeClassBg);
+            document.getElementById("cp-btn").classList.add(activeClassCt);
+            document.getElementById("bc-btn").classList.add('bg-white');
+            document.getElementById("cp-btn").classList.remove('bg-white');
+            showCPDetails();
+        });
+
+        document.getElementById("bc-btn").addEventListener("click", function(){
+            document.getElementById("main-dish-tab").classList.add(activeClassBg);
+            document.getElementById("main-dish-tab").classList.add(activeClassCt);
+            document.getElementById("chicken-btn").classList.add(activeClassBg);
+            document.getElementById("chicken-btn").classList.add(activeClassCt);
+            document.getElementById("bc-btn").classList.add(activeClassBg);
+            document.getElementById("bc-btn").classList.add(activeClassCt);
+            document.getElementById("cp-btn").classList.add('bg-white');
+            document.getElementById("bc-btn").classList.remove('bg-white');
+            showBCDetails();
+        });
+
 
     });
+    
+    function showCPDetails() {
+        document.getElementById("chicken-pandan").classList.remove("hidden");
+        document.getElementById("baked-chicken").classList.add("hidden");
+    }
+
+    function showBCDetails() {
+        document.getElementById("baked-chicken").classList.remove("hidden");
+        document.getElementById("chicken-pandan").classList.add("hidden");
+    }
 
     function showMainDishMenu() {
         // Show Main Dish sub tabs

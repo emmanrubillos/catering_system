@@ -196,7 +196,7 @@
 
       <div class="mx-12">
         {{--? Top Services Type --}}
-        <div class="flex flex-row w-full justify-between my-20">
+        <div class="flex flex-row w-full gap-10 my-20">
 
           <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
               <h1 class="text-center text-primary uppercase font-bold text-xl">
@@ -225,11 +225,11 @@
               </a>
           </div>
 
-          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative mx-10 h-[180px]">
+          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
               <h1 class="text-center text-primary uppercase font-bold text-xl">
                   Birthday
               </h1>
-              <h2 class="font-semibold text-center  text-dark">
+              <h2 class="font-semibold text-center text-dark">
                   Make Your Birthday Unforgettable:
               </h2>
               <p class="text-sm text-center text-dark overflow-hidden">

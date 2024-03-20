@@ -21,7 +21,7 @@
 
         {{--? Tab-Section for Menu --}}
         <div class="mx-auto grid place-items-center relative top-[-7rem]">
-            <div class="tab-section bg-light rounded-lg p-5 shadow-xl w-[1200px] min-h-[800px]">
+            <div class="tab-section bg-light rounded-lg p-5 shadow-xl w-[1200px] h-[650px]">
                 {{--? Table Header --}}
                 <div class="flex flex-wrap gap-3">
                     <button id="main-dish-tab" class="uppercase text-md p-4 rounded-lg text-dark font-bold flex-grow w-80 
