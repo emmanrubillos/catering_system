@@ -15,7 +15,7 @@ class CreateReservationBillingsTable extends Migration
     {
         Schema::create('reservation_billings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('reservation_id')->contrained('reservations');
+            $table->foreignId('reservation_id')->constrained('reservations');
             $table->string('name');
             $table->string('amount');
             $table->timestamps();

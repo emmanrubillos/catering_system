@@ -15,9 +15,9 @@ class CreateServicesInclusion extends Migration
     {
         Schema::create('services_inclusion', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('service_id')->contrained('services');
-            $table->foreignId('classification_id')->contrained('classifications');
-            $table->foreignId('inclusion_id')->contrained('inclusions');
+            $table->foreignId('service_id')->constrained('services');
+            $table->foreignId('classification_id')->constrained('classifications');
+            $table->foreignId('inclusion_id')->constrained('inclusions');
             $table->integer('total_number');
             $table->timestamps();
         });

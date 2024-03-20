@@ -41,11 +41,12 @@ Route::get('/reservation/bill', [App\Http\Controllers\Admin\CustomerReservation\
 Route::get('/service/package_details', [App\Http\Controllers\Admin\Services\ServicePackageController::class, 'index'])->name('package_details');
 Route::get('/service/pax_details', [App\Http\Controllers\Admin\Services\ServicePaxController::class, 'index'])->name('pax_details');
 
-
+Route::get('/inclusions', [App\Http\Controllers\InclusionController::class, 'index'])->name('inclusions');
 Route::resource('users', \App\Http\Controllers\Admin\UserController\UsersController::class);
 Route::resource('package', \App\Http\Controllers\PackageController::class);
 Route::resource('service', \App\Http\Controllers\Admin\Services\ServiceController::class);
-
+Route::resource('inclusion', \App\Http\Controllers\InclusionController::class);
+Route::resource('classification', \App\Http\Controllers\ClassificationController::class);
 
 //! Make a Reservation
 Route::get('/customer/make_reservation', [MakeReservationController::class, 'index'])->name('customer.make_reservation');
