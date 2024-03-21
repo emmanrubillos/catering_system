@@ -4,10 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Reservation;
-use App\Models\Inclusion;
 
-class Reservation_inclusion extends Model
+class ReservationInclusion extends Model
 {
     use HasFactory;
 
@@ -15,12 +13,14 @@ class Reservation_inclusion extends Model
         'reservation_id',
         'inclusion_id',
     ];
-    public function Reservation()
+    
+    public function reservation()
     {
-       return $this->belongsTo('reservation_id');
+       return $this->belongsTo(Reservation::class);
     }
-    public function Inclusion()
+
+    public function inclusion()
     {
-       return $this->belongsTo('inclusion_id');
+       return $this->belongsTo(Inclusion::class);
     }
 }
