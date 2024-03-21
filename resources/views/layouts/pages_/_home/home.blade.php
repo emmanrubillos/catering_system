@@ -226,12 +226,10 @@
               </a>
           </div>
 
-          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
           <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative  h-[180px]">
               <h1 class="text-center text-primary uppercase font-bold text-xl">
                   Birthday
               </h1>
-              <h2 class="font-semibold text-center text-dark">
               <h2 class="font-semibold text-center  text-dark" style="white-space: nowrap;">
                   Make Your Birthday Unforgettable:
               </h2>
@@ -1200,7 +1198,7 @@
                     Select
                     </button>
                 </div>
-            </div>>
+            </div>
         </div>
       </div>
 
@@ -1438,4 +1436,3 @@
 @include('layouts.pages_._services.scripts.read-more-services-script')
 
 @endsection
-

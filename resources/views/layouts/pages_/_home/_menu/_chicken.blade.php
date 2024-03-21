@@ -22,7 +22,7 @@
 
     {{-- RIGHT CONTAINER --}}
     <div id="chicken-pandan" class="hidden basis-3/5">
-      <div class="Right-container flex flex-col basis-3/5 h-[480px] px-4">
+      <div class="Right-container flex flex-col basis-3/5 h-[480px] px-4"> 
 
         <div class="flex flex-row gap-4">
           <img class="w-[200px] h-[200px] rounded-xl shadow-lg border-primary border-4"
