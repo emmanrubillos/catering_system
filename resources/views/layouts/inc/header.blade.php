@@ -16,7 +16,7 @@
                 </svg>
             </button>
             {{-- logo --}}
-            <a href="{{ url('/profile') }}" class="logo-md-sm w-32">
+            <a href=" {{ url('/profile') }}" class="logo-md-sm w-32">
                 <img class="logo-lg w-auto h-auto sm-mobile:w" src="{{ asset('assets/img/logo.png') }}" alt="titans-catering-logo">
             </a>
         </div>
@@ -27,7 +27,7 @@
             @if (Route::has('login'))
                 <div class="flex justify-between items-center w-full p-4">
                         <div class="text-md font-semibold">
-                            @auth   
+                            @auth
                                 <a href="{{ url('/profile') }}">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon
@@ -39,17 +39,17 @@
                                 </a>
                             @else
                                 <a href="{{ route('login') }}" >
-                                    <button class="uppercase  bg-light text-dark font-semibold rounded-lg px-4 tablet:px-6 py-2 text-md tablet:text-sm laptop:text-base 
+                                    <button class="uppercase  bg-light text-dark font-semibold rounded-lg px-4 tablet:px-6 py-2 text-md tablet:text-sm laptop:text-base
                                     transition delay-100 ease-in-out hover:scale-110">Login</button>
                                 </a>
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}">
-                                        <button class="uppercase text-light font-semibold rounded-lg px-4 tablet:px-6 py-2  text-md tablet:text-sm laptop:text-base 
+                                        <button class="uppercase text-light font-semibold rounded-lg px-4 tablet:px-6 py-2  text-md tablet:text-sm laptop:text-base
                                         ring-2 ring-light transition delay-100 ease-in-out hover:bg-primary hover:text-light hover:scale-110">Register</button>
-                                    </a>    
+                                    </a>
                                 @endif
-                            @endauth    
-                        </div>  
+                            @endauth
+                        </div>
             @endif
                 <button id="close-sidebar" class="focus:outline-none">
                     <svg class="w-6 h-6 text-light hover:text-primary hover:scale-110 transition delay-100 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -60,54 +60,72 @@
             </div>
             <hr class="text-light mx-3">
             <div class="flex flex-col items-start justify-start w-full">
-                <a href="{{ route('home') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Home</a>
-                <a href="{{ route('about_us') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">About Us</a>
-                <a href="{{ route('services') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Services</a>
-                <a href="{{ route('menu') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Menu</a>
-                <a href="{{ route('contact_us') }}" class="w-full py-2 px-4 text-lg font-semibold text-light transition delay-100 ease-in-out hover:text-primary">Contact Us</a>
+                {{-- <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('home') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Home</a> --}}
+                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('about_us') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">About Us</a>
+                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('services') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Services</a>
+                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('menu') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Menu</a>
+                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('contact_us') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Contact Us</a>
             </div>
         </aside>
 
 
         {{--! Navbar for Desktop to Laptop --}}
         <div class="flex items-start justify-between relative">
-            <a href="" class="logo-xl-lg hidden tablet:block w-72 tablet:w-92">
-                <img class="logo-lg w-full h-full" 
+            <a href="{{ route('home') }}" class="logo-xl-lg hidden tablet:block w-72 tablet:w-92">
+                <img class="logo-lg w-full h-full"
                 src="{{ asset('assets/img/logo/titans-catering-logo.png') }}" alt="titans-catering-logo-w/-bg">
             </a>
 
             <div class="nav-links mt-0 tablet:mt-8 hidden tablet:flex flex-wrap gap-default">
-                <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">Home</a>
-                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">About Us</a>
-                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">Services</a>
-                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">Menu</a>
-                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">Contact Us</a>
+
+                {{-- <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('home') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Home</a> --}}
+                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('about_us') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">About Us</a>
+                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('services') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Services</a>
+                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('menu') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Menu</a>
+                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('contact_us') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Contact Us</a>
+
+
             </div>
             @if (Route::has('login'))
                 <div class="nav-btn gap-sm px-8 mt-4 hidden tablet:flex">
-                    @auth   
-                        <a href="{{ url('/profile') }}">
+                    @auth
+                    <div class="relative">
+                        <a href="" class="flex items-center space-x-2"  id="profileDropdownTrigger">
                             <script src="https://cdn.lordicon.com/lordicon.js"></script>
                             <lord-icon
+
                                 src="https://cdn.lordicon.com/hrjifpbq.json"
                                 trigger="hover"
-                                colors="primary:#fff7e9"
+                                colors="primary:#fff7e9;"
                                 style="width:50px; height:50px;">
                             </lord-icon>
+
                         </a>
+                        <div class="absolute top-full left-0 mt-2 w-40 bg-dark rounded-lg shadow-lg hidden" id="profileDropdown">
+                            <a href="{{ url('/profile') }}" class="block px-4 py-2 text-light hover:bg-primary hover:text-light">Profile</a>
+                            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="block px-4 py-2 text-light hover:bg-primary hover:text-light">Logout</a>
+                            <!-- Ensure the form with ID logout-form is present -->
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                                @csrf
+                            </form>
+
+
+
+                        </div>
+                    </div>
                     @else
                         <a href="{{ route('login') }}" >
-                            <button class="uppercase  bg-light text-dark font-semibold rounded-lg px-4 tablet:px-6 py-2 text-md tablet:text-sm laptop:text-base 
+                            <button class="uppercase  bg-light text-dark font-semibold rounded-lg px-4 tablet:px-6 py-2 text-md tablet:text-sm laptop:text-base
                             transition delay-100 ease-in-out hover:scale-110">Login</button>
                         </a>
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">
-                                <button class="uppercase text-light font-semibold rounded-lg px-4 tablet:px-6 py-2  text-md tablet:text-sm laptop:text-base 
+                                <button class="uppercase text-light font-semibold rounded-lg px-4 tablet:px-6 py-2  text-md tablet:text-sm laptop:text-base
                                 ring-2 ring-light transition delay-100 ease-in-out hover:bg-primary hover:text-light hover:scale-110">Register</button>
-                            </a>    
+                            </a>
                         @endif
-                    @endauth    
-                </div>  
+                    @endauth
+                </div>
             @endif
         </div>
     </nav>
@@ -117,5 +135,14 @@
 @include('layouts.inc.partial-js.menu-toggle')
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var profileDropdownTrigger = document.getElementById('profileDropdownTrigger');
+        var profileDropdown = document.getElementById('profileDropdown');
 
-
+        profileDropdownTrigger.addEventListener('click', function(event) {
+            event.preventDefault();
+            profileDropdown.classList.toggle('hidden'); // Toggle the 'hidden' class
+        });
+    });
+</script>

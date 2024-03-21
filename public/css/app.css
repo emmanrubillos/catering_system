@@ -1186,6 +1186,10 @@ input:checked + .toggle-bg {
   top: 425px;
 }
 
+.top-full {
+  top: 100%;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -1585,6 +1589,10 @@ input:checked + .toggle-bg {
   height: 35rem;
 }
 
+.h-\[40rem\] {
+  height: 40rem;
+}
+
 .h-\[43rem\] {
   height: 43rem;
 }
@@ -1655,10 +1663,6 @@ input:checked + .toggle-bg {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[40rem\] {
-  height: 40rem;
 }
 
 .min-h-\[800px\] {
