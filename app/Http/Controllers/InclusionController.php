@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Inclusion;
+use app\Models\Classificaton;
 
 class InclusionController extends Controller
 {
@@ -15,7 +16,8 @@ class InclusionController extends Controller
     public function index()
     {
         $inclusions = Inclusion::all();
-        return view('admin.inclusion.index', compact('inclusions'));
+        $classifications = Classification::all(); // Fetch all classifications
+        return view('admin.inclusion.index', compact('inclusions', 'classifications'));
     }
 
     /**
@@ -35,10 +37,10 @@ class InclusionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {   
         $validatedData = $request->validate([
             'name' => 'required',
-            'classification_id' => 'required]integer',
+            'classification_id' => 'required|integer',
             'description' => 'required',
         ]);
 
@@ -85,8 +87,20 @@ class InclusionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+        // Validate the request data
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'classification_id' => 'required|integer',
+            'description' => 'required',
+        ]);
+
+            // Find the user by ID and update its details
+            $inclusion = Inclusion::findOrFail($id);
+            $inclusion->update($validatedData);
+
+            // Redirect back to the index page with the updated user data and a success message
+            return redirect()->route('inclusion.index')->with('success', 'User updated successfully!');
+        }
 
     /**
      * Remove the specified resource from storage.
