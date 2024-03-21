@@ -96,7 +96,7 @@
         }).then((result)=>{
             if(result.isConfirmed){
                 $.ajax({
-                    url: `/classifications/${classificationId}`,
+                    url: `/classification/${classificationId}`,
                     type: 'DELETE',
                     headers: {
                         'X-CSRF-TOKEN': '{{ csrf_token() }}',
