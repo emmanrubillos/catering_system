@@ -7,7 +7,7 @@
       <button id="cp-btn" class="mb-4 flex py-3 px-4 rounded shadow-lg transition ease-in-out hover:border-light
        hover:bg-primary text-dark hover:text-light" data-tab-target="#cp-details">
         <h1 class="before:border-l-4 before:mr-3 before:border-primary-dark text-xxl font-black">
-          Chicken Pandan
+          sample Food
         </h1>
       </button>
 
