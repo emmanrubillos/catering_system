@@ -52,7 +52,7 @@ class ServiceController extends Controller
             'description' => $validatedData['description'],
             'number_of_person' => $validatedData['number_of_person'],
         ]);
-        return redirect()->route('service.index')->with(  'success', 'Service created successfully!');
+        return redirect()->route('service.index')->with('success', 'Service created successfully!');
 
     }
 
@@ -64,8 +64,8 @@ class ServiceController extends Controller
      */
     public function show($id)
     {
-        $service = Service::findOrFail($id);
-        return view('admin.service.show', compact('service'));
+        $service = Service::findOrFail($id); // Fetch the service with the specified ID
+        return view('admin.service.partials._show_service_modal', compact('service'));
     }
 
     /**
@@ -91,8 +91,24 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // Validate the request data
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:50',
+            'type' => 'required|string|max:50',
+            'price' => 'required|string|max:50',
+            'description' => 'required|string|max:255',
+            'number_of_person' => 'required|string|max:255',
+        ]);
+
+        // Find the service by ID and update its details
+        $service = Service::findOrFail($id);
+        $service->update($validatedData);
+
+        // Redirect back to the index page with the updated service data and a success message
+        return redirect()->route('service.index')->with('success', 'Service updated successfully!');
     }
+
+    
 
     /**
      * Remove the specified resource from storage.

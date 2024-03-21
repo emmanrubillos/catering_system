@@ -20,21 +20,15 @@
 	<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}"> </head>
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap-datetimepicker.min.css') }}">
 	
-	<link rel="stylesheet" href="{{ asset('assets/plugins/links/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ asset('assets/plugins/links/bootstrap.min.css') }}" rel="stylesheet">
 	
 	<link rel="stylesheet" href="{{ asset('assets/css/toastr.min.css') }}">
     
-	<script	src="{{ asset('assets/plugins/links/axios.min.js') }}"></script>
-	<script	src="{{ asset('assets/plugins/links/sweetalert2@11.js') }}"></script>
 	
 	<link rel="stylesheet" href="{{ asset('assets/plugins/links/dataTables.bootstrap5.css') }}">
 	
 	<link href="{{ asset('css/admin.css') }}" rel="stylesheet">
-
-	<script	src="{{ asset('assets/plugins/links/jquery-3.7.1.js') }}"></script>
-	<script	src="{{ asset('assets/plugins/links/bootstrap.bundle.min.js') }}"></script>
-	<script	src="{{ asset('assets/plugins/links/dataTables.js') }}"></script>
-
+	
 
     <style>
 	a {
@@ -140,10 +134,13 @@
 	<script src="{{ asset('assets/js/bootstrap-datetimepicker.min.js') }}"></script>
 	<script src="{{ asset('assets/js/script.js') }}"></script>
 	<script src="{{ asset('assets/js/moment.min.js') }}"></script>
-	
-	<script	src="{{ asset('assets/plugins/links/popper.min.js') }}" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+	<script	src="{{ asset('assets/plugins/links/popper.min.js') }}"></script>
 	<script	src="{{ asset('assets/plugins/links/jquery-3.7.1.min.js') }}"></script>
-
+	<script	src="{{ asset('assets/plugins/links/jquery-3.7.1.js') }}"></script>
+	<script	src="{{ asset('assets/plugins/links/bootstrap.bundle.min.js') }}"></script>
+	<script	src="{{ asset('assets/plugins/links/dataTables.js') }}"></script>
+	<script	src="{{ asset('assets/plugins/links/axios.min.js') }}"></script>
+	<script	src="{{ asset('assets/plugins/links/sweetalert2@11.js') }}"></script>
 
 </body>
 
