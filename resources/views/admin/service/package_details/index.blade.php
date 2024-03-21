@@ -18,185 +18,32 @@
                             <table id="example" class="table table-striped" style="width:100%">
                                 <thead class="border border-0">
                                     <tr>
+                                        <th style="width:16%;">Action</th>
                                         <th style="width:16%">Name</th>
                                         <th style="width:18%">Type</th>
-                                        <th style="width:17%">Food & Catering</th>
-                                        <th style="width:16%;">Decoration</th>
-                                        <th style="width:25%;">Others</th>
+                                        <th style="width:17%">More Detials</th>
                                     </tr>
                                 </thead>
                                 <tbody class="border border-0">
                                     <tr>
-                                        <td class="fw-bold">Sample Package</td>
                                         <td>
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Whole Set Attire
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
+                                            <a href="" class="btn btn-primary btn-sm edit-user-btn"  data-toggle="modal" data-target=""><i class="fas fa-edit"></i></a>
 
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Floral Ensemble
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Beauty Service
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <form action="" method="POST" class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-sm btn-danger" onclick="">
+                                                    <i class="fas fa-trash"></i>
+                                                </button>
+                                            </form>
                                         </td>
+                                        <td  class="fw-bold">Sample Name</td>
+                                        <td>Sample Type</td>
                                         <td>
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Foods
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Catering
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Freebies
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
+                                                View More Details
+                                            </button>
                                         </td>
-                                        <td>
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Church
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Reception
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="d-flex flex-column gap-1">
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Photography & Videography
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Full Coordination
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-
-                                                <div class="d-flex flex-row justify-content-between">
-                                                    <div>
-                                                        <button class="btn-primary btn-sm badge text-bg-primary text-wrap">
-                                                            Program & Entertainment
-                                                        </button>
-                                                    </div>
-                                                    <div>
-                                                        <button class="btn btn-success btn-sm edit-user-btn">
-                                                            <i class="fas fa-edit"></i>
-                                                        </button>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-
                                     </tr>
                                 </tbody>
                             </table>

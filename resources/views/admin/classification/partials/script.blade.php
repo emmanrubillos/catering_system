@@ -1,7 +1,6 @@
 {{-- Sweet alert for the Edit Classification Button --}}
 <script>
     $(document).ready(function() {
-        @foreach($classifications as $classification)
             // Add event listener for form submission
             $(document).on("submit", "#editClassificationForm{{ $classification->id }}", function(event) {
                 event.preventDefault(); // Prevent the default form submission
@@ -68,8 +67,7 @@
                         });
                     }
                 });
-            });
-        @endforeach    
+            });   
     });
 </script>
 
