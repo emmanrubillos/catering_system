@@ -25,7 +25,7 @@ class ClassificationController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.users.create');
     }
 
     /**
@@ -44,7 +44,7 @@ class ClassificationController extends Controller
             'name' => $validateData['name'],
         ]);
 
-        return redirect()->route('classifications.index');
+        return redirect()->route('classification.index', compact('classification'));
 
 
     }
@@ -68,7 +68,10 @@ class ClassificationController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Fetch the user data based on the ID
+        $classification = Classification::findOrFail($id);
+        // Pass the user data to the view
+        return view('admin.users.partials._edit_classification_modal', compact('classification'));
     }
 
     /**
@@ -80,7 +83,17 @@ class ClassificationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+        ]);
+        
+        $classification = Classification::findOrFail($id);
+        $classification->update($validatedData);
+        
+        // Redirect back to the index page with the updated classification data and a success message
+        return redirect()->route('classification.index')->with('success', 'Classification updated successfully!');
+        
+
     }
 
     /**
@@ -91,6 +104,13 @@ class ClassificationController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Find the user by ID
+        $classification = Classification::findOrFail($id);
+
+        // Delete the user
+        $deleteClassification = $classification->delete();
+
+        // Check if the deletion was successful
+        return response()->json(['message' => 'User deleted successfully'], 200);
     }
 }
