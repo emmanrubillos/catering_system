@@ -35,7 +35,7 @@
                             @foreach($inclusions as $inclusion)
                             <tr>
                                 <td>
-                                    <a href="" class="btn btn-primary btn-sm edit-user-btn"  data-toggle="modal" data-target=""><i class="fas fa-edit"></i></a>
+                                    <a href="" class="btn btn-primary btn-sm edit-user-btn"  data-toggle="modal" data-target="#editInclusionModal"><i class="fas fa-edit"></i></a>
 
                                     <form action="" method="POST" class="d-inline">
                                         @csrf

@@ -21,7 +21,7 @@
                     </a>
                 </li>
 
-                <li class="submenu">
+                {{-- <li class="submenu">
                     <a href="#">
                         <i class="fas fa-book-open"></i>
                         <span> Reservation </span>
@@ -49,7 +49,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
                 {{-- <li class="nav-item {{ request()->is('inclusions') ? 'active' : '' }}">
                     <a class="nav-link" href="inclusions">

@@ -23,6 +23,20 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
+                                <label for="classification_id">Type</label>
+                                <div>
+                                    @foreach ($classifications as $classification)
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="classifications[]" value="{{ $classification->id }}">
+                                            <label class="form-check-label" for="classification_{{ $classification->id }}">
+                                                {{ $classification->name }}
+                                            </label>
+                                        </div>
+                                    @endforeach
+                                </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
                                 <label for="description">Description</label>
                                 <input type="text" class="form-control" id="description" name="description">
                             </div>
