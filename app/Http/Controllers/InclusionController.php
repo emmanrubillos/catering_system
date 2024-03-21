@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Inclusion;
-use app\Models\Classificaton;
+use App\Models\Classification;
 
 class InclusionController extends Controller
 {
@@ -16,7 +16,7 @@ class InclusionController extends Controller
     public function index()
     {
         $inclusions = Inclusion::all();
-        $classifications = Classification::all(); // Fetch all classifications
+        $classifications = Classification::all();
         return view('admin.inclusion.index', compact('inclusions', 'classifications'));
     }
 
