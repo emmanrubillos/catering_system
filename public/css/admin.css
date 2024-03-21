@@ -30,3 +30,8 @@ body {
     min-width: 100px;
     margin-bottom: 3px;/* Adjust the width as needed */
 }
+
+a:visited {
+    color:  #ff371d; /* Change the color to orange */
+}
+
