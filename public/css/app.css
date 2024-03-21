@@ -1477,10 +1477,6 @@ input:checked + .toggle-bg {
   margin-top: 7.5rem;
 }
 
-.ml-32 {
-  margin-left: 8rem;
-}
-
 .block {
   display: block;
 }
@@ -1667,10 +1663,6 @@ input:checked + .toggle-bg {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[750px\] {
-  height: 750px;
 }
 
 .min-h-\[800px\] {

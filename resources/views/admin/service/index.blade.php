@@ -46,7 +46,9 @@
                                                 </button>
                                             </form>
 
-                                            <a href="#" class="btn btn-warning btn-sm edit-service-btn" data-toggle="modal" data-target="#"><i class="fas fa-eye text-white"></i></a>
+                                            <a href="{{ route('service.show', ['service' => $service->id]) }}" class="btn btn-warning btn-sm show-service-btn" 
+                                            data-toggle="modal" data-target="#showServiceModal{{ $service->id }}"><i class="fas fa-eye text-white"></i></a>
+
                                         </td>
                                         <td class="fw-bold">{{ $service->name }}</td>
                                         <td>
@@ -57,8 +59,10 @@
                                         <td class="fw-bold">₱ {{ $service->price }}</td>
                                         <td class="fw-bold">{{ $service->number_of_person }} Pax</td>
 
+                                        
                                         @include('admin.service.partials._script')
                                         @include('admin.service.partials._edit_service_modal')
+                                        @include('admin.service.partials._show_service_modal')
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -76,11 +80,11 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
+
 <script>
     new DataTable('#service-table');
 </script>
-
-
 @include('admin.service.partials._add_service_modal')
+
 
 @endsection
