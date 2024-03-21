@@ -5,26 +5,29 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Reservation extends Model
+class ServiceInclusion extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'name',
         'service_id',
-        'event_name',
-        'email_address',
-        'transaction_number',
-        'accepted_by',
-        'pax',
-        'theme_color',
-        'meal_type',
-        'descriptions',
-        'service_date',
-        'status',
+        'classfication_id',
+        'inclusion_id',
     ];
+
     public function service()
     {
        return $this->belongsTo(Service::class);
+    }
+
+    public function classification()
+    {
+       return $this->belongsTo(Classification::class);
+    }
+
+    public function inclusion()
+    {
+       return $this->belongsTo(Inclusion::class);
     }
 }

@@ -4,19 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Reservation;
 
-class Reservation_billing extends Model
+class Entourage extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'reservation_id',
         'name',
-        'amount',
+        'reservation_id',
+        'description',
+        'max_person',
     ];
-    public function Reservation()
+    
+    public function reservation()
     {
-        return $this->belongsTo('reservation_id');
+       return $this->belongsTo(Reservation::class);
     }
 }
