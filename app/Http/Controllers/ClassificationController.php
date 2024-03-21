@@ -14,6 +14,7 @@ class ClassificationController extends Controller
      */
     public function index()
     {
+        // classification
         $classifications = Classification::all();
         return view('admin.classification.index', compact('classifications'));
     }
