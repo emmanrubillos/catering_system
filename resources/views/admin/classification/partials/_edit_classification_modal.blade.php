@@ -1,5 +1,4 @@
 <!-- Edit User Modal -->
-@foreach ($classifications as $classification)
     <div class="modal fade" id="editClassificationModal{{ $classification->id }}" tabindex="-1" role="dialog" aria-labelledby="editUserModal{{ $classification->id }}Label" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
@@ -35,4 +34,4 @@
             </div>
         </div>
     </div>
-@endforeach
+

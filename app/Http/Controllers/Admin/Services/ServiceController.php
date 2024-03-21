@@ -76,7 +76,10 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        //
+        // Fetch the user data based on the ID
+        $service = Service::findOrFail($id);
+        // Pass the user data to the view
+        return view('admin.service.partials._edit_service_modal', compact('service'));
     }
 
     /**

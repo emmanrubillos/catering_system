@@ -50,7 +50,10 @@
                                 <td class="fw-bold">
                                     {{ $classification->name }}
                                 </td>
-                                
+
+                                @include('admin.classification.partials.script')
+                                @include('admin.classification.partials._add_classification_modal')
+                                @include('admin.classification.partials._edit_classification_modal')
                             </tr>
                             @endforeach
 
@@ -73,9 +76,5 @@
     new DataTable('#classifications-table');
 </script>
 
-
-@include('admin.classification.partials.script')
-@include('admin.classification.partials._add_classification_modal')
-@include('admin.classification.partials._edit_classification_modal')
 
 @endsection
