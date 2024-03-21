@@ -14,7 +14,7 @@
                                 <h3 class="mt-2 ml-2 text-dark fw-bold">Classifications</h3>
                             </div>
                             <div class="mt-2">
-                                <button class="btn btn-success" data-toggle="modal" data-target="#addInclusionModal">
+                                <button class="btn btn-success" data-toggle="modal" data-target="#addClassificationModal">
                                     <i class="fas fa-plus"></i> Add Classifications
                                 </button>
                             </div>
@@ -26,12 +26,25 @@
                         <thead>
                             <tr>
                                 <th scope="col">Name</th>
+                                <th class="" scope="col">Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($classifications as $classification)
                             <tr>
                                 <td>{{ $classification->name }}</td>
+                            </tr>
+                            <tr>
+                                <a href="{{ route('users.edit', ['user' => $user->id]) }}" class="btn btn-primary btn-sm edit-user-btn"  data-toggle="modal" data-target="#editClassificationModal{{ $user->id }}"><i class="fas fa-edit"></i></a>
+
+                                <form action="{{ route('users.destroy', $user->id) }}" method="POST" class="d-inline">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-sm btn-danger">
+                                    <!-- onclick="confirmDeleteUser({{ $user->id }})" -->
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </form>
                             </tr>
                             @endforeach
                         </tbody>
@@ -51,5 +64,8 @@
     new DataTable('#classifications-table');
 </script>
 
+
+@include('admin.service.partials._script')
+@include('admin.classification.partials._add_classification_modal')
 
 @endsection
