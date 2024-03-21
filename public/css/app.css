@@ -1186,6 +1186,10 @@ input:checked + .toggle-bg {
   top: 425px;
 }
 
+.top-full {
+  top: 100%;
+}
+
 .z-0 {
   z-index: 0;
 }

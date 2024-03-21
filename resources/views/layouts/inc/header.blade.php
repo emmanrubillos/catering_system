@@ -83,7 +83,7 @@
                 <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('services') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Services</a>
                 <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('menu') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Menu</a>
                 <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('contact_us') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Contact Us</a>
- 
+
 
             </div>
             @if (Route::has('login'))
