@@ -15,8 +15,8 @@ class CreateInclusionsTable extends Migration
     {
         Schema::create('inclusions', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('classification_id')->nullable()->default(null);
             $table->string('name');
-            $table->foreignId(' classification_id')->contrained('classifications');
             $table->string('description');
             $table->timestamps();
         });

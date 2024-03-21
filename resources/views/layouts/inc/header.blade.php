@@ -16,7 +16,7 @@
                 </svg>
             </button>
             {{-- logo --}}
-            <a href="{{ url('/home') }}" class="logo-md-sm w-32">
+            <a href="{{ url('/profile') }}" class="logo-md-sm w-32">
                 <img class="logo-lg w-auto h-auto sm-mobile:w" src="{{ asset('assets/img/logo.png') }}" alt="titans-catering-logo">
             </a>
         </div>
@@ -28,7 +28,7 @@
                 <div class="flex justify-between items-center w-full p-4">
                         <div class="text-md font-semibold">
                             @auth   
-                                <a href="{{ url('/home') }}">
+                                <a href="{{ url('/profile') }}">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon
                                         src="https://cdn.lordicon.com/hrjifpbq.json"
@@ -77,16 +77,16 @@
             </a>
 
             <div class="nav-links mt-0 tablet:mt-8 hidden tablet:flex flex-wrap gap-default">
-                <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Home</a>
-                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">About Us</a>
-                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Services</a>
-                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Menu</a>
-                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary">Contact Us</a>
+                <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">Home</a>
+                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">About Us</a>
+                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">Services</a>
+                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">Menu</a>
+                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary">Contact Us</a>
             </div>
             @if (Route::has('login'))
                 <div class="nav-btn gap-sm px-8 mt-4 hidden tablet:flex">
                     @auth   
-                        <a href="{{ url('/home') }}">
+                        <a href="{{ url('/profile') }}">
                             <script src="https://cdn.lordicon.com/lordicon.js"></script>
                             <lord-icon
                                 src="https://cdn.lordicon.com/hrjifpbq.json"

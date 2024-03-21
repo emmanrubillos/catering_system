@@ -21,7 +21,7 @@
 	
 </head>
 
-<body class="flex flex-col w-full h-screen">
+<body class="flex flex-col w-full h-screen overflow-x-hidden">
 
 
 	@yield('content')
