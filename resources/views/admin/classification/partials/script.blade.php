@@ -1,81 +1,83 @@
-{{-- Sweet alert for the Edit User Button --}}
+{{-- Sweet alert for the Edit Classification Button --}}
 <script>
     $(document).ready(function() {
-        // Add event listener for form submission
-        $(document).on("submit", "#editUserForm{{ $user->id }}", function(event) {
-            event.preventDefault(); // Prevent the default form submission
+        @foreach($classifications as $classification)
+            // Add event listener for form submission
+            $(document).on("submit", "#editClassificationForm{{ $classification->id }}", function(event) {
+                event.preventDefault(); // Prevent the default form submission
 
-            // Submit the form via AJAX
-            $.ajax({
-                url: $(this).attr('action'),
-                type: 'POST',
-                data: $(this).serialize(),
-                success: function(response) {
-                    // Show success message with SweetAlert
-                    Swal.fire({
-                        title: 'Success!',
-                        text: "User has been updated successfully.",
-                        icon: 'success'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            // Reload the page after the SweetAlert is closed
-                            location.reload();
-                        }
-                    });
-                },
-                error: function(error) {
-                    // Show error message with SweetAlert
-                    Swal.fire({
-                        title: 'Error!',
-                        text: "Failed to update the package.",
-                        icon: 'error'
-                    });
-                }
+                // Submit the form via AJAX
+                $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        // Show success message with SweetAlert
+                        Swal.fire({
+                            title: 'Success!',
+                            text: "Classification has been updated successfully.",
+                            icon: 'success'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // Reload the page after the SweetAlert is closed
+                                location.reload();
+                            }
+                        });
+                    },
+                    error: function(error) {
+                        // Show error message with SweetAlert
+                        Swal.fire({
+                            title: 'Error!',
+                            text: "Failed to update the package.",
+                            icon: 'error'
+                        });
+                    }
+                });
             });
-        });
 
-        // Add event listener for cancel button
-        $(document).on("click", "#cancelEdit", function() {
-            // Show confirmation SweetAlert
-            Swal.fire({
-                title: 'Are you sure?',
-                text: "Your changes will not be saved.",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Yes, cancel',
-                cancelButtonText: 'No, keep editing'
-            }).then((result) => {
-                // If user confirms cancel, close the modal
-                if (result.isConfirmed) {
-                    $('#editUserForm{{ $user->id }}').modal('hide');
-                } else {
-                    // If user cancels the action, show a message
-                    Swal.fire({
-                        title: 'Cancelled',
-                        text: 'The package update has been cancelled.',
-                        icon: 'info',
-                        showCancelButton: false,
-                        confirmButtonColor: '#3085d6',
-                        confirmButtonText: 'Okay'
-                    }).then((result) => {
-                        if (result.isConfirmed) {
-                            // Redirect to the index page
-                            window.location.href = "{{ route('package.index') }}";
-                        }
-                    });
-                }
+            // Add event listener for cancel button
+            $(document).on("click", "#cancelEdit", function() {
+                // Show confirmation SweetAlert
+                Swal.fire({
+                    title: 'Are you sure?',
+                    text: "Your changes will not be saved.",
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Yes, cancel',
+                    cancelButtonText: 'No, keep editing'
+                }).then((result) => {
+                    // If classification confirms cancel, close the modal
+                    if (result.isConfirmed) {
+                        $('#editClassificationForm{{ $classification->id }}').modal('hide');
+                    } else {
+                        // If classification cancels the action, show a message
+                        Swal.fire({
+                            title: 'Cancelled',
+                            text: 'The classification update has been cancelled.',
+                            icon: 'info',
+                            showCancelButton: false,
+                            confirmButtonColor: '#3085d6',
+                            confirmButtonText: 'Okay'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                                // Redirect to the index page
+                                window.location.href = "{{ route('classification.index') }}";
+                            }
+                        });
+                    }
+                });
             });
-        });
+        @endforeach    
     });
 </script>
 
-{{-- Sweet alert for the Delete User Button --}}
+{{-- Sweet alert for the Delete Classification Button --}}
 <script>
-    function confirmDeleteUser(id){
+    function confirmDeleteClassification(id){
         event.preventDefault();
-        let userId = id;
+        let classificationId = id;
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
                 confirmButton: 'btn btn-danger',
@@ -96,7 +98,7 @@
         }).then((result)=>{
             if(result.isConfirmed){
                 $.ajax({
-                    url: `/users/${userId}`,
+                    url: `/classification/${classificationId}`,
                     type: 'DELETE',
                     headers: {
                         'X-CSRF-TOKEN': '{{ csrf_token() }}',
@@ -105,7 +107,7 @@
                     success: function(response) {
                         Swal.fire({
                             title: 'Deleted!',
-                            text: "Users has been deleted.",
+                            text: "Classifications has been deleted.",
                             icon: 'success',
                             showCancelButton: false,
                             confirmButtonColor: '#3085d6',
@@ -132,28 +134,20 @@
         })
     }
 </script>
-{{-- Sweet alert for validation of the Add New User Button --}}
+
+{{-- Sweet alert for validation of the Add New Classification Button --}}
 <script>
     // Wait for the DOM to fully load
     document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('save-user-btn').addEventListener('click', function(event) {
+        document.getElementById('save-classification-btn').addEventListener('click', function(event) {
             // Prevent the default form submission
             event.preventDefault();
             
             // Check if any required field is empty
-            var firstName = document.getElementById('first_name').value;
-            var lastName = document.getElementById('last_name').value;
-            var middleName = document.getElementById('middle_name').value;
-            var email = document.getElementById('email').value;
-            var tempPassword = document.getElementById('temp_password').value;
-            var contactNumber = document.getElementById('contact_number').value;
-            var street = document.getElementById('street').value;
-            var barangay = document.getElementById('barangay').value;
-            var city = document.getElementById('city').value;
-            var roleId = document.getElementById('role_id').value;
+            var name = document.getElementById('name').value;
 
             // Check if any of the required fields are empty
-            if (!firstName.trim() || !lastName.trim() || !email.trim() || !tempPassword.trim() || !middleName.trim() || !contactNumber.trim() || !street.trim() || !barangay.trim() || !city.trim() ||  roleId === "") {
+            if (!name.trim() === "") {
                 // If any required field is empty, show an error message and return
                 Swal.fire({
                     icon: 'error',
@@ -166,23 +160,24 @@
             Swal.fire({
                 position: 'center',
                 icon: 'success',
-                title: 'Users Added Successfully',
+                title: 'Classification Added Successfully',
                 showConfirmButton: false,
                 timer: 1500
             }).then((result) => {
-                // If user clicks 'OK', submit the form
+                // If classification clicks 'OK', submit the form
                 if (result.dismiss === Swal.DismissReason.timer || result.isConfirmed) {
-                    document.getElementById('create-user-form').submit();
+                    document.getElementById('create-classification-form').submit();
                 }
             });
         });
     });
 </script>
-{{-- Sweet Alert for updating User --}}
+
+{{-- Sweet Alert for updating Classification --}}
 <script>
-    function updateUser(id){
+    function updateClassification(id){
         event.preventDefault();
-        let userId = id;
+        let classificaitonId = id;
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
                 confirmButton: 'btn btn-danger',
@@ -192,29 +187,29 @@
         })
 
         swalWithBootstrapButtons.fire({
-            title: 'Update User',
-            text: "Are you sure you want to update this user?",
+            title: 'Update Classification',
+            text: "Are you sure you want to update this classification?",
             showCancelButton: true,
-            confirmButtonText: 'Yes,update this user!',
+            confirmButtonText: 'Yes,update this classification!',
             cancelButtonText: 'Cancel',
             reverseButtons: false
         }).then((result)=>{
             if(result.isConfirmed){
                 $.ajax({
-                    url: `/users/${userId}`,
+                    url: `/classifications/${classificationId}`,
                     type: 'PUT',
-                    data: $('#editUserForm').serialize(),
+                    data: $('#editClassificationForm').serialize(),
                     headers: {
                         'X-CSRF-TOKEN': '{{ csrf_token() }}',
                         'Content-Type': 'application/json'
                     },
                     success: function (response) {
                         // Update the DataTable dynamically
-                        $('#users-table').DataTable().ajax.reload();
+                        $('#classifications-table').DataTable().ajax.reload();
                         // Show success message
                         Swal.fire({
                             title: 'Updated!',
-                            text: "User has been updated.",
+                            text: "classification has been updated.",
                             icon: 'success',
                             confirmButtonColor: '#3085d6',
                             confirmButtonText: 'Okay'
@@ -226,7 +221,7 @@
                         // Show error message
                         Swal.fire({
                             title: 'Error',
-                            text: "Failed to update user.",
+                            text: "Failed to update classification.",
                             icon: 'error',
                             confirmButtonColor: '#3085d6',
                             confirmButtonText: 'Okay'

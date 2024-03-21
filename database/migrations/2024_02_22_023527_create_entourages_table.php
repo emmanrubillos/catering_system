@@ -15,7 +15,7 @@ class CreateEntouragesTable extends Migration
     {
         Schema::create('entourages', function (Blueprint $table) {
             $table->id();
-            $table->integer('reservation_id');
+            $table->foreignId('reservation_id')->constrained('reservations');
             $table->string('name');
             $table->string('description');
             $table->integer('max_person');

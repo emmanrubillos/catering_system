@@ -21,9 +21,9 @@
                     </a>
                 </li>
 
-                <li class="submenu">
+                {{-- <li class="submenu">
                     <a href="#">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-book-open"></i>
                         <span> Reservation </span>
                         <span class="menu-arrow"></span>
                     </a>
@@ -49,36 +49,36 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
 
-                <li class="nav-item {{ request()->is('menu') ? 'active' : '' }}">
-                    <a class="nav-link" href="/menu">
+                {{-- <li class="nav-item {{ request()->is('inclusions') ? 'active' : '' }}">
+                    <a class="nav-link" href="inclusions">
                         <i class="fas fa-fw fa-user"></i>
-                        <span>Menu</span>
+                        <span>Inclusion</span>
                     </a>
-                </li>
+                </li> --}}
 
-                <li class="nav-item {{ request()->is('venue') ? 'active' : '' }}">
-                    <a class="nav-link" href="/venue">
+                {{-- <li class="nav-item {{ request()->is('classifications') ? 'active' : '' }}">
+                    <a class="nav-link" href="/classifications">
                         <i class="fas fa-fw fa-user"></i>
-                        <span>Venue</span>
+                        <span>Classifications</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <!-- Nav Item - Package -->
-                <li class="nav-item {{ request()->is('themes') ? 'active' : '' }}">
+                {{-- <li class="nav-item {{ request()->is('themes') ? 'active' : '' }}">
                     <a class="nav-link" href="/themes">
                         <i class="fas fa-fw fa-user"></i>
                         <span>Themes</span>
                     </a>
-                </li>
+                </li> --}}
 
-                <li class="nav-item {{ request()->is('package') ? 'active' : '' }}">
+                {{-- <li class="nav-item {{ request()->is('package') ? 'active' : '' }}">
                     <a class="nav-link" href="/package">
                         <i class="fas fa-fw fa-user"></i>
                         <span>Package</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li class="submenu">
                     <a href="#">
@@ -100,6 +100,26 @@
                         <li>
                             <a href="{{ route('pax_details') }}" class="{{ request()->is('service/pax_details') ? 'active' : '' }}">
                                 {!! request()->is('service/pax_details') ? '<b>Pax Details</b>' : 'Pax Details' !!}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="submenu">
+                    <a href="#">
+                        <i class="fas fa-wrench"></i>
+                        <span>Settings</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="submenu_class">
+                        
+                        <li>
+                            <a href="{{ route('inclusion.index') }}" class="{{ request()->is('inclusion') ? 'active' : '' }}">
+                                {!! request()->is('inclusion') ? '<b>Inclusion</b>' : 'Inclusion' !!}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('classification.index') }}" class="{{ request()->is('classification') ? 'active' : '' }}">
+                                {!! request()->is('classification') ? '<b>Classification</b>' : 'Classification' !!}
                             </a>
                         </li>
                     </ul>
