@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Classification;
 use Illuminate\Http\Request;
-use App\Models\Classifications;
 
 class ClassificationController extends Controller
 {
@@ -14,7 +14,7 @@ class ClassificationController extends Controller
      */
     public function index()
     {
-        $classifications = Classifications::all();
+        $classifications = Classification::all();
         return view('admin.classification.index', compact('classifications'));
     }
 
@@ -40,7 +40,7 @@ class ClassificationController extends Controller
             'name' => 'required',
         ]);
 
-        $classification = Classifications::create([
+        $classification = Classification::create([
             'name' => $validateData['name'],
         ]);
 

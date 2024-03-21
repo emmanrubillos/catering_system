@@ -1186,10 +1186,6 @@ input:checked + .toggle-bg {
   top: 425px;
 }
 
-.top-full {
-  top: 100%;
-}
-
 .z-0 {
   z-index: 0;
 }
@@ -1661,6 +1657,13 @@ input:checked + .toggle-bg {
   height: 100vh;
 }
 
+<<<<<<< HEAD
+=======
+.h-\[40rem\] {
+  height: 40rem;
+}
+
+>>>>>>> b9fecb205f432962b1d66197eb78740d9675818a
 .min-h-\[800px\] {
   min-height: 800px;
 }
