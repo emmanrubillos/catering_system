@@ -1198,7 +1198,7 @@
                     Select
                     </button>
                 </div>
-            </div>>
+            </div>
         </div>
       </div>
 
@@ -1436,4 +1436,3 @@
 @include('layouts.pages_._services.scripts.read-more-services-script')
 
 @endsection
-

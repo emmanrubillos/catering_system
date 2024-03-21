@@ -28,6 +28,23 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+/* -------------- custom scrollbar --------------*/
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF2E4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#FF731D,#ED6B1B);
+  border-radius: 5px;
+}
+
+
+
 
 /* Ensure the wrapper fills the entire viewport */
 html, body {

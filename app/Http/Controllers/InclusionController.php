@@ -36,7 +36,7 @@ class InclusionController extends Controller
      */
     public function store(Request $request)
     {
-        $validateData = $request->validate([
+        $validatedData = $request->validate([
             'name' => 'required',
             'classification_id' => 'required]integer',
             'description' => 'required',
@@ -59,8 +59,11 @@ class InclusionController extends Controller
      */
     public function show($id)
     {
-        //
+        $inclusion = Inclusion::findOrFail($id);
+        // dd($inclusion);  
+        return view('layouts.pages_.menu.index', ['inclusion' => $inclusion]);
     }
+    
 
     /**
      * Show the form for editing the specified resource.
