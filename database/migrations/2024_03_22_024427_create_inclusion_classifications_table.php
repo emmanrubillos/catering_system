@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateClassificationInclusionTable extends Migration
+class CreateInclusionClassificationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateClassificationInclusionTable extends Migration
      */
     public function up()
     {
-        Schema::create('classification_inclusion', function (Blueprint $table) {
+        Schema::create('inclusion_classifications', function (Blueprint $table) {
             $table->id();
             $table->foreignId('inclusion_id')->constrained();
             $table->foreignId('classification_id')->constrained();
@@ -28,7 +28,6 @@ class CreateClassificationInclusionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('classification_inclusion');
+        Schema::dropIfExists('inclusion_classifications');
     }
 }
-

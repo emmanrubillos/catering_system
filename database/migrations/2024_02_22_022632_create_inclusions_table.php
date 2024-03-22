@@ -15,7 +15,6 @@ class CreateInclusionsTable extends Migration
     {
         Schema::create('inclusions', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('classification_id')->constrained('classifications');
             $table->string('name');
             $table->string('description');
             $table->timestamps();

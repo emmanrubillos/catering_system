@@ -17,13 +17,11 @@ class InclusionSeeder extends Seeder
         $inclusions = [
             [
                 'name' => 'Chicken Pandan',
-                'classification_id' => '1',
                 'description' => 'Crispy on the outside, tender on the inside - our Chicken Pandan is a flavorful delight, infused with aromatic pandan leaves for a uniquely delicious experience.'
             ],
 
             [
                 'name' => 'Baked Chicken',
-                'classification_id' => '1',
                 'description' => 'Enjoy exceptional cuisine tailored to your every occasion. Whether its a wedding, christening, birthday, anniversary, or any special event. Let us create unforgettable'
             ],
         ];

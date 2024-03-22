@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class InclusionClassification extends Pivot
+class InclusionClassification extends Model
 {
     use HasFactory;
 

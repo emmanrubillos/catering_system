@@ -14,9 +14,9 @@ class Inclusion extends Model
         'description',
     ];
 
-    public function classifications()
+    public function inclusionclassifications()
 
     {
-       return $this->belongsToMany(Classification::class);
+       return $this->hasMany(InclusionClassification::class);
     }
 }
