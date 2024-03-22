@@ -57,10 +57,11 @@
                                 </td>
                                 <td>{{ $inclusion->name }}</td>
                                 <td>
-                                    @if ($inclusion->classifications)
-                                        @foreach ($inclusion->classifications as $classification)
-                                            <span class="badge badge-primary">{{ $classification->name }}</span>
-                                        @endforeach
+                                    @if($inclusion->inclusionClassifications)
+                                    @foreach($inclusion->inclusionClassifications as $inclusionClassifications)
+                                    <span class="badge badge-primary">{{ $inclusionClassifications->classification->name }}</span>
+
+                                    @endforeach
                                     @endif
                                 </td>
                                 <td>{{ $inclusion->description }}</td>

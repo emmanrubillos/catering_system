@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Inclusion;
 use App\Models\Classification;
-// use App\Models\InclusionClassification;
 
 class InclusionController extends Controller
 {
@@ -16,9 +15,13 @@ class InclusionController extends Controller
      */
     public function index()
     {
-        $inclusions = Inclusion::all();
+        $inclusions = Inclusion::with(['inclusionclassifications', 'inclusionclassifications.classification'])->orderBy('id', 'desc')->get();
         $classifications = Classification::all();
         return view('admin.inclusion.index', compact('inclusions', 'classifications'));
+
+        // $inclusion = Inclusion::with('classifications')->get();
+        // dd($inclusion);
+        // return view('admin.inclusion.index', ['inclusions' => InclusionResource::collection($inclusion)]);
     }
 
     /**
@@ -59,7 +62,7 @@ class InclusionController extends Controller
                 ]);
             }
         }
-        dd($classifications);
+        // dd($classifications);
         return redirect()->route('inclusion.index');
     }
 
