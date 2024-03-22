@@ -11,11 +11,12 @@ class Inclusion extends Model
 
     protected $fillable = [
         'name',
-        'classification_id',
         'description',
     ];
-    public function classification()
+
+    public function classifications()
+
     {
-       return $this->belongsTo(Classification::class);
+       return $this->belongsToMany(Classification::class);
     }
 }

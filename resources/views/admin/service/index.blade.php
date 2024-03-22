@@ -60,7 +60,6 @@
                                         <td class="fw-bold">{{ $service->number_of_person }} Pax</td>
 
                                         
-                                        @include('admin.service.partials._script')
                                         @include('admin.service.partials._edit_service_modal')
                                         @include('admin.service.partials._show_service_modal')
                                     </tr>
@@ -85,6 +84,7 @@
     new DataTable('#service-table');
 </script>
 @include('admin.service.partials._add_service_modal')
+@include('admin.service.partials._script')
 
 
 @endsection

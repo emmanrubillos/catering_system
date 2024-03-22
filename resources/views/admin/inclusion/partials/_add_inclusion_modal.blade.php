@@ -27,8 +27,8 @@
                                 <div>
                                     @foreach ($classifications as $classification)
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="classifications[]" value="{{ $classification->id }}">
-                                            <label class="form-check-label" for="classification_{{ $classification->id }}">
+                                            <input class="form-check-input" type="checkbox" name="classification_id[]" value="{{ $classification->id }}">
+                                            <label class="form-check-label" for="classification_id{{ $classification->id }}">
                                                 {{ $classification->name }}
                                             </label>
                                         </div>

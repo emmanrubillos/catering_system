@@ -21,6 +21,16 @@
                         </div>
                     </div>
                 </div>
+                <!-- Validation Errors -->
+                @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+                @endif
                 <div class="card-body p-1">
                     <table class="table table-sm table-hover mb-0"  id="inclusions-table"  style="overflow-x: scroll; max-width: 100%;" >
                         <thead>
@@ -47,16 +57,10 @@
                                 </td>
                                 <td>{{ $inclusion->name }}</td>
                                 <td>
-                                    @if ($inclusion->classification_id == 1)
-                                    <span class="badge badge-primary">Chicken</span>
-                                    @elseif ($inclusion->classification_id == 2)
-                                        <span class="badge badge-success">Beef</span>
-                                    @elseif ($inclusion->classification_id == 3)
-                                        <span class="badge badge-warning">Pork</span>
-                                    @elseif($inclusion->classification_id == 4)
-                                        <span class="badge badge-info">Fish</span>
-                                    @else
-                                        <span class="badge badge-secondary">Unknown</span>
+                                    @if ($inclusion->classifications)
+                                        @foreach ($inclusion->classifications as $classification)
+                                            <span class="badge badge-primary">{{ $classification->name }}</span>
+                                        @endforeach
                                     @endif
                                 </td>
                                 <td>{{ $inclusion->description }}</td>
