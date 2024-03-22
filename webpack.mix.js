@@ -21,6 +21,7 @@ mix.js('resources/js/app.js', 'public/js')
     // Copy Flowbite CSS and JavaScript files
     .copy('node_modules/flowbite/dist/flowbite.min.css', 'public/css')
     .copy('node_modules/flowbite/dist/flowbite.min.js', 'public/js')
+    .browserSync("127.0.0.1:8000")
     // Vue Loader Configuration
     .webpackConfig({
         module: {
