@@ -11,6 +11,7 @@ class Classification extends Model
 
     protected $fillable = [
         'name',
+        'group',
     ];
 
     public function inclusionclassifications()

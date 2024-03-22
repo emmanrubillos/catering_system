@@ -26,7 +26,8 @@
                         <thead class="border border-0">
                             <tr class="border border-0">
                                 <th class="fw-bold" style="width:20%" scope="col">Action</th>
-                                <th class="fw-bold" scope="col">Name</th>
+                                <th class="fw-bold" style="width:30%" scope="col">Name</th>
+                                <th class="fw-bold" scope="col">Group</th>
                             </tr>
                         </thead>
                         <tbody class="border border-0">
@@ -49,6 +50,12 @@
                                 
                                 <td class="fw-bold">
                                     {{ $classification->name }}
+                                </td>
+
+                                <td class="fw-bold">
+                                    <span class="badge badge-secondary">
+                                        {{ $classification->group }}
+                                    </span>
                                 </td>
 
                                 @include('admin.classification.partials.script')

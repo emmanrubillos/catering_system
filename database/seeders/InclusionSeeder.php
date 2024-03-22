@@ -9,6 +9,7 @@ use App\Models\Inclusion;
 use App\Models\InclusionClassification;
 
 
+
 class InclusionSeeder extends Seeder
 {
     /**
@@ -20,7 +21,12 @@ class InclusionSeeder extends Seeder
     {
         $inclusions = [
             [
-                'classification' => ['Foods and Catering',],
+                'classification' => [
+                    [
+                        'name' => 'Foods and Catering',
+                        'group' => 'Foods and Catering',
+                    ],
+                ],
                 'items' => [
                     'Main Dish',
                     'Side Dish',
@@ -29,7 +35,12 @@ class InclusionSeeder extends Seeder
             ],
 
             [
-                'classification' => ['One Round', 'Foods and Catering'],
+                'classification' => [
+                    [
+                        'name' => 'One Round',
+                        'group' => 'Foods and Catering',
+                    ],
+                ],
                 'items' => [
                     'Rice',
                     'Softdrinks',
@@ -37,15 +48,27 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Seated Buffet', 'Foods and Catering'],
+                'classification' =>[ 
+                    [ 
+                        'name' => 'Seated Buffet',
+                        'group' => 'Foods and Catering',
+                    ],  
+                ], 
                 'items' => [
-                    'Presidential',
-                    'Couple',
-                    'Parents',
+                
+                        'Presidential',
+                        'Couple',
+                        'Parents',
                 ],
             ],
             [
-                'classification' => ['Table Setup', 'Foods and Catering'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Table Setup',
+                            'group' => 'Foods and Catering',
+                        ],
+                    ],  
                 'items' => [
                     'Couple Table',
                     'Parents Table',
@@ -55,7 +78,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Table Setup w/ Tiffany Charis', 'Foods and Catering'],
+                'classification' => 
+                    [
+                        [   
+                            'name' => 'Table Setup w/ Tiffany Charis',
+                            'group' => 'Foods and Catering',
+                        ],
+                    ], 
                 'items' => [
                     'Couple Table',
                     'Parents Table',
@@ -64,7 +93,14 @@ class InclusionSeeder extends Seeder
 
             ],
             [
-                'classification' => ['Whole Set Entourage Attire'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Whole Set Entourage Attire',
+                            'group' => 'Whole Set Entourage Attire',
+                        ],
+                    ], 
+
                 'items' => [
                     'Brides Gown',
                     'Groom Suit',
@@ -80,7 +116,13 @@ class InclusionSeeder extends Seeder
 
             ],
             [
-                'classification' => ['Accessories', 'Whole Set Entourage Attire'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Accessories',
+                            'group' => 'Whole Set Entourage Attire',
+                        ],
+                    ], 
                 'items' => [
                     'Veils',
                     'Pillos',
@@ -91,7 +133,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Bouquet'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Bouquet',
+                            'group' => 'Bouquet',
+                        ],
+                    ],  
                 'items' => [
                     'Bridal Bouquet',
                     'Maid of Honor',
@@ -100,7 +148,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Corsage'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Corsage',
+                            'group' => 'Corsage',
+                        ],
+                    ], 
                 'items' => [
                     'Groom',
                     'Best Man',
@@ -110,7 +164,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Church Decoration'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Church Decoration',
+                            'group' => 'Church Decoration',
+                        ],
+                    ], 
                 'items' => [
                     'Flowers',
                     'Arch Entrance',
@@ -124,7 +184,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Reception Decoration'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Reception Decoration',
+                            'group' => 'Reception Decoration',
+                        ],
+                    ], 
                 'items' => [
                     'Presidential Table',
                     'Arch Entrance',
@@ -141,7 +207,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Program and Entertainment'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Program and Entertainment',
+                            'group' => 'Program and Entertainment',
+                        ],
+                    ], 
                 'items' => [
                     'Reception Singer',
                     'Chruch Singer',
@@ -150,7 +222,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Full Coordination'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Full Coordination',
+                            'group' => 'Full Coordination',
+                        ],
+                    ], 
                 'items' => [
                     'Full Coordination (on the Day)',
                     'Full Coordination (Plan before an event)',
@@ -160,7 +238,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Photograhics and Videograhics'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Photograhics and Videograhics',
+                            'group' => 'Photograhics and Videograhics',
+                        ],
+                    ], 
                 'items' => [
                     'Pre-Photo',
                     'Photo and View Coverage',
@@ -176,7 +260,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Hair and Make-up'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Hair and Make-up',
+                            'group' => 'Hair and Make-up',
+                        ],
+                    ], 
                 'items' => [
                     'Prenup',
                     'Bride',
@@ -187,7 +277,13 @@ class InclusionSeeder extends Seeder
                 ],
             ],
             [
-                'classification' => ['Freebies'],
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Freebies',
+                            'group' => 'Freebies', 
+                        ],
+                    ], 
                 'items' => [
                     'Layers Wedding Cake',
                     'Bottle of Wine',
@@ -206,9 +302,7 @@ class InclusionSeeder extends Seeder
         foreach ($inclusions as $inclusion) {
             //loop through classificaiton list
             foreach ($inclusion['classification'] as $classification) {
-                $classi = Classification::updateOrCreate([
-                    'name' => $classification
-                ]);
+                $classi = Classification::updateOrCreate($classification);
 
                 foreach ($inclusion['items'] as $item) {
                     $itemData = Inclusion::where('name', $item)->first();
