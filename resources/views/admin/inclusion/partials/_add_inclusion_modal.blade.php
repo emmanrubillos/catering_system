@@ -56,8 +56,8 @@
                                 <label class="fw-bold bg-success text-white px-4 py-1 rounded" for="description">Description</label>
                                 <textarea type="text" class="form-control" placeholder="Enter a description ...." name="description" id="add-inclusion-description" rows="5"></textarea>
                             </div>
-                            <div class="col-md-12 mb-4 overflow-auto add-scroll" style="height:200px;">
-                                <div class="form-group" style="height:150px;">
+                            <div class="col-md-12 mb-4 rounded overflow-auto add-scroll" style="height:200px; background-color: #FAF2E4;">
+                                <div class="form-group mt-3" style="height:150px;">
                                     <label class="fw-bold bg-success text-white px-4 py-1 rounded" for="classification_id_selected">Selected Types</label>
                                     <ul id="selected-types-list" class="list-unstyled">
                                         

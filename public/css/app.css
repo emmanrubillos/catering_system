@@ -1341,6 +1341,11 @@ input:checked + .toggle-bg {
   margin-bottom: 2rem;
 }
 
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .mb-0 {
   margin-bottom: 0px;
 }
