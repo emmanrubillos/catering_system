@@ -31,7 +31,7 @@ class InclusionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.inclusion.create');
     }
 
     /**
