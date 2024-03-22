@@ -18,8 +18,8 @@ class CreateServicesTable extends Migration
             $table->string('name');
             $table->string('type');
             $table->text('description');
-            $table->decimal('price',8, 2);
-            $table->integer('number_of_person');
+            $table->string('price',8, 2);
+            $table->string('number_of_person');
             $table->timestamps();
         });
     }
