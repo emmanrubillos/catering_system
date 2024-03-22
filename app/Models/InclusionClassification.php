@@ -5,17 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Classification extends Model
+class InclusionClassification extends Pivot
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'inclusion_id',
+        'classification_id',
     ];
-
-    public function inclusions()
-
-    {
-       return $this->belongsToMany(Inclusion::class);
-    }
 }

@@ -40,18 +40,23 @@ class InclusionController extends Controller
     {   
         $validatedData = $request->validate([
             'name' => 'required',
-            'classification_id' => 'required|integer',
+            'classification_id' => 'required|array',
             'description' => 'required',
         ]);
-
+        
+        // Create the Inclusion instance
         $inclusion = Inclusion::create([
             'name' => $validatedData['name'],
-            'classification_id' =>$validatedData['classification_id'],
             'description' => $validatedData['description'],
         ]);
+        // dd($validatedData);
+        // Attach classifications to the inclusion
+        $inclusion->classifications()->attach($validatedData['classification_id']);
 
-         return redirect()->route('inclusion.index');
+        return redirect()->route('inclusion.index');
     }
+
+
 
     /**
      * Display the specified resource.
