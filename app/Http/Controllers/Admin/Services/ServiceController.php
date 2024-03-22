@@ -38,11 +38,11 @@ class ServiceController extends Controller
     public function store(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|string|max:50',
-            'type' => 'required|string|max:50',
-            'price' => 'required|string|max:50',
-            'description' => 'required|string|max:255',
-            'number_of_person' => 'required|string|max:255',
+            'name' => 'required',
+            'type' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+            'number_of_person' => 'required',
         ]);
             // dd($validatedData);
         $service =Service::create([
@@ -91,15 +91,16 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
+        
         // Validate the request data
         $validatedData = $request->validate([
-            'name' => 'required|string|max:50',
-            'type' => 'required|string|max:50',
-            'price' => 'required|string|max:50',
-            'description' => 'required|string|max:255',
-            'number_of_person' => 'required|string|max:255',
+            'name' => 'required',
+            'type' => 'required',
+            'price' => 'required',
+            'description' => 'required',
+            'number_of_person' => 'required',
         ]);
-
+        dd($validatedData);
         // Find the service by ID and update its details
         $service = Service::findOrFail($id);
         $service->update($validatedData);

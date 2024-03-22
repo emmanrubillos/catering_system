@@ -10,9 +10,10 @@
             var type = document.getElementById('type').value;
             var description = document.getElementById('description').value;
             var price = document.getElementById('price').value;
+            var number_of_person = document.getElementById('number_of_person').value;
 
             // Check if any of the required fields are empty
-            if (!name.trim() || type === "" || !description.trim() || !price.trim() ) {
+            if (!name.trim() || type === "" || !description.trim() || !price.trim() || !number_of_person.trim()) {
                 // If any required field is empty, show an error message and return
                 Swal.fire({
                     icon: 'error',
