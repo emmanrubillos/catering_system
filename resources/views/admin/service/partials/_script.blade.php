@@ -1,16 +1,19 @@
 <script>
-    // Wait for the DOM to fully load
+// Wait for the DOM to fully load
     document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('save-service-btn').addEventListener('click', function(event) {
             // Prevent the default form submission
             event.preventDefault();
             
             // Check if any required field is empty
-            var name = document.getElementById('name').value;
-            var type = document.getElementById('type').value;
-            var description = document.getElementById('description').value;
-            var price = document.getElementById('price').value;
-            var number_of_person = document.getElementById('number_of_person').value;
+            let name = $('input#add-service-name').val();
+            let type = $('#add-service-type').val();
+            let description = $('#add-service-description').val();
+            let price = $('input#add-service-price').val();
+            let number_of_person = $('input#add-service-number_of_person').val();
+
+            // console.log(name, type, description, price, number_of_person);
+            // return;
 
             // Check if any of the required fields are empty
             if (!name.trim() || type === "" || !description.trim() || !price.trim() || !number_of_person.trim()) {
@@ -37,9 +40,9 @@
             });
         });
     });
-</script>
-{{-- Delete Service SweetAlert --}}
-<script>
+    
+
+//? Delete Service SweetAlert
     function confirmDeleteService(id){
         event.preventDefault();
         let serviceId = id;
