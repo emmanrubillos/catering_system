@@ -38,10 +38,12 @@ class ClassificationController extends Controller
     {
         $validateData = $request->validate([
             'name' => 'required',
+            'group' => 'required',
         ]);
 
         $classification = Classification::create([
             'name' => $validateData['name'],
+            'group' => $validateData['group'],
         ]);
 
         return redirect()->route('classification.index', compact('classification'));
@@ -85,6 +87,7 @@ class ClassificationController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
+            'group' => 'required|string|max:255',
         ]);
         
         $classification = Classification::findOrFail($id);

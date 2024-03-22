@@ -1,5 +1,6 @@
-{{-- Sweet alert for the Edit Classification Button --}}
+
 <script>
+// Sweet alert for the Edit Classification Button
     $(document).ready(function() {
             // Add event listener for form submission
             $(document).on("submit", "#editClassificationForm{{ $classification->id }}", function(event) {
@@ -69,10 +70,9 @@
                 });
             });   
     });
-</script>
 
-{{-- Sweet alert for the Delete Classification Button --}}
-<script>
+
+// Sweet alert for the Delete Classification Button
     function confirmDeleteClassification(id){
         event.preventDefault();
         let classificationId = id;
@@ -131,21 +131,25 @@
             }
         })
     }
-</script>
 
-{{-- Sweet alert for validation of the Add New Classification Button --}}
-<script>
+
+// Sweet alert for validation of the Add New Classification Button
+
     // Wait for the DOM to fully load
     document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('save-classification-btn').addEventListener('click', function(event) {
             // Prevent the default form submission
             event.preventDefault();
             
-            // Check if any required field is empty
-            var name = document.getElementById('name').value;
+            // Check if any required field is empty add-classification-
+            let name = $('input#add-classification-name').val();
+            let group = $('input#add-classification-group').val();
+
+            // console.log(name, group);
+            // return;
 
             // Check if any of the required fields are empty
-            if (!name.trim() === "") {
+            if (!name.trim() || !group.trim()) {
                 // If any required field is empty, show an error message and return
                 Swal.fire({
                     icon: 'error',
@@ -169,51 +173,72 @@
             });
         });
     });
-</script>
 
-{{-- Sweet Alert for updating Classification --}}
-<script>
-    function updateClassification(id){
+
+//?  Sweet Alert for updating Classification
+
+    function areChangesMade(id) {
+        let classificationId = id;
+        let currentName = $('#name' + classificationId).val();
+        let currentGroup = $('#group' + classificationId).val();
+        let originalName = $('#original-name' + classificationId).val();
+        let originalGroup = $('#original-group' + classificationId).val();
+
+        return currentName !== originalName || currentGroup !== originalGroup;
+    }
+
+    function updateClassification(event, id) {
         event.preventDefault();
-        let classificaitonId = id;
+        let classificationId = id;
+
+        if (!areChangesMade(classificationId)) {
+            Swal.fire({
+                title: 'No Changes Made',
+                text: "You haven't made any changes.",
+                icon: 'warning',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'Okay'
+            });
+            return;
+        }
+
         const swalWithBootstrapButtons = Swal.mixin({
             customClass: {
                 confirmButton: 'btn btn-danger',
                 cancelButton: 'btn btn-secondary'
             },
-            
-        })
+        });
 
         swalWithBootstrapButtons.fire({
             title: 'Update Classification',
             text: "Are you sure you want to update this classification?",
             showCancelButton: true,
-            confirmButtonText: 'Yes,update this classification!',
+            confirmButtonText: 'Yes, update this classification!',
             cancelButtonText: 'Cancel',
             reverseButtons: false
-        }).then((result)=>{
-            if(result.isConfirmed){
+        }).then((result) => {
+            if (result.isConfirmed) {
                 $.ajax({
                     url: `/classifications/${classificationId}`,
                     type: 'PUT',
-                    data: $('#editClassificationForm').serialize(),
+                    data: $('#editClassificationForm' + classificationId).serialize(),
                     headers: {
                         'X-CSRF-TOKEN': '{{ csrf_token() }}',
                         'Content-Type': 'application/json'
                     },
-                    success: function (response) {
+                    success: function(response) {
                         // Update the DataTable dynamically
                         $('#classifications-table').DataTable().ajax.reload();
                         // Show success message
                         Swal.fire({
                             title: 'Updated!',
-                            text: "classification has been updated.",
+                            text: "Classification has been updated.",
                             icon: 'success',
                             confirmButtonColor: '#3085d6',
                             confirmButtonText: 'Okay'
                         });
                     },
-                    error: function (error) {
+                    error: function(error) {
                         // Handle error response
                         console.error('Update request failed:', error);
                         // Show error message
@@ -236,4 +261,5 @@
             }
         });
     }
+
 </script>
