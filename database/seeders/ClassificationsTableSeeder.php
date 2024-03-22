@@ -15,10 +15,10 @@ class ClassificationsTableSeeder extends Seeder
     public function run()
     {
         $classifications = [
-            ['name' => 'chicken'],
-            ['name' => 'beef'],
-            ['name' => 'pork'],
-            ['name' => 'fish'],
+            // ['name' => 'chicken'],
+            // ['name' => 'beef'],
+            // ['name' => 'pork'],
+            // ['name' => 'fish'],
             // Add more data as needed
         ];
 
