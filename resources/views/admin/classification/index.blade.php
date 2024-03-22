@@ -50,13 +50,12 @@
                                 <td class="fw-bold">
                                     {{ $classification->name }}
                                 </td>
-                                
+
+                                @include('admin.classification.partials.script')
+                                @include('admin.classification.partials._add_classification_modal')
+                                @include('admin.classification.partials._edit_classification_modal')
                             </tr>
                             @endforeach
-
-                            <tr>
-
-                            </tr>
 
                         </tbody>
                     </table>
@@ -68,14 +67,12 @@
 
 
 {{-- <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script> --}}
-
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.datatables.net/2.0.2/js/dataTables.js"></script>
 <script>
     new DataTable('#classifications-table');
 </script>
 
-
-@include('admin.classification.partials.script')
 @include('admin.classification.partials._add_classification_modal')
-@include('admin.classification.partials._edit_classification_modal')
-
 @endsection

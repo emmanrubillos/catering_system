@@ -29,7 +29,7 @@
                     <div class="mt-4 contact">
                         <ul>
                             <li class="my-3">
-                                <a href="" class="flex">
+                                <a href="{{ route('contact_us') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/iikoxwld.json" trigger="hover"
                                         colors="primary:#FF731D" style="width:30px;height:30px">
@@ -41,7 +41,7 @@
                                 </a>
                             </li>
                             <li class="my-3">
-                                <a href="" class="flex">
+                                <a href="{{ route('contact_us') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xtzvywzp.json" trigger="hover"
                                         colors="primary:#FF731D" style="width:30px;height:30px">
@@ -53,7 +53,7 @@
                                 </a>
                             </li>
                             <li class="my-3">
-                                <a href="" class="flex">
+                                <a href="{{ route('contact_us') }}" class="flex">
                                     <a href="" class="flex">
                                         <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                         <lord-icon src="https://cdn.lordicon.com/srsgifqc.json" trigger="hover"
@@ -79,7 +79,7 @@
                         </h5>
                         <ul class="my-2">
                             <li class="my-2">
-                                <a href="" class="flex">
+                                <a href="{{ route('about_us') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
@@ -90,7 +90,7 @@
                                 </a>
                             </li>
                             <li class="my-2">
-                                <a href="" class="flex">
+                                <a href="{{ route('services') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
@@ -112,7 +112,7 @@
                                 </a>
                             </li>
                             <li class="my-2">
-                                <a href="" class="flex">
+                                <a href="{{ route('menu') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
@@ -123,7 +123,7 @@
                                 </a>
                             </li>
                             <li class="my-2">
-                                <a href="" class="flex">
+                                <a href="{{ route('contact_us') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
@@ -134,7 +134,7 @@
                                 </a>
                             </li>
                             <li class="my-2">
-                                <a href="" class="flex">
+                                <a href="{{ route('home') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
