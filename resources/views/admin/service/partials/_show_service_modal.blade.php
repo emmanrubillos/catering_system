@@ -13,34 +13,27 @@
                 </button>
             </div>
             <div class="modal-body">
-                <!-- Form for showing user -->
+
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="form-group">
-                            <h2 class="fw-bold">
+                            <h1 class="fw-bold">
                                 {{ $service->name }}
                             </h2>
                         </div>
                         <div class="d-flex flex-row">
-                            <label for="type" class="fw-bold">Type:</label>
                             <span class="badge-primary badge-sm badge text-bg-primary text-wrap">
-                                {{ $service->type }}
+                                Type: {{ $service->type }} 
                             </span>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <label for="type" class="fw-bold">Prize:</label>
-                            <span class="badge-primary badge-sm badge text-bg-primary text-wrap">
-                                {{ $service->number_of_person }}
+                            <span class="badge-primary badge-sm badge text-bg-primary text-wrap mx-3">
+                                ₱ {{ $service->price }}
                             </span>
-                        </div>
-                        <div class="d-flex flex-row">
-                            <label for="type" class="fw-bold">Pax:</label>
                             <span class="badge-primary badge-sm badge text-bg-primary text-wrap">
-                                {{ $service->number_of_person }}
+                                {{ $service->number_of_person }} PAX
                             </span>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-7">
                         <div class="form-group">
                             <label for="description" class="fw-bold">Decription:</label>
                             <p>
@@ -49,10 +42,321 @@
                         </div>
                     </div>
                 </div>
+                
+                <hr>
+
+                <div class="col px-0 mb-4 overflow-auto show-scroll" style="height: 300px;">
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                            Foods & Catering
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    3 Main Dish
+                                </li>
+                                <li>
+                                    1 Side Dish
+                                </li>
+                                <li>
+                                    1 Round Soft Drinks
+                                </li>
+                                <li>
+                                    1 Round Soft Desserts
+                                </li>
+                                <li>
+                                    1 Round Soft Rice
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Presidential Seated Buffet
+                                </li>
+                                <li>
+                                    Couple Table Setup
+                                </li>
+                                <li>
+                                    Parents Table Setup
+                                </li>
+                                <li>
+                                    Presidential Table Setup
+                                </li>
+                                <li>
+                                    Guest Table Setup
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                            Chruch Decoration
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers Stand for Aisles (Ordinary)
+                                </li>
+                                <li>
+                                    Red Carpet
+                                </li>
+                                <li>
+                                    Bridal Car Decoration
+                                </li>
+                            </ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                            Reception Decoration
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                           Whole Set Entourage Attire
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                           Whole Set Entourage Attire
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                           Bouquet & Corsage
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                           Program & Entertainment
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                           Full Coordination
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                          Photographic & Videographic 
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col px-0">
+                        <h5 class="fw-bold">
+                            Hair and Make-up
+                        </h5>
+                        <div class="row mx-2">
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                            <ul class="text-md col-5">
+                                <li>
+                                    Flowers
+                                </li>
+                                <li>
+                                    Arch Entrance
+                                </li>
+                                <li>
+                                    Candle for Matrimonial
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
                 
                 <div class="modal-footer">
-                    <button type="button" class="badge badge-secondary fw-bold" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary fw-bold" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
