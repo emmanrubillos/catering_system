@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Inclusion;
 use App\Models\Classification;
+// use App\Models\InclusionClassification;
 
 class InclusionController extends Controller
 {
@@ -49,9 +50,9 @@ class InclusionController extends Controller
             'name' => $validatedData['name'],
             'description' => $validatedData['description'],
         ]);
-        // dd($validatedData);
+        
         // Attach classifications to the inclusion
-        $inclusion->classifications()->attach($validatedData['classification_id']);
+        $inclusion->inclusionclassifications()->attach($validatedData['classification_id']);
 
         return redirect()->route('inclusion.index');
     }
