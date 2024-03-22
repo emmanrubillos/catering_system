@@ -52,8 +52,14 @@ class InclusionController extends Controller
         ]);
         
         // Attach classifications to the inclusion
-        $inclusion->inclusionclassifications()->attach($validatedData['classification_id']);
-
+        if (isset($validatedData['classification_id']) && is_array($validatedData['classification_id'])) {
+            foreach ($validatedData['classification_id'] as $classifications){
+                $inclusion->inclusionclassifications()->create([
+                    'classification_id' => $classifications
+                ]);
+            }
+        }
+        dd($classifications);
         return redirect()->route('inclusion.index');
     }
 
