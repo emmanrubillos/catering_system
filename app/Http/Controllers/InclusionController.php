@@ -126,6 +126,13 @@ class InclusionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Find the inclusion by ID
+        $inclusion = Inclusion::findOrFail($id);
+
+        // Delete the inclusion
+        $deleteInclusion = $inclusion->delete();
+
+        // Check if the deletion was successful
+        return response()->json(['message' => 'Inclusion deleted successfully'], 200);
     }
 }

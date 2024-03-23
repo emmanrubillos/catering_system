@@ -53,7 +53,7 @@
                                     <form action="{{ route('inclusion.destroy', $inclusion->id) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-sm btn-danger" onclick="#">
+                                        <button class="btn btn-sm btn-danger" onclick="confirmDeleteInclusion( {{ $inclusion->id }} )">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </form>
