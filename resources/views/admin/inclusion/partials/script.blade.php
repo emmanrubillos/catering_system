@@ -39,7 +39,7 @@
         });
     });
 
-// Sweet alert for the Delete Classification Button
+// Sweet alert for the Delete Inclusion Button
     function confirmDeleteInclusion(id){
         event.preventDefault();
         let inclusionId = id;
@@ -63,7 +63,7 @@
         }).then((result)=>{
             if(result.isConfirmed){
                 $.ajax({
-                    url: `/inclusions/${inclusionId}`,
+                    url: `/inclusion/${inclusionId}`,
                     type: 'DELETE',
                     headers: {
                         'X-CSRF-TOKEN': '{{ csrf_token() }}',

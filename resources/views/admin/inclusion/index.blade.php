@@ -64,9 +64,10 @@
                                 
                                 <td>
                                     {{-- {{ $inclusion->description }} --}}
-                                    <button class="badge badge-warning border-0">
+                                    <a href="{{ route('inclusion.show', ['inclusion' => $inclusion->id]) }}" data-toggle="modal" 
+                                    class="badge badge-warning border-0" data-target="#showInclusionDescriptionModal{{ $inclusion->id }}">
                                         show description
-                                    </button>
+                                    </a>
                                 </td>
 
                                 <td>
@@ -83,6 +84,7 @@
                                     @endif
                                 </td>
                                 @include('admin.inclusion.partials._edit_inclusion_modal')
+                                @include('admin.inclusion.partials._show_inclusion_description_modal')
                             </tr>
                             @endforeach
                         </tbody>
@@ -105,5 +107,7 @@
 
 @include('admin.inclusion.partials.script')
 @include('admin.inclusion.partials._add_inclusion_modal')
+
+
 
 @endsection
