@@ -33,14 +33,14 @@
                                     <label class="fw-bold text-white" for="name">Classification Type</label> 
                                 </span>                               
 
-                                <input type="text" class="form-control mt-1" id="search-classification-type" name="search" placeholder="Classification Type">
+                                <input type="text" class="form-control mt-1" id="search-add-classification-type" name="search" placeholder="Classification Type">
                             </div>
                             <div class="col-md-12 mb-4 overflow-auto add-scroll" style="height:200px;">
                                 <div class="form-group">
                                     <label class="fw-bold bg-success text-white px-4 py-1 rounded" for="classification_id">Types</label>
                                     <div>
                                         @foreach ($classifications as $classification)
-                                            <div class="form-check">
+                                            <div class="form-check add-form-check">
                                                 <input class="form-check-input" type="checkbox" id="add-classification-check" name="classification_id[]" value="{{ $classification->id }}">
                                                 <label class="form-check-label fw-bold" for="classification_id{{ $classification->id }}">
                                                     {{ $classification->name }}
@@ -58,8 +58,8 @@
                             </div>
                             <div class="col-md-12 mb-4 rounded overflow-auto add-scroll" style="height:200px; background-color: #FAF2E4;">
                                 <div class="form-group mt-3" style="height:150px;">
-                                    <label class="fw-bold bg-success text-white px-4 py-1 rounded" for="classification_id_selected">Selected Types</label>
-                                    <ul id="selected-types-list" class="list-unstyled">
+                                    <label class="fw-bold bg-success text-white px-4 py-1 rounded" for="add-classification_id_selected">Selected Types</label>
+                                    <ul id="add-selected-types-list" class="list-unstyled">
                                         
                                     </ul>
                                 </div>
@@ -79,23 +79,33 @@
     </div>
 </div>
 
-
+<script	src="{{ asset('assets/plugins/links/lodash.min.js') }}"></script>
 <script>
-    // Search Generator for Classification Type
-    $(document).ready(function() {
-        $('#search-classification-type').on('input', function() {
-            var searchText = $(this).val().toLowerCase();
-            $('.form-check-label').each(function() {
-                var classificationName = $(this).text().toLowerCase();
-                if (classificationName.includes(searchText)) {
-                    $(this).parent().show();
-                } else {
-                    $(this).parent().hide();
-                }
-            });
-        });
-    });
+    // Function to filter classifications based on input text
+    function filterClassifications() {
+        var input, filter, classifications, i, txtValue;
+        input = document.getElementById("search-add-classification-type");
+        filter = input.value.toUpperCase();
+        classifications = document.querySelectorAll(".add-form-check");
 
+        classifications.forEach(function(classification) {
+            txtValue = classification.textContent || classification.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                classification.style.display = "";
+            } else {
+                classification.style.display = "none";
+            }
+        });
+    }
+
+    // Debounce the filter function
+    var debouncedFilter = _.debounce(filterClassifications, 100);
+
+    // Add event listener to call debounced filter function on input change
+    document.getElementById("search-add-classification-type").addEventListener("input", debouncedFilter);
+
+    
+    //Showing the Checked Classification Type
     $(document).ready(function() {
         $('input[name="classification_id[]"]').on('change', function() {
             var selectedTypes = [];
@@ -107,7 +117,7 @@
                 return '<li class="badge badge-secondary mb-1">' + type + '</li> <br>';
             });
 
-            $('#selected-types-list').html(listItems.join(''));
+            $('#add-selected-types-list').html(listItems.join(''));
         });
     });
 
