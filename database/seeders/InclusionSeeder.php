@@ -81,7 +81,7 @@ class InclusionSeeder extends Seeder
                 'classification' => 
                     [
                         [   
-                            'name' => 'Table Setup w/ Tiffany Charis',
+                            'name' => 'Table Setup w/ Tiffany Chairs',
                             'group' => 'Foods and Catering',
                         ],
                     ], 
@@ -125,7 +125,7 @@ class InclusionSeeder extends Seeder
                     ], 
                 'items' => [
                     'Veils',
-                    'Pillos',
+                    'Pillow',
                     'Garter',
                     'Cord',
                     'Arrhea',
@@ -202,7 +202,7 @@ class InclusionSeeder extends Seeder
                     'Ceiling Swag with Decoration',
                     'LED Wall',
                     'Low Lying Fog Machine',
-                    'Sparkler Maching',
+                    'Sparkler Machine',
                     'Confetti/Poppers',
                 ],
             ],
@@ -216,9 +216,9 @@ class InclusionSeeder extends Seeder
                     ], 
                 'items' => [
                     'Reception Singer',
-                    'Chruch Singer',
+                    'Church Singer',
                     'Reception Host',
-                    'Chruch Host',
+                    'Church Host',
                 ],
             ],
             [
@@ -241,8 +241,8 @@ class InclusionSeeder extends Seeder
                 'classification' =>
                     [
                         [
-                            'name' => 'Photograhics and Videograhics',
-                            'group' => 'Photograhics and Videograhics',
+                            'name' => 'Photographic and Videographic',
+                            'group' => 'Photographic and Videographic',
                         ],
                     ], 
                 'items' => [
@@ -300,7 +300,7 @@ class InclusionSeeder extends Seeder
 
         //loop through inclusions list
         foreach ($inclusions as $inclusion) {
-            //loop through classificaiton list
+            //loop through classification list
             foreach ($inclusion['classification'] as $classification) {
                 $classi = Classification::updateOrCreate($classification);
 
