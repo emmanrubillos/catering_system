@@ -47,13 +47,13 @@
                             @foreach($inclusions as $inclusion)
                             <tr>
                                 <td>
-                                    <a href="" class="btn btn-primary btn-sm edit-user-btn"  data-toggle="modal" 
-                                    data-target="#editInclusionModal"><i class="fas fa-edit"></i></a>
+                                    <a href="{{ route('inclusion.edit', ['inclusion' => $inclusion->id]) }}" class="btn btn-primary btn-sm edit-inclusion-btn"  data-toggle="modal" 
+                                    data-target="#editInclusionModal{{ $inclusion->id }}"><i class="fas fa-edit"></i></a>
 
-                                    <form action="" method="POST" class="d-inline">
+                                    <form action="{{ route('inclusion.destroy', $inclusion->id) }}" method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')
-                                        <button class="btn btn-sm btn-danger" onclick="">
+                                        <button class="btn btn-sm btn-danger" onclick="#">
                                             <i class="fas fa-trash"></i>
                                         </button>
                                     </form>
@@ -82,7 +82,7 @@
 
                                     @endif
                                 </td>
-
+                                @include('admin.inclusion.partials._edit_inclusion_modal')
                             </tr>
                             @endforeach
                         </tbody>
@@ -102,6 +102,8 @@
     new DataTable('#inclusions-table');
 </script>
 
+
 @include('admin.inclusion.partials.script')
 @include('admin.inclusion.partials._add_inclusion_modal')
+
 @endsection

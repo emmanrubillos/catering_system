@@ -13,7 +13,7 @@
             </div>
             <div class="modal-body">
                 <!-- Form for editing user -->
-                <form id="editInclusionForm" action="{{ route('inclusion.update', $user->id) }}" method="POST" id="inclusion-update-form">
+                <form id="editInclusionForm" action="{{ route('inclusion.update', $inclusion->id) }}" method="POST" id="inclusion-update-form">
                     @csrf
                     @method('PUT')
                     <div class="row">
