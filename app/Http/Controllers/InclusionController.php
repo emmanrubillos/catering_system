@@ -17,6 +17,7 @@ class InclusionController extends Controller
     {
         $inclusions = Inclusion::with(['inclusionclassifications', 'inclusionclassifications.classification'])->orderBy('id', 'desc')->get();
         $classifications = Classification::all();
+
         return view('admin.inclusion.index', compact('inclusions', 'classifications'));
 
         // $inclusion = Inclusion::with('classifications')->get();
@@ -91,7 +92,8 @@ class InclusionController extends Controller
     public function edit($id)
     {
         $inclusions = Inclusion::findOrFail($id);
-        return view('admin.inclusion.partials._edit_inclusion_modal', compact('inclusions'));
+
+        return view('admin.inclusion.partials._edit_inclusion_modal', compact('preselectedClassifications','inclusions'));
     }
 
     /**
