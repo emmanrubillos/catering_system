@@ -90,7 +90,8 @@ class InclusionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $inclusions = Inclusion::findOrFail($id);
+        return view('admin.inclusion.partials._edit_inclusion_modal', compact('inclusions'));
     }
 
     /**
