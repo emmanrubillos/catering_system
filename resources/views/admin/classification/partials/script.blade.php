@@ -125,7 +125,7 @@
                 result.dismiss == Swal.DismissReason.cancel;
                 swalWithBootstrapButtons.fire(
                     'Cancelled',
-                    'Your imaginary file is safe :)',
+                    'Your Classification file is safe :)',
                     'error'
                 );
             }
