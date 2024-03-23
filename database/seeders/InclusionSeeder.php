@@ -30,8 +30,7 @@ class InclusionSeeder extends Seeder
                 'items' => [
                     'Main Dish',
                     'Side Dish',
-                    'Lechon',
-                ]
+                    'Pork Lechon (30kg)',                ]
             ],
 
             [
@@ -43,7 +42,7 @@ class InclusionSeeder extends Seeder
                 ],
                 'items' => [
                     'Rice',
-                    'Softdrinks',
+                    'Soft Drinks',
                     'Desserts',
                 ],
             ],
