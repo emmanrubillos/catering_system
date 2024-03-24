@@ -10,15 +10,16 @@ class Service extends Model
     use HasFactory;
 
     protected $fillable = [
-
         'name',
         'type',
         'description',
         'price',
         'number_of_person',
+        'main_dish',
+        'side_dish',
     ]; 
 
-    public function serviceInclusion()
+    public function serviceInclusions()
     {
         return $this->hasMany(ServiceInclusion::class);
     }
@@ -28,7 +29,7 @@ class Service extends Model
         parent::boot();
 
         static::deleting(function ($service) {
-            $service->InclusionInclusion()->delete();
+            $service->inclusions()->delete(); // Corrected method name
         });
     }
 }

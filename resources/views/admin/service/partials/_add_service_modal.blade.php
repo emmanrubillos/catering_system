@@ -9,7 +9,10 @@
                     Add Service
                 </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="iconmodal">
+                        <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                        <path fill="#ffffff" d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm79 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/>
+                    </svg>
                 </button>
             </div>
             <div class="modal-body">
@@ -39,11 +42,11 @@
                                 <label for="description" class="fw-bold bg-success text-white px-4 py-1 rounded">Description</label>
                                 <textarea type="text" class="form-control" placeholder="Enter a description ...." name="description" id="add-service-description" rows="5"></textarea>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group mt-4">
                                 <label for="price" class="fw-bold bg-success text-white px-4 py-1 rounded">Price</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                                        <span class="input-group-text">₱</span>
+                                        <span class="input-group-text bg-success text-wrap text-white rounded-end fw-bold">₱</span>
                                     </div>
                                     <input type="number" class="form-control" placeholder="Enter the Price" id="add-service-price" name="price">
                                 </div>
@@ -53,24 +56,45 @@
 
                     <hr>
 
-                    {{-- <div class="col-md-3">
-                        <div class="col p-0">
-                            <div class="form-group">
-                                <label for="main_dish" class="badge bg-success text-wrap">Number of Main Dish:</label>
-                                <input type="number" class="form-control" placeholder="Main Dish" name="main_dish" id="add-service-main_dish" rows="5"></input>
-                                </div>    
-                            <div class="form-group">
-                                <label for="side_dish" class="badge bg-success text-wrap">Number of Side Dish:</label>
-                                <input type="number" class="form-control" placeholder="Side Dish" name="side_dish" id="add-service-side_dish" rows="5"></input>
-                            </div>
-                        </div>
-                    </div> --}}
-
                     {{-- If Package is the Type --}}
                     <div class="col px-0 mb-4 overflow-auto add-scroll" style="height:300px;">
                         
+                        <div class="firstContianer">
+                            <div class="col">
+                                <h5 class="fw-bold bg-success text-white px-4 py-1 rounded text-center">
+                                    Courses of a Meal
+                                </h5> 
+        
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col p-0">
+                                            <div class="form-group">
+                                                {{-- <label for="main_dish" class="badge ">Number of:</label> --}}
+                                                <div class="input-group">
+                                                    <input type="number" class="form-control" placeholder="Number of" name="main_dish" id="add-service-main_dish" rows="5"></input>
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text bg-success text-wrap text-white rounded-end fw-bold">Main Dish</span>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Number of" name="side_dish" id="add-service-side_dish" rows="5"></input>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text bg-success text-wrap text-white rounded-end fw-bold">Side Dish</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         @foreach ($classifications as $classification)
-                            <div class="firstContainer">
+                            <div class="secondContainer">
                                 <div class="col">
                                     <h5 class="fw-bold bg-success text-white px-4 py-1 rounded text-center">
                                         {{ $classification['name'] }}
@@ -104,161 +128,13 @@
                             </div>
                         @endforeach
                         
-
                     </div>
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        
-                        {{-- <div class="secondContainer">
-                            <div class="col">
-                                <h5 class="fw-bold bg-success text-white px-4 py-1 rounded text-center">
-                                    WHOLE SET ENTOURAGE ATTIRE
-                                </h5>
-                                <div class="row">
-                                    <div class="col-6">
-                                        <label for="dessert" class="badge bg-success text-wrap">Entourage Members:</label>
-                                        <div>
-                                            checklist here
-                                        </div>
-                                    </div>
-                                    <div class="col-6">
-                                        <div class="form-group">
-                                            <label for="dessert" class="badge bg-success text-wrap">Accessories:</label>
-                                            <div>
-                                                checklist here
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="thirdContainer col mb-4">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h6 class="add-text fw-bold bg-success text-white px-4 py-1 rounded text-center">
-                                        BOUQUET
-                                    </h5>
-                                    <label for="dessert" class="badge bg-success text-wrap">Entourage Members:</label>
-                                    <div>
-                                        checklist here
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <h6 class="fw-bold bg-success text-white px-4 py-1 rounded text-center" >
-                                        CORSAGE
-                                    </h5>
-                                    <label for="dessert" class="badge bg-success text-wrap">Entourage Members:</label>
-                                    <div>
-                                        checklist here
-                                    </div>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="fourthContainer col mb-4">
-                            <div class="row">
-                                <div class="col-4">
-                                    <h6 class="add-text fw-bold bg-success text-white px-4 py-1 rounded text-center">
-                                        CHURCH DECORATION
-                                    </h5>
-                                    <div>
-                                        checklist here
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <h6 class="fw-bold bg-success text-white px-4 py-1 rounded text-center" >
-                                        RECEPTION DECORATION
-                                    </h5>
-                                    <div>
-                                        checklist here
-                                    </div>
-                                </div>
-                                
-                                <div class="col-4">
-                                    <h6 class="fw-bold bg-success text-white px-4 py-1 rounded text-center">
-                                        PROGRAM & ENTERTAINMENT
-                                    </h5>
-                                    <div>
-                                        checklist here
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <div class="fivethContainer col mb-4">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h6 class="add-text fw-bold bg-success text-white px-4 py-1 rounded text-center">
-                                        PHOTOGRAPHIC & VIDEOGRAPHIC
-                                    </h5>
-                                    <div>
-                                        checklist here
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <h6 class="fw-bold bg-success text-white px-4 py-1 rounded text-center" >
-                                        HAIR AND MAKE-UP
-                                    </h5>
-                                    <label for="dessert" class="badge bg-success text-wrap">Entourage Members:</label>
-                                    <div>
-                                        checklist here
-                                    </div>
-                                </div>
-                        
-                            </div>
-                        </div>
-                        <div class="sixththContainer col mb-4">
-                            <div class="row">
-                                <div class="col-6">
-                                    <h6 class="add-text fw-bold bg-success text-white px-4 py-1 rounded text-center">
-                                        FULL COORDINATION
-                                    </h5>
-                                    <div>
-                                        checklist here
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <h6 class="fw-bold bg-success text-white px-4 py-1 rounded text-center" >
-                                        FREEBIES
-                                    </h5>
-                                    <div>
-                                        checklist here
-                                    </div>
-                                </div>
-                        
-                            </div>
-                        </div> --}}
-                    
-                    
-                
+
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary fw-bold" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-success fw-bold" id="save-service-btn">Save</button>
                     </div>
+
                 </form>
             </div>
         </div>

@@ -23,14 +23,14 @@ class InclusionSeeder extends Seeder
             [
                 'classification' => [
                     [
-                        'name' => 'Dishes',
+                        'name' => 'Lechon',
                         'group' => 'Foods and Catering',
                     ],
                 ],
                 'items' => [
-                    'Main Dish',
-                    'Side Dish',
-                    'Pork Lechon (30kg)',                
+                    'Pork Lechon (30kg)',    
+                    'Pork Lechon (40kg)',
+                    'Pork Lechon (50kg)',            
                 ],
             ],
 
@@ -383,7 +383,7 @@ class InclusionSeeder extends Seeder
                     [
                         [
                             'name' => 'Others:',
-                            'group' => 'Photographic and Videographic',
+                            'group' => 'Visual Media Artist',
                         ],
                     ], 
                 'items' => [
@@ -441,9 +441,10 @@ class InclusionSeeder extends Seeder
                             'group' => 'Freebies', 
                         ],
                     ], 
-                'items' => [                    
-                    '3 Bottle of Wine',
-                    '6 Bottle of Wine',
+                'items' => [   
+                    '1 Bottle',              
+                    '3 Bottle',
+                    '6 Bottle',
                     'none',
                 ],
             ],
@@ -486,6 +487,7 @@ class InclusionSeeder extends Seeder
                 'items' => [
                     'Pika-pika Corner',
                     'Grazing Table',
+                    'Tiffany Chairs',
                 ],
             ],
         ];

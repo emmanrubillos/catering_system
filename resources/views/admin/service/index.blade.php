@@ -22,7 +22,7 @@
 
                         <div class="table-responsive">
                             <table id="service-table" class="table table-striped" style="width:100%">
-                                <thead class="border border-0">
+                                <thead class="border-0">
                                     <tr>
                                         <th style="width:25%;">Action</th>
                                         <th style="width:16%">Name</th>
@@ -31,7 +31,7 @@
                                         <th style="width:15%;">Number of Person</th>
                                     </tr>
                                 </thead>
-                                <tbody class="border border-0">
+                                <tbody class="border-0">
                                     @foreach($services as $service)
                                     <tr>
                                         <td>
