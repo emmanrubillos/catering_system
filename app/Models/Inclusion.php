@@ -14,9 +14,20 @@ class Inclusion extends Model
         'description',
     ];
 
-    public function inclusionclassifications()
-
+    public function inclusionClassifications()
     {
-       return $this->hasMany(InclusionClassification::class);
+        return $this->hasMany(InclusionClassification::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($inclusion) {
+            $inclusion->inclusionClassifications()->delete();
+        });
     }
 }
+
+
+

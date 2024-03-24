@@ -1,11 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Inclusion;
 use App\Models\Classification;
-// use App\Models\InclusionClassification;
 
 class InclusionController extends Controller
 {
@@ -16,9 +14,13 @@ class InclusionController extends Controller
      */
     public function index()
     {
-        $inclusions = Inclusion::all();
+        $inclusions = Inclusion::with(['inclusionclassifications', 'inclusionclassifications.classification'])->orderBy('id', 'desc')->get();
         $classifications = Classification::all();
         return view('admin.inclusion.index', compact('inclusions', 'classifications'));
+
+        // $inclusion = Inclusion::with('classifications')->get();
+        // dd($inclusion);
+        // return view('admin.inclusion.index', ['inclusions' => InclusionResource::collection($inclusion)]);
     }
 
     /**
@@ -28,7 +30,7 @@ class InclusionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.inclusion.create');
     }
 
     /**
@@ -52,8 +54,14 @@ class InclusionController extends Controller
         ]);
         
         // Attach classifications to the inclusion
-        $inclusion->inclusionclassifications()->attach($validatedData['classification_id']);
-
+        if (isset($validatedData['classification_id']) && is_array($validatedData['classification_id'])) {
+            foreach ($validatedData['classification_id'] as $classifications){
+                $inclusion->inclusionclassifications()->create([
+                    'classification_id' => $classifications
+                ]);
+            }
+        }
+        // dd($classifications);
         return redirect()->route('inclusion.index');
     }
 
@@ -81,7 +89,8 @@ class InclusionController extends Controller
      */
     public function edit($id)
     {
-        //
+        $inclusions = Inclusion::findOrFail($id);
+        return view('admin.inclusion.partials._edit_inclusion_modal', compact('inclusions'));
     }
 
     /**
@@ -116,6 +125,14 @@ class InclusionController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // Find the inclusion by ID
+        $inclusion = Inclusion::findOrFail($id);
+
+        // Delete the inclusion
+        $deleteInclusion = $inclusion->delete();
+
+        // Check if the deletion was successful
+        return response()->json(['message' => 'Inclusion deleted successfully'], 200);
     }
 }
+

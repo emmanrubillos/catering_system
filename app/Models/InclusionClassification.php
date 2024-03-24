@@ -13,4 +13,9 @@ class InclusionClassification extends Model
         'inclusion_id',
         'classification_id',
     ];
+
+    public function classification()
+    {
+        return $this->belongsTo(Classification::class);
+    }
 }

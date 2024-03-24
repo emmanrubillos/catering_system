@@ -15,7 +15,7 @@
                             </div>
                             <div class="mt-2">
                                 <button class="btn btn-success fw-bold" data-toggle="modal" data-target="#addServiceModal">
-                                    <i class="fas fa-plus"></i> Add Services
+                                    <i class="fas fa-plus"></i> Add Service
                                 </button>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                                 {{ $service->type }}
                                             </span>
                                         </td>
-                                        <td class="fw-bold">₱ {{ $service->price }}</td>
+                                        <td class="fw-bold">₱ {{ number_format($service->price, 2) }}</td>
                                         <td class="fw-bold">{{ $service->number_of_person }} Pax</td>
 
                                         
@@ -83,6 +83,7 @@
 <script>
     new DataTable('#service-table');
 </script>
+
 @include('admin.service.partials._add_service_modal')
 @include('admin.service.partials._script')
 

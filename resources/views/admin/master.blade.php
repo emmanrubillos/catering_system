@@ -141,6 +141,8 @@
 	<script	src="{{ asset('assets/plugins/links/dataTables.js') }}"></script>
 	<script	src="{{ asset('assets/plugins/links/axios.min.js') }}"></script>
 	<script	src="{{ asset('assets/plugins/links/sweetalert2@11.js') }}"></script>
+	
+	
 
 </body>
 
