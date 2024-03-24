@@ -14,6 +14,13 @@ class Inclusion extends Model
         'description',
     ];
 
+    protected $appends = ['inclusion_classification_ids'];
+
+    public function getInclusionClassificationIdsAttribute()
+    {
+        return $this->inclusionClassifications()->get()->pluck('classification_id')->toArray();
+    }
+
     public function inclusionClassifications()
     {
         return $this->hasMany(InclusionClassification::class);
