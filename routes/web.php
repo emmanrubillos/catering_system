@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\UserController\UsersController;
-use App\Http\Controllers\PackageController;
 use App\Http\Controllers\Admin\CustomerReservation\CustomerEventDetailsController;
 use App\Http\Controllers\Admin\Services\ServiceController;
 use App\Http\Controllers\Customer\MakeReservationController;
@@ -34,16 +33,11 @@ Route::get('/profile', [App\Http\Controllers\Pages\HomeController::class, 'profi
 // Route::get('/reservation/event_details/create', [CustomerEventDetailsController::class, 'create'])->name('event_details.create');
 // Route::get('/reservation/buffet_order', [App\Http\Controllers\Admin\CustomerReservation\CustomerBuffetOrderController::class, 'index'])->name('buffet_order');
 // Route::get('/reservation/bill', [App\Http\Controllers\Admin\CustomerReservation\CustomerBillController::class, 'index'])->name('bill');
-
-
 // Route::get('/service', [App\Http\Controllers\Admin\Services\ServiceController::class, 'index'])->name('service');
 // Route::post('/service', [App\Http\Controllers\Admin\Services\ServiceController::class, 'store'])->name('services.store');
-Route::get('/service/package_details', [App\Http\Controllers\Admin\Services\ServicePackageController::class, 'index'])->name('package_details');
-Route::get('/service/pax_details', [App\Http\Controllers\Admin\Services\ServicePaxController::class, 'index'])->name('pax_details');
 
 // Route::get('/inclusions', [App\Http\Controllers\InclusionController::class, 'index'])->name('inclusions');
 Route::resource('users', \App\Http\Controllers\Admin\UserController\UsersController::class);
-Route::resource('package', \App\Http\Controllers\PackageController::class);
 Route::resource('service', \App\Http\Controllers\Admin\Services\ServiceController::class);
 Route::resource('inclusion', \App\Http\Controllers\InclusionController::class);
 Route::resource('classification', \App\Http\Controllers\ClassificationController::class);
@@ -57,10 +51,8 @@ Route::middleware('CheckUserRole')->group(function (){
 Route::get('/home', [App\Http\Controllers\Pages\HomeController::class, 'index'])->name('home');
 Route::get('/about_us', [App\Http\Controllers\Pages\AboutController::class, 'index'])->name('about_us');
 Route::get('/services', [App\Http\Controllers\Pages\ServicesController::class, 'index'])->name('services');
-// Route::get('/packages', [App\Http\Controllers\Pages\PackagesController::class, 'index'])->name('packages');
 Route::get('/menu', [App\Http\Controllers\Pages\MenuController::class, 'index'])->name('menu');
 Route::get('/contact_us', [App\Http\Controllers\Pages\ContactController::class, 'index'])->name('contact_us');
-
 Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'index'])->name('profile');
 
 });

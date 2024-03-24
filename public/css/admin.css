@@ -70,3 +70,25 @@ border-radius: 3px;
     min-width: 100px;
     margin-bottom: 3px;/* Adjust the width as needed */
 }
+
+.add-text {
+  font-size: 16.5px;
+}
+
+/* Style for the checkbox */
+.add-bg-checkbox input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid green; /* Border color */
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Custom styling when the checkbox is checked */
+.add-bg-checkbox input[type="checkbox"]:checked {
+  background-color: green; /* Change background color when checked */
+}

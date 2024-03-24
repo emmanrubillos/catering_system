@@ -17,4 +17,18 @@ class Service extends Model
         'price',
         'number_of_person',
     ]; 
+
+    public function serviceInclusion()
+    {
+        return $this->hasMany(ServiceInclusion::class);
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($service) {
+            $service->InclusionInclusion()->delete();
+        });
+    }
 }
