@@ -119,7 +119,7 @@
         </ul>
     </div>
 </div>
-<script>
+{{-- <script>
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOMContentLoaded event fired");
 
@@ -154,4 +154,4 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
-</script>
+</script> --}}
