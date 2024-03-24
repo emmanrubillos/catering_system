@@ -1,3 +1,5 @@
+import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -33,4 +35,5 @@ const app = new Vue({
 
 mix.js('resources/js/app.js', 'public/js')
    .vue();
+
 
