@@ -1,5 +1,5 @@
 {{--? Pax Service Reservation --}}
-<div class="relative top-[-9rem]">
+<div class="relative top-[-9rem] hidden">
                     
     <div class="mx-[20rem]">
         <div class="text-center">

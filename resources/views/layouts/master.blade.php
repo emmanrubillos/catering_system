@@ -23,6 +23,10 @@
 
 <body class="flex flex-col w-full h-screen overflow-x-hidden">
 
+	{{--! Loading Screen --}}
+	{{-- <div class="loading-screen">
+		<div class="spinner"></div>
+	</div> --}}
 
 	@yield('content')
 

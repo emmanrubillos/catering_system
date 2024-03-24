@@ -24,6 +24,34 @@ header {
     fill: #181D50;
 }
 
+.header-link {
+    padding-bottom: 5px;
+}
+
+.hover-line-link {
+    position: relative;
+}
+
+.hover-line-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #FF731D;
+    transition: width 0.3s ease-in-out;
+}
+
+.hover-line-link:hover::after {
+    width: 100%;
+}
+
+.hover-line-link:hover {
+    color: #FF731D;
+}
+
+
 /** For tablet devices **/
 @media (min-width: 768px) and (max-width: 1023px) {
     .wave svg {

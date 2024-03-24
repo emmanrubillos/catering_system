@@ -1,5 +1,5 @@
 {{--? Calender Reservation --}}
-<div class="relative top-[-9rem] hidden">
+<div class="relative top-[-9rem] ">
     <div class="mx-[20rem]">
         <div class="text-center">
             <h1 class="relative -bottom-5 text-primary display-font bg-light py-1 px-4 mx-[7.5rem] text-xxl rounded-md">
@@ -18,11 +18,126 @@
     </div>
 
     <div class="flex flex-row gap-5 h-[35rem] mx-16 mt-10">
-        <div class="border-2 border-primary basis-3/5 self-center">
-            <h1 class="font-bold text-[50px] text-primary drop-shadow-sm text-center">
-                This is the Calendar
-            </h1>
+        
+        <div class="border-2 border-primary basis-3/5 p-4 bg-fff7e9">
+            <div class="flex justify-between mb-4">
+                <button id="prevMonthBtn" class="text-primary">&lt;</button>
+                <div id="currentMonth" class="text-primary font-semibold"></div>
+                <button id="nextMonthBtn" class="text-primary">&gt;</button>
+            </div>
+
+            <div class="grid grid-cols-7 gap-1">
+                 <!-- Days of the week -->
+                 <div class="text-center text-primary font-semibold">Sun</div>
+                 <div class="text-center text-primary font-semibold">Mon</div>
+                 <div class="text-center text-primary font-semibold">Tue</div>
+                 <div class="text-center text-primary font-semibold">Wed</div>
+                 <div class="text-center text-primary font-semibold">Thu</div>
+                 <div class="text-center text-primary font-semibold">Fri</div>
+                 <div class="text-center text-primary font-semibold">Sat</div>
+            </div>
+
+            <div class="grid grid-cols-7 gap-1">
+        
+
+            </div>
         </div>
+        
+        <script>
+            const currentMonthElement = document.getElementById('currentMonth');
+            const prevMonthBtn = document.getElementById('prevMonthBtn');
+            const nextMonthBtn = document.getElementById('nextMonthBtn');
+        
+            let currentMonth = new Date().getMonth();
+            let currentYear = new Date().getFullYear();
+        
+            function renderCalendar(month, year) {
+                const daysInMonth = new Date(year, month + 1, 0).getDate();
+                const firstDayIndex = new Date(year, month, 1).getDay();
+                const lastDayIndex = new Date(year, month, daysInMonth).getDay();
+        
+                // Clear previous month's days
+                const calendarGrid = document.querySelector('.grid');
+                calendarGrid.innerHTML = '';
+        
+                // Render previous month's days if needed
+                for (let i = firstDayIndex; i > 0; i--) {
+                    calendarGrid.innerHTML += `<div class="text-center text-gray-400">${daysInMonth - i + 1}</div>`;
+                }
+        
+                // Render current month's days
+                for (let i = 1; i <= daysInMonth; i++) {
+                    calendarGrid.innerHTML += `<div class="text-center">${i}</div>`;
+                }
+        
+                // Render next month's days if needed
+                for (let i = 1; i < 7 - lastDayIndex; i++) {
+                    calendarGrid.innerHTML += `<div class="text-center text-gray-400">${i}</div>`;
+                }
+        
+                currentMonthElement.textContent = new Date(year, month).toLocaleString('default', { month: 'long' }) + ' ' + year;
+            }
+        
+            renderCalendar(currentMonth, currentYear);
+        
+            prevMonthBtn.addEventListener('click', () => {
+                currentMonth--;
+                if (currentMonth < 0) {
+                    currentMonth = 11;
+                    currentYear--;
+                }
+                renderCalendar(currentMonth, currentYear);
+            });
+        
+            nextMonthBtn.addEventListener('click', () => {
+                currentMonth++;
+                if (currentMonth > 11) {
+                    currentMonth = 0;
+                    currentYear++;
+                }
+                renderCalendar(currentMonth, currentYear);
+            });
+
+            function renderCalendar(month, year) {
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const firstDayIndex = new Date(year, month, 1).getDay();
+    const lastDayIndex = new Date(year, month, daysInMonth).getDay();
+    const today = new Date();
+    const todayDate = today.getDate();
+    const todayMonth = today.getMonth();
+    const todayYear = today.getFullYear();
+
+    // Clear previous month's days
+    const calendarGrid = document.querySelector('.grid');
+    calendarGrid.innerHTML = '';
+
+    // Render previous month's days if needed
+    for (let i = firstDayIndex; i > 0; i--) {
+        calendarGrid.innerHTML += `<div class="text-center text-gray-400">${daysInMonth - i + 1}</div>`;
+    }
+
+    // Render current month's days
+    for (let i = 1; i <= daysInMonth; i++) {
+        let classes = "text-center";
+        if (i === todayDate && month === todayMonth && year === todayYear) {
+            classes += " bg-primary"; // Add bg-primary class to highlight today's date
+        }
+        calendarGrid.innerHTML += `<div class="${classes}">${i}</div>`;
+    }
+
+    // Render next month's days if needed
+    for (let i = 1; i < 7 - lastDayIndex; i++) {
+        calendarGrid.innerHTML += `<div class="text-center text-gray-400">${i}</div>`;
+    }
+
+    currentMonthElement.textContent = new Date(year, month).toLocaleString('default', { month: 'long' }) + ' ' + year;
+}
+
+        </script>
+        
+
+        
+        
 
         <div class="basis-2/5">
             <div class="m-5 p-10 bg-light rounded-lg shadow-lg">
@@ -97,3 +212,12 @@
         </div>
     </div>
 </div>
+
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+<script>
+    // Initialize date picker
+    const datePickerEl = document.getElementById('datepicker');
+    new Datepicker(datePickerEl, {
+        // options
+    });
+</script> --}}
