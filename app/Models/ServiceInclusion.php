@@ -12,7 +12,6 @@ class ServiceInclusion extends Model
     protected $fillable = [
         'name',
         'service_id',
-        'classfication_id',
         'inclusion_id',
     ];
 
@@ -21,10 +20,6 @@ class ServiceInclusion extends Model
        return $this->belongsTo(Service::class);
     }
 
-    public function classification()
-    {
-       return $this->belongsTo(Classification::class);
-    }
 
     public function inclusion()
     {

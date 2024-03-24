@@ -76,29 +76,23 @@ class ServiceController extends Controller
             'price' => 'required',
             'description' => 'required',
             'number_of_person' => 'required',
+            'main_dish' => 'required',
+            'side_dish' => 'required',
             'classification_id' => 'required|array',
             'inclusion_id' => 'required|array',
         ]);
-            // dd($validatedData);
-        $service =Service::create([
-            'name' => $validatedData['name'],
-            'type' => $validatedData['type'],
-            'price' => $validatedData['price'],
-            'description' => $validatedData['description'],
-            'number_of_person' => $validatedData['number_of_person'],
-        ]);
 
-        if (isset($validatedData['classification_id']) && is_array($validatedData['classification_id'])) {
-            foreach ($validatedData['classification_id'] as $classifications){
-                $inclusion->inclusionclassifications()->create([
-                    'classification_id' => $classifications
-                ]);
-            }
-        }
+        $service = Service::create($request->all());
+        
+        
 
-        return redirect()->route('service.index');
-
+        // Redirect back to the index page with success message
+        return redirect()->route('service.index')->with('success', 'Service created successfully!');
+    
     }
+
+
+    // 
 
     /**
      * Display the specified resource.

@@ -11,12 +11,15 @@
             let description = $('#add-service-description').val();
             let price = $('input#add-service-price').val();
             let number_of_person = $('input#add-service-number_of_person').val();
+            let main_dish = $('input#add-service-main_dish').val();
+            let side_dish = $('input#add-service-side_dish').val();
+            
 
-            // console.log(name, type, description, price, number_of_person);
+            // console.log(name, type, description, price, number_of_person, main_dish, side_dish);
             // return;
 
             // Check if any of the required fields are empty
-            if (!name.trim() || type === "" || !description.trim() || !price.trim() || !number_of_person.trim()) {
+            if (!name.trim() || type === "" || !description.trim() || !price.trim() || !number_of_person.trim() || !main_dish.trim() || !side_dish.trim()) {
                 // If any required field is empty, show an error message and return
                 Swal.fire({
                     icon: 'error',
