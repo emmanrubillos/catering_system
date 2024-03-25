@@ -18,6 +18,7 @@
 	<link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/about.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/calendar.css') }}" rel="stylesheet">
 	
 </head>
 

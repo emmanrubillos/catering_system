@@ -1,0 +1,21 @@
+.calendar-body ul li{
+    position: relative;
+    width: calc(100% / 7);
+}
+
+.calendar-days li {
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.calendar-days li::before {
+    position: absolute;
+    content: "";
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    background: #181D50;
+}
