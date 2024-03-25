@@ -92,7 +92,6 @@
                                 </div>
                             </div>
                         </div>
-
                         @foreach ($classifications as $classification)
                             <div class="secondContainer">
                                 <div class="col">
