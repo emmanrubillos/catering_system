@@ -29,12 +29,24 @@
 		<div class="spinner"></div>
 	</div> --}}
 
+
+
+
 	@yield('content')
 
 
-	
-</body>
+
+
+
+	{{-- Tailwind CSS Connection --}}
 	<script src="{{ mix('js/app.js') }}"></script>
+
 	<!-- Include Flowbite JS -->
 	<script src="{{ asset('js/flowbite.min.js') }}"></script>
+
+	{{-- Calendar JS File --}}
+	<script src="{{ asset('js/calendar.js') }}" defer></script>
+	
+</body>
+	
 </html>

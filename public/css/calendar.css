@@ -4,18 +4,43 @@
 }
 
 .calendar-days li {
+    z-index: 1;
     cursor: pointer;
     margin-top: 15px;
+    font-weight: 700;
 }
 
 .calendar-days li::before {
     position: absolute;
     content: "";
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     top: 50%;
     left: 50%;
+    z-index: -1;
     border-radius: 8px;
-    transform: translate(-50%, -50%);
-    background: #181D50;
+    transform: translate(-50%, -50%); 
 }
+
+.calendar-days li:hover::before {
+    color: #fff;
+    background: #FF731D;
+    transition: ease-in-out;
+}
+
+.days-inActive {
+    color: lightgray;
+}
+.day-Active {
+    color: #FAF2E4;
+}
+
+.day-Active::before {
+    background: #FF731D; 
+}
+
+/* .day-reserved {    
+    background-color: red; 
+    color: #FFF;
+    border-radius: 8px;
+} */

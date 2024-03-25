@@ -17,22 +17,22 @@
         </div>
     </div>
 
-    <div class="flex flex-row gap-5 h-[35rem] mx-16 mt-10">
+    <div class="flex flex-row gap-5 h-[35rem] mx-16 mt-20">
         
         <div class="calendar-contianer basis-3/5 p-4 flex items-center justify-center">
 
            <div class="calendar-wrapper w-[40rem] bg-light rounded-xl shadow-xl">
                 <div class="calendar-header flex items-center justify-between pt-[25px] px-[30px] pb-[10px]">
-                    <p class="current-date text-xxl font-bold text-dark display-font">March 2024</p>
+                    <p class="current-date text-[45px] font-bold text-dark display-font"></p>
                     <div class="action-icons flex flex-row gap-1">
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="prev-icon action-icon w-11 fill-dark delay-50
+                        <svg id="prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="prev-icon action-icon w-11 fill-dark delay-50
                         transition ease-in-out hover:fill-primary-dark hover:delay-50">
                             <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path d="M0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416zM128 256c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22l0 208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z"/>
                         </svg>
 
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="next-icon action-icon w-11 fill-dark delay-50
+                        <svg id="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="next-icon action-icon w-11 fill-dark delay-50
                         transition ease-in-out hover:fill-primary-dark hover:delay-50">
                             <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
                             <path d="M448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM320 256c0 6.7-2.8 13-7.7 17.6l-112 104c-7 6.5-17.2 8.2-25.9 4.4s-14.4-12.5-14.4-22l0-208c0-9.5 5.7-18.2 14.4-22s18.9-2.1 25.9 4.4l112 104c4.9 4.5 7.7 10.9 7.7 17.6z"/>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="calendar-body p-[20px]">
                     <ul class="calendar-weeks text-xxl flex flex-wrap text-dark 
-                    text-center font-semibold">
+                    text-center font-bold">
                         <li>Sun</li>
                         <li>Mon</li>
                         <li>Tue</li>
@@ -51,43 +51,12 @@
                         <li>Fri</li>
                         <li>Sat</li>
                     </ul>
-                    <ul class="calendar-days text-xxl flex flex-wrap text-dark 
+
+                    <ul class="calendar-days text-xxl flex flex-wrap text-dark
                     text-center mb-20">
-                        <li>28</li>
-                        <li>29</li>
-                        <li>30</li>
-                        <li>31</li>
-                        <li>1</li>
-                        <li>2</li>
-                        <li>3</li>
-                        <li>4</li>
-                        <li>5</li>
-                        <li>6</li>
-                        <li>7</li>
-                        <li>8</li>
-                        <li>9</li>
-                        <li>10</li>
-                        <li>11</li>
-                        <li>12</li>
-                        <li>13</li>
-                        <li>14</li>
-                        <li>15</li>
-                        <li>16</li>
-                        <li>17</li>
-                        <li>18</li>
-                        <li>19</li>
-                        <li>20</li>
-                        <li>21</li>
-                        <li>22</li>
-                        <li>23</li>
-                        <li>24</li>
-                        <li>25</li>
-                        <li>26</li>
-                        <li>27</li>
-                        <li>28</li>
-                        <li>29</li>
-                        <li>30</li>
-                        <li>1</li>
+                    
+                        {{--? the Days are Produce by JS --}}
+                        
                     </ul>
                     
                 </div>
@@ -96,7 +65,7 @@
         </div>
         
 
-        {{--! This is the Right Container --}}
+        {{--? This is the Right Container --}}
         <div class="basis-2/5">
             <div class="m-5 p-10 bg-light rounded-lg shadow-lg">
                 <div class="flex flex-row">
@@ -109,13 +78,10 @@
                     </h1>
                 </div>
                 
-                <input id="first_name" type="first_name" placeholder="Choice Month" class="w-full my-3 form-control text-dark text-base px-5 py-5 border-none rounded-md shadow-md
+                <input id="date" type="date" placeholder="Select date" class="w-full my-3 form-control text-dark text-base px-5 py-5 border-none rounded-md shadow-md
                 ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
-                @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name">
+                @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" required autocomplete="date">
                 
-                <input id="first_name" type="first_name" placeholder="Choice Day" class="w-full form-control text-dark text-base px-5 py-5 border-none rounded-md shadow-md
-                    ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
-                    @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name">
                 
                 <div class="flex flex-row my-3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-[35px] mr-3">
