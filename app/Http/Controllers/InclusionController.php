@@ -88,11 +88,11 @@ class InclusionController extends Controller
      */
     public function edit($id)
     {
-        $inclusion = Inclusion::findOrFail($id);
+        // $inclusion = Inclusion::findOrFail($id);
         
-        $classifications = Classification::All();
+        // $classifications = Classification::All();
 
-        return view('admin.inclusion.partials._edit_inclusion_modal', compact('inclusion', 'classifications'));
+        // return view('admin.inclusion.partials._edit_inclusion_modal', compact('inclusion', 'classifications'));
     }
 
     /**
@@ -104,17 +104,26 @@ class InclusionController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        // Find the user by ID and update its details
+        $inclusion = Inclusion::findOrFail($id);
         // Validate the request data
-        // dd($request);
         $validatedData = $request->validate([
             'name' => 'required',
-            'edit-classification_id' => 'required|array',
+            'edit_classification_id' => 'required|array',
             'description' => 'required',
         ]);
-            // dd($validatedData);
-            // Find the user by ID and update its details
-            $inclusion = Inclusion::findOrFail($id);
+
+        $inclusion->inclusionclassifications()->delete();
+
             // Update the inclusion details
+            if (isset($validatedData['edit_classification_id']) && is_array($validatedData['edit_classification_id'])) {
+                foreach ($validatedData['edit_classification_id'] as $classifications){
+                    $inclusion->inclusionclassifications()->create([
+                        'classification_id' => $classifications
+                    ]);
+                }
+            }
             $inclusion->update($validatedData);
             // Redirect back to the index page with the updated user data and a success message
             return redirect()->route('inclusion.index')->with('success', 'User updated successfully!');
