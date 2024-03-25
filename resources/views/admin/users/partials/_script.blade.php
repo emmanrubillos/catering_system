@@ -62,7 +62,7 @@
                     }).then((result) => {
                         if (result.isConfirmed) {
                             // Redirect to the index page
-                            window.location.href = "{{ route('package.index') }}";
+                            window.location.href = "{{ route('users.index') }}";
                         }
                     });
                 }
