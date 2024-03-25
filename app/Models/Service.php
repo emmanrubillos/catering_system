@@ -29,7 +29,7 @@ class Service extends Model
         parent::boot();
 
         static::deleting(function ($service) {
-            $service->inclusions()->delete(); // Corrected method name
+            $service->serviceInclusions()->delete(); // Corrected method name
         });
     }
 }
