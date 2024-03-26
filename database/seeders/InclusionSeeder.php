@@ -23,14 +23,15 @@ class InclusionSeeder extends Seeder
             [
                 'classification' => [
                     [
-                        'name' => 'Foods and Catering',
+                        'name' => 'Lechon',
                         'group' => 'Foods and Catering',
                     ],
                 ],
                 'items' => [
-                    'Main Dish',
-                    'Side Dish',
-                    'Pork Lechon (30kg)',                ]
+                    'Pork Lechon (30kg)',    
+                    'Pork Lechon (40kg)',
+                    'Pork Lechon (50kg)',            
+                ],
             ],
 
             [
@@ -95,7 +96,7 @@ class InclusionSeeder extends Seeder
                 'classification' =>
                     [
                         [
-                            'name' => 'Whole Set Entourage Attire',
+                            'name' => 'Primary Members',
                             'group' => 'Whole Set Entourage Attire',
                         ],
                     ], 
@@ -105,12 +106,44 @@ class InclusionSeeder extends Seeder
                     'Groom Suit',
                     'Maid of Honor',
                     'Best Man',
-                    'Bridesmaids',
-                    'Flower Girls',
-                    'Groomsmen',
                     'Bearers',
                     '2 Mothers',
                     '2 Fathers',
+                ],
+
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Bridesmaids Flower Girls',
+                            'group' => 'Whole Set Entourage Attire',
+                        ],
+                    ], 
+
+                'items' => [
+                    '3 Bridesmaids',
+                    '5 Bridesmaids',
+                    '7 Bridesmaids',
+                    '3 Flower Girls',
+                    '5 Flower Girls',
+                    '7 Flower Girls',
+                ],
+
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Groomsmen',
+                            'group' => 'Whole Set Entourage Attire',
+                        ],
+                    ], 
+
+                'items' => [
+                    '3 Groomsmen',
+                    '5 Groomsmen',
+                    '7 Groomsmen',
                 ],
 
             ],
@@ -136,14 +169,18 @@ class InclusionSeeder extends Seeder
                     [
                         [
                             'name' => 'Bouquet',
-                            'group' => 'Bouquet',
+                            'group' => 'Floral Arrangements',
                         ],
                     ],  
                 'items' => [
                     'Bridal Bouquet',
                     'Maid of Honor',
-                    'Bridesmaids',
-                    'Flower Girls',
+                    '3 Bridesmaids',
+                    '5 Bridesmaids',
+                    '7 Bridesmaids',
+                    '3 Flower Girls',
+                    '5 Flower Girls',
+                    '7 Flower Girls',
                 ],
             ],
             [
@@ -151,34 +188,32 @@ class InclusionSeeder extends Seeder
                     [
                         [
                             'name' => 'Corsage',
-                            'group' => 'Corsage',
+                            'group' => 'Floral Arrangements',
                         ],
                     ], 
                 'items' => [
                     'Groom',
                     'Best Man',
-                    'Groomsmen',
+                    '3 Groomsmen',
+                    '5 Groomsmen',
+                    '7 Groomsmen',
                     'Bearers',
-                    'Principal Sponsors',
+                    'Unli for Principal Sponsors',
                 ],
             ],
             [
                 'classification' =>
                     [
                         [
-                            'name' => 'Church Decoration',
+                            'name' => 'Primary:',
                             'group' => 'Church Decoration',
                         ],
                     ], 
                 'items' => [
                     'Flowers',
+                    'Red Carpet',
                     'Arch Entrance',
                     'Candle for Matrimonial',
-                    'Flowers Stand for Aisles (Ordinary)',
-                    'Flowers Stand for Aisles (Full Decor)',
-                    'Altar Decoration',
-                    'Full Light Setup for Aisles',
-                    'Red Carpet',
                     'Bridal Car Decoration',
                 ],
             ],
@@ -186,7 +221,33 @@ class InclusionSeeder extends Seeder
                 'classification' =>
                     [
                         [
-                            'name' => 'Reception Decoration',
+                            'name' => 'Flowers Stand for Aisles:',
+                            'group' => 'Church Decoration',
+                        ],
+                    ], 
+                'items' => [
+                    'Ordinary',
+                    'Full Decoration',
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Others:',
+                            'group' => 'Church Decoration',
+                        ],
+                    ], 
+                'items' => [
+                    'Altar Decoration',
+                    'Full Light Setup for Aisles',
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Primary:',
                             'group' => 'Reception Decoration',
                         ],
                     ], 
@@ -198,7 +259,31 @@ class InclusionSeeder extends Seeder
                     'Couple Name/Initials',
                     'Love Seat',
                     'Red Carpet',
-                    'Ceiling Swag with Decoration',
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Ceiling Swag:',
+                            'group' => 'Reception Decoration',
+                        ],
+                    ], 
+                'items' => [
+                    'Standard Decoration',
+                    'Full Decoration',
+                    'none'
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Others:',
+                            'group' => 'Reception Decoration',
+                        ],
+                    ], 
+                'items' => [
                     'LED Wall',
                     'Low Lying Fog Machine',
                     'Sparkler Machine',
@@ -209,47 +294,102 @@ class InclusionSeeder extends Seeder
                 'classification' =>
                     [
                         [
-                            'name' => 'Program and Entertainment',
+                            'name' => 'Hosts:',
                             'group' => 'Program and Entertainment',
                         ],
                     ], 
                 'items' => [
-                    'Reception Singer',
-                    'Church Singer',
                     'Reception Host',
                     'Church Host',
+                    'Single Host',
                 ],
             ],
             [
                 'classification' =>
                     [
                         [
-                            'name' => 'Full Coordination',
-                            'group' => 'Full Coordination',
+                            'name' => 'Performers:',
+                            'group' => 'Program and Entertainment',
                         ],
                     ], 
                 'items' => [
-                    'Full Coordination (on the Day)',
-                    'Full Coordination (Plan before an event)',
-                    'Full Wedding Coordination (Pre-wedding prep )',
-                    'Head Coordinator',
-                    'Assistance',
+                    '1 Reception Singer',
+                    '2 Reception Singer',
+                    '1 Church Singer',
+                    '2 Church Singer',
+                    'Live Band',
+                    'None',
                 ],
             ],
             [
                 'classification' =>
                     [
                         [
-                            'name' => 'Photographic and Videographic',
-                            'group' => 'Photographic and Videographic',
+                            'name' => 'Personel:',
+                            'group' => 'Bridal Event Coordination',
                         ],
                     ], 
                 'items' => [
-                    'Pre-Photo',
+                    '1 Head Coordinator',
+                    '3 Assistance',
+                    '6 Assistance',
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Types of Full Coordination:',
+                            'group' => 'Bridal Event Coordination',
+                        ],
+                    ], 
+                'items' => [
+                    'On the Day Coordination Plan',
+                    'Before the Event Coordination Plan',
+                    'Pre Wedding Prep Coordination Plan',
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Engagement Photoshoot:',
+                            'group' => 'Visual Media Artist',
+                        ],
+                    ], 
+                'items' => [
+                    'Prenup Photo (2-3 Sets)',
+                    'Prenup Photo (3-6 Sets) with stylist',
+                    'Prenup Photo (6-8 Sets) with stylist',
+
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Flash Drive Storage:',
+                            'group' => 'Visual Media Artist',
+                        ],
+                    ], 
+                'items' => [
+                    '16 GigaBytes',
+                    '32 GigaBytes',
+                    '64 GigaBytes'
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Others:',
+                            'group' => 'Visual Media Artist',
+                        ],
+                    ], 
+                'items' => [
                     'Photo and View Coverage',
                     'Wedding Day Photo',
                     'Photo Highlights',
-                    'Flash Drive Storage',
                     'SDE (same day edit)',
                     'Printed Copies 180pcs',
                     '1 Photo Album',
@@ -262,34 +402,92 @@ class InclusionSeeder extends Seeder
                 'classification' =>
                     [
                         [
-                            'name' => 'Hair and Make-up',
-                            'group' => 'Hair and Make-up',
+                            'name' => 'Hair and Make-up:',
+                            'group' => 'Beauty Artist',
                         ],
                     ], 
                 'items' => [
                     'Prenup',
                     'Bride',
                     'Maid of Honor',
-                    '2 Mothers',
-                    'Bridesmaids',
-                    'Flower Girls',
+                    'Mothers',
+                    '3 Bridesmaids',
+                    '5 Bridesmaids',
+                    '7 Bridesmaids',
+                    '3 Flower Girls',
+                    '5 Flower Girls',
+                    '7 Flower Girls',
                 ],
             ],
             [
                 'classification' =>
                     [
                         [
-                            'name' => 'Freebies',
+                            'name' => 'Wedding Cake:',
                             'group' => 'Freebies', 
                         ],
                     ], 
                 'items' => [
-                    'Layers Wedding Cake',
-                    'Bottle of Wine',
-                    'Wedding Invitation',
-                    'Wedding Giveaways',
+                    '2 Layers Cake',
+                    '3 Layers Cake',
+                    'none',
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Bottle of Wine;',
+                            'group' => 'Freebies', 
+                        ],
+                    ], 
+                'items' => [   
+                    '1 Bottle',              
+                    '3 Bottle',
+                    '6 Bottle',
+                    'none',
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Wedding Invitation:',
+                            'group' => 'Freebies', 
+                        ],
+                    ], 
+                'items' => [
+                    '50 pieces',
+                    '100 pieces',
+                    'none',
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Wedding Giveaways:',
+                            'group' => 'Freebies', 
+                        ],
+                    ], 
+                'items' => [
+                    '50 pieces',
+                    '100 pieces',
+                    'none',
+                ],
+            ],
+            [
+                'classification' =>
+                    [
+                        [
+                            'name' => 'Others:',
+                            'group' => 'Freebies', 
+                        ],
+                    ], 
+                'items' => [
                     'Pika-pika Corner',
                     'Grazing Table',
+                    'Tiffany Chairs',
                 ],
             ],
         ];

@@ -6,7 +6,7 @@
                     <div class="card-header">Example Component</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        <input type="text" ref="dateRangePickerInput" />
                     </div>
                 </div>
             </div>
@@ -15,9 +15,12 @@
 </template>
 
 <script>
-    export default {
-        mounted() {
-            console.log('Component mounted.')
-        }
+import DateRangePicker from 'flowbite-datepicker/DateRangePicker';
+
+export default {
+    mounted() {
+        // Initialize DateRangePicker
+        new DateRangePicker(this.$refs.dateRangePickerInput);
     }
+}
 </script>

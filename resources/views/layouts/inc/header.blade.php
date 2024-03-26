@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-<header class="">
+<header class="header-navbar">
     <div class="wave">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
@@ -60,29 +60,49 @@
             </div>
             <hr class="text-light mx-3">
             <div class="flex flex-col items-start justify-start w-full">
-                {{-- <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('home') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Home</a> --}}
-                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('about_us') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">About Us</a>
-                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('services') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Services</a>
-                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('menu') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Menu</a>
-                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('contact_us') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Contact Us</a>
+                {{-- <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" style="{{ request()->routeIs('home') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Home</a> --}}
+                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" 
+                style="{{ request()->routeIs('about_us') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">About Us</a>
+                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" 
+                style="{{ request()->routeIs('services') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Services</a>
+                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" 
+                style="{{ request()->routeIs('menu') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Menu</a>
+                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" 
+                style="{{ request()->routeIs('contact_us') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Contact Us</a>
             </div>
         </aside>
 
 
         {{--! Navbar for Desktop to Laptop --}}
         <div class="flex items-start justify-between relative">
-            <a href="{{ route('home') }}" class="logo-xl-lg hidden tablet:block w-72 tablet:w-92">
+            <a href="{{ route('home') }}" class="logo-xl-lg hidden tablet:block w-72 tablet:w-92 transition ease-in-out hover:scale-105  ">
                 <img class="logo-lg w-full h-full"
                 src="{{ asset('assets/img/logo/titans-catering-logo.png') }}" alt="titans-catering-logo-w/-bg">
             </a>
 
             <div class="nav-links mt-0 tablet:mt-8 hidden tablet:flex flex-wrap gap-default">
 
-                {{-- <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('home') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Home</a> --}}
-                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('about_us') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">About Us</a>
-                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('services') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Services</a>
-                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('menu') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Menu</a>
-                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold transition ease-in-out delay-100 hover:text-primary hover:border-b-2 border-primary" style="{{ request()->routeIs('contact_us') ? 'border-bottom: 2px solid #ff371d; color: #ff371d;' : '' }}">Contact Us</a>
+                {{-- <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" style="{{ request()->routeIs('home') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Home</a> --}}
+                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link" 
+                    style="{{ request()->routeIs('about_us') ? 'border-bottom: 4px solid #FF731D; color: #FF731D; padding-bottom: 5px;' : '' }}">
+                    About Us
+                </a>
+
+                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link" 
+                    style="{{ request()->routeIs('services') ? 'border-bottom: 4px solid #FF731D; color: #FF731D; padding-bottom: 5px;' : '' }}">
+                    Services
+                </a>
+
+                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link" 
+                    style="{{ request()->routeIs('menu') ? 'border-bottom: 4px solid #FF731D; color: #FF731D; padding-bottom: 5px;' : '' }}">
+                    Menu
+                </a>
+
+                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link" 
+                    style="{{ request()->routeIs('contact_us') ? 'border-bottom: 4px solid #FF731D; color: #FF731D; padding-bottom: 5px;' : '' }}">
+                    Contact Us
+                </a>
+
 
 
             </div>

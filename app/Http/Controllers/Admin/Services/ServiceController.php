@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin\Services;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Service;
+use App\Models\Inclusion;
+use App\Models\Classification;
 
 class ServiceController extends Controller
 {
@@ -15,8 +17,40 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services =Service::all();
-        return view('admin.service.index', compact('services'));
+        
+        $services = Service::all();
+        
+        $classifications = [];
+        
+        $groups = Classification::select('group')->distinct()->get();
+
+        foreach ($groups->toArray() as $group) {
+            $groupItem = [
+                'name' => $group['group']
+            ];
+            
+            $classItems = Classification::where('group', $group['group'])->get();
+            $classificationList = [];
+            foreach ($classItems->toArray() as $classItem) {
+                $lists = Inclusion::whereHas('inclusionClassifications', function($query) use($classItem) {
+                    return $query->where('classification_id', $classItem['id']);
+                })->get()->toArray();
+                array_push($classificationList, [
+                    'classification' => $classItem,
+                    'inclusions' => $lists,
+                ]);
+            }
+
+            $groupItem['classifications'] = $classificationList;
+
+            array_push($classifications, $groupItem);
+
+
+        }
+
+        // dd($classifications);
+
+        return view('admin.service.index', compact('services', 'classifications'));
     }
 
     /**
@@ -37,24 +71,43 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
+        
         $validatedData = $request->validate([
             'name' => 'required',
             'type' => 'required',
             'price' => 'required',
             'description' => 'required',
             'number_of_person' => 'required',
+            'main_dish' => 'required',
+            'side_dish' => 'required',
+            'inclusion_id' => 'required|array',
         ]);
-            // dd($validatedData);
-        $service =Service::create([
+        // dd($validatedData);
+        $service = Service::create([
             'name' => $validatedData['name'],
             'type' => $validatedData['type'],
             'price' => $validatedData['price'],
             'description' => $validatedData['description'],
             'number_of_person' => $validatedData['number_of_person'],
+            'main_dish' => $validatedData['main_dish'],
+            'side_dish' => $validatedData['side_dish'],
         ]);
-        return redirect()->route('service.index')->with('success', 'Service created successfully!');
 
+        if (isset($validatedData['inclusion_id']) && is_array($validatedData['inclusion_id'])) {
+            foreach ($validatedData['inclusion_id'] as $inclusions){
+                $service->serviceInclusions()->create([
+                    'inclusion_id' => $inclusions
+                ]);
+            }
+        }
+
+        // Redirect back to the index page with success message
+        return redirect()->route('service.index')->with('success', 'Service created successfully!');
+    
     }
+
+
+    // 
 
     /**
      * Display the specified resource.

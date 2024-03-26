@@ -21,7 +21,40 @@
                     </a>
                 </li>
 
-                {{-- <li class="submenu">
+                <li class="nav-item {{ request()->is('service') ? 'active' : '' }}">
+                    <a class="nav-link" href="/service ">
+                        <i class="fas fa-handshake"></i>
+                        <span>Services</span>
+                    </a>
+                </li>
+
+                <li class="submenu">
+                    <a href="#">
+                        <i class="fas fa-wrench"></i>
+                        <span>Settings</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul class="submenu_class">
+                        
+                        <li>
+                            <a href="{{ route('inclusion.index') }}" class="{{ request()->is('inclusion') ? 'active' : '' }}">
+                                {!! request()->is('inclusion') ? '<b>Inclusion</b>' : 'Inclusion' !!}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('classification.index') }}" class="{{ request()->is('classification') ? 'active' : '' }}">
+                                {!! request()->is('classification') ? '<b>Classification</b>' : 'Classification' !!}
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+ {{-- <li class="submenu">
                     <a href="#">
                         <i class="fas fa-book-open"></i>
                         <span> Reservation </span>
@@ -79,52 +112,3 @@
                         <span>Package</span>
                     </a>
                 </li> --}}
-
-                <li class="submenu">
-                    <a href="#">
-                        <i class="fas fa-handshake"></i>
-                        <span> Services </span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="submenu_class">
-                        <li>
-                            <a href="{{ route('service.index') }}" class="{{ request()->is('service') ? 'active' : '' }}">
-                                {!! request()->is('service') ? '<b>Service</b>' : 'Service' !!}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('package_details') }}" class="{{ request()->is('service/package_details') ? 'active' : '' }}">
-                                {!! request()->is('service/package_details') ? '<b>Package Detials</b>' : 'Package Detials' !!}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('pax_details') }}" class="{{ request()->is('service/pax_details') ? 'active' : '' }}">
-                                {!! request()->is('service/pax_details') ? '<b>Pax Details</b>' : 'Pax Details' !!}
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="submenu">
-                    <a href="#">
-                        <i class="fas fa-wrench"></i>
-                        <span>Settings</span>
-                        <span class="menu-arrow"></span>
-                    </a>
-                    <ul class="submenu_class">
-                        
-                        <li>
-                            <a href="{{ route('inclusion.index') }}" class="{{ request()->is('inclusion') ? 'active' : '' }}">
-                                {!! request()->is('inclusion') ? '<b>Inclusion</b>' : 'Inclusion' !!}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('classification.index') }}" class="{{ request()->is('classification') ? 'active' : '' }}">
-                                {!! request()->is('classification') ? '<b>Classification</b>' : 'Classification' !!}
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>

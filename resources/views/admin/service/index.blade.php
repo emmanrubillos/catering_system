@@ -22,7 +22,7 @@
 
                         <div class="table-responsive">
                             <table id="service-table" class="table table-striped" style="width:100%">
-                                <thead class="border border-0">
+                                <thead class="border-0">
                                     <tr>
                                         <th style="width:25%;">Action</th>
                                         <th style="width:16%">Name</th>
@@ -31,7 +31,7 @@
                                         <th style="width:15%;">Number of Person</th>
                                     </tr>
                                 </thead>
-                                <tbody class="border border-0">
+                                <tbody class="border-0">
                                     @foreach($services as $service)
                                     <tr>
                                         <td>
@@ -74,7 +74,11 @@
     </div>
 </div>
 
-
+<script>
+    $(".service-checkbox").on('click', function(event) {
+       let isChecked = $(this).prop('checked');
+    })
+</script>
 {{-- <script src="https://cdn.datatables.net/2.0.2/js/dataTables.bootstrap5.js"></script> --}}
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>

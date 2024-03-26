@@ -20,6 +20,8 @@ class CreateServicesTable extends Migration
             $table->text('description');
             $table->string('price',8, 2);
             $table->string('number_of_person');
+            $table->string('main_dish');
+            $table->string('side_dish');
             $table->timestamps();
         });
     }

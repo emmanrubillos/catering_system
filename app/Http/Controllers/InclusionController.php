@@ -41,18 +41,17 @@ class InclusionController extends Controller
      */
     public function store(Request $request)
     {   
+        // dd($request);
         $validatedData = $request->validate([
             'name' => 'required',
             'classification_id' => 'required|array',
             'description' => 'required',
         ]);
-        
         // Create the Inclusion instance
         $inclusion = Inclusion::create([
             'name' => $validatedData['name'],
             'description' => $validatedData['description'],
         ]);
-        
         // Attach classifications to the inclusion
         if (isset($validatedData['classification_id']) && is_array($validatedData['classification_id'])) {
             foreach ($validatedData['classification_id'] as $classifications){
@@ -89,8 +88,11 @@ class InclusionController extends Controller
      */
     public function edit($id)
     {
-        $inclusions = Inclusion::findOrFail($id);
-        return view('admin.inclusion.partials._edit_inclusion_modal', compact('inclusions'));
+        // $inclusion = Inclusion::findOrFail($id);
+        
+        // $classifications = Classification::All();
+
+        // return view('admin.inclusion.partials._edit_inclusion_modal', compact('inclusion', 'classifications'));
     }
 
     /**
@@ -102,20 +104,30 @@ class InclusionController extends Controller
      */
     public function update(Request $request, $id)
     {
+
+        // Find the user by ID and update its details
+        $inclusion = Inclusion::findOrFail($id);
         // Validate the request data
         $validatedData = $request->validate([
             'name' => 'required',
-            'classification_id' => 'required|integer',
+            'edit_classification_id' => 'required|array',
             'description' => 'required',
         ]);
 
-            // Find the user by ID and update its details
-            $inclusion = Inclusion::findOrFail($id);
-            $inclusion->update($validatedData);
+        $inclusion->inclusionclassifications()->delete();
 
+            // Update the inclusion details
+            if (isset($validatedData['edit_classification_id']) && is_array($validatedData['edit_classification_id'])) {
+                foreach ($validatedData['edit_classification_id'] as $classifications){
+                    $inclusion->inclusionclassifications()->create([
+                        'classification_id' => $classifications
+                    ]);
+                }
+            }
+            $inclusion->update($validatedData);
             // Redirect back to the index page with the updated user data and a success message
             return redirect()->route('inclusion.index')->with('success', 'User updated successfully!');
-        }
+    }
 
     /**
      * Remove the specified resource from storage.

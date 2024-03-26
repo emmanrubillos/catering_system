@@ -9,6 +9,7 @@
         <link href="{{ asset('css/header.css') }}" rel="stylesheet">
         <link href="{{ asset('css/footer.css') }}" rel="stylesheet">
         <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/calendar.css') }}" rel="stylesheet">
 
         {{--? fontAwesome --}}
         <script src="https://kit.fontawesome.com/ee3372abc2.js" crossorigin="anonymous"></script>
@@ -23,6 +24,8 @@
         <script src="{{ mix('js/app.js') }}"></script>
         <!-- Include Flowbite JS -->
         <script src="{{ asset('js/flowbite.min.js') }}"></script>
+        {{-- Calendar JS File --}}
+	    <script src="{{ asset('js/calendar.js') }}"></script>
 
     </body>
 

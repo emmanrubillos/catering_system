@@ -18,18 +18,35 @@
 	<link href="{{ asset('css/footer.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/main.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/about.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/calendar.css') }}" rel="stylesheet">
 	
 </head>
 
 <body class="flex flex-col w-full h-screen overflow-x-hidden">
 
+	{{--! Loading Screen --}}
+	{{-- <div class="loading-screen">
+		<div class="spinner"></div>
+	</div> --}}
+
+
+
 
 	@yield('content')
 
 
-	
-</body>
+
+
+
+	{{-- Tailwind CSS Connection --}}
 	<script src="{{ mix('js/app.js') }}"></script>
+
 	<!-- Include Flowbite JS -->
 	<script src="{{ asset('js/flowbite.min.js') }}"></script>
+
+	{{-- Calendar JS File --}}
+	<script src="{{ asset('js/calendar.js') }}" defer></script>
+	
+</body>
+	
 </html>

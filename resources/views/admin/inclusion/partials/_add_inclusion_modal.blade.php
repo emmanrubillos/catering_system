@@ -40,9 +40,9 @@
                                     <label class="fw-bold bg-success text-white px-4 py-1 rounded" for="classification_id">Types</label>
                                     <div>
                                         @foreach ($classifications as $classification)
-                                            <div class="form-check add-form-check">
+                                            <div class="form-check add-bg-checkbox add-form-check">
                                                 <input class="form-check-input" type="checkbox" id="add-classification-check" name="classification_id[]" value="{{ $classification->id }}">
-                                                <label class="form-check-label fw-bold" for="classification_id{{ $classification->id }}">
+                                                <label class="form-check-label fw-bold add-checkbox" for="classification_id{{ $classification->id }}">
                                                     {{ $classification->name }}
                                                 </label>
                                             </div>
