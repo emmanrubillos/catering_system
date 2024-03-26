@@ -13,7 +13,7 @@
                 </button>
             </div>
             <div class="modal-body">
-
+                
                 <div class="row">
                     <div class="col-md-5">
                         <div class="form-group">
@@ -22,13 +22,13 @@
                             </h2>
                         </div>
                         <div class="d-flex flex-row">
-                            <span class="badge-primary badge-sm badge text-bg-primary text-wrap">
+                            <span class="badge-warning badge-sm badge text-bg-warning text-wrap">
                                 Type: {{ $service->type }} 
                             </span>
-                            <span class="badge-primary badge-sm badge text-bg-primary text-wrap mx-3">
+                            <span class="badge-warning badge-sm badge text-bg-warning text-wrap mx-3">
                                 ₱ {{ $service->price }}
                             </span>
-                            <span class="badge-primary badge-sm badge text-bg-primary text-wrap">
+                            <span class="badge-warning badge-sm badge text-bg-warning text-wrap">
                                 {{ $service->number_of_person }} PAX
                             </span>
                         </div>
@@ -45,313 +45,84 @@
                 
                 <hr>
 
-                <div class="col px-0 mb-4 overflow-auto show-scroll" style="height: 300px;">
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                            Foods & Catering
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    3 Main Dish
-                                </li>
-                                <li>
-                                    1 Side Dish
-                                </li>
-                                <li>
-                                    1 Round Soft Drinks
-                                </li>
-                                <li>
-                                    1 Round Soft Desserts
-                                </li>
-                                <li>
-                                    1 Round Soft Rice
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Presidential Seated Buffet
-                                </li>
-                                <li>
-                                    Couple Table Setup
-                                </li>
-                                <li>
-                                    Parents Table Setup
-                                </li>
-                                <li>
-                                    Presidential Table Setup
-                                </li>
-                                <li>
-                                    Guest Table Setup
-                                </li>
-                            </ul>
+                <div class="col px-0 mb-4 overflow-auto add-scroll" style="height:300px;">
+                                
+                    <div class="firstContianer">
+                        <div class="col">
+                            <h5 class="fw-bold bg-warning text-white px-4 py-1 rounded text-center">
+                                Courses of a Meal
+                            </h5> 
+            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="col p-0">
+                                        <div class="form-group">
+                                            {{-- <label for="main_dish" class="badge ">Number of:</label> --}}
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Number of" name="main_dish" id="add-service-main_dish" rows="5" value="{{ $service->main_dish }}" disabled></input>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text bg-warning text-wrap text-white rounded-end fw-bold">Main Dish</span>
+                                                </div>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="number" class="form-control" placeholder="Number of" name="side_dish" id="add-service-side_dish" rows="5" value="{{ $service->side_dish }}" disabled></input>
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-warning text-wrap text-white rounded-end fw-bold">Side Dish</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                            Chruch Decoration
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers Stand for Aisles (Ordinary)
-                                </li>
-                                <li>
-                                    Red Carpet
-                                </li>
-                                <li>
-                                    Bridal Car Decoration
-                                </li>
-                            </ul>
-                            </ul>
+                    {{-- For the Package details --}}
+                    @foreach ($classifications as $classification)
+                        <div class="secondContainer">
+                            <div class="col">
+                                <h5 class="fw-bold bg-warning text-white px-4 py-1 rounded text-center">
+                                    {{ $classification['name'] }}
+                                </h5>  
+                                
+                                <div class="row">
+            
+                                @foreach ($classification['classifications'] as $classItem)    
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="dessert" class="badge bg-warning text-wrap">
+                                                {{ $classItem['classification']['name'] }}
+                                            </label>
+                                            <div>
+                                                <!-- Display inclusions here -->
+                                                @foreach ($classItem['inclusions'] as $inclusion)
+                                                {{-- @php
+                                                    dd($inclusion);
+                                                @endphp --}}
+                                                    <div class="form-check edit-check-form">
+                                                        @if (is_array($service->service_inclusion_ids) && in_array($inclusion['id'], $service->service_inclusion_ids))
+                                                        <input disabled checked class="service-checkbox form-check-input" type="checkbox" id="add-inclusion-check" name="inclusion_id[]" value="{{ $inclusion['id'] }}">
+                                                            {{ $inclusion['name'] }}
+                                                        @else
+                                                        <input disabled class="service-checkbox form-check-input" type="checkbox" id="add-inclusion-check" name="inclusion_id[]" value="{{ $inclusion['id'] }}">
+                                                        {{ $inclusion['name'] }}
+                                                        <label class="form-check-label fw-bold add-bg-checkbox" for="inclusion_id{{ $inclusion['id'] }}"> 
+                                                        </label>
+                                                        @endif
+                                                    </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+            
+                                @endforeach
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                            Reception Decoration
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                           Whole Set Entourage Attire
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                           Whole Set Entourage Attire
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                           Bouquet & Corsage
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                           Program & Entertainment
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                           Full Coordination
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                          Photographic & Videographic 
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col px-0">
-                        <h5 class="fw-bold">
-                            Hair and Make-up
-                        </h5>
-                        <div class="row mx-2">
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                            <ul class="text-md col-5">
-                                <li>
-                                    Flowers
-                                </li>
-                                <li>
-                                    Arch Entrance
-                                </li>
-                                <li>
-                                    Candle for Matrimonial
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
 
                 
