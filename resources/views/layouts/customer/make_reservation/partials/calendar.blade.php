@@ -21,45 +21,61 @@
         
         <div class="calendar-contianer basis-3/5 p-4 flex items-center justify-center">
 
-           <div class="calendar-wrapper w-[40rem] bg-light rounded-xl shadow-xl">
+           <div class="calendar-wrapper  h-[40rem] w-[40rem] bg-light rounded-xl shadow-xl">
                 <div class="calendar-header flex items-center justify-between pt-[25px] px-[30px] pb-[10px]">
-                    <p class="current-date text-[45px] font-bold text-dark display-font"></p>
-                    <div class="action-icons flex flex-row gap-1">
+                    <div class="calendar-date flex flex-row gap-1">
+                        <a id="month-btn" class="calendar-month transition ease-in-out delay-100 hover:text-light hover:bg-primary 
+                        text-[45px] font-bold text-dark display-font px-3 py-1 rounded-md cursor-pointer">
+                            {{-- Here's the Current Month --}}
+                        </a>
 
-                        <svg id="prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="prev-icon action-icon w-11 fill-dark delay-50
-                        transition ease-in-out hover:fill-primary-dark hover:delay-50">
-                            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                            <path d="M0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416zM128 256c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22l0 208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z"/>
-                        </svg>
+                        <a id="year-btn" class="calendar-year transition ease-in-out delay-100 hover:text-light hover:bg-primary 
+                        text-[45px] font-bold text-dark display-font px-3 py-1 rounded-md cursor-pointer">
+                            {{-- Here's the Current Year --}}
+                        </a>
+                    </div>
+                    <div class="actionContainer">
+                        <div class="action-icons flex flex-row gap-1">
 
-                        <svg id="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="next-icon action-icon w-11 fill-dark delay-50
-                        transition ease-in-out hover:fill-primary-dark hover:delay-50">
-                            <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
-                            <path d="M448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM320 256c0 6.7-2.8 13-7.7 17.6l-112 104c-7 6.5-17.2 8.2-25.9 4.4s-14.4-12.5-14.4-22l0-208c0-9.5 5.7-18.2 14.4-22s18.9-2.1 25.9 4.4l112 104c4.9 4.5 7.7 10.9 7.7 17.6z"/>
-                        </svg>
-
+                            <svg id="prev" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="prev-icon action-icon w-11 fill-dark delay-50
+                            transition ease-in-out hover:fill-primary-dark hover:delay-50 cursor-pointer">
+                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path d="M0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416zM128 256c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22l0 208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z"/>
+                            </svg>
+    
+                            <svg id="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="next-icon action-icon w-11 fill-dark delay-50
+                            transition ease-in-out hover:fill-primary-dark hover:delay-50 cursor-pointer">
+                                <!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                <path d="M448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM320 256c0 6.7-2.8 13-7.7 17.6l-112 104c-7 6.5-17.2 8.2-25.9 4.4s-14.4-12.5-14.4-22l0-208c0-9.5 5.7-18.2 14.4-22s18.9-2.1 25.9 4.4l112 104c4.9 4.5 7.7 10.9 7.7 17.6z"/>
+                            </svg>
+    
+                        </div>
                     </div>
                 </div>
                 <div class="calendar-body p-[20px]">
-                    <ul class="calendar-weeks text-xxl flex flex-wrap text-dark 
-                    text-center font-bold">
-                        <li>Sun</li>
-                        <li>Mon</li>
-                        <li>Tue</li>
-                        <li>Wed</li>
-                        <li>Thu</li>
-                        <li>Fri</li>
-                        <li>Sat</li>
-                    </ul>
-
-                    <ul class="calendar-days text-xxl flex flex-wrap text-dark
-                    text-center mb-20">
-                    
-                        {{--? the Days are Produce by JS --}}
-                        
-                    </ul>
-                    
+                    <div class="MonthContainer hidden">
+                        <ul class="calendar-months grid grid-cols-3 gap-4 text-xl text-dark font-black">
+                            {{-- The Months are Produced by JS --}}
+                        </ul>
+                    </div>
+                
+                    <div class="WeekDayContainer">
+                        <ul class="calendar-weeks text-xxl flex flex-wrap text-dark text-center font-bold">
+                            <li>Sun</li>
+                            <li>Mon</li>
+                            <li>Tue</li>
+                            <li>Wed</li>
+                            <li>Thu</li>
+                            <li>Fri</li>
+                            <li>Sat</li>
+                        </ul>
+                
+                        <ul class="calendar-days text-xxl flex flex-wrap text-dark text-center mb-20">
+                            {{-- The Days are Produced by JS --}}
+                        </ul>
+                    </div>
                 </div>
+                
            </div>
 
         </div>
