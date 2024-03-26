@@ -133,6 +133,11 @@ daysTag.addEventListener('click', handleDateClick);
 
 // Initialize calendar
 document.addEventListener("DOMContentLoaded", () => {
+    
+    prevButton.style.display = "none";
+    nextButton.style.display = "block";
+
     initializeDate();
     renderCalendar();
+
 });
