@@ -111,7 +111,7 @@
                                                     <!-- Display inclusions here -->
                                                     @foreach ($classItem['inclusions'] as $inclusion)
                                                         <div class="form-check edit-check-form">
-                                                            @if (is_array($service->service_inclusion_ids) && in_array($inclusion->id, $service->service_inclusion_ids))
+                                                            @if (is_array($service->service_inclusion_ids) && in_array($service->id, $service->service_inclusion_ids))
                                                             <input checked class="service-checkbox form-check-input" type="checkbox" id="add-inclusion-check" name="inclusion_id[]" value="{{ $inclusion['id'] }}">
                                                                 {{ $inclusion['name'] }}
                                                             @else
