@@ -1877,6 +1877,10 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
+.w-\[50rem\] {
+  width: 50rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -2039,6 +2043,10 @@ input:checked + .toggle-bg {
 
 .grid-cols-7 {
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -2870,11 +2878,6 @@ input:checked + .toggle-bg {
 .text-dark {
   --tw-text-opacity: 1;
   color: rgb(24 29 80 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
