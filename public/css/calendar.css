@@ -119,3 +119,15 @@
     border-radius: 8px;
     margin: 3px 0;
 }
+
+.reservation-error {
+    margin-top: 8px !important;
+    background-color: #EE4B2B !important;
+    color: white !important;
+    transition: all 0.3s ease; /* Add a transition for smooth animation */
+}
+
+.reservation-error.show {
+    margin-top: 0 !important;
+}
+

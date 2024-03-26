@@ -94,9 +94,9 @@
                     </h1>
                 </div>
                 
-                <input id="date" type="date" placeholder="Select date" class="w-full my-3 form-control text-dark text-base px-5 py-5 border-none rounded-md shadow-md
-                ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6
-                @error('date') is-invalid @enderror" name="date" value="{{ old('date') }}" required autocomplete="date">
+                <h3 class="calendar-selected display-font text-dark drop-shadow-lg py-2 text-[35px]">
+                    Select a Date
+                </h3>
                 
                 
                 <div class="flex flex-row my-3">
