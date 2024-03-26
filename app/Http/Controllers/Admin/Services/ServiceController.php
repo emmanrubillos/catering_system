@@ -73,7 +73,7 @@ class ServiceController extends Controller
     {
         
         $validatedData = $request->validate([
-            'name' => 'required',
+            'name' => 'required|unique:services,name,',
             'type' => 'required',
             'price' => 'required',
             'description' => 'required',
@@ -129,10 +129,39 @@ class ServiceController extends Controller
      */
     public function edit($id)
     {
-        // Fetch the user data based on the ID
         $service = Service::findOrFail($id);
-        // Pass the user data to the view
-        return view('admin.service.partials._edit_service_modal', compact('service'));
+        
+        $classifications = [];
+        
+        $groups = Classification::select('group')->distinct()->get();
+
+        foreach ($groups->toArray() as $group) {
+            $groupItem = [
+                'name' => $group['group']
+            ];
+            
+            $classItems = Classification::where('group', $group['group'])->get();
+            $classificationList = [];
+            foreach ($classItems->toArray() as $classItem) {
+                $lists = Inclusion::whereHas('inclusionClassifications', function($query) use($classItem) {
+                    return $query->where('classification_id', $classItem['id']);
+                })->get()->toArray();
+                array_push($classificationList, [
+                    'classification' => $classItem,
+                    'inclusions' => $lists,
+                ]);
+            }
+
+            $groupItem['classifications'] = $classificationList;
+
+            array_push($classifications, $groupItem);
+
+
+        }
+
+        // dd($classifications);
+
+        return view('admin.service.edit', compact('service', 'classifications'));
     }
 
     /**
@@ -144,18 +173,31 @@ class ServiceController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
+        $service = Service::findOrFail($id);
         // Validate the request data
         $validatedData = $request->validate([
-            'name' => 'required',
+            'name' => 'required|unique:services,name,' . $id,
             'type' => 'required',
             'price' => 'required',
             'description' => 'required',
             'number_of_person' => 'required',
+            'main_dish' => 'required',
+            'side_dish' => 'required',
+            'inclusion_id' => 'required|array',
         ]);
-        dd($validatedData);
+        // dd($validatedData);
+        $service->serviceInclusions()->delete();
+
+        if (isset($validatedData['inclusion_id']) && is_array($validatedData['inclusion_id'])) {
+            foreach ($validatedData['inclusion_id'] as $inclusions){
+                $service->serviceInclusions()->create([
+                    'inclusion_id' => $inclusions
+                ]);
+            }
+        }
+
+        // dd($validatedData);
         // Find the service by ID and update its details
-        $service = Service::findOrFail($id);
         $service->update($validatedData);
 
         // Redirect back to the index page with the updated service data and a success message

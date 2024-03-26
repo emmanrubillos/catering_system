@@ -52,6 +52,9 @@
                                 <div class="row">
                                     @foreach ($classifications as $classification)
                                         <div class="col-md-3">
+                                            {{-- @php
+                                                dd($classifications)
+                                            @endphp --}}
                                             <div class="form-check edit-form-check">
                                                 @if (is_array($inclusion->inclusion_classification_ids) && in_array($classification->id, $inclusion->inclusion_classification_ids))
                                                     <input checked class="classification-checkbox form-check-input" type="checkbox" id="edit-classification-check-{{ $classification->id }}" name="edit_classification_id[]" value="{{ $classification->id }}">
