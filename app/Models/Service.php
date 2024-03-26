@@ -19,6 +19,13 @@ class Service extends Model
         'side_dish',
     ]; 
 
+    protected $appends = ['service_inclusion_ids'];
+
+    public function getServiceInclusionIdsAttribute()
+    {
+        return $this->serviceInclusions()->get()->pluck('inclusion_id')->toArray();
+    }
+
     public function serviceInclusions()
     {
         return $this->hasMany(ServiceInclusion::class);

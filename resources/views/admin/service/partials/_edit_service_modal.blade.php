@@ -21,32 +21,116 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="name" class="fw-bold">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" value="{{ $service->name }}">
+                                <label for="name" class="fw-bold bg-success text-white px-4 py-1 rounded">Name</label>
+                                <input type="text" class="form-control" placeholder="Enter name" id="add-service-name" name="name" value="{{ $service->name }}">
                             </div>
                             <div class="form-group">
-                                <label for="type" class="fw-bold">Type</label>
-                                <select name="type" id="type" class="form-control">
-                                    <option value="" selected disabled>{{ $service->type }}</option>
-                                    <option value="Package">Package</option>
-                                    <option value="Pax">Pax</option>
+                                <label for="type" class="fw-bold bg-success text-white px-4 py-1 rounded">Type</label>
+                                <select name="type" id="add-service-type" class="form-control">
+                                    <option value="" selected disabled>Select a Type</option>
+                                    <option value="Package"{{ $service->type === "Package"}}>Package</option>
+                                    <option value="Pax"{{ $service->type === "Pax"}}>Pax</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="number_of_person" class="fw-bold">Number of Person</label>
-                                <input type="text" class="form-control" id="number_of_person" name="number_of_person" value="{{ $service->number_of_person }}">
+                                <label for="number_of_person" class="fw-bold bg-success text-white px-4 py-1 rounded">Number of Person</label>
+                                <input type="number" class="form-control" placeholder="Number of person" id="add-service-number_of_person" name="number_of_person" value="{{ $service->number_of_person }}">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="description" class="fw-bold">Decription</label>
-                                <textarea type="text" class="form-control" name="description" id="description" rows="5">{{ $service->description }}</textarea>
+                                <label for="description" class="fw-bold bg-success text-white px-4 py-1 rounded">Description</label>
+                                <textarea type="text" class="form-control" placeholder="Enter a description ...." name="description" id="add-service-description" rows="5" value="{{ $service->description }}"></textarea>
                             </div>
-                            <div class="form-group">
-                                <label for="price" class="fw-bold">Prize</label>
-                                <input type="text" class="form-control" id="price" name="price" value="{{ $service->price }}">
+                            <div class="form-group mt-4">
+                                <label for="price" class="fw-bold bg-success text-white px-4 py-1 rounded">Price</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-success text-wrap text-white rounded-end fw-bold">₱</span>
+                                    </div>
+                                    <input type="number" class="form-control" placeholder="Enter the Price" id="add-service-price" name="price" value="{{ $service->price }}">
+                                </div>
                             </div>
                         </div>
+                    </div>
+
+                    <hr>
+
+                    {{-- If Package is the Type --}}
+                    <div class="col px-0 mb-4 overflow-auto add-scroll" style="height:300px;">
+                        
+                        <div class="firstContianer">
+                            <div class="col">
+                                <h5 class="fw-bold bg-success text-white px-4 py-1 rounded text-center">
+                                    Courses of a Meal
+                                </h5> 
+        
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col p-0">
+                                            <div class="form-group">
+                                                {{-- <label for="main_dish" class="badge ">Number of:</label> --}}
+                                                <div class="input-group">
+                                                    <input type="number" class="form-control" placeholder="Number of" name="main_dish" id="add-service-main_dish" rows="5" value="{{ $service->main_dish }}"></input>
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text bg-success text-wrap text-white rounded-end fw-bold">Main Dish</span>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="number" class="form-control" placeholder="Number of" name="side_dish" id="add-service-side_dish" rows="5" value="{{ $service->side_dish }}"></input>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text bg-success text-wrap text-white rounded-end fw-bold">Side Dish</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @foreach ($classifications as $classification)
+                            <div class="secondContainer">
+                                <div class="col">
+                                    <h5 class="fw-bold bg-success text-white px-4 py-1 rounded text-center">
+                                        {{ $classification['name'] }}
+                                    </h5>  
+                                    
+                                    <div class="row">
+
+                                    @foreach ($classification['classifications'] as $classItem)    
+                                        <div class="col-4">
+                                            <div class="form-group">
+                                                <label for="dessert" class="badge bg-success text-wrap">
+                                                    {{ $classItem['classification']['name'] }}
+                                                </label>
+                                                <div>
+                                                    <!-- Display inclusions here -->
+                                                    @foreach ($classItem['inclusions'] as $inclusion)
+                                                        <div class="form-check edit-check-form">
+                                                            @if (is_array($service->service_inclusion_ids) && in_array($service->id, $service->service_inclusion_ids))
+                                                            <input checked class="service-checkbox form-check-input" type="checkbox" id="add-inclusion-check" name="inclusion_id[]" value="{{ $inclusion['id'] }}">
+                                                                {{ $inclusion['name'] }}
+                                                            @else
+                                                            <input class="service-checkbox form-check-input" type="checkbox" id="add-inclusion-check" name="inclusion_id[]" value="{{ $inclusion['id'] }}">
+                                                            {{ $inclusion['name'] }}
+                                                            <label class="form-check-label fw-bold add-bg-checkbox" for="inclusion_id{{ $inclusion['id'] }}"> 
+                                                            </label>
+                                                            @endif
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary fw-bold" data-dismiss="modal">Close</button>

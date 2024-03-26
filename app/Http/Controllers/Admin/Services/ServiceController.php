@@ -82,7 +82,7 @@ class ServiceController extends Controller
             'side_dish' => 'required',
             'inclusion_id' => 'required|array',
         ]);
-        dd($validatedData);
+        // dd($validatedData);
         $service = Service::create([
             'name' => $validatedData['name'],
             'type' => $validatedData['type'],
