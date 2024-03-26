@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="modal-body">
                         <a href="{{ route('service.index') }}" class="float-end">
-                            <button type="button" class="btn btn-primary">Back</button>
+                            <button type="button" class="btn btn-secondary">Back</button>
                         </a>
                         <form action="{{ route('service.update', $service->id) }}" method="POST" enctype="multipart/form-data">
                             @csrf
@@ -133,7 +133,7 @@
                             </div>
                             <div class="modal-footer">
                                 <a href="{{ route('service.index') }}" class="float-end">
-                                    <button type="button" class="btn btn-primary">Back</button>
+                                    <button type="button" class="btn btn-secondary">Back</button>
                                 </a>
                                 <button type="submit" class="btn btn-primary fw-bold" id="update-submit">Update</button>
                             </div>
