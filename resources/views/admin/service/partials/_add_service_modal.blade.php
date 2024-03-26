@@ -93,6 +93,9 @@
                             </div>
                         </div>
                         @foreach ($classifications as $classification)
+                            {{-- @php
+                                dd($classifications);
+                            @endphp --}}
                             <div class="secondContainer">
                                 <div class="col">
                                     <h5 class="fw-bold bg-success text-white px-4 py-1 rounded text-center">
@@ -101,7 +104,7 @@
                                     
                                     <div class="row">
 
-                                    @foreach ($classification['classifications'] as $classItem)    
+                                    @foreach ($classification['classifications'] as $classItem) 
                                         <div class="col-4">
                                             <div class="form-group">
                                                 <label for="dessert" class="badge bg-success text-wrap">

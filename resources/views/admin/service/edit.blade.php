@@ -53,7 +53,7 @@
                             <hr>
                         
                             {{-- If Package is the Type --}}
-                            <div class="col px-0 mb-4 overflow-auto add-scroll" style="height:300px;">
+                            <div class="col px-0 mb-4 ">
                                 
                                 <div class="firstContianer">
                                     <div class="col">
@@ -94,9 +94,7 @@
                                             <h5 class="fw-bold bg-primary text-white px-4 py-1 rounded text-center">
                                                 {{ $classification['name'] }}
                                             </h5>  
-                                            
                                             <div class="row">
-                        
                                             @foreach ($classification['classifications'] as $classItem)    
                                                 <div class="col-4">
                                                     <div class="form-group">
@@ -106,9 +104,6 @@
                                                         <div>
                                                             <!-- Display inclusions here -->
                                                             @foreach ($classItem['inclusions'] as $inclusion)
-                                                            {{-- @php
-                                                                dd($inclusion);
-                                                            @endphp --}}
                                                                 <div class="form-check edit-check-form">
                                                                     @if (is_array($service->service_inclusion_ids) && in_array($inclusion['id'], $service->service_inclusion_ids))
                                                                     <input checked class="service-checkbox form-check-input" type="checkbox" id="add-inclusion-check" name="inclusion_id[]" value="{{ $inclusion['id'] }}">

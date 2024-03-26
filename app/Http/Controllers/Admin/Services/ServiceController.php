@@ -130,17 +130,19 @@ class ServiceController extends Controller
     public function edit($id)
     {
         $service = Service::findOrFail($id);
-        
+
         $classifications = [];
         
         $groups = Classification::select('group')->distinct()->get();
-
+        dd($groups);
         foreach ($groups->toArray() as $group) {
+            
             $groupItem = [
                 'name' => $group['group']
             ];
-            
+            // dd($groupItem);
             $classItems = Classification::where('group', $group['group'])->get();
+
             $classificationList = [];
             foreach ($classItems->toArray() as $classItem) {
                 $lists = Inclusion::whereHas('inclusionClassifications', function($query) use($classItem) {
@@ -156,6 +158,7 @@ class ServiceController extends Controller
 
             array_push($classifications, $groupItem);
 
+            // dd($classifications);
 
         }
 
