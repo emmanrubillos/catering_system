@@ -3,7 +3,7 @@
 
     <div class="section w-full h-160">
 
-        <div class="menu-bg h-[35rem] rounded-b-[15rem] shadow-lg">
+        <div class="menu-bg h-[35rem] rounded-b-[15rem] shadow-lg" data-aos="fade-down" data-aos-duration="1000">
             <div class="flex flex-col relative text-center top-40 mx-14">
                 <h2 class="cusive-font text-[60px] text-dark drop-shadow-lg">
                     Our Menu
@@ -20,7 +20,7 @@
         </div>
 
         {{--? Tab-Section for Menu --}}
-        <div class="mx-auto grid place-items-center relative top-[-7rem]">
+        <div class="mx-auto grid place-items-center relative top-[-7rem]" data-aos="fade-up" data-aos-duration="1000">
             <div class="tab-section bg-light rounded-lg p-5 shadow-xl w-[1200px] h-[650px]">
                 {{--? Table Header --}}
                 <div class="flex flex-wrap gap-3">
@@ -98,4 +98,9 @@
     </div>
 
     @include('layouts.pages_._home.scripts.tab-menu-script')
+
+    <script>
+        AOS.init();
+    </script>
+
 @endsection

@@ -1,14 +1,13 @@
 @extends('layouts.inc.header')
 
 @section('content')
-
 <div class="section w-full h-160 bg-light">
 
 
     <div class="relative text-center bg-light top-40">
 
         <div class="h-[80rem]">
-            <div class="flex flex-row justify-center mx-12">
+            <div class="flex flex-row justify-center mx-12" data-aos="fade-down" data-aos-duration="1000">
                 <div class="flex flex-col">
                     <h2 class="cusive-font text-[50px] text-dark">
                         Our Services
@@ -30,7 +29,7 @@
                 {{--? Top Services Type --}}
                 <div class="flex flex-row w-full justify-between mt-10">
 
-                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
                         <h1 class="text-center text-primary uppercase font-bold text-xl">
                             Wedding
                         </h1>
@@ -57,7 +56,7 @@
                         </a>
                     </div>
 
-                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative mx-10 h-[180px]">
+                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative mx-10 h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
                         <h1 class="text-center text-primary uppercase font-bold text-xl">
                             Birthday
                         </h1>
@@ -86,7 +85,7 @@
                         </a>
                     </div>
 
-                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
                     <h1 class="text-center text-primary uppercase font-bold text-xl">
                         Christening
                     </h1>
@@ -119,7 +118,7 @@
                 {{--? Mid Services Type --}}
                 <div class="flex flex-row w-full justify-between mt-10">
 
-                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
                         <h1 class="text-center text-primary uppercase font-bold text-xl">
                             Anniversary
                         </h1>
@@ -143,7 +142,7 @@
                         </a>
                     </div>
 
-                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative mx-10 h-[180px]">
+                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative mx-10 h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
                         <h1 class="text-center text-primary uppercase font-bold text-xl">
                             Feast
                         </h1>
@@ -170,7 +169,7 @@
                         </a>
                     </div>
 
-                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
                     <h1 class="text-center text-primary uppercase font-bold text-xl">
                         Conferences
                     </h1>
@@ -201,7 +200,7 @@
                 {{--? Bot Services Type --}}
                 <div class="flex flex-row w-full justify-between mt-10">
 
-                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
                         <h1 class="text-center text-primary uppercase font-bold text-xl">
                             Alumni Reunions
                         </h1>
@@ -228,7 +227,7 @@
                         </a>
                     </div>
 
-                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative mx-10 h-[180px]">
+                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative mx-10 h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
                         <h1 class="text-center text-primary uppercase font-bold text-xl">
                             Burial
                         </h1>
@@ -257,7 +256,7 @@
                         </a>
                     </div>
 
-                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+                    <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
                     <h1 class="text-center text-primary uppercase font-bold text-xl">
                         Seminar
                     </h1>
@@ -308,6 +307,12 @@
 @include('layouts.pages_._services._services-modal._burial')
 @include('layouts.pages_._services._services-modal._seminar')
 @include('layouts.pages_._services.scripts.read-more-services-script')
+
+
+<script>
+    AOS.init();
+</script>
+
 
 @endsection
 

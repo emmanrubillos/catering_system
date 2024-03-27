@@ -1,7 +1,7 @@
 @extends('layouts.inc.header')
 
 @section('content')
-  <div class="section w-full h-160 z-0">
+  <div class="section w-full h-160 z-0" data-aos="fade-down" data-aos-duration="1000">
 
     {{--? Home Top Container  --}}
     <div class="home h-full">
@@ -44,7 +44,7 @@
     {{--? About Us Container --}}
     <div class="relative -top-56">
         {{--? About Top --}}
-        <div class="flex flex-row bg-light w-3/5 mx-auto rounded-3xl shadow-xl">
+        <div class="flex flex-row bg-light w-3/5 mx-auto rounded-3xl shadow-xl" data-aos="zoom-in" data-aos-duration="1000">
 
           <div class="image-of-Catereer bg-cover basis-2/5 ltr">
             <img class="rounded-s-3xl ring-1 ring-dark/5"
@@ -122,7 +122,7 @@
         {{-- ? About Bottom  --}}
         <div class="flex flex-row justify-between mt-11 mx-16">
         {{--? Left-bot --}}
-        <div class="flex flex-col basis-3/5 mr-10">
+        <div class="flex flex-col basis-3/5 mr-10" data-aos="fade-right" data-aos-duration="1000">
           <h1 class="font-bold text-dark leading-[3rem] text-[40px]">
             Premium Catering Services <br> For Your Taste Only
           </h1>
@@ -141,7 +141,7 @@
         </div>
 
         {{--? Right-Bot --}}
-        <div class="bg-light flex flex-col basis-2/5 ml-10 shadow-2xl rounded-b-3xl p-10 pt-4 relative mx-20">
+        <div class="bg-light flex flex-col basis-2/5 ml-10 shadow-2xl rounded-b-3xl p-10 pt-4 relative mx-20" data-aos="fade-left" data-aos-duration="1000">
           <h1 class="font-bold text-xxl text-primary text-center mb-4">
             7 Years Experiences
           </h1>
@@ -168,7 +168,7 @@
       {{--? Top Services --}}
       <div class="flex flex-row justify-between ">
         {{--? Top-left Services --}}
-        <div class="flex flex-col basis-2/4 ">
+        <div class="flex flex-col basis-2/4" data-aos="fade-right" data-aos-duration="1000">
           <h2 class="cusive-font text-[38px] text-dark">
             Our Services
           </h2>
@@ -178,7 +178,7 @@
         </div>
 
         {{--? Top-right Services --}}
-        <div class="flex flex-col basis-2/4">
+        <div class="flex flex-col basis-2/4" data-aos="fade-left" data-aos-duration="1000">
           <p class="text-md leading-6 text-justify text-dark font-semibold">
             Elevating every moment from love's start to life's milestones.
             Let us make your occasions unforgettable with our culinary perfection.
@@ -1435,4 +1435,8 @@
 @include('layouts.pages_._services._services-modal._seminar')
 @include('layouts.pages_._services.scripts.read-more-services-script')
 
+
+<script>
+    AOS.init();
+</script>
 @endsection

@@ -61,13 +61,13 @@
             <hr class="text-light mx-3">
             <div class="flex flex-col items-start justify-start w-full">
                 {{-- <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" style="{{ request()->routeIs('home') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Home</a> --}}
-                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" 
+                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link"
                 style="{{ request()->routeIs('about_us') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">About Us</a>
-                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" 
+                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link"
                 style="{{ request()->routeIs('services') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Services</a>
-                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" 
+                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link"
                 style="{{ request()->routeIs('menu') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Menu</a>
-                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" 
+                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link"
                 style="{{ request()->routeIs('contact_us') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Contact Us</a>
             </div>
         </aside>
@@ -83,22 +83,22 @@
             <div class="nav-links mt-0 tablet:mt-8 hidden tablet:flex flex-wrap gap-default">
 
                 {{-- <a href="{{ route('home') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold hover-line-link" style="{{ request()->routeIs('home') ? 'border-bottom: 4px solid #FF731D; color: #FF731D;' : '' }}">Home</a> --}}
-                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link" 
+                <a href="{{ route('about_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link"
                     style="{{ request()->routeIs('about_us') ? 'border-bottom: 4px solid #FF731D; color: #FF731D; padding-bottom: 5px;' : '' }}">
                     About Us
                 </a>
 
-                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link" 
+                <a href="{{ route('services') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link"
                     style="{{ request()->routeIs('services') ? 'border-bottom: 4px solid #FF731D; color: #FF731D; padding-bottom: 5px;' : '' }}">
                     Services
                 </a>
 
-                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link" 
+                <a href="{{ route('menu') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link"
                     style="{{ request()->routeIs('menu') ? 'border-bottom: 4px solid #FF731D; color: #FF731D; padding-bottom: 5px;' : '' }}">
                     Menu
                 </a>
 
-                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link" 
+                <a href="{{ route('contact_us') }}" class="uppercase text-md laptop:text-base tablet:text-sm text-light font-bold header-link hover-line-link"
                     style="{{ request()->routeIs('contact_us') ? 'border-bottom: 4px solid #FF731D; color: #FF731D; padding-bottom: 5px;' : '' }}">
                     Contact Us
                 </a>
@@ -109,6 +109,13 @@
             @if (Route::has('login'))
                 <div class="nav-btn gap-sm px-8 mt-4 hidden tablet:flex">
                     @auth
+                    <a href="{{ route('customer.make_reservation') }}">
+                        <button class="uppercase bg-primary text-light font-bold rounded-lg px-4 tablet:px-10 py-4 text-md
+                            tablet:text-sm laptop:text-base transition delay-100 ease-in-out hover:scale-110">
+                            Make A Reservation
+                        </button>
+                    </a>
+
                     <div class="relative">
                         <a href="" class="flex items-center space-x-2"  id="profileDropdownTrigger">
                             <script src="https://cdn.lordicon.com/lordicon.js"></script>

@@ -1,6 +1,6 @@
 <div id="modal-wedding-info" class="hidden">
     <div class="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-dark bg-opacity-50 z-40">
-        <div class="bg-light shadow-lg w-[70rem] h-[25rem]">
+        <div class="bg-light shadow-lg w-[70rem] h-[25rem]" >
             {{-- Modal Body --}}
             <div class="flex flex-row gap-3">
                 <div class="bg-light h-[25rem] w-2/4 ">
@@ -57,7 +57,7 @@
                     </div>
 
                 </div>
-                <div class="bg-cover h-[25rem] w-2/4 ">
+                <div class="bg-cover h-[25rem] w-2/4">
                     <div class="flex justify-between px-3 py-2">
                         <h1 class="before:border-primary before:border-l-4 before:mr-3 text-primary display-font text-[60px]">
                             Wedding
@@ -73,7 +73,7 @@
                     </div>
 
                     <div class="px-3 py-2">
-                        <span class=" font-bold text-light bg-dark px-5 py-2 text-base rounded-r-xl">
+                        <span class=" font-bold text-light bg-dark px-5 py-2 text-base rounded-r-xl" >
                             Craft Your Perfect Wedding:
                         </span>
                     </div>
