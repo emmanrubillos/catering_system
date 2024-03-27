@@ -145,10 +145,10 @@ class InclusionController extends Controller
             $inclusions_Img_extension = $file->getClientOriginalExtension();
             $inclusions_img = $inclusions_Img_filename . '-' . $date . '.' . $inclusions_Img_extension;
             $path_inclusions_img = $file->storeAs('public/images', $inclusions_img);
-            $validatedData['img'] = $path_inclusions_img;
+            $validatedData['img'] = $inclusions_img;
         } else {
             // If no new image is uploaded, retain the existing image
-            $validatedData['img'] = $inclusion->img;
+            $validatedData['img'] = null;
         }
 
             // Update the inclusion details
