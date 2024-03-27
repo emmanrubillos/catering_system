@@ -13,13 +13,13 @@
 
             <div class="mx-auto px-10 pt-8 flex sm-mobile:flex-col tablet:flex-row justify-between">
                 {{--! Column One --}}
-                <div class="column-one basis-1/4 laptop:basis-1/3 ">
+                <div class="column-one basis-1/4 laptop:basis-1/3 " data-aos="zoom-in" data-aos-duration="1000">
                     <div class="logo">
                         <a href="{{ url('/home') }}" class="w-ful">
                             <img src="{{ asset('assets/img/logo/logo-lenght.png') }}" alt="logo-of-titan's">
                         </a>
                     </div>
-                    <div class="paragraph text-sm tablet:text-[9px] laptop:text-xsm">
+                    <div class="paragraph text-sm tablet:text-[9px] laptop:text-xsm" data-aos="zoom-in" data-aos-duration="1000">
                         <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Eligendi consequuntur, corporis laboriosam
                             provident dolorem optio voluptate dignissimos
@@ -27,7 +27,7 @@
                             quis soluta fugit molestias cum, atque quidem.
                         </p>
                     </div>
-                    <div class="mt-4 contact">
+                    <div class="mt-4 contact" data-aos="zoom-in" data-aos-duration="1000">
                         <ul>
                             <li class="my-3">
                                 <a href="{{ route('contact_us') }}" class="flex">
@@ -75,72 +75,72 @@
                 <div class="column-two basis-2/5 laptop:basis-1/3 flex justify-evenly tablet:justify-between">
                     {{-- C-two-Column-one --}}
                     <div>
-                        <h5 class="font-bold uppercase text-md laptop:text-lg">
+                        <h5 class="font-bold uppercase text-md laptop:text-lg" data-aos="zoom-in" data-aos-duration="1000">
                             Quick Links
                         </h5>
                         <ul class="my-2">
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="{{ route('about_us') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         About Us
                                     </span>
                                 </a>
                             </li>
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="{{ route('services') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         Services
                                     </span>
                                 </a>
                             </li>
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         Packages
                                     </span>
                                 </a>
                             </li>
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="{{ route('menu') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         Menu
                                     </span>
                                 </a>
                             </li>
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="{{ route('contact_us') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         Contact Us
                                     </span>
                                 </a>
                             </li>
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="{{ route('home') }}" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         Home
                                     </span>
                                 </a>
@@ -149,59 +149,59 @@
                     </div>
                     {{-- C-two-Column-two --}}
                     <div>
-                        <h5 class="font-bold uppercase text-md laptop:text-lg">
+                        <h5 class="font-bold uppercase text-md laptop:text-lg" data-aos="zoom-in" data-aos-duration="1000">
                             Useful Links
                         </h5>
                         <ul>
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         Privacy Policy
                                     </span>
                                 </a>
                             </li>
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         Terms and Conditions
                                     </span>
                                 </a>
                             </li>
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         Support
                                     </span>
                                 </a>
                             </li>
-                            <li class="my-2">
+                            <li class="my-2" data-aos="zoom-in" data-aos-duration="1000">
                                 <a href="" class="flex">
                                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                                     <lord-icon src="https://cdn.lordicon.com/xcrjfuzb.json" colors="primary:#FF731D"
                                         trigger="hover" style="width:30px;height:30px" class="-rotate-90">
                                     </lord-icon>
-                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary">
+                                    <span class="text-sm laptop:text-md mx-2 mt-1.5 lattop:mt-1 hover:text-primary" data-aos="zoom-in" data-aos-duration="1000">
                                         Credit
                                     </span>
                                 </a>
                             </li>
                         </ul>
-                        <h5 class="font-bold uppercase text-md laptop:text-lg mt-5 relative">
+                        <h5 class="font-bold uppercase text-md laptop:text-lg mt-5 relative" data-aos="zoom-in" data-aos-duration="1000">
                             Social Media
                         </h5>
-                        <div class="flex mt-2 z-10">
+                        <div class="flex mt-2 z-10" data-aos="zoom-in" data-aos-duration="1000">
                             <a href="" class="">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="sm-mobile:w-[25px] tablet:w-[40px] laptop:w-[50px]"
                                     viewBox="0,0,256,256" class="transition ease-in-out delay-100 hover:scale-125">
@@ -217,7 +217,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="" class="mx-3 laptop:mx-5 z-10">
+                            <a href="" class="mx-3 laptop:mx-5 z-10" data-aos="zoom-in" data-aos-duration="1000">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="sm-mobile:w-[25px] tablet:w-[40px] laptop:w-[50px]"
                                     viewBox="0,0,256,256" class="transition ease-in-out delay-100 hover:scale-125">
                                         <g fill="#ff731d" fill-rule="nonzero" stroke="none" stroke-width="1"
@@ -232,7 +232,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="" class=" z-10">
+                            <a href="" class=" z-10" data-aos="zoom-in" data-aos-duration="1000">
                                 <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="sm-mobile:w-[25px] tablet:w-[40px] laptop:w-[50px]"
                                     viewBox="0,0,256,256" class="transition ease-in-out delay-100 hover:scale-125 z-10">
                                         <g fill="#ff731d" fill-rule="nonzero" stroke="none" stroke-width="1"
@@ -269,6 +269,7 @@
             {{--! Column Shapes (Blobs) --}}
             <img class="absolute hidden tablet:block -bottom-72 right-5 rotate-90 z-0"
                 src="{{ asset('assets/img/blob-foot-1.svg') }}" alt="blob-1">
+
 
             <img class="absolute hidden z-0 tablet:block w-[650px] h-[850px] laptop:w-[750px] laptop:h-[900px] -bottom-[70%] -right-72 laptop:-bottom-2/4 laptop:-right-80 rotate-45"
             src="{{ asset('assets/img/blob-foot-2.svg') }}" alt="blob-2">
