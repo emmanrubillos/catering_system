@@ -20,11 +20,18 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form id="editInclusionForm" action="{{ route('inclusion.update', $inclusion->id) }}" method="POST" id="inclusion-update-form">
+                <form id="editInclusionForm" action="{{ route('inclusion.update', $inclusion->id) }}" method="POST" id="inclusion-update-form" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="row">
                         <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="fw-bold bg-primary text-white px-4 py-1 rounded" for="img">Inclusion Image</label>
+                                <input type="file" class="form-control" id="img" placeholder="Image" name="img">
+                                {{-- @if(isset($inclusion) && $inclusion->img)
+                                <img src="{{ asset('storage/app/public/images' . $inclusion->img) }}" alt="Student Image" style="max-width: 100%">
+                            @endif --}}
+                            </div>
                             <div class="form-group">
                                 <label class="fw-bold bg-primary text-white px-4 py-1 rounded" for="name">Name</label>
                                 <input type="text" class="form-control" id="edit-inclusion-name" name="name" placeholder="Inclusion Name" value="{{ $inclusion->name }}">
