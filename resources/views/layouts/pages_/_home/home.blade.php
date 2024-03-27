@@ -197,9 +197,9 @@
 
       <div class="mx-12 ">
         {{--? Top Services Type --}}
-        <div class="flex flex-row  gap-10 my-20  ">
+        <div class="flex flex-row  gap-10 my-20">
 
-          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
               <h1 class="text-center text-primary uppercase font-bold text-xl">
                   Wedding
               </h1>
@@ -226,7 +226,7 @@
               </a>
           </div>
 
-          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative  h-[180px]">
+          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative  h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
               <h1 class="text-center text-primary uppercase font-bold text-xl">
                   Birthday
               </h1>
@@ -255,7 +255,7 @@
               </a>
           </div>
 
-          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
           <h1 class="text-center text-primary uppercase font-bold text-xl">
               Christening
           </h1>
@@ -288,7 +288,7 @@
         {{--? Top Services Type --}}
         <div class="flex flex-row w-full gap-10 my-20 justify-center">
 
-          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
               <h1 class="text-center text-primary uppercase font-bold text-xl">
                   Anniversary
               </h1>
@@ -312,7 +312,7 @@
               </a>
           </div>
 
-          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]">
+          <div class="basis-2/6 bg-white flex flex-col pt-3 py-8 px-8 shadow-xl relative h-[180px]" data-aos="zoom-in" data-aos-duration="1000">
             <h1 class="text-center text-primary uppercase font-bold text-xl">
                 Feast
             </h1>
@@ -349,7 +349,7 @@
     {{--? Our Menu Container  --}}
     <div class="relative -top-28">
       <div class="bg-cover rounded-b-full h-[500px]"
-           style="background-image: url('assets/img/background-images/home-menu-bg.png')">
+           style="background-image: url('assets/img/background-images/home-menu-bg.png')" data-aos="fade-down" data-aos-duration="2000">
 
         <div class="text-center flex flex-col py-5 mx-52">
             <h1 class="cusive-font text-[38px] text-dark">
@@ -374,7 +374,7 @@
 
             {{--? Tab-Section for Menu --}}
             <div class="mx-auto grid place-items-center relative -top-80">
-              <div class="tab-section bg-light rounded-lg p-5 shadow-xl w-[1200px] min-h-[800px]">
+              <div class="tab-section bg-light rounded-lg p-5 shadow-xl w-[1200px] min-h-[800px]" data-aos="fade-up" data-aos-duration="1000">
                   {{--? Table Header --}}
                   <div class="flex flex-wrap gap-3">
                       <button id="main-dish-tab" class="uppercase text-md p-4 rounded-lg text-dark font-bold flex-grow w-80
@@ -449,7 +449,7 @@
     {{--? Our Work Container --}}
     <div class="relative -top-72 mt-10">
 
-      <div class="text-center flex flex-col py-5 mx-52">
+      <div class="text-center flex flex-col py-5 mx-52" data-aos="zoom-in" data-aos-duration="1000">
         <h1 class="cusive-font text-[38px] text-dark">
           Our Work
         </h1>
@@ -468,7 +468,7 @@
       <div class="mx-10 grid place-items-center relative">
         <div class="flex flex-row gap-4">
           <div class="flex flex-col">
-              <div class="relative place-items-center grid">
+              <div class="relative place-items-center grid" data-aos="zoom-in" data-aos-duration="1000">
                 <img class="w-32 relative -bottom-12 z-10 transition ease-in-out hover:scale-110"
                 src="{{ URL::to('assets/img/Our-Work/Step-1.png') }}" alt="number 1">
 
@@ -479,7 +479,7 @@
                 </div>
 
               </div>
-              <div class="text-center mt-5">
+              <div class="text-center mt-5" data-aos="zoom-in" data-aos-duration="1000">
                 <h3 class=" text-dark font-bold text-lg">
                   Make An Appointment
                 </h3>
@@ -492,7 +492,7 @@
           </div>
 
           <div class="flex flex-col">
-                <div class="relative place-items-center grid">
+                <div class="relative place-items-center grid" data-aos="zoom-in" data-aos-duration="1000">
                   <img class="w-32 relative -bottom-12 z-10 transition ease-in-out hover:scale-110"
                   src="{{ URL::to('assets/img/Our-Work/Step-2.png') }}" alt="number 1">
 
@@ -503,7 +503,7 @@
                   </div>
 
                 </div>
-                <div class="text-center mt-5">
+                <div class="text-center mt-5" data-aos="zoom-in" data-aos-duration="1000">
                   <h3 class=" text-dark font-bold text-lg">
                     Pay Your Catering
                   </h3>
@@ -516,7 +516,7 @@
             </div>
 
         <div class="flex flex-col">
-              <div class="relative place-items-center grid">
+              <div class="relative place-items-center grid" data-aos="zoom-in" data-aos-duration="1000">
                 <img class="w-32 relative -bottom-12 z-10 transition ease-in-out hover:scale-110"
                 src="{{ URL::to('assets/img/Our-Work/Step-3.png') }}" alt="number 1">
 
@@ -527,7 +527,7 @@
                 </div>
 
               </div>
-              <div class="text-center mt-5">
+              <div class="text-center mt-5" data-aos="zoom-in" data-aos-duration="1000">
                 <h3 class=" text-dark font-bold text-lg">
                   Enjoy Your Food
                 </h3>
@@ -548,7 +548,7 @@
     <div class="relative -top-72 h-[50rem]">
       <div class="mt-10 bg-light h-[85rem] shadow-xl">
 
-        <div class="text-center flex flex-col py-5 mx-52">
+        <div class="text-center flex flex-col py-5 mx-52" data-aos="fade-down" data-aos-duration="1000">
           <h1 class="cusive-font text-[38px] text-dark">
             Our Wedding Packages
           </h1>
@@ -565,7 +565,7 @@
         </div>
 
         <div class="flex flex-row mx-20 mt-8 gap-5">
-          <div class="Package-Details flex flex-col h-[35rem] basis-1/4 bg-white px-5 py-3 shadow-xl rounded-xl ">
+          <div class="Package-Details flex flex-col h-[35rem] basis-1/4 bg-white px-5 py-3 shadow-xl rounded-xl" data-aos="fade-right" data-aos-duration="1000">
             <h1 class="font-bold text-dark text-xl">
               Package Details
             </h1>
@@ -714,9 +714,9 @@
             </ul>
           </div>
 
-          <div class="flex flex-col basis-3/4 gap-5">
+          <div class="flex flex-col basis-3/4 gap-5" >
             {{--? Basic Package Summary --}}
-            <div class="basis-1/3 bg-primary bg-opacity-10 shadow-lg rounded-lg rounded-br-none">
+            <div class="basis-1/3 bg-primary bg-opacity-10 shadow-lg rounded-lg rounded-br-none" data-aos="zoom-in" data-aos-duration="1000">
               <div class="flex flex-row p-5">
 
                 <div class="basis-1/4 mr-5 flex flex-col">
@@ -818,7 +818,7 @@
             </div>
 
             {{--? Standard Package Summary --}}
-            <div class="basis-3/3 bg-primary bg-opacity-30 shadow-lg rounded-lg rounded-br-none">
+            <div class="basis-3/3 bg-primary bg-opacity-30 shadow-lg rounded-lg rounded-br-none" data-aos="zoom-in" data-aos-duration="1000">
               <div class="flex flex-row p-5">
 
                 <div class="basis-1/4 mr-5 flex flex-col">
@@ -922,7 +922,7 @@
             </div>
 
             {{--? Premium Package Summary --}}
-            <div class="basis-3/3 bg-primary bg-opacity-90 shadow-lg rounded-lg">
+            <div class="basis-3/3 bg-primary bg-opacity-90 shadow-lg rounded-lg" data-aos="zoom-in" data-aos-duration="1000">
               <div class="flex flex-row p-5">
 
                 <div class="basis-1/4 mr-5 flex flex-col">
@@ -1052,7 +1052,7 @@
     {{--? Our By Pax Container --}}
       <div class="relative top-[20rem] h-[75rem]">
 
-        <div class="text-center flex flex-col py-5 mx-52">
+        <div class="text-center flex flex-col py-5 mx-52" data-aos="fade-down" data-aos-duration="1000">
           <h1 class="cusive-font text-[38px] text-dark">
             Our Wedding Packages
           </h1>
@@ -1072,7 +1072,7 @@
             {{--? left-container --}}
             <div class="bg-white rounded-b-3xl h-[25rem] basis-2/6
             transition-shadow ease-in delay-100 hover:delay-100  hover:shadow-2xl hover:scale-105 hover:shadow:dark">
-                <div class="text-center mt-8 mb-1">
+                <div class="text-center mt-8 mb-1" data-aos="zoom-in" data-aos-duration="1000">
                     <span class="text-primary text-base font-bold px-4 py-2 rounded-3xl shadow-md
                     border-4 border-primary">
                         Basic By Pax
@@ -1105,7 +1105,7 @@
                     </ul>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000">
                     <button class="bg-primary text-light uppercase font-bold text-md px-10 py-2 mt-5
                     transition ease-in-out hover:scale-110 shadow-lg">
                     Select
@@ -1114,11 +1114,11 @@
             </div>
 
             {{--? center-container --}}
-            <div class="bg-light rounded-b-3xl shadow-md h-[25rem] basis-2/6
-            transition-shadow ease-in delay-150 hover:delay-150  hover:scale-105 hover:shadow-2xl  hover:shadow-dark">
-                <div class="text-center mt-8 mb-1">
+            <div class="bg-light rounded-b-3xl shadow-md h-[25rem] basis-2/6 
+            transition-shadow ease-in delay-150 hover:delay-150  hover:scale-105 hover:shadow-2xl  hover:shadow-dark"  >
+                <div class="text-center mt-8 mb-1" data-aos="zoom-in" data-aos-duration="1000">
                     <span class="text-light text-base font-bold bg-primary px-4 py-2 rounded-3xl shadow-md
-                    border-4 border-white">
+                    border-4 border-white" >
                         Standard By Pax
                     </span>
                     <h2 class="text-primary text-[30px] drop-shadow-lg font-black base-font mt-4">
@@ -1149,7 +1149,7 @@
                     </ul>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000">
                     <button class="bg-primary text-light uppercase font-bold text-md px-10 py-2 mt-5
                     transition ease-in-out hover:scale-110 shadow-lg">
                     Select
@@ -1159,8 +1159,8 @@
 
             {{--? right-contianer --}}
             <div class="bg-dark rounded-b-3xl h-[25rem] basis-2/6
-            transition-shadow ease-in delay-100 hover:delay-100 hover:shadow-2xl hover:scale-105 hover:shadow-primary-dark ">
-                <div class="text-center mt-8 mb-1">
+            transition-shadow ease-in delay-100 hover:delay-100 hover:shadow-2xl hover:scale-105 hover:shadow-primary-dark">
+                <div class="text-center mt-8 mb-1" data-aos="zoom-in" data-aos-duration="1000">
                     <span class="text-light text-base font-bold bg-primary px-4 py-2 rounded-3xl shadow-md">
                         Premium By Pax
                     </span>
@@ -1192,7 +1192,7 @@
                     </ul>
                 </div>
 
-                <div class="text-center">
+                <div class="text-center" data-aos="zoom-in" data-aos-duration="1000">
                     <button class="bg-primary text-light uppercase font-bold text-md px-10 py-2 mt-5
                     transition ease-in-out hover:scale-110 shadow-lg">
                     Select
@@ -1206,7 +1206,7 @@
     {{--? Contact Us --}}
     <div class="bg-dark/5 pt-3 shadow-inner z-0">
       <div class="flex flex-col mt-14 h-[90rem] mx-14 ">
-        <div class="flex flex-row gap-10 h-[44rem]">
+        <div class="flex flex-row gap-10 h-[44rem]" data-aos="zoom-in" data-aos-duration="1000">
             <div class="flex flex-col bg-light basis-2/4 rounded-lg shadow-lg">
                 <div class="my-14 mx-10">
                     <form action="" class="flex flex-col">
@@ -1263,7 +1263,7 @@
                 </div>
             </div>
 
-            <div class="flex flex-col basis-2/4">
+            <div class="flex flex-col basis-2/4" data-aos="zoom-in" data-aos-duration="1000">
                 <h3 class="cusive-font text-dark drop-shadow-lg text-[40px]">
                     Contact Us
                 </h3>
@@ -1408,7 +1408,7 @@
             </div>
         </div>
 
-        <div class="mt-10 self-center border-[5px] rounded border-primary shadow-xl">
+        <div class="mt-10 self-center border-[5px] rounded border-primary shadow-xl" data-aos="zoom-in" data-aos-duration="1000">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.9740754588386!2d124.72542520000003!3d10.429803100000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33077194abad0a75%3A0xc2341f5d56e75cd0!2sTitan&#39;s%20catering%20%26%20services!5e0!3m2!1sen!2sus!4v1710676324669!5m2!1sen!2sus"
             width="1000" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>

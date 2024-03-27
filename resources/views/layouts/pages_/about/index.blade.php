@@ -5,7 +5,7 @@
 
 
     {{-- About Top Container --}}
-    <div class="about h-[50rem]" data-aos="fade-down" data-aos-duration="1000">
+    <div class="about h-[50rem]" data-aos="fade-down" data-aos-duration="2000">
         <img class="absolute bottom-0 z-0"
         src="{{ URL::to('assets/img/wave-home.svg') }}" alt="wave-home-bottom">
     </div>
@@ -15,7 +15,7 @@
         <div class="flex flex-row ml-36 mr-32 gap-12 z-20">
 
             {{-- Left Container --}}
-            <div class=" flex flex-col basis-2/5" data-aos="fade-right" data-aos-duration="1000">
+            <div class=" flex flex-col basis-2/5" data-aos="fade-right" data-aos-duration="2000">
                 <div class=" w-full h-[25rem]">
                     {{-- empty --}}
                 </div>
@@ -47,7 +47,7 @@
 
 
             {{-- Right Container --}}
-            <div class="flex flex-col basis-3/5" data-aos="fade-left" data-aos-duration="1000">
+            <div class="flex flex-col basis-3/5" data-aos="fade-left" data-aos-duration="2000">
                 <div class="bg-white flex flex-col ml-20 mr-[6rem] pt-3 py-8 px-10 shadow-xl relative rounded-3xl h-[43rem]">
                     <h1 class="mt-3 mb-3 cusive-font text-dark text text-[40px]">About Us</h1>
                     <h2 class="text-primary leading-8 font-bold text-3xl mb-3">Welcome To The <br> Best Catering Company</h2>
