@@ -131,3 +131,59 @@
     margin-top: 0 !important;
 }
 
+.YearContainer {
+    /* Add these properties */
+    flex: 1; /* This will make MonthContainer take up the remaining vertical space */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.calendar-years {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.calendar-years li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    cursor: pointer;
+}
+
+.calendar-years li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: transparent; /* Set initial background color */
+    border-radius: 0; /* Set initial border radius */
+    transition: background-color 0.3s ease, border-radius 0.3s ease; /* Add transition */
+}
+
+.calendar-years li:hover {
+    background-color: #ffdb9c;
+    border-radius: 8px;
+}
+
+.selected-date {
+    position: relative; /* Ensure pseudo-element is positioned relative to this element */
+    color: #FFF7E9;
+}
+
+.selected-date::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background-color: #181D50; /* Same color as selected date */
+    z-index: -1;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+}
+
