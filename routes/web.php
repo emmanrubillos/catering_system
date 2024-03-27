@@ -24,7 +24,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/admin', [App\Http\Controllers\Admin\UserController\AdminController::class, 'index'])->name('admin');
+
 
 Route::get('/profile', [App\Http\Controllers\Pages\HomeController::class, 'profile'])->middleware('auth')->name('profile');
 // Route::get('/package', [App\Http\Controllers\PackageController::class, 'index'])->name('package');
@@ -37,15 +37,13 @@ Route::get('/profile', [App\Http\Controllers\Pages\HomeController::class, 'profi
 // Route::post('/service', [App\Http\Controllers\Admin\Services\ServiceController::class, 'store'])->name('services.store');
 
 // Route::get('/inclusions', [App\Http\Controllers\InclusionController::class, 'index'])->name('inclusions');
-Route::resource('users', \App\Http\Controllers\Admin\UserController\UsersController::class);
-Route::resource('service', \App\Http\Controllers\Admin\Services\ServiceController::class);
-Route::resource('inclusion', \App\Http\Controllers\InclusionController::class);
-Route::resource('classification', \App\Http\Controllers\ClassificationController::class);
-Route::resource('reservation', \App\Http\Controllers\ReservationController::class);
 
 //! Make a Reservation
 Route::get('/customer/make_reservation', [MakeReservationController::class, 'index'])->name('customer.make_reservation');
 
+Route::get('/not-authorized', function(){
+    return view('auth.not-authorized');
+})->name('not-authorized');
 
 Route::middleware('CheckUserRole')->group(function (){
 
@@ -55,5 +53,14 @@ Route::get('/services', [App\Http\Controllers\Pages\ServicesController::class, '
 Route::get('/menu', [App\Http\Controllers\Pages\MenuController::class, 'index'])->name('menu');
 Route::get('/contact_us', [App\Http\Controllers\Pages\ContactController::class, 'index'])->name('contact_us');
 Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'index'])->name('profile');
+
+//Admin Side
+Route::get('/admin', [App\Http\Controllers\Admin\UserController\AdminController::class, 'index'])->name('admin');
+Route::resource('users', \App\Http\Controllers\Admin\UserController\UsersController::class);
+Route::resource('service', \App\Http\Controllers\Admin\Services\ServiceController::class);
+Route::resource('inclusion', \App\Http\Controllers\InclusionController::class);
+Route::resource('classification', \App\Http\Controllers\ClassificationController::class);
+Route::resource('reservation', \App\Http\Controllers\ReservationController::class);
+
 
 });
