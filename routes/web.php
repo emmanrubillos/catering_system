@@ -45,22 +45,27 @@ Route::get('/not-authorized', function(){
     return view('auth.not-authorized');
 })->name('not-authorized');
 
+Route::get('/home', [App\Http\Controllers\Pages\HomeController::class, 'index'])->name('home');
+
 Route::middleware('CheckUserRole')->group(function (){
 
-Route::get('/home', [App\Http\Controllers\Pages\HomeController::class, 'index'])->name('home');
+
 Route::get('/about_us', [App\Http\Controllers\Pages\AboutController::class, 'index'])->name('about_us');
 Route::get('/services', [App\Http\Controllers\Pages\ServicesController::class, 'index'])->name('services');
 Route::get('/menu', [App\Http\Controllers\Pages\MenuController::class, 'index'])->name('menu');
 Route::get('/contact_us', [App\Http\Controllers\Pages\ContactController::class, 'index'])->name('contact_us');
 Route::get('/profile', [App\Http\Controllers\Admin\ProfileController::class, 'index'])->name('profile');
 
+});
 //Admin Side
-Route::get('/admin', [App\Http\Controllers\Admin\UserController\AdminController::class, 'index'])->name('admin');
-Route::resource('users', \App\Http\Controllers\Admin\UserController\UsersController::class);
-Route::resource('service', \App\Http\Controllers\Admin\Services\ServiceController::class);
-Route::resource('inclusion', \App\Http\Controllers\InclusionController::class);
-Route::resource('classification', \App\Http\Controllers\ClassificationController::class);
-Route::resource('reservation', \App\Http\Controllers\ReservationController::class);
+Route::middleware('auth:web')->group(function (){
+    Route::get('/admin', [App\Http\Controllers\Admin\UserController\AdminController::class, 'index'])->name('admin');
+    Route::resource('users', \App\Http\Controllers\Admin\UserController\UsersController::class);
+    Route::resource('service', \App\Http\Controllers\Admin\Services\ServiceController::class);
+    Route::resource('inclusion', \App\Http\Controllers\InclusionController::class);
+    Route::resource('classification', \App\Http\Controllers\ClassificationController::class);
+    Route::resource('reservation', \App\Http\Controllers\ReservationController::class);
+
 
 
 });
