@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    
+
     <title>Titan's Catering</title>
 
     <!-- Scripts -->
@@ -30,7 +30,7 @@
         <main>
 
             @yield('content')
-            
+
         </main>
 
     </div>

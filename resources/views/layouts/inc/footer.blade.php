@@ -1,9 +1,10 @@
 
 {{--! footer --}}
-<footer class="relative z-0">
+<footer class="relative z-0" data-ao>
         <div class=" bg-dark w-full h-[51rem] tablet:h-96 laptop:h-115 text-light overflow-hidden ">
+
             {{--! toogle-up-button --}}
-            <a href="#" id="scroll-to-top" class="">
+            <a href="#" id="scroll-to-top" class="" data-aos="zoom-in" data-aos-duration="1000">
                 <img class="tablet:w-32 tablet:h-32 w-[6.5rem] h-[6.5rem] absolute -top-20 z-50
                 right-20 transition ease-in-out delay-150 -translate-y-1 hover:scale-110"
                 src="{{ asset('assets/img/up-toggle.png') }}" alt="toggle-up">
@@ -312,4 +313,6 @@
     }
 </script>
 
-
+<script>
+    AOS.init();
+</script>
