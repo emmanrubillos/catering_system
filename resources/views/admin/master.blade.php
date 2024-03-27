@@ -106,7 +106,7 @@
 
 </head>
 
-<body>
+<body class="primary-scroll">
 
 	<div class="main-wrapper">
 

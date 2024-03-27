@@ -1,4 +1,9 @@
-.calendar-body ul li{
+.calendar-body .calendar-weeks li{
+    position: relative;
+    width: calc(100% / 7);
+}
+
+.calendar-body .calendar-days li{
     position: relative;
     width: calc(100% / 7);
 }
@@ -20,18 +25,17 @@
     z-index: -1;
     border-radius: 8px;
     transform: translate(-50%, -50%); 
+    transition: background-color 0.3s ease, border-radius 0.3s ease; 
 }
 
 .calendar-days li:hover::before {
-    color: #fff;
-    background: #FF731D;
-    transition: ease-in-out;
+    background: #ffdb9c;
 }
 
 .days-inActive {
     color: lightgray;
 }
-.day-Active {
+.month-Active, .day-Active {
     color: #FAF2E4;
 }
 
@@ -39,8 +43,91 @@
     background: #FF731D; 
 }
 
-/* .day-reserved {    
-    background-color: red; 
-    color: #FFF;
+.calendar-body .calendar-months li{
+    position: relative;
+}
+
+.calendar-months li {
+    z-index: 1;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.calendar-months li::before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 190px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
     border-radius: 8px;
-} */
+    transform: translate(-50%, -50%); 
+    transition: background-color 0.3s ease, border-radius 0.3s ease; 
+}
+
+.month-Active::before {
+    background: #FF731D;
+}
+
+.calendar-body {
+    /* Add these properties */
+    display: flex;
+    flex-direction: column;
+}
+
+.MonthContainer {
+    /* Add these properties */
+    flex: 1; /* This will make MonthContainer take up the remaining vertical space */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.calendar-months {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.calendar-months li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.calendar-months li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    background-color: transparent; /* Set initial background color */
+    border-radius: 0; /* Set initial border radius */
+    transition: background-color 0.3s ease, border-radius 0.3s ease; /* Add transition */
+}
+
+.calendar-months li:hover {
+    background-color: #ffdb9c;
+    border-radius: 8px;
+}
+
+.disabled-reservation {
+    cursor: not-allowed !important; /* Ensure the cursor property is applied */
+    color: lightgray; /* Change the text color to lightgray */
+    border-radius: 8px;
+    margin: 3px 0;
+}
+
+.reservation-error {
+    margin-top: 8px !important;
+    background-color: #EE4B2B !important;
+    color: white !important;
+    transition: all 0.3s ease; /* Add a transition for smooth animation */
+}
+
+.reservation-error.show {
+    margin-top: 0 !important;
+}
+

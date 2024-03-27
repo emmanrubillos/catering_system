@@ -9,6 +9,19 @@ body {
     width: 30px;
 }
 
+.primary-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.primary-scroll::-webkit-scrollbar-track {
+background: #FAF2E4;
+}
+
+.primary-scroll::-webkit-scrollbar-thumb {
+background: #ED6B1B;
+border-radius: 3px;
+}
+
 .show-scroll::-webkit-scrollbar {
     width: 8px;
 }

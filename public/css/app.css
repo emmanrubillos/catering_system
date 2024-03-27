@@ -1218,6 +1218,10 @@ input:checked + .toggle-bg {
   grid-column: 1 / -1;
 }
 
+.float-end {
+  float: inline-end;
+}
+
 .m-0 {
   margin: 0px;
 }
@@ -2031,6 +2035,10 @@ input:checked + .toggle-bg {
 
 .list-disc {
   list-style-type: disc;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .grid-cols-4 {
@@ -2870,11 +2878,6 @@ input:checked + .toggle-bg {
 .text-dark {
   --tw-text-opacity: 1;
   color: rgb(24 29 80 / var(--tw-text-opacity));
-}
-
-.text-gray-400 {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {

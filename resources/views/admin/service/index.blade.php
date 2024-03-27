@@ -36,7 +36,7 @@
                                     <tr>
                                         <td>
                                             <a href="{{ route('service.edit', ['service' => $service->id]) }}" class="btn btn-primary btn-sm edit-service-btn" 
-                                            data-toggle="modal" data-target="#editServiceModal{{ $service->id }}"><i class="fas fa-edit"></i></a>
+                                            ><i class="fas fa-edit"></i></a>
     
                                             <form action="{{ route('service.destroy', $service->id) }}" method="POST" class="d-inline">
                                                 @csrf
@@ -60,7 +60,6 @@
                                         <td class="fw-bold">{{ $service->number_of_person }} Pax</td>
 
                                         
-                                        @include('admin.service.partials._edit_service_modal')
                                         @include('admin.service.partials._show_service_modal')
                                     </tr>
                                     @endforeach

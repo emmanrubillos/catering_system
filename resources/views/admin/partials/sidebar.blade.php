@@ -21,6 +21,13 @@
                     </a>
                 </li>
 
+                <li class="nav-item {{ request()->is('#') ? 'active' : '' }}">
+                    <a class="nav-link" href="# ">
+                        <i class="fas fa-user-clock"></i>
+                        <span>Reservations</span>
+                    </a>
+                </li>
+
                 <li class="nav-item {{ request()->is('service') ? 'active' : '' }}">
                     <a class="nav-link" href="/service ">
                         <i class="fas fa-handshake"></i>
