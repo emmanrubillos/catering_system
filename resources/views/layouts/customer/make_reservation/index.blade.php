@@ -16,22 +16,23 @@
         <form action="">
             @csrf 
 
-            {{--! it's hidden --}}
+            {{-- step-1 --}}
             @include('layouts.customer.make_reservation.partials.calendar') 
+
+            {{-- step-2 --}}
             @include('layouts.customer.make_reservation.partials.event')
-            @include('layouts.customer.make_reservation.partials.service.service_selection')
+
+            {{-- step-3.5 for Package--}}
+            @include('layouts.customer.make_reservation.partials.service.packageOrPax')
+
+            {{-- step-3.5 for Pax --}}
             @include('layouts.customer.make_reservation.partials.service.by_pax_service')
 
         </form>
 
 
-
-        
-
-        
-
-
         @include('layouts.inc.footer')
+            
     </div>
 
 
@@ -45,5 +46,7 @@
     @include('layouts.pages_._services._services-modal._burial')
     @include('layouts.pages_._services._services-modal._seminar')
     @include('layouts.pages_._services.scripts.read-more-services-script')
+    
+    @include('layouts.customer.make_reservation.partials.service.script.reservation_step')
     
 @endsection

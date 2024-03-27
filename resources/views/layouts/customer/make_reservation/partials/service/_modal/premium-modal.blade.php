@@ -1,5 +1,5 @@
 {{--? BY PAX MODAL --}}
-<div id="modal-standard-by-pax" class="hidden">
+<div id="modal-premium-by-pax" class="hidden">
     <div class="h-screen w-full fixed left-0 top-0 flex justify-center items-center bg-dark bg-opacity-50 z-40">
         {{-- Modal Body --}}
         <div class="bg-light shadow-lg w-[28rem] h-[33rem]">
@@ -14,7 +14,7 @@
                         state="hover-cross-2"
                         colors="primary:#FF731D"
                         style="width:40px;height:40px"
-                        class="standard-modal-exit">
+                        class="premium-modal-exit">
                     </lord-icon>
                 </div>
 
