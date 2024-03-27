@@ -21,8 +21,8 @@
                     </a>
                 </li>
 
-                <li class="nav-item {{ request()->is('#') ? 'active' : '' }}">
-                    <a class="nav-link" href="# ">
+                <li class="nav-item {{ request()->is('reservation') ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('reservation.index') }}">
                         <i class="fas fa-user-clock"></i>
                         <span>Reservations</span>
                     </a>
