@@ -1,7 +1,7 @@
 @extends('layouts.inc.header')
 
 @section('content')
-  <div class="section w-full h-160 z-0" data-aos="fade-down" data-aos-duration="1000">
+  <div class="section w-full h-160 z-0">
 
     {{--? Home Top Container  --}}
     <div class="home h-full">
@@ -1114,8 +1114,8 @@
             </div>
 
             {{--? center-container --}}
-            <div class="bg-light rounded-b-3xl shadow-md h-[25rem] basis-2/6 
-            transition-shadow ease-in delay-150 hover:delay-150  hover:scale-105 hover:shadow-2xl  hover:shadow-dark"  >
+            <div class="bg-light rounded-b-3xl shadow-md h-[25rem] basis-2/6
+            transition-shadow ease-in delay-150 hover:delay-150  hover:scale-105 hover:shadow-2xl  hover:shadow-dark">
                 <div class="text-center mt-8 mb-1" data-aos="zoom-in" data-aos-duration="1000">
                     <span class="text-light text-base font-bold bg-primary px-4 py-2 rounded-3xl shadow-md
                     border-4 border-white" >
@@ -1151,7 +1151,7 @@
 
                 <div class="text-center" data-aos="zoom-in" data-aos-duration="1000">
                     <button class="bg-primary text-light uppercase font-bold text-md px-10 py-2 mt-5
-                    transition ease-in-out hover:scale-110 shadow-lg">
+                    transition ease-in-out hover:scale-110 shadow-lg" >
                     Select
                     </button>
                 </div>
@@ -1206,8 +1206,8 @@
     {{--? Contact Us --}}
     <div class="bg-dark/5 pt-3 shadow-inner z-0">
       <div class="flex flex-col mt-14 h-[90rem] mx-14 ">
-        <div class="flex flex-row gap-10 h-[44rem]" data-aos="zoom-in" data-aos-duration="1000">
-            <div class="flex flex-col bg-light basis-2/4 rounded-lg shadow-lg">
+        <div class="flex flex-row gap-10 h-[44rem]">
+            <div class="flex flex-col bg-light basis-2/4 rounded-lg shadow-lg" data-aos="zoom-in" data-aos-duration="1000">
                 <div class="my-14 mx-10">
                     <form action="" class="flex flex-col">
                         @csrf
@@ -1408,7 +1408,7 @@
             </div>
         </div>
 
-        <div class="mt-10 self-center border-[5px] rounded border-primary shadow-xl" data-aos="zoom-in" data-aos-duration="1000">
+        <div class="mt-10 self-center border-[5px] rounded border-primary shadow-xl" data-aos="zoom-in" data-aos-duration="1000"g>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.9740754588386!2d124.72542520000003!3d10.429803100000008!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33077194abad0a75%3A0xc2341f5d56e75cd0!2sTitan&#39;s%20catering%20%26%20services!5e0!3m2!1sen!2sus!4v1710676324669!5m2!1sen!2sus"
             width="1000" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
