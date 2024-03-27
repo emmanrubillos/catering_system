@@ -11,6 +11,7 @@ class Inclusion extends Model
 
     protected $fillable = [
         'name',
+        'img',
         'description',
     ];
 

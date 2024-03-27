@@ -41,6 +41,7 @@ Route::resource('users', \App\Http\Controllers\Admin\UserController\UsersControl
 Route::resource('service', \App\Http\Controllers\Admin\Services\ServiceController::class);
 Route::resource('inclusion', \App\Http\Controllers\InclusionController::class);
 Route::resource('classification', \App\Http\Controllers\ClassificationController::class);
+Route::resource('reservation', \App\Http\Controllers\ReservationController::class);
 
 //! Make a Reservation
 Route::get('/customer/make_reservation', [MakeReservationController::class, 'index'])->name('customer.make_reservation');

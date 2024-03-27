@@ -134,7 +134,7 @@ class ServiceController extends Controller
         $classifications = [];
         
         $groups = Classification::select('group')->distinct()->get();
-        dd($groups);
+        // dd($groups);
         foreach ($groups->toArray() as $group) {
             
             $groupItem = [

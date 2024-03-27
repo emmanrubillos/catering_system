@@ -44,14 +44,30 @@ class InclusionController extends Controller
         // dd($request);
         $validatedData = $request->validate([
             'name' => 'required',
+            'img' => 'nullable|file|mimes:jpeg,png,jpg,gif|max:2048',
             'classification_id' => 'required|array',
-            'description' => 'required',
+            'description' => 'nullable',
         ]);
         // Create the Inclusion instance
+
+        $date = now()->format('YmdHis');
+
+        if ($request->has('img')) {
+            $inclusions_Img_WithExt = $request->file('img')->getClientOriginalName();  
+            $inclusions_Img_filename = str_replace(' ', '_', pathinfo($inclusions_Img_WithExt, PATHINFO_FILENAME));  
+            $inclusions_Img_extension = $request->file('img')->getClientOriginalExtension();  
+            $inclusions_img = $inclusions_Img_filename . '-' . $date . '.' . $inclusions_Img_extension;  
+            $path_inclusions_img = $request->file('img')->storeAs('public/images', $inclusions_img);  
+        } else {
+            $inclusions_img = null; // Corrected variable name
+        }                
+
         $inclusion = Inclusion::create([
             'name' => $validatedData['name'],
+            'img' => $inclusions_img,
             'description' => $validatedData['description'],
         ]);
+
         // Attach classifications to the inclusion
         if (isset($validatedData['classification_id']) && is_array($validatedData['classification_id'])) {
             foreach ($validatedData['classification_id'] as $classifications){
@@ -105,16 +121,35 @@ class InclusionController extends Controller
     public function update(Request $request, $id)
     {
 
-        // Find the user by ID and update its details
-        $inclusion = Inclusion::findOrFail($id);
+        // dd($request->all(), $request->file('img'));
         // Validate the request data
         $validatedData = $request->validate([
             'name' => 'required',
+            'img' => 'nullable|file|mimes:jpeg,png,jpg,gif|max:2048',
             'edit_classification_id' => 'required|array',
-            'description' => 'required',
+            'description' => 'nullable',
         ]);
 
+        
+        // dd($validatedData);
+        // Find the user by ID and update its details
+        $inclusion = Inclusion::findOrFail($id);
+
         $inclusion->inclusionclassifications()->delete();
+
+        if ($request->hasFile('img')) {
+            $file = $request->file('img');
+            $date = now()->format('YmdHis');
+            $inclusions_Img_WithExt = $file->getClientOriginalName();
+            $inclusions_Img_filename = str_replace(' ', '_', pathinfo($inclusions_Img_WithExt, PATHINFO_FILENAME));
+            $inclusions_Img_extension = $file->getClientOriginalExtension();
+            $inclusions_img = $inclusions_Img_filename . '-' . $date . '.' . $inclusions_Img_extension;
+            $path_inclusions_img = $file->storeAs('public/images', $inclusions_img);
+            $validatedData['img'] = $path_inclusions_img;
+        } else {
+            // If no new image is uploaded, retain the existing image
+            $validatedData['img'] = $inclusion->img;
+        }
 
             // Update the inclusion details
             if (isset($validatedData['edit_classification_id']) && is_array($validatedData['edit_classification_id'])) {
