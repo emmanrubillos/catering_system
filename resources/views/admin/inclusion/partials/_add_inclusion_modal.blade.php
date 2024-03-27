@@ -16,10 +16,17 @@
                 </button>
             </div>
             <div class="modal-body">
-                <form action="{{ route('inclusion.store') }}" method="POST" id="create-inclusion-form">
+                <form action="{{ route('inclusion.store') }}" method="POST" id="create-inclusion-form" enctype="multipart/form-data">
                     @csrf
                     <div class="row">
                         <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="fw-bold bg-success text-white px-4 py-1 rounded" for="img">Inclusion Image</label>
+                                <input type="file" class="form-control" id="img" placeholder="Image" name="img">
+                                {{-- @if(isset($inclusion) && $inclusion->img)
+                                <img src="{{ asset('storage/images' . $inclusion->img) }}" alt="Inclucion image Image" style="max-width: 100%">
+                            @endif --}}
+                            </div>
                             <div class="form-group">
                                 <label class="fw-bold bg-success text-white px-4 py-1 rounded" for="name">Name</label>
                                 <input type="text" class="form-control" id="add-inclusion-name" name="name" placeholder="Incluson Name">
